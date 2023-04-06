@@ -1,4 +1,4 @@
-WORKSHOP_TITLE
+Introduction to Quarto with R + RStudio
 ================
 
 ### posit::conf 2023
