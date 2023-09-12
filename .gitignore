@@ -5,5 +5,5 @@
 .DS_Store
 
 /.quarto/
-*/old-*
+materials/*/old-*
 _site
