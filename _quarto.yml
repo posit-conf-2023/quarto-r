@@ -1,0 +1,62 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!materials/*/exercises/"
+
+from: markdown+emoji
+
+website:
+  title: "Quarto for R & RStudio"
+  page-navigation: true
+  navbar:
+    background: light
+    foreground: dark
+    right:
+      - text: "About"
+        href: about.qmd
+      - icon: github
+        href: https://github.com/posit-conf-2023/quarto-r
+        aria-label: GitHub
+  
+  sidebar:
+    - title: "Materials"
+      style: docked
+      align: left
+      contents:
+          - section: "Intro: Single Docs"
+            contents:
+            - text: "1. Welcome to Quarto"
+              href: materials/1-single-docs/1-welcome-to-quarto/index.qmd
+            - text: "2. Polishing Documents"
+              href: materials/1-single-docs/2-polishing-docs/index.qmd
+            - text: "3. Presentations"
+              href: materials/1-single-docs/3-presentations/index.qmd
+            - text: "4. Sharing Your Work"
+              href: materials/1-single-docs/4-sharing-your-work/index.qmd
+          - section: "Advanced: Projects"
+            contents:
+            - text: "1. From Docs to Projects"
+              href: materials/2-projects/1-docs-to-projects/index.qmd
+            - text: "2. Websites"
+              href: materials/2-projects/2-websites/index.qmd
+            - text: "3. Advanced Slidecraft"
+              href: materials/2-projects/3-slidecraft/index.qmd
+            - text: "4. Books"
+              href: materials/2-projects/4-books/index.qmd
+            - text: "5. Extensions"
+              href: materials/2-projects/5-extensions/index.qmd
+    
+  page-footer:
+    right: "This page is built with {{< fa heart >}} and [Quarto](https://quarto.org/)."
+    left: "&copy; 2023, Andrew Bray"
+
+format: 
+  html:
+    theme: [default, custom.scss]
+    
+# Design tips:
+# 1. maggieappleton.com
+# 2. Palette: https://www.jpl.nasa.gov/images/the-grand-tour-jpl-travel-poster
+
+  

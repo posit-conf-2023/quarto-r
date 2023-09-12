@@ -1,0 +1,25 @@
+---
+title: "About the Workshop"
+---
+
+These materials are for two one-day workshops taking place before [posit::conf 2023](https://posit.co/conference/) in Chicago, Illinois.
+
+- [Location:]{.smallcaps} Hyatt Regency
+- [Time:]{.smallcaps} 9 am - 5 pm September 17^th^ and September^18^
+
+
+## Teaching Team
+
+#### Andrew Bray
+
+Andrew Bray is a statistician at UC Berkeley where he develops and teaches courses in statistics and data science. His gets excited about empowering students to use data to understand the world and enjoys being part of a community of people developing open source software and open source educational resources. Though primarily an R user, he taught a large data science class to 1100 students in Python, which had him sorely missing the R Markdown ecosystem. The experience made him particularly grateful for Quarto as a bridge to other communities of data scientists.
+
+#### Mouna Belaid
+
+#### Emil Hvitveldt
+
+#### Amelia McNamara
+
+## About these materials
+
+This source code and license for all of the materials found on this website can be found on Github [{{< fa brands github >}}](https://github.com/posit-conf-2023/quarto-r).
