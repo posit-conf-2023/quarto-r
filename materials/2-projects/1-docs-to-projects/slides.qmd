@@ -1,0 +1,4 @@
+---
+title: "From Documents to Projects"
+format: qmdrslides-revealjs
+---
