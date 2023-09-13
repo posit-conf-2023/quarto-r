@@ -2,3 +2,16 @@
 title: "From Documents to Projects"
 format: qmdrslides-revealjs
 ---
+
+# {{< fa circle-right >}} Exercise 1 {background-color="#00403d" style="font-size: .9em"}
+
+1. Open the *Quarto Puzzle* project on Posit Cloud.
+2. Open `quarto-puzzle.qmd` and render it.
+3. Modify the document to add five features:
+   1. Add an author to the yaml.
+   2. Convert "Advanced Quarto" to be a level two header.
+   3. Add a link to the Quarto website (https://quarto.org/) on the word "Quarto" that appears before the comma in the first sentence.
+   4. Turn the schedule into a bulleted list with 8 items.
+   5. At the end of the document, insert the image `quarto-logo.png` found in the same directory.
+   
+Render after each change to your document to check your progress!
