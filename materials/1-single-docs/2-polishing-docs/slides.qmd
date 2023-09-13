@@ -1,4 +1,4 @@
 ---
-title: "From Documents to Projects"
+title: "Polishing Documents"
 format: qmdrslides-revealjs
 ---
