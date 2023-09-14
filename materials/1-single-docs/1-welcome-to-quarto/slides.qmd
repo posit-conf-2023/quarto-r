@@ -3,21 +3,6 @@ title: "Welcome to Quarto"
 format: qmdrslides-revealjs
 ---
 
-## From R Markdown to Quarto {style="text-align: center"}
-
-\
-
-### Welcome! {style="color: orange"}
-
-As you arrive, if you haven't already, please get your machine configured using the steps found on the workshop website. Please assist your neighbors if they're running into issues.
-
-\
-
-<https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/>{style="text-align: center"}
-
-\
-
-Also, please be ready with **Discord** for discussions (you should have an invite in your email from the conference).
 
 ## Introductions
 
@@ -46,7 +31,7 @@ Please share ...
 \
 Workshop schedule, slides, and exercises are at:
 
-[rstd.io/rmd-to-quarto](rstd.io/rmd-to-quarto){style="font-size: 1.5em"}
+[pos.it/quarto-r-conf23](pos.it/quarto-r-conf23){style="font-size: 1.5em"}
 :::
 
 ## {data-menu-item="Workshop Goals"}
@@ -57,7 +42,7 @@ Workshop schedule, slides, and exercises are at:
 ### Goals for the Workshop {style="font-size: 2.5em; text-align: center"}
 
 :::{.incremental style="font-size: 1.5em"}
-1. Everyone leaves with a document, slides, and a website.
+1. Everyone leaves with a report and presentation.
 
 2. Learn from one another.
 
@@ -70,34 +55,27 @@ Workshop schedule, slides, and exercises are at:
 
 ![](images/edison-bulb.png){fig-alt="A technical sketch of a lightbulb" .fragment .fade-left style="position: absolute; top: 180px; left: 450px; height: 600px; border: 3px solid orange; filter: drop-shadow(10px 10px 4px #5c5859)"}
 
-## Workshop Schedule {.smaller}
+## Workshop Schedule
 
-:::{layout-ncol="2"}
-### Day One
-- 9-10:30 am Welcome to Quarto
-- 10:30-11 am [coffee break]{.smallcaps}
-- 11-12:30 pm Polishing Documents
-- 12:30-1:30 pm [lunch]{.smallcaps}
-- 1:30-3 pm Computations
-- 3-3:30 pm [coffee break]{.smallcaps}
-- 3:30-5 pm Projects and Publishing
+\
 
-### Day Two
-- 9-10:30 am Presentations
-- 10:30-11 am [coffee break]{.smallcaps}
-- 11-12:30 pm Websites and Books
-- 12:30-1:30 pm [lunch]{.smallcaps}
-- 1:30-3 pm Project Workshop
-- 3-3:30 pm [coffee break]{.smallcaps}
-- 3:30-5 pm The Future of Quarto
+:::{style="text-align: center"}
+**Introduction to Quarto**
+
+-   9-10:30 am [Welcome to Quarto](materials/1-single-docs/1-welcome-to-quarto)
+-   10:30-11 am Coffee Break
+-   11-12:30 pm [Polishing Documents](materials/1-single-docs/2-polishing-docs)
+-   12:30-1:30 pm Lunch
+-   1:30-3 pm [Presentations](materials/1-single-docs/3-presentations)
+-   3-3:30 pm Coffee Break
+-   3:30-5:00 pm [Sharing your Work](materials/1-single-docs/4-sharing-your-work)
 :::
 
-## Discussions {auto-animate=true}
+## Discussions: Discord
 
-Ask a question by opening a new discussion post:\
-[https://github.com/rstudio-conf-2022/rmd-to-quarto/discussions](https://github.com/rstudio-conf-2022/rmd-to-quarto/discussions){.uri style="font-size: .9em"}
+Ask questions and share your work at **#intro-quarto-r**.
 
-![](images/github-discussion.png){fig-alt="Screenshot of the github discussion page that serves as the forum for the workshop." fig-align="center" width="546"}
+![](images/github-discussion.png){fig-alt="Screenshot of the discord server app that serves as the forum for the workshop." fig-align="center" width="546"}
 
 ## Stickies
 
@@ -112,15 +90,15 @@ Image by [Megan Duffy](https://dynamicecology.wordpress.com/2015/01/13/sticky-no
 :::
 
 
-## Polls
+<!-- ## Polls -->
 
-During polls, you can vote in a browser tab either on your laptop or your phone at
+<!-- During polls, you can vote in a browser tab either on your laptop or your phone at -->
 
-::: {style="text-align: center"}
-[pollev.com/rmdtoquarto](https://pollev.com/rmdtoquarto){style="font-size: 1.5em"}
-:::
+<!-- ::: {style="text-align: center"} -->
+<!-- [pollev.com/rmdtoquarto](https://pollev.com/rmdtoquarto){style="font-size: 1.5em"} -->
+<!-- ::: -->
 
-![](images/pollev.png){fig-alt="Screencap of a poll everywhere poll." fig-align="center"}
+<!-- ![](images/pollev.png){fig-alt="Screencap of a poll everywhere poll." fig-align="center"} -->
 
 
 ## Practicalities
@@ -140,6 +118,12 @@ Please carefully review the Code of Conduct and COVID policies[^coc] can be foun
 :::
 
 [^coc]: <https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/>
+
+# Quarto: A Guided Tour
+
+. . .
+
+[Sit back and enjoy the tour!]{.bigadage}
 
 # What can you do with Quarto?
 
@@ -439,227 +423,204 @@ A quick way to find out how Pandoc will convert: <https://pandoc.org/try/>.
 ![](images/try-pandoc.png){fig-align=center}
 
 
-# The Structure of a Document
+# Anatomy of a Document
 
-## What Defines a Document?
+# Metadata: YAML
 
-A document consists of *content*, *structure*, *appearance*, *format*.
+## YAML
 
-::: columns
-:::{.column width="50%" .fragment .fade-right}
-![](images/rubiks-patent.png)
-:::
-
-::: {.column width="50%" .fragment}
-\
-
-- **Content:** text, code, graphics
-- **Structure:** paragraphs, lists, emphasis, etc.
-- **Appearance:** fonts, colors, layout
-- **Format:** functionality
-
-:::
-:::
-
-##  {data-menu-title="Document Structure" auto-animate="true"}
-
-\
-\
-
-### What defines the *structure* of a document? {style="text-align: center"}
-
-\
-
-::: {style="text-align: center"}
-[A document is a list of [block elements]{.block-el}]{.fragment} [that contain [inline elements]{.inline-el} or other blocks,]{.fragment} [along with associated [metadata]{.meta-el}.]{.fragment}
-:::
-
-##  {data-menu-title="Block Elements" auto-animate="true"}
-
-::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
-:::
-
-\
+"Yet Another Markup Language" or "YAML Ain't Markup Language" is used to provide document level metadata ...
 
 . . .
 
-[Block Element]{.block-el}
-
-:   Starts on a new line and followed by an empty line. Forms a visible block.
+... in key-value pairs,
 
 . . .
 
-::: {layout-ncol="2"}
-::: {#leftcol}
-::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px"}
-Block 1
+... that can nest,
+
+. . .
+
+... are fussy about indentation,
+
+. . .
+
+... and are kept between `---`.
+
+
+``` yaml
+---
+key: value
+---
+```
+
+## Example: Output options
+
+``` yaml
+---
+format: something
+---
+```
+
+. . .
+
+<br>
+
+``` yaml
+---
+format: html
+---
+```
+
+``` yaml
+---
+format: pdf
+---
+```
+
+``` yaml
+---
+format: revealjs
+---
+```
+
+## Example: Indented nesting
+
+Indentation matters!
+
+``` yaml
+---
+format: 
+  html:
+    toc: true
+    code-fold: true
+---
+```
+
+## Fussing with YAML (invalid) {.smaller}
+
+-   Invalid: No space after `:`
+
+``` yaml
+---
+format:html
+---
+```
+
+-   Invalid: Read as missing
+
+``` yaml
+---
+format:
+html
+---
+```
+
+-   Valid, but needs next object
+
+``` yaml
+---
+format: 
+  html:
+---
+```
+
+## Fussing with YAML (valid) {.smaller}
+
+There are multiple ways of formatting valid YAML:
+
+-   Valid: There's a space after `:`
+
+``` yaml
+format: html
+```
+
+-   Valid: There are 2 spaces a new line and no trailing `:`
+
+``` yaml
+format:
+  html
+```
+
+-   Valid: `format: html` with additional options made with proper indentation
+
+``` yaml
+format: 
+  html:
+    toc: true
+```
+
+## Why YAML?
+
+To avoid manually typing out all the options, every time when rendering via the CLI:
+
+. . .
+
+``` bash
+quarto render document.qmd --to html
+```
+
+<br>
+
+. . .
+
+``` bash
+quarto render document.qmd --to html -M code-fold:true
+```
+
+<br>
+
+. . .
+
+``` bash
+quarto render document.qmd --to html -M code-fold:true -P alpha:0.2 -P ratio:0.3
+```
+
+## Quarto linting
+
+Lint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs.
+
+<br>
+
+![](images/lint-rstudio.png)
+
+
+::: aside
+Source: <https://en.wikipedia.org/wiki/Lint_(software)>
 :::
 
-::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px"}
-Block 2
+## Quarto YAML Intelligence
+
+RStudio + VSCode provide rich tab-completion - start a word and tab to complete, or <kbd>`Ctrl + space`</kbd> to see all available options.
+
+<br>
+
+![](images/quarto-tab-complete.png){fig-align="center" width="600"}
+
+## Your turn
+
+::: task
+-   Open `hello-penguins.qmd` in RStudio.
+-   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
+-   Try out the tab-completion of any options that sound interesting.
+-   Bring back your two favorite to share in chat when we return from breakout rooms.
+-   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 :::
 
-::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px"}
-Block 3
-:::
-:::
+```{r}
+#| echo: false
 
-::: {#rightcol style="font-size: .7em"}
-\
+countdown::countdown(minutes = 5)
+```
 
-Examples:
+## List of valid YAML fields
 
--   Paragraph
--   Heading
--   Image
--   List
-:::
-:::
+-   Many YAML fields are common across various outputs
 
-##  {data-menu-title="Inline Elements" auto-animate="true"}
+-   But also each output type has its own set of valid YAML fields and options
 
-::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
-:::
+-   Definitive list: [quarto.org/docs/reference/formats/html](https://quarto.org/docs/reference/formats/html.html)
 
-\
-
-[Inline Element]{.inline-el}
-
-:   Modifies content inline and is not followed by a new line.
-
-::: {layout-ncol="2"}
-<div>
-
-::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px"}
-Block 1
-:::
-
-::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px"}
-:::
-
-::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 105px; font-size: .7em"}
-Inline 1
-:::
-
-::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 250px; font-size: .7em"}
-Inline 2
-:::
-
-::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px"}
-Block 3
-:::
-
-</div>
-
-::: {style="font-size: .7em"}
-\
-
-Examples:
-
--   Emphasis
--   Link
--   Footnote
--   Citation
-:::
-:::
-
-##  {data-menu-title="Metadata" auto-animate="true"}
-
-::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
-:::
-
-\
-
-[Metadata]{.meta-el}
-
-:   Ancillary info about the document's origin, format, look, etc.
-
-::: {layout-ncol="2"}
-<div>
-
-::: {.v-center-container .meta-el data-id="metadata" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 30px; left: 95px"}
-Metadata
-:::
-
-::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 100px; left: 95px"}
-Block 1
-:::
-
-::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 210px; left: 95px"}
-:::
-
-::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 105px; font-size: .7em"}
-Inline 1
-:::
-
-::: {.v-center-container .inline-el data-id="inline-1" style="purple; width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 250px; font-size: .7em"}
-Inline 2
-:::
-
-::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 320px; left: 95px"}
-Block 3
-:::
-
-</div>
-
-::: {style="font-size: .7em"}
-\
-
-Examples:
-
--   Author
--   Keywords
--   Character set
--   Appearance/style
-:::
-:::
-
-##  {data-menu-title="Document Formats" auto-animate="true"}
-
-::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
-:::
-
-::: {layout-ncol="2"}
-::: {#\"leftcol}
-::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 60px; left: 95px"}
-Header
-:::
-
-::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 130px; left: 95px"}
-Paragraph
-:::
-
-::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 140px; left: 125px; font-size: .6em"}
-Emphasis
-:::
-
-::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 290px; left: 95px"}
-Image
-:::
-
-::: {.fragment .fade-right fragment-index="4"}
-![](images/demo-md.png)
-:::
-:::
-
-::: r-stack
-::: {.fragment .fade-left fragment-index="1"}
-![](images/demo-pdf.png)
-:::
-
-::: {.fragment .fade-left fragment-index="2"}
-![](images/demo-html.png)
-:::
-
-::: {.fragment .fade-left fragment-index="3"}
-![](images/demo-docx.png)
-:::
-:::
-:::
 
 # The Elements of Markdown
 ##  {data-menu-title="Markdown"}
@@ -711,11 +672,6 @@ Which of the following forms of text formatting are possible in pandoc markdown?
 - subscript
 - strikethrough
 :::
-
-:::footer
-Please respond at [pollev.com/rmdtoquarto](https://pollev.com/rmdtoquarto).
-:::
-
 
 ## {data-menu-title="Results"}
 
@@ -1034,10 +990,6 @@ It gave me joy.
 It's hard to tell but there are two paragraphs in each list item in the output.
 :::
 
-:::footer
-Please respond at [pollev.com/rmdtoquarto](https://pollev.com/rmdtoquarto).
-:::
-
 ## {menu-title="Results"}
 
 <center>
@@ -1265,10 +1217,6 @@ My idea is to build a cube...
 ```
 
 :::
-:::
-
-:::footer
-Please respond at [pollev.com/rmdtoquarto](https://pollev.com/rmdtoquarto).
 :::
 
 ## {menu-title="Results"}
