@@ -2,3 +2,116 @@
 title: "Presentations"
 format: qmdrslides-revealjs
 ---
+
+## Anatomy of a Document
+
+Presentations, like any Quarto document, 
+
+1. YAML
+
+   `format: revealjs`, format: 
+2. Markdown
+3. Code cells
+
+## Output options
+
+## {{< fa bolt >}} Live Code
+
+This slide deck is in desperate need of some help. Let's...
+
+1. [Add some organization]
+2. [Reveal on click]
+3. [Split content into columns]
+4. [Deal with code more deftly]
+5. [Add image to title slide]
+
+# {{< fa terminal >}} Activity 1 {background-color="#00403d" style="font-size: .8em"}
+
+Pick up where we left off and modify then YAML to...
+
+1. Change the [transition style](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions) between slides
+2. Change the [slide size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
+3. Add [slide numbers](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers)
+4. Experiment with different [slide background options](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
+
+
+## Themes and SCSS
+
+# {{< fa terminal >}} Activity 2 {background-color="#00403d" style="font-size: .8em"}
+
+It's time to make this presentation really shine. Use SASS variables to
+
+1. Select a new [theme](https://quarto.org/docs/presentations/revealjs/themes.html#using-themes) to use.
+2. Personalize your theme by
+   a. Changing the background color
+
+## 
+
+# Appendix
+
+## Add some organization
+
+1. Add title slides by starting a slide with `#` instead of `##` ([docs](https://quarto.org/docs/presentations/#creating-slides)).
+2. Press "o" to see slide overview ([docs](https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode)).
+
+:::{style="text-align: center"}
+{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+:::
+
+## Reveal on click
+
+1. Add `. . .` on a new line to introduce a break in the slide that you can click to advance.
+2. Can add the `.fragment` class to any div or span to reveal on click ([docs](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments)).
+3. Add `.incremental` class to a div outside a list to incrementally reveal list items ([docs](https://quarto.org/docs/presentations/revealjs/#incremental-lists)).
+4. Can set `incremental: true` option in yaml under `format: revealjs`.
+5. Can create an exception using `.nonincremental` class on a div.
+
+:::{style="text-align: center"}
+{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+:::
+
+## Split content into columns
+
+Nest `.column` divs inside a `.columns` div and specify their width ([docs](https://quarto.org/docs/presentations/revealjs/#multiple-columns))
+
+   ```markdown
+   :::{.columns}
+   
+   :::{.column width="50%"}
+   Here is the stuff on the left.
+   :::
+   
+   :::{.column width="50%"}
+   Here is the stuff on the right.
+   :::
+   
+   :::
+   ```
+
+:::{style="text-align: center"}
+{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+:::
+
+## Deal with code more deftly {.smaller}
+
+1. Naive way: put a code cell in left column with `eval: false` and a copy of it in the right column with `echo: false`.
+2. Instead, try putting both of those code cells in a div with `.panel-tabset`. Precede each cell block with a level 2 header to serve as the label for each tab.
+3. Better yet: remove the tabset and the columns. Add the code cell option.
+
+   ```{{r}}
+   #| output-location: column-fragment
+   ```
+
+   This will put it in the right column and appear after a click. Read the docs for other good options ([docs](https://quarto.org/docs/presentations/revealjs/index.html#output-location))
+   
+:::{style="text-align: center"}
+{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+:::
+
+## Add image to title slide
+
+1. 
+
+:::{style="text-align: center"}
+{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+:::
