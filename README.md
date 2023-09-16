@@ -33,13 +33,27 @@ There is no need to install software or packages on your machine. All you'll nee
 
 ## Schedule
 
-### Day 1
+### Day 1: Introduction to Quarto
 
-TBD
+-   9-10:30 am [Welcome to Quarto](materials/1-single-docs/1-welcome-to-quarto)
+-   10:30-11 am Coffee Break
+-   11-12:30 pm [Polishing Documents](materials/1-single-docs/2-polishing-docs)
+-   12:30-1:30 pm Lunch
+-   1:30-3 pm [Presentations](materials/1-single-docs/3-presentations)
+-   3-3:30 pm Coffee Break
+-   3:30-5:00 pm [Sharing your Work](materials/1-single-docs/4-sharing-your-work)
 
-### Day 2
+### Day 2: Advanced Quarto
 
-TBD
+-   9-10:30 am [From Docs to Projects](materials/2-projects/1-docs-to-projects)
+-   10:30-11 am Coffee Break
+-   11-12:30 pm [Websites](materials/2-projects/2-websites)
+-   12:30-1:30 pm Lunch
+-   1:30-2 pm [Advanced Slidecraft](materials/2-projects/3-slidecraft)
+-   2-3 pm [Books](materials/2-projects/4-books)
+-   3-3:30 pm Coffee Break
+-   3:30-4:30 [Extensions](materials/2-projects/5-extensions)
+-   4:30-5 pm Panel Discussion with the Quarto Dev Team
 
 ## Instructor
 
