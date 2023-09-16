@@ -3,8 +3,6 @@
 @import url(https://fonts.googleapis.com/css?family=Commissioner&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:Bold,700&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script');
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100;1,400');
 $font-family-sans-serif: "Commissioner" !default;
 $presentation-font-size-root: 46px;
 
@@ -22,9 +20,11 @@ $green: #02733e;
 $purple: #73245e;
 $dark-purple: #39122f;
 $blue: #00817c;
+$dark-blue: #00403d;
 $beige: #f8f5f0;
 $dark-beige: #9f8e71;
 $light-orange: lighten($orange, 60%);
+$dark-orange: darken($orange, 8%);
 
 // set your custom colors here
 $body-color: #5c5859 !default;
@@ -36,12 +36,15 @@ $presentation-heading-font: "Cabin", "Commissioner", sans serif !default;
 
 // code
 $code-block-bg: $beige !default;
-$code-color: $purple !default;
 $code-block-border-color: $dark-beige !default;
+$code-color: $dark-purple !default;
+//$code-bg: #A9BCC9 !default;
 
 // links
-$light-bg-link-color: $green !default;
-$dark-bg-link-color: $beige !default;
+$link-color: $dark-orange !default;
+$light-bg-link-color: $dark-orange !default;
+$dark-bg-link-color: $orange !default;
+
 
 /*-- scss:rules --*/
 
@@ -145,12 +148,15 @@ div.meta-el {
   text-align: left;
   font-family: 'Nanum Myeongjo', serif;
   margin: 5em 0em 0em 0em; // or margin-top: 1em;
-}
-
-#title-slide h1 {
+  h1 {
   text-align: left;
   color: $blue;
   font-family: 'Nanum Myeongjo', serif;
+  }
+}
+
+.reveal ol {
+  padding-left: 50px;
 }
 
 .reveal .footer {
@@ -163,11 +169,73 @@ div.meta-el {
   display: none;
 }
 
-.reveal .exercise {
-  background-color: #00403d;
+.reveal .activity {
+  color: $beige;
+  .slide-background-content {
+    background: $dark-blue;
+  }
+  h1 {
+    color: $beige;
+    font-family: "Cabin", "Commissioner", sans serif;
+  }
 }
 
 blockquote {
   font-family: 'Bitter';
   color: $body-color !important;
+}
+
+img.drop {    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.75rem);
+}
+
+// template slides
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.reveal .live-code {
+  a {
+    color: $blue;
+  }
+  .slide-background-content {
+    background: lighten($orange, 25%);
+  }
+  h2 {
+    font-size: 2.2em;
+    font-family: 'Nanum Myeongjo', serif;
+  }
+  h2:before {
+      font-family: FontAwesome;
+      content: "\f0e7";
+      display: inline-block;
+      padding-right: 15px;
+    }
+}
+
+.reveal .your-turn {
+  color: $beige;
+  .slide-background-content {
+    background: $dark-blue;
+  }
+  code {
+    color: lighten($red, 8%);
+  }
+  h2 {
+    font-size: 2.2em;
+    color: $beige;
+    font-family: 'Nanum Myeongjo', serif;
+  }
+  h2:before {
+      font-family: FontAwesome;
+      content: "\f0a9";
+      display: inline-block;
+      padding-right: 15px;
+    }
 }

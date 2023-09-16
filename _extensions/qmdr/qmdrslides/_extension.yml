@@ -12,7 +12,7 @@ contributes:
       multiplex: false
       transition: fade
       slide-number: c
-      footer: "[qmdr](index.html)"
+      footer: "[Quarto for R & RStudio](index.html)"
       incremental: false 
       menu: false
       highlight-style: github
@@ -22,6 +22,9 @@ contributes:
         data-background-image: seaplane-bg.png
         data-background-size: contain
         data-background-color: "#f8f5f0"
+      include-before-body:
+        - text: |
+            <div style='display:none;'>{{< fa thumbs-up >}}</div>
       include-after-body:
         - text: |
             <script type="text/javascript">
@@ -48,3 +51,5 @@ contributes:
                 }
               });
             </script>
+  shortcodes:
+    - fontawesome.lua
