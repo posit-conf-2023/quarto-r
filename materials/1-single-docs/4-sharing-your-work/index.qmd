@@ -2,9 +2,7 @@
 title: "Sharing Your Work"
 ---
 
-> A summarty
-
-#### Slides
+> The best way to share your work with others (and with future you) is to put together a custom format. Create a new custom format for pdfs.
 
 [Full Screen](slides.qmd)
 
@@ -12,9 +10,5 @@ title: "Sharing Your Work"
 <iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-#### Outline
-
-
-#### Exercises
 
 
