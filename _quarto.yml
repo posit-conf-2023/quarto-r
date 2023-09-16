@@ -15,10 +15,13 @@ website:
     right:
       - text: "About"
         href: about.qmd
+      - icon: cloud-fill
+        href: https://posit.cloud/spaces/397249
+        aria-label: Posit Cloud
       - icon: github
         href: https://github.com/posit-conf-2023/quarto-r
         aria-label: GitHub
-  
+
   sidebar:
     - title: "Materials"
       style: docked
@@ -53,7 +56,8 @@ website:
 
 format: 
   html:
-    theme: [default, custom.scss]
+    theme: [default, assets/custom.scss]
+    toc: false
     
 # Design tips:
 # 1. maggieappleton.com
