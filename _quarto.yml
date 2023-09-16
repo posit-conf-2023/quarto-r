@@ -21,7 +21,6 @@ website:
       - icon: github
         href: https://github.com/posit-conf-2023/quarto-r
         aria-label: GitHub
-
   sidebar:
     - title: "Materials"
       style: docked
@@ -49,7 +48,6 @@ website:
               href: materials/2-projects/4-books/index.qmd
             - text: "5. Extensions"
               href: materials/2-projects/5-extensions/index.qmd
-    
   page-footer:
     right: "This page is built with {{< fa heart >}} and [Quarto](https://quarto.org/)."
     left: "&copy; 2023, Andrew Bray"
