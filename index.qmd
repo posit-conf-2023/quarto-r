@@ -1,8 +1,7 @@
 ---
 anchor-sections: false
 section-divs: false
-toc: false
-css: index.css
+css: assets/index.css
 ---
 
 ::: {.grid}
@@ -17,13 +16,13 @@ css: index.css
 
 ::: {.g-col-8}
 
-![](images/seaplane-narrow.png){fig-alt="Seaplane."}
+![](assets/images/seaplane-narrow.png){fig-alt="Seaplane."}
 
 :::
 
 :::
 
-These workshops will prepare you to author a rich array of documents in Quarto, the next generation of R Markdown. Quarto is an open-source scientific and technical publishing system that offers multilingual programming language support to create dynamic and static documents, books, presentations, blogs, and other online resources.
+These workshops will prepare you to author a rich array of documents in Quarto, the next generation of R Markdown. Quarto is an open-source scientific and technical publishing system that offers multilingual programming language support to create dynamic and static documents, books, presentations, blogs, and other online resources. 
 
 ::: content-block
 ::: features
