@@ -3,6 +3,12 @@ title: "Welcome to Quarto"
 format: qmdrslides-revealjs
 ---
 
+```{r}
+#| echo: false
+library(countdown)
+```
+
+
 
 ## Introductions
 
@@ -21,17 +27,16 @@ Please share ...
 
 # About the Workshop
 
-## {data-menu-title="Website Link"}
+## {data-menu-title="Website Link" style="text-align: center"}
 
-::: {style="text-align: center"}
 \
 \
 \
-\
-\
-Workshop schedule, slides, and exercises are at:
 
-[pos.it/quarto-r-conf23](pos.it/quarto-r-conf23){style="font-size: 1.5em"}
+:::{.r-fit-text}
+Workshop materials are at:
+
+[pos.it/quarto-r-conf23](pos.it/quarto-r-conf23)
 :::
 
 ## {data-menu-item="Workshop Goals"}
@@ -73,33 +78,33 @@ Workshop schedule, slides, and exercises are at:
 
 ## Discussions: Discord
 
-Ask questions and share your work at **#intro-quarto-r**.
+Ask questions at **#introduction-to-quarto-with-r-and-rstudio**.
 
-![](images/github-discussion.png){fig-alt="Screenshot of the discord server app that serves as the forum for the workshop." fig-align="center" width="546"}
+![](images/discord.png){fig-alt="Screenshot of the discord server app that serves as the forum for the workshop." fig-align="center" width="546"}
+
+## Flow of the Workshop ZZQ
+
+:::{layout="[2, 2]"}
+normal slide
+
+discord poll
+
+our turn
+
+your turn
+:::
 
 ## Stickies
 
 :::{layout="[[4, 5, 1]]" layout-valign=center}
 ![](images/sticky.jpeg){fig-alt="Picture of a laptop with a red sticky note stuck to the top." width=540}
 
-During an exercise, place a [**yellow**]{style="color: orange"} sticky on your laptop if you're good to go and a [**blue**]{style="color: blue"} sticky if you want help.
+During an activity, place a [**yellow**]{style="color: orange"} sticky on your laptop if you're good to go and a [**blue**]{style="color: blue"} sticky if you want help.
 :::
 
 :::footer
 Image by [Megan Duffy](https://dynamicecology.wordpress.com/2015/01/13/sticky-notes-as-a-teaching-and-lab-meeting-tool/)
 :::
-
-
-<!-- ## Polls -->
-
-<!-- During polls, you can vote in a browser tab either on your laptop or your phone at -->
-
-<!-- ::: {style="text-align: center"} -->
-<!-- [pollev.com/rmdtoquarto](https://pollev.com/rmdtoquarto){style="font-size: 1.5em"} -->
-<!-- ::: -->
-
-<!-- ![](images/pollev.png){fig-alt="Screencap of a poll everywhere poll." fig-align="center"} -->
-
 
 ## Practicalities
 
@@ -119,11 +124,20 @@ Please carefully review the Code of Conduct and COVID policies[^coc] can be foun
 
 [^coc]: <https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/>
 
-# Quarto: A Guided Tour
+# Hello Quarto!
 
 . . .
 
 [Sit back and enjoy the tour!]{.bigadage}
+
+## Your Turn{.your-turn}
+
+Open `hello-penguins.qmd` in RStudio and...
+
+1. Render the document.
+2. Update your name and re-render.
+3. Inspect components of the document and make one more update and re-render.
+Compare notes with neighbors about updates you’ve made and note any aspects of the document that are not clear after the tour and your first interaction with it
 
 # What can you do with Quarto?
 
@@ -202,7 +216,7 @@ Please carefully review the Code of Conduct and COVID policies[^coc] can be foun
 
 ## What can you do with R Markdown that you can't with Quarto?
 
-- Access tools built around R Markdown (e.g. `blogdown`, `xaringan`, `workflowr`, `papaja`) that haven't yet been implemented in Quarto.
+- Access tools built around R Markdown (e.g. `workflowr`, `papaja`) that haven't yet been implemented in Quarto.
 
 > Heavy users of such tools may want to stick with R Markdown.
 
@@ -214,17 +228,23 @@ Please carefully review the Code of Conduct and COVID policies[^coc] can be foun
 - Better cross referencing
 - Up-to-date revealjs slides
 - Easier to customize websites and books with projects
+- Convince your Python-user colleagues to use it
+
+. . .
+
+> Note: You can render existing R Markdown documents with Quarto and/or rename them to .qmd files to turn them into Quarto documents.
 
 
-# {{< fa circle-right >}} Exercise 0 {background-color="#00403d" style="font-size: .9em"}
+## Your Turn {.your-turn}
 
-Let's kick the tires on Quarto!
+Let's talk about syntax.
 
-1. Open up a new Quarto document using an HTML format
+Look carefully through the source of `hello-penguins.qmd`. What do you notice that's different from what it would look like in an Rmd document? Work with your neighbor to see if you can find the differences (there are at least 3).
 
-2. Click the Render button.
+```{r}
+countdown::countdown(2)
+```
 
-3. Look carefully through the source. What do you notice that's different from what it would look like in an Rmd document? Discuss with your neighbor then post your answers to the discussion forum.
 
 # Rendering in Quarto
 
@@ -319,65 +339,6 @@ Render input file to various document formats.
    quarto render <input> --to <format>`
    ```
 
-##  {auto-animate="true"}
-
-![](images/rstudio-console.png){fig-align="center"}
-
-. . .
-
-::: {data-id="spotlight" style="background: #f2a03d40; width: 60px; height: 25px; margin: 5px; position: absolute; top: 86px; left: 344px; border-radius: 8px; border: 4px solid #f2a03d"}
-:::
-
-##  {auto-animate="true"}
-
-![](images/rstudio-console.png){fig-align="center"}
-
-::: {data-id="spotlight" style="background: #f2a03d50; width: 60px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 91px; border-radius: 8px; border: 4px solid #f2a03d"}
-:::
-
-::: {data-id="typed-code" style="background: #02733e50; width: 308px; height: 22px; margin: 5px; position: absolute; top: 607px; left: 95px"}
-:::
-
-##  {auto-animate="true"}
-
-![](images/rstudio-console.png){fig-align="center"}
-
-::: {data-id="spotlight" style="background: #f2a03d50; width: 70px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 150px; border-radius: 8px; border: 4px solid #f2a03d"}
-:::
-
-::: {data-id="typed-code" style="background: #02733e50; width: 308px; height: 22px; margin: 5px; position: absolute; top: 607px; left: 95px"}
-:::
-
-## {auto-animate="true"}
-
-![](images/rstudio-terminal.png){fig-align="center"}
-
-::: {data-id="spotlight" style="background: #f2a03d50; width: 70px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 150px; border-radius: 8px; border: 4px solid #f2a03d"}
-:::
-
-::: {data-id="typed-code" style="background: #02733e50; width: 537px; height: 22px; margin: 5px; position: absolute; top: 455px; left: 95px"}
-:::
-
-## Getting Exercise
-
-To get the materials for each part of this course packed in an RStudio Project, run:
-
-````{.markdown style="font-size: 1.5em"}
-```{{r}}
-usethis::use_course("rmd-to-quarto/welcome-to-quarto")
-```
-````
-
-> You can also `git clone` if you prefer that workflow.
-
-::: notes
-1.  Navigate to the terminal tab of the console pane
-2.  Run quarto render demo.qmd --to html
-3.  Run quarto render demo.qmd --to docx
-4.  Run quarto render demo.qmd --to latex
-5.  Inspect how emphasis and the image is expressed
-:::
-
 ## Element expression depends on format
 
 #### Emphasis
@@ -406,15 +367,62 @@ A \emph{spatial logical toy}
 \includegraphics{images/med-rubiks-cube.png}
 ```
 
-# {{< fa terminal >}} Exercise 1 {background-color="#00403d" style="font-size: .8em"}
+<!-- ##  {auto-animate="true"} -->
+
+<!-- ![](images/rstudio-console.png){fig-align="center"} -->
+
+<!-- . . . -->
+
+<!-- ::: {data-id="spotlight" style="background: #f2a03d40; width: 60px; height: 25px; margin: 5px; position: absolute; top: 86px; left: 344px; border-radius: 8px; border: 4px solid #f2a03d"} -->
+<!-- ::: -->
+
+<!-- ##  {auto-animate="true"} -->
+
+<!-- ![](images/rstudio-console.png){fig-align="center"} -->
+
+<!-- ::: {data-id="spotlight" style="background: #f2a03d50; width: 60px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 91px; border-radius: 8px; border: 4px solid #f2a03d"} -->
+<!-- ::: -->
+
+<!-- ::: {data-id="typed-code" style="background: #02733e50; width: 308px; height: 22px; margin: 5px; position: absolute; top: 607px; left: 95px"} -->
+<!-- ::: -->
+
+<!-- ##  {auto-animate="true"} -->
+
+<!-- ![](images/rstudio-console.png){fig-align="center"} -->
+
+<!-- ::: {data-id="spotlight" style="background: #f2a03d50; width: 70px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 150px; border-radius: 8px; border: 4px solid #f2a03d"} -->
+<!-- ::: -->
+
+<!-- ::: {data-id="typed-code" style="background: #02733e50; width: 308px; height: 22px; margin: 5px; position: absolute; top: 607px; left: 95px"} -->
+<!-- ::: -->
+
+<!-- ## {auto-animate="true"} -->
+
+<!-- ![](images/rstudio-terminal.png){fig-align="center"} -->
+
+<!-- ::: {data-id="spotlight" style="background: #f2a03d50; width: 70px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 150px; border-radius: 8px; border: 4px solid #f2a03d"} -->
+<!-- ::: -->
+
+<!-- ::: {data-id="typed-code" style="background: #02733e50; width: 537px; height: 22px; margin: 5px; position: absolute; top: 455px; left: 95px"} -->
+<!-- ::: -->
+
+::: notes
+1.  Navigate to the terminal tab of the console pane
+2.  Run quarto render demo.qmd --to html
+3.  Run quarto render demo.qmd --to docx
+4.  Run quarto render demo.qmd --to latex
+5.  Inspect how emphasis and the image is expressed
+:::
+
+
+##  Your Turn {.your-turn style="font-size: .8em"}
 
 Let's focus on using `quarto` at the command line. Within RStudio, this can be done in the Terminal tab in the Console pane.
 
 1.  Render `ex-1.qmd` to `html` and view the html file in an editor. How is the list expressed in html?
 2.  Render `ex-1.qmd` to `latex` and view the latex file in an editor. How is the list expressed in latex?
-3.  Render `ex-1.qmd` to `pdf` but specify that you want to output to a file named `handout.pdf`. (see the helpfile for `render` by typing `quarto render --help`)
-4.  Try changing the extension of `ex-1.qmd` to be `.md` and `.Rmd` and re-rendering. Does the output differ?
-5.  Explore full list of commands available in Quarto by using `quarto --help`.
+3.  Try changing the extension of `ex-1.qmd` to be `.md` and `.Rmd` and re-rendering. Does the output differ?
+4.  Explore full list of commands available in Quarto by using `quarto --help`.
 
 ## Try Pandoc!
 
@@ -422,71 +430,37 @@ A quick way to find out how Pandoc will convert: <https://pandoc.org/try/>.
 
 ![](images/try-pandoc.png){fig-align=center}
 
-
 # Anatomy of a Document
 
-# Metadata: YAML
+1. Metadata
+2. Text
+3. Code Cells
 
-## YAML
+# Metadata
+
+## [Metadata:]{.meta-el} YAML
 
 "Yet Another Markup Language" or "YAML Ain't Markup Language" is used to provide document level metadata ...
 
-. . .
+:::columns
 
-... in key-value pairs,
+:::{.column width=10%}
+:::
 
-. . .
+:::{.column width=50%}
+[... in key-value pairs,]{.fragment}
 
-... that can nest,
+[... that can nest,]{.fragment}
 
-. . .
+[... are fussy about indentation,]{.fragment}
 
-... are fussy about indentation,
+[... and are kept between `---`.]{.fragment}
 
-. . .
+:::
 
-... and are kept between `---`.
+:::{.column width=40% .fragment}
 
-
-``` yaml
----
-key: value
----
-```
-
-## Example: Output options
-
-``` yaml
----
-format: something
----
-```
-
-. . .
-
-<br>
-
-``` yaml
----
-format: html
----
-```
-
-``` yaml
----
-format: pdf
----
-```
-
-``` yaml
----
-format: revealjs
----
-```
-
-## Example: Indented nesting
-
-Indentation matters!
+\
 
 ``` yaml
 ---
@@ -496,8 +470,166 @@ format:
     code-fold: true
 ---
 ```
+:::
 
-## Fussing with YAML (invalid) {.smaller}
+:::
+
+
+
+<!-- ## [Metadata:]{.meta-el} Types of values -->
+
+<!-- ZZQ could add slide talking about single value, [] list and - lists. -->
+
+
+<!-- :::columns -->
+
+<!-- :::{.column width=50%} -->
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: something -->
+<!-- --- -->
+<!-- ``` -->
+<!-- ::: -->
+
+<!-- :::{.column width=50% .fragment} -->
+
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: html -->
+<!-- --- -->
+<!-- ``` -->
+
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: pdf -->
+<!-- --- -->
+<!-- ``` -->
+
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: revealjs -->
+<!-- --- -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+## {menu-title="YAML Poll"}
+
+::: poll
+{{< fa brands discord >}} Which of the following are valid ways to include metadata?
+:::
+
+:::columns
+:::{.column width="50%"}
+[A]{.smallcaps}
+```markdown
+---
+title: US Patent: A Spatial Toy
+author: Erno Rubik
+format: html
+---
+
+My idea is to build a cube...
+```
+
+[C]{.smallcaps}
+```markdown
+---
+format: html
+---
+
+My idea is to build a cube...
+
+---
+title: A Spatial Toy
+author: Erno Rubik
+---
+```
+
+:::
+
+:::{.column width="50%"}
+[C]{.smallcaps}
+
+```markdown
+My idea is to build a cube...
+```
+
+[... then at the command line, run:]{style="font-size: .8em"}
+
+```bash
+quarto render patent.qmd --to html -M title:patent
+```
+
+
+[D]{.smallcaps}
+```markdown
+---
+title: "US Patent: A Spatial Toy"
+author: "Erno Rubik"
+format: "html"
+---
+
+My idea is to build a cube...
+```
+
+:::
+:::
+
+## [Metadata:]{.meta-el} YAML
+
+:::columns
+:::{.column width="39%"}
+```yaml
+---
+title: "US Patent: A Spatial Toy"
+author:
+  - Erno Rubrik
+  - Albert Einstein
+format:
+  html:
+    toc: true
+    abstract: |
+      This is the abstract.
+
+      It has two paragraphs.
+---
+
+```
+:::
+
+:::{.column width="61%" style="font-size: .85em"}
+Some syntax rules:
+
+::: incremental
+- Set a single value with
+  ```yaml
+  key: value`
+  ```
+- Set a list of values either:
+  ```yaml
+  key: [val1, val2]`
+  ```
+  ```yaml
+  key:
+    - val1
+    - val2
+  ```
+- Quote values that contain `:`
+- Nest key-value pairs with 2 space indent
+- Multi-line strings follow `|`
+- Multiple YAML blocks will be merged
+:::
+
+:::
+:::
+
+:::aside
+An overview of YAML syntax: <https://en.m.wikipedia.org/wiki/YAML#Syntax>
+:::
+
+## [Metadata:]{.meta-el} Fussing with YAML (invalid) {.smaller}
 
 -   Invalid: No space after `:`
 
@@ -525,7 +657,7 @@ format:
 ---
 ```
 
-## Fussing with YAML (valid) {.smaller}
+## [Metadata:]{.meta-el} Fussing with YAML (valid) {.smaller}
 
 There are multiple ways of formatting valid YAML:
 
@@ -550,39 +682,13 @@ format:
     toc: true
 ```
 
-## Why YAML?
-
-To avoid manually typing out all the options, every time when rendering via the CLI:
-
-. . .
-
-``` bash
-quarto render document.qmd --to html
-```
-
-<br>
-
-. . .
-
-``` bash
-quarto render document.qmd --to html -M code-fold:true
-```
-
-<br>
-
-. . .
-
-``` bash
-quarto render document.qmd --to html -M code-fold:true -P alpha:0.2 -P ratio:0.3
-```
-
 ## Quarto linting
 
 Lint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs.
 
 <br>
 
-![](images/lint-rstudio.png)
+![](images/lint-rstudio.png){.drop fig-align="center"}
 
 
 ::: aside
@@ -593,19 +699,17 @@ Source: <https://en.wikipedia.org/wiki/Lint_(software)>
 
 RStudio + VSCode provide rich tab-completion - start a word and tab to complete, or <kbd>`Ctrl + space`</kbd> to see all available options.
 
-<br>
+\
 
-![](images/quarto-tab-complete.png){fig-align="center" width="600"}
+![](images/quarto-tab-complete.png){.drop fig-align="center" width="600"}
 
-## Your turn
+## Your Turn {.your-turn}
 
-::: task
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
 -   Try out the tab-completion of any options that sound interesting.
 -   Bring back your two favorite to share in chat when we return from breakout rooms.
--   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
-:::
+-   Use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 
 ```{r}
 #| echo: false
@@ -613,30 +717,26 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 countdown::countdown(minutes = 5)
 ```
 
-## List of valid YAML fields
+# Text
 
--   Many YAML fields are common across various outputs
+[The Elements of Markdown]{style="font-family: 'Nanum Myeongjo', serif; font-size:1.7em"}
 
--   But also each output type has its own set of valid YAML fields and options
-
--   Definitive list: [quarto.org/docs/reference/formats/html](https://quarto.org/docs/reference/formats/html.html)
-
-
-# The Elements of Markdown
 ##  {data-menu-title="Markdown"}
 
 ::: {style="font-size: 4em; text-align: center; color: green"}
 {{< fa brands markdown >}}
 :::
 
--   Markdown is designed to be easy to write, and, even more importantly, easy to read:
+-   Markdown is designed to be easy to write and easy to read:
 
     > A Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions.\
     > -John Gruber
 
 . . .
 
--   Quarto uses extended version of **Pandoc markdown** designed with multiple output formats in mind.
+- Quarto uses extended version of **Pandoc markdown**.
+- Pandoc classifies markdown in terms of [Inline]{.inline-el} and [Block]{.block-el} elements.
+
 
 ## {data-menu-title="Working with pandoc"}
 
@@ -660,24 +760,18 @@ Whenever I hear "Pandoc", I picture . . .
 Via giphy.
 :::
 
-## Poll
+## {menu-title="Markdown poll"}
 
 ::: poll
-Which of the following forms of text formatting are possible in pandoc markdown?
+{{< fa brands discord >}} Which of the following forms of text formatting are possible in pandoc markdown?
 
-- italics
-- bold
-- underline
-- superscript
-- subscript
-- strikethrough
+1. italics
+2. bold
+3. underline
+4. superscript
+5. subscript
+6. strikethrough
 :::
-
-## {data-menu-title="Results"}
-
-<center>
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/lPD3yZWSvtJzgxUfNKQwx?controls=none&short_poll=true" width="800px" height="600px"></iframe>
-</center>
 
 ## [Inline Elements:]{.inline-el} Text Formatting
 
@@ -787,17 +881,17 @@ enough to fit inline.]
 ::: {.column width="50%"}
 
 ```{.markdown}
-Here is a longer footnote[^1]
+Here is a longer footnote[^9]
 
-[^1]: This footnote can be placed in a separate block.
+[^9]: This footnote can be placed in a separate block.
 The identifier can be any alphanumeric string.
 ```
 :::
 
 ::: {.column width="50%" .fragment}
-Here is a longer footnote[^1]
+Here is a longer footnote[^9]
 
-[^1]: This footnote can be placed in a
+[^9]: This footnote can be placed in a
 separate block. The identifier can be any
 alphanumeric string.
 
@@ -922,10 +1016,10 @@ Pandoc gives you a lot of control over lists, including *nesting*, *fancy lists*
 Read the docs for details: <https://pandoc.org/MANUAL.html#pandocs-markdown>
 :::
 
-## Poll
+## {menu-title="List Poll"}
 
 :::poll
-Which of the following will render to the output on the right?
+{{< fa brands discord >}} Which of the following will render to the output on the right?
 :::
 
 :::columns
@@ -989,12 +1083,6 @@ It gave me joy.
 :::aside
 It's hard to tell but there are two paragraphs in each list item in the output.
 :::
-
-## {menu-title="Results"}
-
-<center>
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/yH0ohoWOaPtixLPRqcntE?controls=none&short_poll=true" width="800px" height="600px"></iframe>
-</center>
 
 ## [Block Elements:]{.block-el} Lists (blocks in lists)
 
@@ -1145,194 +1233,23 @@ or do they?
 :::
 :::
 
-::: {.fragment .fade-left style="position: absolute; width: 800px; top: 450px; left: 350px; filter: drop-shadow(10px 10px 4px #5c5859)"}
-![](images/elephant-html.png){fig-alt="Screenshot of html output showing the image inside a paragraph block."}
+::: {.fragment .fade-left style="position: absolute; width: 800px; top: 450px; left: 350px"}
+![](images/elephant-html.png){.drop fig-alt="Screenshot of html output showing the image inside a paragraph block."}
 :::
 
-::: {.fragment .fade-left style="position: absolute; width: 650px; top: 400px; left: 400px; filter: drop-shadow(10px 10px 4px #5c5859)"}
-![](images/elephant-latex.png){fig-alt="Screenshot of latex output showing the image inside a figure environment"}
+::: {.fragment .fade-left style="position: absolute; width: 650px; top: 400px; left: 400px"}
+![](images/elephant-latex.png){.drop fig-alt="Screenshot of latex output showing the image inside a figure environment"}
 :::
 
 . . .
 
-[Images behave mostly like inline elements but often live in a dedicated block (e.g. a paragraph). Their behavior depends on output format.]{style="font-size: .8em"}
-
-## Poll {style="font-size: .95em"}
-
-::: poll
-Which of the following are valid ways to include metadata with a document?
-:::
-:::columns
-:::{.column width="50%"}
-[A]{.smallcaps}
-```markdown
----
-title: US Patent: A Spatial Toy
-author: Erno Rubik
-format: html
----
-
-My idea is to build a cube...
-```
-
-[C]{.smallcaps}
-```markdown
----
-format: html
----
-
-My idea is to build a cube...
-
----
-title: A Spatial Toy
-author: Erno Rubik
----
-```
-
-:::
-
-:::{.column width="50%"}
-[C]{.smallcaps}
-
-```markdown
-My idea is to build a cube...
-```
-
-[... then at the command line, run:]{style="font-size: .8em"}
-
-```bash
-quarto render patent.qmd --to html -M title:patent
-```
+[Images behave mostly like inline elements but actually live in a block (e.g. a paragraph). Their behavior depends on output format.]{style="font-size: .8em"}
 
 
-[D]{.smallcaps}
-```markdown
----
-title: "US Patent: A Spatial Toy"
-author: "Erno Rubik"
-format: "html"
----
 
-My idea is to build a cube...
-```
+## Your Turn {.your-turn style="font-size: .9em"}
 
-:::
-:::
-
-## {menu-title="Results"}
-
-<center>
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/u9b7ZayoFkgRuLUrgxd6i?controls=none&short_poll=true" width="800px" height="600px"></iframe>
-</center>
-
-## [Metadata:]{.meta-el} YAML {style="font-size: .85em"}
-
-Metadata can be included via YAML (YAML Ain't Markup Language).
-
-:::columns
-:::{.column width="50%"}
-```yaml
----
-title: "US Patent: A Spatial Toy"
-author:
-  - Erno Rubrik
-  - Albert Einstein
-format:
-  html:
-    toc: true
-    abstract: |
-      This is the abstract.
-
-      It has two paragraphs.
----
-
-```
-:::
-
-:::{.column width="50%"}
-Some syntax rules:
-
-::: incremental
-- Set a single option `key: value`
-- Strings with `:` must be quoted
-- Include multiple values in a list with `-`
-- Nest key-value pairs using indentation
-- Multi-line strings follow `|`
-- Multiple YAML blocks in a document will be merged
-:::
-
-:::
-:::
-
-:::aside
-Pandoc's interpretation of YAML metadata: <https://pandoc.org/MANUAL%202.html#extension-yaml_metadata_block>
-:::
-:::aside
-An overview of YAML syntax: <https://en.m.wikipedia.org/wiki/YAML#Syntax>
-:::
-
-
-## [Metadata:]{.meta-el} YAML {.smaller}
-:::columns
-:::{.column width="50%"}
-[A]{.smallcaps}
-```markdown
----
-title: US Patent: A Spatial Toy
-author: Erno Rubik
-format: html
----
-
-My idea is to build a cube...
-```
-
-[C]{.smallcaps}
-```markdown
----
-format: html
----
-
-My idea is to build a cube...
-
----
-title: A Spatial Toy
-author: Erno Rubik
----
-```
-
-:::
-
-:::{.column width="50%"}
-[C]{.smallcaps}
-
-```markdown
-My idea is to build a cube...
-```
-
-[... then at the command line, run:]{style="font-size: .8em"}
-
-```bash
-quarto render patent.qmd --to html -M title:patent
-```
-
-
-[D]{.smallcaps}
-```markdown
----
-title: "US Patent: A Spatial Toy"
-author: "Erno Rubik"
-format: "html"
----
-
-My idea is to build a cube...
-```
-
-:::
-:::
-
-# {{< fa cubes >}} Exercise 2 {background-color="#00403d" style="font-size: .7em"}
-
-Inside `ex-2.qmd` you'll find all of the *content* needed to create the output files `ex-2-goal.html` and `ex-2-goal.pdf`. Add into `ex-2.qmd` the markdown syntax needed to create the various inline and block elements found in the output documents.
+Your goal is to create from scratch the beautiful documents `ex-2-goal.html` and `ex-2-goal.pdf`. Add into `ex-2.qmd` the markdown syntax needed to create the various inline and block elements found in the output documents.
 
 \
 
@@ -1357,7 +1274,467 @@ Inside `ex-2.qmd` you'll find all of the *content* needed to create the output f
 
 :::
 
+```{r}
+#| echo: false
+countdown::countdown(10)
+```
+
+:::aside
 For reference, see: <https://pandoc.org/MANUAL.html#pandocs-markdown>
+:::
+
+# Code Cells
+
+##  {data-menu-title="Computation in Quarto"}
+
+![](images/quarto-workshop-13.jpg){fig-align="center"}
+
+
+## Pandoc's Fenced Code Block
+
+Sandwich the code between "fences" of at least three backticks[^1]. An optional language provides syntax highlighting.
+
+[^1]: Pandoc also allows `~~~`
+
+::: columns
+::: {.column width=50%}
+```` markdown
+```cobol
+1 + 1
+```
+````
+:::
+
+::: {.column .fragment width=50%}
+-   Useful for **displaying** source code, not running it
+-   Note that the language is not in `{ }`
+-   Pandoc supports 140 languages!
+:::
+:::
+
+## R Markdown's Code Chunk
+
+::: columns
+::: {.column width=25%}
+:::
+
+::: {.column width=50% style="font-size: 2em"}
+    ```{{r, echo=FALSE}}
+    rnorm(3)
+    ```
+:::
+
+::: {.column width=25%}
+:::
+:::
+
+. . .
+
+\
+
+::: poll
+{{< fa brands discord >}} What syntax is being used in `echo=FALSE`?
+
+1.  HTML
+2.  Pandoc attribute syntax
+3.  YAML
+4.  CSS
+5.  R
+:::
+
+## Generalizing the Code Chunk {auto-animate="true"}
+
+How can this be generalized to other languages?
+
+::: columns
+::: {.column width="50%"}
+    ```{{r, echo=FALSE}}
+    rnorm(3)
+    ```
+:::
+
+::: {.column width="50%"}
+-   Executable code flagged by `{ }`
+:::
+:::
+
+## Generalizing the Code Chunk {auto-animate="true"}
+
+How can this be generalized to other languages?
+
+::: columns
+::: {.column width="50%"}
+    ```{{language, echo=FALSE}}
+    code
+    ```
+:::
+
+::: {.column width="50%"}
+-   Executable code flagged by `{ }`
+-   Support R, Python, Julia
+-   Also support `mermaid` and `dot` diagram languages[^3].
+:::
+:::
+
+[^3]: See <https://quarto.org/docs/authoring/diagrams.html>.
+
+## Generalizing the Code Chunk {auto-animate="true"}
+
+How can this be generalized to other languages?
+
+::: columns
+::: {.column width="50%"}
+    ```{{language}}
+    #| echo: false
+
+    code
+    ```
+:::
+
+::: {.column width="50%"}
+-   Executable code flagged by `{ }`
+-   Support R, Python, Julia
+-   Also support `mermaid` and `dot` diagram languages[^3]
+-   Cell options live as YAML inside the cell after `#|` (the hash pipe!)[^4]
+
+::: fragment
+[**This is a Quarto Code Cell.**]{style="color: green;font-size: 1.2em"}
+:::
+:::
+:::
+
+[^3]: See <https://quarto.org/docs/authoring/diagrams.html>.
+
+[^4]: The hash pipe is available in the R Markdown too.
+
+## The Perks of the Hashpipe `#|`
+
+::: {.fragment style="margin-left: 20px; white-space: nowrap"}
+1.  Line breaks prevent chunk options that go on `{r, and=on, and=on, and=on, and=on, and=on, and=on}`{style="white-space: nowrap"}
+:::
+
+::: {.fragment style="margin-left: 20px"}
+2.  Chunk options are now pan-language with `<commentchar>|`.
+
+::: columns
+::: {.column width="50%"}
+````markdown
+```{{python}}
+#| echo: false
+```
+````
+:::
+
+::: {.column width="50%"}
+````markdown
+```{{mermaid}}
+%%| echo: false
+```
+````
+:::
+:::
+:::
+
+::: {.fragment style="margin-left: 20px; white-space: nowrap"}
+3.  No more yelling! (`eval=FALSE`)
+:::
+
+## Execution Options
+
+Control how the code is executed with options.
+
+::: {style="font-size: .8em"}
+| Option    | Description                                                                                                                                                                                       |
+|------------|------------------------------------------------------------|
+| `eval`    | Evaluate the code chunk (if `false`, just echos the code into the output).                                                                                                                        |
+| `echo`    | Include the source code in output                                                                                                                                                                 |
+| `output`  | Include the results of executing the code in the output (`true`, `false`, or `asis` to indicate that the output is raw markdown and should not have any of Quarto's standard enclosing markdown). |
+| `warning` | Include warnings in the output.                                                                                                                                                                   |
+| `error`   | Include errors in the output.                                                                                                                                                                     |
+| `include` | Catch all for preventing any output (code or results) from being included (e.g. `include: false` suppresses all output from the code block).                                                      |
+:::
+
+## Setting `knitr` options
+
+The `knitr` syntax for passing options still works since Quarto uses `knitr`.
+
+::: columns
+::: {.column width="50%"}
+#### Source
+
+````markdown
+```{{r, error=TRUE}}
+#| echo: true
+
+rnorm(5       # this is missing a parens
+```
+````
+:::
+
+::: {.column .fragment width="50%"}
+#### Output
+
+```{r, error=TRUE}
+#| echo: true
+
+rnorm(5       # this is missing a parens
+```
+:::
+:::
+ 
+. . .
+
+> While it's possible to use R chunks options, hash pipe options are more portable across computational engines.
+
+::: aside
+Without `error=TRUE`, this would error out on rendering and produce no output.
+:::
+
+##  {menu-title="YAML Intelligence" style="text-align: center"}
+
+\
+
+[Don't forget to use tab-completion to see the available options!]{style="align: center"}
+
+\
+
+![](images/code-yaml-intelligence.png){.drop width="100px"}
+
+## From Cell Option to YAML {auto-animate=true}
+
+:::columns
+:::{.column width=50%}
+````{.markdown code-line-numbers="7"}
+---
+title: My Doc
+format: html
+---
+
+```{{r}}
+#| echo: true
+
+pi + 1
+```
+````
+:::
+:::
+
+## From Cell Option to YAML {auto-animate=true}
+
+:::columns
+:::{.column width=50%}
+````{.markdown code-line-numbers="4,5"}
+---
+title: My Doc
+format: html
+execute:
+  echo: true
+---
+
+```{{r}}
+pi + 1
+```
+````
+:::
+:::{.column width=50%}
+- Options can be moved into YAML under the `execute` key to apply to all chunks. Exceptions to that option can be set cell-by-cell.
+:::
+:::
+
+## From Cell Option to YAML {auto-animate=true}
+
+:::columns
+:::{.column width=50%}
+````{.markdown code-line-numbers="6-8"}
+---
+title: My Doc
+format: html
+execute:
+  echo: true
+knitr:
+  opts_chunk: 
+    collapse: true
+---
+
+```{{r}}
+pi + 1
+```
+````
+:::
+:::{.column width=50%}
+- Options can be moved into YAML under the `execute` key to apply to all chunks. Exceptions to that option can be set cell-by-cell.
+
+- You can also pass options via YAML to knitr through the `knitr` key[^setup].
+:::
+:::
+
+[^setup]: No more ````{r setup}` :tada:
+
+
+## From Cell Option to YAML {auto-animate=true}
+
+:::columns
+:::{.column width=50%}
+````{.markdown code-line-numbers="9-10"}
+---
+title: My Doc
+format: html
+execute:
+  echo: true
+knitr:
+  opts_chunk: 
+    collapse: true
+    R.options:
+      digits: 2
+---
+
+```{{r}}
+pi + 1
+```
+````
+:::
+:::{.column width=50%}
+- Options can be moved into YAML under the `execute` key to apply to all chunks. Exceptions to that option can be set cell-by-cell.
+
+- You can also pass options via YAML to knitr through the `knitr` key[^setup].
+
+- You can use knitr to pass options that control your R session.
+:::
+:::
+
+[^setup]: No more ````{r setup}` :tada:
+
+## Example: Figures from Code {auto-animate=true}
+
+:::columns
+:::{.column width=50%}
+````markdown
+```{{r}}
+library(palmerpenguins)
+library(ggplot2)
+
+ggplot(penguins, aes(x = bill_length_mm,
+                     y = bill_depth_mm,
+                     col = island)) +
+  geom_point()
+```
+````
+:::
+:::{.column width=50% .fragment}
+```{r}
+#| echo: false
+library(palmerpenguins)
+library(ggplot2)
+
+ggplot(penguins, aes(x = bill_length_mm,
+                     y = bill_depth_mm,
+                     col = island)) +
+  geom_point() +
+  theme_grey(base_size = 18)
+```
+:::
+:::
+
+## Example: Figures from Code {auto-animate=true}
+
+:::columns
+:::{.column width=50%}
+````markdown
+```{{r}}
+#| fig-width: 5
+#| fig-height: 3
+
+library(palmerpenguins)
+library(ggplot2)
+
+ggplot(penguins, aes(x = bill_length_mm,
+                     y = bill_depth_mm,
+                     col = island)) +
+  geom_point()
+```
+````
+:::
+:::{.column width=50% .fragment}
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 3
+#| 
+library(palmerpenguins)
+library(ggplot2)
+
+ggplot(penguins, aes(x = bill_length_mm,
+                     y = bill_depth_mm,
+                     col = island)) +
+  geom_point() +
+  theme_grey(base_size = 18)
+```
+:::
+:::
+
+. . .
+
+> Save time/code by moving figure sizing defaults up to the YAML.
+
+
+
+## Your turn {.your-turn}
+
+::: task
+-   Open `code-cells.qmd` and render the document.
+-   Add `echo: false` to the code cell and re-render.
+-   Add 2 more cell options by using  Ctrl + Space after the `#|` or consult the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html).
+-   Add a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.
+-   Please share your favorite code cell option on {{< fa brands discord >}}.
+:::
+
+```{r}
+#| echo: false
+countdown(minutes = 7)
+```
+
+
+
+## Questions
+
+::: task
+Any questions / anything you'd like to review before we wrap up this module?
+:::
+
+## One last thing!
+
+::: task
+Where does the name "Quarto" come from?
+:::
+
+. . .
+
+
+:::{style="text-align: center"}
+```{=html}
+<iframe src="https://en.wikipedia.org/wiki/Quarto" title = "Quarto on Wikipedia" frameborder="1" height="600" width="1300" style="border: 1px solid black"></iframe>
+```
+:::
+
+::: aside
+Source: <https://en.wikipedia.org/wiki/Quarto>
+:::
+
+# Let's take a break!
+
+\
+\
+
+:::{style="text-align: center"}
+![](https://i.gifer.com/A7YM.gif)
+:::
+
+```{r}
+#| echo: false
+countdown::countdown(30)
+```
+
+
 
 
 ## References and further reading {.smaller}
