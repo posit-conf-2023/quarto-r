@@ -3,15 +3,481 @@ title: "From Documents to Projects"
 format: qmdrslides-revealjs
 ---
 
-# {{< fa circle-right >}} Exercise 1 {background-color="#00403d" style="font-size: .9em"}
+<!-- ## Your Turn {.your-turn style="font-size: .85em"} -->
 
-1. Open the *Quarto Puzzle* project on Posit Cloud.
-2. Open `quarto-puzzle.qmd` and render it.
-3. Modify the document to add five features:
-   1. Add an author to the yaml.
-   2. Convert "Advanced Quarto" to be a level two header.
-   3. Add a link to the Quarto website (https://quarto.org/) on the word "Quarto" that appears before the comma in the first sentence.
-   4. Turn the schedule into a bulleted list with 8 items.
-   5. At the end of the document, insert the image `quarto-logo.png` found in the same directory.
-   
-Render after each change to your document to check your progress!
+<!-- 1. Open the *Quarto Puzzle* project on Posit Cloud. -->
+<!-- 2. Open `quarto-puzzle.qmd` and render it. -->
+<!-- 3. Modify the document to add five features: -->
+<!--    1. Add an author to the yaml. -->
+<!--    2. Convert "Advanced Quarto" to be a level two header. -->
+<!--    3. Add a link to the Quarto website (https://quarto.org/) on the word "Quarto" that appears before the comma in the first sentence. -->
+<!--    4. Turn the schedule into a bulleted list with 8 items. -->
+<!--    5. At the end of the document, insert the image `quarto-logo.png` found in the same directory. -->
+
+<!-- Render after each change to your document to check your progress! -->
+
+<!-- ```{r} -->
+<!-- countdown::countdown(7) -->
+<!-- ``` -->
+
+
+<!-- # Fundamentals of a Quarto Document -->
+
+<!-- # The Structure of a Document -->
+
+<!-- ## What Defines a Document? -->
+
+<!-- A document consists of *content*, *structure*, *appearance*, *format*. -->
+
+<!-- ::: columns -->
+<!-- :::{.column width="50%" .fragment .fade-right} -->
+<!-- ![](images/rubiks-patent.png) -->
+<!-- ::: -->
+
+<!-- ::: {.column width="50%" .fragment} -->
+<!-- \ -->
+
+<!-- - **Content:** text, code, graphics -->
+<!-- - **Structure:** paragraphs, lists, emphasis, etc. -->
+<!-- - **Appearance:** fonts, colors, layout -->
+<!-- - **Format:** functionality -->
+
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ##  {data-menu-title="Document Structure" auto-animate="true"} -->
+
+<!-- \ -->
+<!-- \ -->
+
+<!-- ### What defines the *structure* of a document? {style="text-align: center"} -->
+
+<!-- \ -->
+
+<!-- ::: {style="text-align: center"} -->
+<!-- [A document is a list of [block elements]{.block-el}]{.fragment} [that contain [inline elements]{.inline-el} or other blocks,]{.fragment} [along with associated [metadata]{.meta-el}.]{.fragment} -->
+<!-- ::: -->
+
+<!-- ##  {data-menu-title="Block Elements" auto-animate="true"} -->
+
+<!-- ::: {style="text-align: center"} -->
+<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
+<!-- ::: -->
+
+<!-- \ -->
+
+<!-- . . . -->
+
+<!-- [Block Element]{.block-el} -->
+
+<!-- :   Starts on a new line and followed by an empty line. Forms a visible block. -->
+
+<!-- . . . -->
+
+<!-- ::: {layout-ncol="2"} -->
+<!-- ::: {#leftcol} -->
+<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px"} -->
+<!-- Block 1 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px"} -->
+<!-- Block 2 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px"} -->
+<!-- Block 3 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ::: {#rightcol style="font-size: .7em"} -->
+<!-- \ -->
+
+<!-- Examples: -->
+
+<!-- -   Paragraph -->
+<!-- -   Heading -->
+<!-- -   Image -->
+<!-- -   List -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ##  {data-menu-title="Inline Elements" auto-animate="true"} -->
+
+<!-- ::: {style="text-align: center"} -->
+<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
+<!-- ::: -->
+
+<!-- \ -->
+
+<!-- [Inline Element]{.inline-el} -->
+
+<!-- :   Modifies content inline and is not followed by a new line. -->
+
+<!-- ::: {layout-ncol="2"} -->
+<!-- <div> -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px"} -->
+<!-- Block 1 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px"} -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 105px; font-size: .7em"} -->
+<!-- Inline 1 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 250px; font-size: .7em"} -->
+<!-- Inline 2 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px"} -->
+<!-- Block 3 -->
+<!-- ::: -->
+
+<!-- </div> -->
+
+<!-- ::: {style="font-size: .7em"} -->
+<!-- \ -->
+
+<!-- Examples: -->
+
+<!-- -   Emphasis -->
+<!-- -   Link -->
+<!-- -   Footnote -->
+<!-- -   Citation -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ##  {data-menu-title="Metadata" auto-animate="true"} -->
+
+<!-- ::: {style="text-align: center"} -->
+<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
+<!-- ::: -->
+
+<!-- \ -->
+
+<!-- [Metadata]{.meta-el} -->
+
+<!-- :   Ancillary info about the document's origin, format, look, etc. -->
+
+<!-- ::: {layout-ncol="2"} -->
+<!-- <div> -->
+
+<!-- ::: {.v-center-container .meta-el data-id="metadata" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 30px; left: 95px"} -->
+<!-- Metadata -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 100px; left: 95px"} -->
+<!-- Block 1 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 210px; left: 95px"} -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 105px; font-size: .7em"} -->
+<!-- Inline 1 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="purple; width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 250px; font-size: .7em"} -->
+<!-- Inline 2 -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 320px; left: 95px"} -->
+<!-- Block 3 -->
+<!-- ::: -->
+
+<!-- </div> -->
+
+<!-- ::: {style="font-size: .7em"} -->
+<!-- \ -->
+
+<!-- Examples: -->
+
+<!-- -   Author -->
+<!-- -   Keywords -->
+<!-- -   Character set -->
+<!-- -   Appearance/style -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ##  {data-menu-title="Document Formats" auto-animate="true"} -->
+
+<!-- ::: {style="text-align: center"} -->
+<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
+<!-- ::: -->
+
+<!-- ::: {layout-ncol="2"} -->
+<!-- ::: {#\"leftcol} -->
+<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 60px; left: 95px"} -->
+<!-- Header -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 130px; left: 95px"} -->
+<!-- Paragraph -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 140px; left: 125px; font-size: .6em"} -->
+<!-- Emphasis -->
+<!-- ::: -->
+
+<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 290px; left: 95px"} -->
+<!-- Image -->
+<!-- ::: -->
+
+<!-- ::: {.fragment .fade-right fragment-index="4"} -->
+<!-- ![](images/demo-md.png) -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ::: r-stack -->
+<!-- ::: {.fragment .fade-left fragment-index="1"} -->
+<!-- ![](images/demo-pdf.png) -->
+<!-- ::: -->
+
+<!-- ::: {.fragment .fade-left fragment-index="2"} -->
+<!-- ![](images/demo-html.png) -->
+<!-- ::: -->
+
+<!-- ::: {.fragment .fade-left fragment-index="3"} -->
+<!-- ![](images/demo-docx.png) -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+<!-- # Exercise 2  -->
+
+<!-- # Fundamentals of a Quarto Project -->
+
+<!-- ## What defines a Quarto Project? -->
+
+<!-- :::{.r-fit-text} -->
+<!-- > [A Quarto Project is a directory]{.fragment} [that contains a file called `_quarto.yml`.]{.fragment} -->
+<!-- ::: -->
+
+<!-- \ -->
+
+<!-- :::{.columns} -->
+<!-- :::{.column .fragment .fade-right width=50%} -->
+<!-- This is a Quarto Project. -->
+
+<!-- ![](images/quarto-project.png){.drop fig-alt="Files panel in RStudio showing my-doc.qmd and _quarto.yml."} -->
+
+<!-- ::: -->
+<!-- :::{.column .fragment .fade-left width=50%} -->
+<!-- This is not. -->
+
+<!-- ![](images/not-quarto-project.png){.drop fig-alt="Files panel in RStudio showing only my-doc.qmd."} -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ## _quarto.yml -->
+
+<!-- A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored. -->
+
+
+<!-- ## Quarto Project vs RStudio Project -->
+
+<!-- :::columns -->
+
+<!-- :::{.column width=50% .smaller} -->
+<!-- - Quarto Projects determine how `quarto render`, `quarto preview` and `quarto publish` work when run inside the directory. -->
+<!-- - RStudio Projects store configuration info for the IDE when working from the directory. -->
+<!-- - A directory can have one or both! -->
+<!-- ::: -->
+
+<!-- :::{.column width=50% .fragment .fade-left } -->
+
+<!-- \ -->
+
+<!-- ![This is both a Quarto Project and an RStudio Project.](images/quarto-rstudio-project.png){.drop fig-alt="Files panel in RStudio showing my-doc.qmd, _quarto.yml, and an .Rproj file."} -->
+<!-- ::: -->
+
+<!-- ::: -->
+
+<!-- ## Our Running Example: Course Materials -->
+
+<!-- :::{.centered} -->
+<!-- ![](images/stat20.png){fig-alt="Screenshot of stat20.org"} -->
+<!-- ::: -->
+
+<!-- ## Kick the Tires -->
+
+<!-- :::{.poll} -->
+
+<!-- **Poll**: Open `1-docs-to-projects-activity` and click through the file directories to see what's inside. Try rendering a document or two. -->
+
+<!-- *Post to Discord one piece of Quarto syntax or YAML option that you have never seen before*. -->
+<!-- ::: -->
+
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- countdown::countdown(3) -->
+<!-- ``` -->
+
+
+<!-- ## The 4 roles of a Quarto Project -->
+
+<!-- :::incremental -->
+<!-- 1. Control which files get rendered -->
+<!-- 2. Store shared metadata -->
+<!-- 3. Enable conditional content -->
+<!-- 4. Structure the navigation between docs -->
+<!-- ::: -->
+
+<!-- # 1. Control which files get rendered -->
+
+<!-- ## Render Targets -->
+
+<!-- When you call `quarto render` inside a project, it defaults to rendering *all* .qmd files. There are two ways to exert finer control over this. -->
+
+<!-- . . . -->
+
+<!-- \ -->
+<!-- \ -->
+
+<!-- You can ignore files from the render by: -->
+
+<!-- 1. Adding them to the render targets list. -->
+<!-- 2. Renaming the file (or a dir along its path) to begin with `_`. -->
+
+
+<!-- ## Live Code {.live-code} -->
+
+<!-- Let's start with a first baby step. -->
+
+<!-- 1. [Create a blank project] -->
+<!-- 2. [Render all of the files] -->
+<!-- 3. [Exclude one particular note] -->
+<!-- 4. [Exclude a subdirectory] -->
+
+
+
+<!-- # 2. Store shared metadata -->
+
+<!-- ## Activity -->
+
+<!-- **Goal**: Let's reorganize the metadata that exists in a repo of class notes. -->
+
+<!-- Screenshot of `1-docs-to-projects-activity` project. -->
+
+
+<!-- ## Live Code {.live-code} -->
+
+<!-- Let's start with a first baby step. -->
+
+<!-- 1. [Create a blank project]. -->
+
+
+<!-- ## Your Turn {.your-turn} -->
+
+<!-- 1. Move the metadata shared by all three files into `_quarto.yml` -->
+<!-- 2. Add your name to the `author:` key in one of the documents. Does the document- or project-level author take precedence? -->
+
+<!-- ## Live Code {.live-code} -->
+
+<!-- 1. [Create a blank project]. -->
+<!-- 2. [Split off notes written by colleague]{#_metadata.yml}. -->
+<!-- 3. [Treat the semester as a variable]{#_variables.yml}. -->
+
+
+<!-- ## Takeaways -->
+
+<!-- :::incremental -->
+<!-- - Metadata can live in a document, in _metadata.yml, or in _quarto.yml. -->
+
+<!-- - DRY^["Don't Repeat Yourself". A coding maxim to encourage writing functions.] out your metadata by moving it upstream. -->
+
+<!-- - Precedence of Metadata -->
+
+<!--   :::{style="text-align: center"} -->
+<!--   _quarto.yml < _metadata.yml < foo.qmd < -M -->
+<!--   ::: -->
+<!-- ::: -->
+
+<!-- ## The 4 roles of a Quarto Project -->
+
+<!-- 1. Control which files get rendered -->
+<!-- 2. [Store shared metadata]{.fragment .highlight-current-red} -->
+<!-- 3. [Enable conditional content]{.fragment .highlight-current-red} -->
+<!-- 4. Structure the navigation between docs -->
+
+<!-- # 3. Enable conditional content -->
+
+
+
+<!-- ## The 4 roles of a Quarto Project -->
+
+<!-- 1. Control which files get rendered -->
+<!-- 2. Store shared metadata -->
+<!-- 3. [Enable conditional content]{.fragment .highlight-current-red} -->
+<!-- 4. [Structure the navigation between docs]{.fragment .highlight-current-red} -->
+
+<!-- :::{.fragment style="text-align:center"} -->
+<!-- Sounds like a [website]{.smalladage}! -->
+<!-- ::: -->
+
+<!-- # Appendix -->
+
+<!-- ## Create a blank project -->
+
+<!-- 1. You can create a blank project by running `quarto create-project` at the command line. -->
+<!-- 2. Note the files that it creates: a largely empty `_quarto.yml` and a demo doc called `project.qmd`. That's just there to give you something to render - it can be deleted! -->
+<!-- 3. Learn more by running `quarto create-project --help` at the command line. -->
+
+<!-- :::{style="text-align: center"} -->
+<!-- {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}} -->
+<!-- ::: -->
+
+<!-- 1. [Create a blank project] -->
+<!-- 2. [Render all of the files] -->
+<!-- 3. [Exclude one particular note] -->
+<!-- 4. [Exclude a subdirectory] -->
+
+<!-- ## Render all of the files -->
+
+
+
+<!-- :::{style="text-align: center"} -->
+<!-- {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}} -->
+<!-- ::: -->
+
+<!-- ## Exclude one particular note -->
+
+<!-- :::{style="text-align: center"} -->
+<!-- {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}} -->
+<!-- ::: -->
+
+<!-- ## Exclude a subdirectory -->
+
+<!-- :::{style="text-align: center"} -->
+<!-- {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}} -->
+<!-- ::: -->
+
+<!-- ## _metadata.yml -->
+
+<!-- In addition to storing project-wide metadata in `_quarto.yml`, you can store sub-directory specific metadata in a `_metadata.yml`. -->
+
+<!-- :::{style="text-align: center"} -->
+<!-- {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}} -->
+<!-- ::: -->
+
+
+<!-- ## _variables.yml -->
+
+<!-- - You can store any information you like in YAML format in a file called `_variables.yml` at the root of the project directory ([docs](https://quarto.org/docs/authoring/variables.html#var)). -->
+
+<!--   ```yml {filename="_variables.yml"} -->
+<!--   semester: -->
+<!--     year: 2023 -->
+<!--     term: fall -->
+<!--   ``` -->
+
+<!-- - Those values can be injected into a document using the shortcode syntax -->
+
+<!--   `{{<var semester.year >}}` will evaluate to `2023`. -->
+
+<!-- :::{style="text-align: center"} -->
+<!-- {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}} -->
+<!-- ::: -->
