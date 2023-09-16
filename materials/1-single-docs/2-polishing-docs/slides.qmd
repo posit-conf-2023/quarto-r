@@ -2,3 +2,7 @@
 title: "Polishing Documents"
 format: qmdrslides-revealjs
 ---
+
+## Before we come back...
+
+Visit <https://quartopub.com/> and set up an account.

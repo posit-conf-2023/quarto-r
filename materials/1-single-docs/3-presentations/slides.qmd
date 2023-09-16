@@ -15,7 +15,7 @@ Presentations, like any Quarto document,
 
 ## Output options
 
-## {{< fa bolt >}} Live Code
+## Our Turn {.out-turn}
 
 This slide deck is in desperate need of some help. Let's...
 
@@ -25,7 +25,15 @@ This slide deck is in desperate need of some help. Let's...
 4. [Deal with code more deftly]
 5. [Add image to title slide]
 
-# {{< fa terminal >}} Activity 1 {background-color="#00403d" style="font-size: .8em"}
+## Use the Docs
+
+:::{layout-ncol="2"}
+Essays on Functionality
+
+List of Options YAML keys
+:::
+
+## Your Turn {.your-turn style="font-size: .8em"}
 
 Pick up where we left off and modify then YAML to...
 
@@ -35,9 +43,36 @@ Pick up where we left off and modify then YAML to...
 4. Experiment with different [slide background options](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
 
 
-## Themes and SCSS
+## Our Turn {.our-turn}
 
-# {{< fa terminal >}} Activity 2 {background-color="#00403d" style="font-size: .8em"}
+This slide deck is in desperate need of some help. Let's...
+
+1. [Add a timer]
+2. 
+
+## SCSS
+
+```scss {code-line-numbers="1|3-4|6-7|9-11|13-16"}
+/*-- scss:defaults --*/
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", serif !default;
+
+// colors
+$body-bg: #f0f1eb !default;
+
+// headings
+$presentation-heading-font: "Palatino Linotype", serif !default;
+$presentation-heading-color: #383d3d !default;
+
+/*-- scss:rules --*/
+
+blockquote {
+  margin-left: 80px !important;
+}
+```
+
+## Your Turn {.your-turn style="font-size: .8em"}
 
 It's time to make this presentation really shine. Use SASS variables to
 
@@ -45,7 +80,9 @@ It's time to make this presentation really shine. Use SASS variables to
 2. Personalize your theme by
    a. Changing the background color
 
-## 
+# Quarto Publish
+
+
 
 # Appendix
 
@@ -55,7 +92,7 @@ It's time to make this presentation really shine. Use SASS variables to
 2. Press "o" to see slide overview ([docs](https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode)).
 
 :::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+{{< fa arrow-rotate-left >}} Return to [Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
 :::
 
 ## Reveal on click
@@ -67,7 +104,7 @@ It's time to make this presentation really shine. Use SASS variables to
 5. Can create an exception using `.nonincremental` class on a div.
 
 :::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+{{< fa arrow-rotate-left >}} Return to [Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
 :::
 
 ## Split content into columns
@@ -89,7 +126,7 @@ Nest `.column` divs inside a `.columns` div and specify their width ([docs](http
    ```
 
 :::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+{{< fa arrow-rotate-left >}} Return to [Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
 :::
 
 ## Deal with code more deftly {.smaller}
@@ -105,13 +142,6 @@ Nest `.column` divs inside a `.columns` div and specify their width ([docs](http
    This will put it in the right column and appear after a click. Read the docs for other good options ([docs](https://quarto.org/docs/presentations/revealjs/index.html#output-location))
    
 :::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
+{{< fa arrow-rotate-left >}} Return to [Live Code](#fa-bolt-live-code)(#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
 :::
 
-## Add image to title slide
-
-1. 
-
-:::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} Return to [Live Code] {{< fa arrow-rotate-left >}}
-:::
