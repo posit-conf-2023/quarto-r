@@ -7,3 +7,4 @@
 /.quarto/
 materials/*/old-*
 _site
+*.html
