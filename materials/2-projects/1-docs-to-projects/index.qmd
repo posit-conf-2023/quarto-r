@@ -2,19 +2,11 @@
 title: "From Documents to Projects"
 ---
 
-> A summarty
-
-#### Slides
+> Meet your neighbors, familiarize yourself with the structure of the workshop, revisit some Quarto fundamentals, then then stitch together several documents with your first project.
 
 [Full Screen](slides.qmd)
 
 ```{=html}
-<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="slides.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-#### Outline
-
-
-#### Exercises
-
 

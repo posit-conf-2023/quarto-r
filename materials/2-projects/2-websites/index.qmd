@@ -2,20 +2,10 @@
 title: "Websites"
 ---
 
-> A summary
-
-#### Slides
+> While the default project gives us control over our documents, to navigate between them, we need something better: website projects. Learn to link your documents together with a website, explore helpful features, and generate adaptive layouts with listings.
 
 [Full Screen](slides.qmd)
 
 ```{=html}
-<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="slides.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-#### Outline
-
-1. to start
-
-#### Exercises
-
-

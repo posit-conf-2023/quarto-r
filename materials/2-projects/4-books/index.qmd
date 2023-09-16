@@ -2,19 +2,11 @@
 title: "Books"
 ---
 
-> A summary
-
-#### Slides
+> Create your first book, binding together many chapters into a work thats accessible as a pdf or on the web.
 
 [Full Screen](slides.qmd)
 
 ```{=html}
 <iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-#### Outline
-
-
-#### Exercises
-
 

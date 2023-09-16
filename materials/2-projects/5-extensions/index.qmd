@@ -2,18 +2,11 @@
 title: "Extensions"
 ---
 
-> 
-
-#### Slides
+> Quarto is an open-source tool like R and in the same way that you can extend R by writing R packages, you can extend Quarto by writing extensions. We'll look at two parts of this ecosystem: custom pdfs and Lua filters.
 
 [Full Screen](slides.qmd)
 
 ```{=html}
 <iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-#### Outline
-
-#### Exercises
-
 

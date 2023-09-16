@@ -2,19 +2,10 @@
 title: "Polishing Documents"
 ---
 
-> A summary
-
-#### Slides
+> Enrich your documents with layouts, callouts, tables, and cross-references. Utilize the fenced div and the bracketed span to finely tune your elements. Control the look of your HTML with SASS variables and the substance of your output with conditional content.
 
 [Full Screen](slides.qmd)
 
 ```{=html}
 <iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-#### Outline
-
-
-#### Exercises
-
-
