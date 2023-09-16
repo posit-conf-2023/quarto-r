@@ -1,5 +1,6 @@
 ---
 title: "About the Workshop"
+sidebar: false
 ---
 
 These materials are for two one-day workshops taking place before [posit::conf 2023](https://posit.co/conference/) in Chicago, Illinois.
