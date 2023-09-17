@@ -2,3 +2,67 @@
 title: "Sharing Your Work"
 format: qmdrslides-revealjs
 ---
+
+# Publishing
+
+## Web publishing venues
+
+| Destination                            | Description                                                                                                                                                                                     |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Quarto Pub](quarto-pub.qmd)           | Publishing service for Quarto documents, websites, and books.                                         |
+| [GitHub Pages](github-pages.qmd)       | Publish content based on source code managed within a GitHub repository.                              |     
+| [Posit Connect](rstudio-connect.qmd) | Publishing platform for secure sharing of data products within an organization.  |
+| [Netlify](netlify.qmd)                 | Professional web publishing platform.                         | 
+| [Confluence](confluence.qmd)         | Publishing platform for supporting team collaboration.  
+
+... and more.
+
+## Quartopub
+
+Visit <https://quartopub.com/> and set up a free account.
+
+:::{style="text-align: center"}
+![](images/quartopub.png)
+:::
+
+## [quarto publish]{.filename}
+
+\
+\
+
+At the Terminal, run:
+
+\
+
+:::{style="font-size: 2em"}
+```bash
+quarto publish <document>
+```
+:::
+
+
+# Custom PDF
+
+## Our Turn
+
+Let's 
+
+
+# Custom Revealjs
+
+# Journal Articles
+
+## Our Turn {.our-turn}
+
+Let's prepare an article to submit to the Journal of Statistical Software.
+
+1. At the Terminal.
+  
+   ```bash
+   quarto use template quarto-journals/jss
+   ```
+2. Render.
+3. Modify to your hearts content.
+
+
+# Thank You

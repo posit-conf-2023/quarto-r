@@ -1183,13 +1183,6 @@
     "text": "Your Turn\nOpen 2-layouts.qmd and follow the directions to create a document that describes your favorite place to visit on vacation.\n\n\nWhen you’re done, please share a screenshot of your document in Discord."
   },
   {
-    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#before-we-come-back",
-    "href": "materials/1-single-docs/2-polishing-docs/slides.html#before-we-come-back",
-    "title": "Polishing Documents",
-    "section": "Before we come back…",
-    "text": "Before we come back…\nVisit https://quartopub.com/ and set up a free account."
-  },
-  {
     "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#section",
     "href": "materials/1-single-docs/2-polishing-docs/slides.html#section",
     "title": "Polishing Documents",
@@ -1201,42 +1194,28 @@
     "href": "materials/1-single-docs/3-presentations/slides.html#anatomy-of-a-document",
     "title": "Presentations",
     "section": "Anatomy of a Document",
-    "text": "Anatomy of a Document\nPresentations, like any Quarto document,\n\nYAML\nformat: revealjs, format:\nMarkdown\nCode cells"
+    "text": "Anatomy of a Document\nPresentations, like any Quarto document,\n\nYAML format: revealjs\nMarkdown\nCode cells"
   },
   {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#output-options",
-    "href": "materials/1-single-docs/3-presentations/slides.html#output-options",
-    "title": "Presentations",
-    "section": "Output options",
-    "text": "Output options"
-  },
-  {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#our-turn",
-    "href": "materials/1-single-docs/3-presentations/slides.html#our-turn",
+    "objectID": "materials/1-single-docs/3-presentations/slides.html#toc",
+    "href": "materials/1-single-docs/3-presentations/slides.html#toc",
     "title": "Presentations",
     "section": "Our Turn",
-    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\nAdd some organization\nReveal on click\nSplit content into columns\nDeal with code more deftly\n[Add image to title slide]"
-  },
-  {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#use-the-docs",
-    "href": "materials/1-single-docs/3-presentations/slides.html#use-the-docs",
-    "title": "Presentations",
-    "section": "Use the Docs",
-    "text": "Use the Docs\n\n\n\nEssays on Functionality\n\n\nList of Options YAML keys"
+    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\nAdd some organization\nReveal on click\nSplit content into columns\nDeal with code more deftly\nAdd logo and footer\nEnable slide annotation"
   },
   {
     "objectID": "materials/1-single-docs/3-presentations/slides.html#your-turn",
     "href": "materials/1-single-docs/3-presentations/slides.html#your-turn",
     "title": "Presentations",
     "section": "Your Turn",
-    "text": "Your Turn\nPick up where we left off and modify then YAML to…\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\nExperiment with different slide background options"
+    "text": "Your Turn\nPick up where we left off and modify then YAML to…\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\nExperiment with different slide background options\n\n\n\n\n−+\n10:00"
   },
   {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#our-turn-1",
-    "href": "materials/1-single-docs/3-presentations/slides.html#our-turn-1",
+    "objectID": "materials/1-single-docs/3-presentations/slides.html#our-turn",
+    "href": "materials/1-single-docs/3-presentations/slides.html#our-turn",
     "title": "Presentations",
     "section": "Our Turn",
-    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\n[Add a timer]"
+    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\nAdd a timer\nPrint to PDF\nPrepare to present\nAdd a theme"
   },
   {
     "objectID": "materials/1-single-docs/3-presentations/slides.html#scss",
@@ -1250,35 +1229,70 @@
     "href": "materials/1-single-docs/3-presentations/slides.html#your-turn-1",
     "title": "Presentations",
     "section": "Your Turn",
-    "text": "Your Turn\nIt’s time to make this presentation really shine. Use SASS variables to\n\nSelect a new theme to use.\nPersonalize your theme by\n\nChanging the background color"
+    "text": "Your Turn\nIt’s time to make this presentation really shine. Use SASS variables to\n\nSelect a new theme to use.\nPersonalize your theme by\n\nChanging the background color\nChanging the font size."
   },
   {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#add-some-organization",
-    "href": "materials/1-single-docs/3-presentations/slides.html#add-some-organization",
+    "objectID": "materials/1-single-docs/3-presentations/slides.html#org",
+    "href": "materials/1-single-docs/3-presentations/slides.html#org",
     "title": "Presentations",
     "section": "Add some organization",
-    "text": "Add some organization\n\nAdd title slides by starting a slide with # instead of ## (docs).\nPress “o” to see slide overview (docs).\n\n\n Return to Live Code"
+    "text": "Add some organization\n\nAdd title slides by starting a slide with # instead of ## (docs).\nPress “o” to see slide overview (docs).\n\n\n Return to Our Turn"
   },
   {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#reveal-on-click",
-    "href": "materials/1-single-docs/3-presentations/slides.html#reveal-on-click",
+    "objectID": "materials/1-single-docs/3-presentations/slides.html#click",
+    "href": "materials/1-single-docs/3-presentations/slides.html#click",
     "title": "Presentations",
     "section": "Reveal on click",
-    "text": "Reveal on click\n\nAdd . . . on a new line to introduce a break in the slide that you can click to advance.\nCan add the .fragment class to any div or span to reveal on click (docs).\nAdd .incremental class to a div outside a list to incrementally reveal list items (docs).\nCan set incremental: true option in yaml under format: revealjs.\nCan create an exception using .nonincremental class on a div.\n\n\n Return to Live Code"
+    "text": "Reveal on click\n\nAdd . . . on a new line to introduce a break in the slide that you can click to advance.\nCan add the .fragment class to any div or span to reveal on click (docs).\nAdd .incremental class to a div outside a list to incrementally reveal list items (docs).\nCan set incremental: true option in yaml under format: revealjs.\nCan create an exception using .nonincremental class on a div.\n\n\n Return to Our Turn"
   },
   {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#split-content-into-columns",
-    "href": "materials/1-single-docs/3-presentations/slides.html#split-content-into-columns",
+    "objectID": "materials/1-single-docs/3-presentations/slides.html#cols",
+    "href": "materials/1-single-docs/3-presentations/slides.html#cols",
     "title": "Presentations",
     "section": "Split content into columns",
-    "text": "Split content into columns\nNest .column divs inside a .columns div and specify their width (docs)\n:::{.columns}\n\n:::{.column width=\"50%\"}\nHere is the stuff on the left.\n:::\n\n:::{.column width=\"50%\"}\nHere is the stuff on the right.\n:::\n\n:::\n\n Return to Live Code"
+    "text": "Split content into columns\nNest .column divs inside a .columns div and specify their width (docs)\n:::{.columns}\n\n:::{.column width=\"50%\"}\nHere is the stuff on the left.\n:::\n\n:::{.column width=\"50%\"}\nHere is the stuff on the right.\n:::\n\n:::\n\n Return to Our Turn"
   },
   {
-    "objectID": "materials/1-single-docs/3-presentations/slides.html#deal-with-code-more-deftly",
-    "href": "materials/1-single-docs/3-presentations/slides.html#deal-with-code-more-deftly",
+    "objectID": "materials/1-single-docs/3-presentations/slides.html#code",
+    "href": "materials/1-single-docs/3-presentations/slides.html#code",
     "title": "Presentations",
     "section": "Deal with code more deftly",
-    "text": "Deal with code more deftly\n\nNaive way: put a code cell in left column with eval: false and a copy of it in the right column with echo: false.\nInstead, try putting both of those code cells in a div with .panel-tabset. Precede each cell block with a level 2 header to serve as the label for each tab.\nBetter yet: remove the tabset and the columns. Add the code cell option.\n#| output-location: column-fragment\nThis will put it in the right column and appear after a click. Read the docs for other good options (docs)\n\n\n Return to Live Code(#fa-bolt-live-code) \n\n\n\nQuarto for R & RStudio"
+    "text": "Deal with code more deftly\n\nNaive way: put a code cell in left column with eval: false and a copy of it in the right column with echo: false.\nInstead, try putting both of those code cells in a div with .panel-tabset. Precede each cell block with a level 2 header to serve as the label for each tab.\nBetter yet: remove the tabset and the columns. Add the code cell option.\n#| output-location: column-fragment\nThis will put it in the right column and appear after a click. Read the docs for other good options (docs)\n\n\n Return to Our Turn \n\n\n\nQuarto for R & RStudio"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-sharing-your-work/slides.html#web-publishing-venues",
+    "href": "materials/1-single-docs/4-sharing-your-work/slides.html#web-publishing-venues",
+    "title": "Sharing Your Work",
+    "section": "Web publishing venues",
+    "text": "Web publishing venues\n\n\n\nDestination\nDescription\n\n\n\n\nQuarto Pub\nPublishing service for Quarto documents, websites, and books.\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository.\n\n\nPosit Connect\nPublishing platform for secure sharing of data products within an organization.\n\n\nNetlify\nProfessional web publishing platform.\n\n\nConfluence\nPublishing platform for supporting team collaboration.\n\n\n\n… and more."
+  },
+  {
+    "objectID": "materials/1-single-docs/4-sharing-your-work/slides.html#quartopub",
+    "href": "materials/1-single-docs/4-sharing-your-work/slides.html#quartopub",
+    "title": "Sharing Your Work",
+    "section": "Quartopub",
+    "text": "Quartopub\nVisit https://quartopub.com/ and set up a free account."
+  },
+  {
+    "objectID": "materials/1-single-docs/4-sharing-your-work/slides.html#quarto-publish",
+    "href": "materials/1-single-docs/4-sharing-your-work/slides.html#quarto-publish",
+    "title": "Sharing Your Work",
+    "section": "quarto publish",
+    "text": "quarto publish\n\n\n\nAt the Terminal, run:\n\n\n\nquarto publish &lt;document&gt;"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-sharing-your-work/slides.html#our-turn",
+    "href": "materials/1-single-docs/4-sharing-your-work/slides.html#our-turn",
+    "title": "Sharing Your Work",
+    "section": "Our Turn",
+    "text": "Our Turn\nLet’s"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-sharing-your-work/slides.html#our-turn-1",
+    "href": "materials/1-single-docs/4-sharing-your-work/slides.html#our-turn-1",
+    "title": "Sharing Your Work",
+    "section": "Our Turn",
+    "text": "Our Turn\nLet’s prepare an article to submit to the Journal of Statistical Software.\n\nAt the Terminal.\nquarto use template quarto-journals/jss\nRender.\nModify to your hearts content."
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html",
@@ -1292,7 +1306,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1] -0.6197073 -0.1616573  1.9473339 -0.9880099 -0.1051141"
+    "text": "Executing code\n\nrnorm(5)\n\n[1]  0.39508931 -0.21316364  0.38360821  0.06713088 -0.33249439"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",

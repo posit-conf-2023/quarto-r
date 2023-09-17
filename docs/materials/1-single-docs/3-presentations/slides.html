@@ -385,6 +385,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../../../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
 <div style="display:none;"></div>
@@ -403,38 +405,22 @@
 <h2>Anatomy of a Document</h2>
 <p>Presentations, like any Quarto document,</p>
 <ol type="1">
-<li><p>YAML</p>
-<p><code>format: revealjs</code>, format:</p></li>
-<li><p>Markdown</p></li>
-<li><p>Code cells</p></li>
+<li>YAML <span class="fragment"><code>format: revealjs</code></span></li>
+<li>Markdown</li>
+<li>Code cells</li>
 </ol>
 </section>
-<section id="output-options" class="slide level2">
-<h2>Output options</h2>
-</section>
-<section id="our-turn" class="slide level2 our-turn">
+<section id="toc" class="slide level2 our-turn">
 <h2>Our Turn</h2>
 <p>This slide deck is in desperate need of some help. Let’s…</p>
 <ol type="1">
-<li><a href="#/add-some-organization">Add some organization</a></li>
-<li><a href="#/reveal-on-click">Reveal on click</a></li>
-<li><a href="#/split-content-into-columns">Split content into columns</a></li>
-<li><a href="#/deal-with-code-more-deftly">Deal with code more deftly</a></li>
-<li>[Add image to title slide]</li>
+<li><a href="#/org">Add some organization</a></li>
+<li><a href="#/click">Reveal on click</a></li>
+<li><a href="#/cols">Split content into columns</a></li>
+<li><a href="#/code">Deal with code more deftly</a></li>
+<li>Add logo and footer</li>
+<li>Enable slide annotation</li>
 </ol>
-</section>
-<section id="use-the-docs" class="slide level2">
-<h2>Use the Docs</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>Essays on Functionality</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>List of Options YAML keys</p>
-</div>
-</div>
-</div>
 </section>
 <section id="your-turn" class="slide level2 your-turn" style="font-size: .8em">
 <h2>Your Turn</h2>
@@ -445,13 +431,23 @@
 <li>Add <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers">slide numbers</a></li>
 <li>Experiment with different <a href="https://quarto.org/docs/presentations/revealjs/#slide-backgrounds">slide background options</a></li>
 </ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_c4b42e86" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
-<section id="our-turn-1" class="slide level2 our-turn">
+<section id="our-turn" class="slide level2 our-turn">
 <h2>Our Turn</h2>
 <p>This slide deck is in desperate need of some help. Let’s…</p>
 <ol type="1">
-<li>[Add a timer]</li>
-<li></li>
+<li>Add a timer</li>
+<li>Print to PDF</li>
+<li>Prepare to present</li>
+<li>Add a theme</li>
 </ol>
 </section>
 <section id="scss" class="slide level2">
@@ -482,30 +478,26 @@
 <li>Personalize your theme by
 <ol type="a">
 <li>Changing the background color</li>
+<li>Changing the font size.</li>
 </ol></li>
 </ol>
 </section>
-<section id="quarto-publish" class="title-slide slide level1 center">
-<h1>Quarto Publish</h1>
-
-</section>
-
 <section>
 <section id="appendix" class="title-slide slide level1 center">
 <h1>Appendix</h1>
 
 </section>
-<section id="add-some-organization" class="slide level2">
+<section id="org" class="slide level2">
 <h2>Add some organization</h2>
 <ol type="1">
 <li>Add title slides by starting a slide with <code>#</code> instead of <code>##</code> (<a href="https://quarto.org/docs/presentations/#creating-slides">docs</a>).</li>
 <li>Press “o” to see slide overview (<a href="https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode">docs</a>).</li>
 </ol>
 <div style="text-align: center">
-<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/fa-bolt-live-code">Live Code</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/toc">Our Turn</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
 </div>
 </section>
-<section id="reveal-on-click" class="slide level2">
+<section id="click" class="slide level2">
 <h2>Reveal on click</h2>
 <ol type="1">
 <li>Add <code>. . .</code> on a new line to introduce a break in the slide that you can click to advance.</li>
@@ -515,10 +507,10 @@
 <li>Can create an exception using <code>.nonincremental</code> class on a div.</li>
 </ol>
 <div style="text-align: center">
-<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/fa-bolt-live-code">Live Code</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/toc">Our Turn</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
 </div>
 </section>
-<section id="split-content-into-columns" class="slide level2">
+<section id="cols" class="slide level2">
 <h2>Split content into columns</h2>
 <p>Nest <code>.column</code> divs inside a <code>.columns</code> div and specify their width (<a href="https://quarto.org/docs/presentations/revealjs/#multiple-columns">docs</a>)</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>:::{.columns}</span>
@@ -533,10 +525,10 @@
 <span id="cb2-10"><a href="#cb2-10"></a></span>
 <span id="cb2-11"><a href="#cb2-11"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div style="text-align: center">
-<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/fa-bolt-live-code">Live Code</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/toc">Our Turn</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
 </div>
 </section>
-<section id="deal-with-code-more-deftly" class="slide level2 smaller">
+<section id="code" class="slide level2 smaller">
 <h2>Deal with code more deftly</h2>
 <ol type="1">
 <li><p>Naive way: put a code cell in left column with <code>eval: false</code> and a copy of it in the right column with <code>echo: false</code>.</p></li>
@@ -546,7 +538,7 @@
 <p>This will put it in the right column and appear after a click. Read the docs for other good options (<a href="https://quarto.org/docs/presentations/revealjs/index.html#output-location">docs</a>)</p></li>
 </ol>
 <div style="text-align: center">
-<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/fa-bolt-live-code">Live Code</a>(#fa-bolt-live-code) <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> Return to <a href="#/toc">Our Turn</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
 </div>
 
 <div class="footer footer-default">
@@ -764,6 +756,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

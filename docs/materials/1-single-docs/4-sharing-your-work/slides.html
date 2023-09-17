@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -334,8 +399,95 @@
 </div>
 
 </section>
-<section class="slide level2">
+<section>
+<section id="publishing" class="title-slide slide level1 center">
+<h1>Publishing</h1>
 
+</section>
+<section id="web-publishing-venues" class="slide level2">
+<h2>Web publishing venues</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Destination</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="quarto-pub.qmd">Quarto Pub</a></td>
+<td>Publishing service for Quarto documents, websites, and books.</td>
+</tr>
+<tr class="even">
+<td><a href="github-pages.qmd">GitHub Pages</a></td>
+<td>Publish content based on source code managed within a GitHub repository.</td>
+</tr>
+<tr class="odd">
+<td><a href="rstudio-connect.qmd">Posit Connect</a></td>
+<td>Publishing platform for secure sharing of data products within an organization.</td>
+</tr>
+<tr class="even">
+<td><a href="netlify.qmd">Netlify</a></td>
+<td>Professional web publishing platform.</td>
+</tr>
+<tr class="odd">
+<td><a href="confluence.qmd">Confluence</a></td>
+<td>Publishing platform for supporting team collaboration.</td>
+</tr>
+</tbody>
+</table>
+<p>… and more.</p>
+</section>
+<section id="quartopub" class="slide level2">
+<h2>Quartopub</h2>
+<p>Visit <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a> and set up a free account.</p>
+<div style="text-align: center">
+<p><img data-src="images/quartopub.png"></p>
+</div>
+</section>
+<section id="quarto-publish" class="slide level2">
+<h2><span class="filename">quarto publish</span></h2>
+<p><br>
+<br>
+</p>
+<p>At the Terminal, run:</p>
+<p><br>
+</p>
+<div style="font-size: 2em">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">quarto</span> publish <span class="op">&lt;</span>document<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section>
+<section>
+<section id="custom-pdf" class="title-slide slide level1 center">
+<h1>Custom PDF</h1>
+
+</section>
+<section id="our-turn" class="slide level2">
+<h2>Our Turn</h2>
+<p>Let’s</p>
+</section></section>
+<section id="custom-revealjs" class="title-slide slide level1 center">
+<h1>Custom Revealjs</h1>
+
+</section>
+
+<section>
+<section id="journal-articles" class="title-slide slide level1 center">
+<h1>Journal Articles</h1>
+
+</section>
+<section id="our-turn-1" class="slide level2 our-turn">
+<h2>Our Turn</h2>
+<p>Let’s prepare an article to submit to the Journal of Statistical Software.</p>
+<ol type="1">
+<li><p>At the Terminal.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">quarto</span> use template quarto-journals/jss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Render.</p></li>
+<li><p>Modify to your hearts content.</p></li>
+</ol>
+</section></section>
+<section id="thank-you" class="title-slide slide level1 center">
+<h1>Thank You</h1>
 
 <div class="footer footer-default">
 <p><a href="index.html">Quarto for R &amp; RStudio</a></p>

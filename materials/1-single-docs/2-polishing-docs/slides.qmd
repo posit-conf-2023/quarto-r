@@ -832,14 +832,6 @@ Open `2-layouts.qmd` and follow the directions to create a document that describ
 
 When you're done, please share a screenshot of your document in Discord.
 
-## Before we come back...
-
-Visit <https://quartopub.com/> and set up a free account.
-
-:::{style="text-align: center"}
-![](images/quartopub.png)
-:::
-
 ## 
 
 :::{style="text-align:center"}
