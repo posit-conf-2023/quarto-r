@@ -48,6 +48,29 @@ $dark-bg-link-color: $orange !default;
 
 /*-- scss:rules --*/
 
+// Code
+.reveal code.sourceCode {
+  font-size: 1.5em;
+}
+
+.reveal pre.sourceCode code {
+  /* height: 500px; */
+  max-height: 800px;
+}
+
+.reveal pre code {
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.filename {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.08em;
+}
+
+//misc
+
 details>summary {
   font-size: 0.75em;
 }
@@ -159,10 +182,10 @@ div.meta-el {
   padding-left: 50px;
 }
 
-.reveal .footer {
-  font-size: .3em !important;
+.reveal div.footer p a {
   font-family: 'Nanum Myeongjo', serif !important;
-  bottom: 8px !important;
+  color: $body-color;
+  text-decoration: underline;
 }
 
 .reveal .slide-number > a[href*='title-slide'] {
@@ -200,7 +223,7 @@ img.drop {
   -webkit-font-smoothing: antialiased;
 }
 
-.reveal .live-code {
+.reveal .our-turn {
   a {
     color: $blue;
   }
@@ -239,3 +262,4 @@ img.drop {
       padding-right: 15px;
     }
 }
+

@@ -514,36 +514,43 @@
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#discussions-discord",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#discussions-discord",
     "title": "Welcome to Quarto",
-    "section": "Discussions: Discord",
-    "text": "Discussions: Discord\nAsk questions at #introduction-to-quarto-with-r-and-rstudio."
+    "section": "Discussions: discord",
+    "text": "Discussions: discord\nAsk questions at #introduction-to-quarto-with-r-and-rstudio."
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#flow-of-the-workshop-zzq",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#flow-of-the-workshop-zzq",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#flow-of-the-workshop",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#flow-of-the-workshop",
     "title": "Welcome to Quarto",
-    "section": "Flow of the Workshop ZZQ",
-    "text": "Flow of the Workshop ZZQ\n\n\n\nnormal slide\n\n\ndiscord poll\n\n\n\n\nour turn\n\n\nyour turn"
+    "section": "Flow of the Workshop",
+    "text": "Flow of the Workshop"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#stickies",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#stickies",
     "title": "Welcome to Quarto",
     "section": "Stickies",
-    "text": "Stickies\n\n\n\n\n\n\nDuring an activity, place a yellow sticky on your laptop if you’re good to go and a blue sticky if you want help.\n\n\n\n\nImage by Megan Duffy"
+    "text": "Stickies\n\n\n\n\n\n\nDuring an activity, place a blue sticky on your laptop if you’re good to go and a red sticky if you want help.\n\n\n\n\nImage by Megan Duffy"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#practicalities",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#practicalities",
     "title": "Welcome to Quarto",
     "section": "Practicalities",
-    "text": "Practicalities\n\n\n\n\nWiFi:\n\nUsername: conf22\nPassword: together!\n\nThere are gender neutral bathrooms by the National Harbor rooms.\nThe meditation room is located at National Harbor 9. Open 8am - 5pm, Monday - Thursday. The hotel also has a dedicated room behind the reception.\nThe lactation room is located at Potomac Dressing Room. Open 8am - 5pm, Monday - Thursday.\nParticipants who do not wish to be photographed have red lanyards, please note everyone’s lanyard colors before taking a photo and respect their choices.\n\n\n\nCode of Conduct\nPlease carefully review the Code of Conduct and COVID policies1 can be found at . Please review them carefully. RStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces. We strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; we will have a limited supply available upon request. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.\n\n\n\nhttps://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/"
+    "text": "Practicalities\n\n\n\nWiFi:\n\nNetwork: Posit Conf 2023\nPassword: conf2023\n\nThere are gender-neutral bathrooms located are among the Grand Suite Bathrooms.\nThere are two meditation/prayer rooms: Grand Suite 2A and Grand Suite 2B. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.\nThe lactation room is located in Grand Suite 1. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.\n\n\n\nParticipants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.\nThe Code of Conduct and COVID policies can be found at https://posit.co/code-of-conduct/. Please review them carefully. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information."
+  },
+  {
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-2",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-2",
+    "title": "Welcome to Quarto",
+    "section": "",
+    "text": "Join me in Posit Cloud!"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn",
     "title": "Welcome to Quarto",
     "section": "Your Turn",
-    "text": "Your Turn\nOpen hello-penguins.qmd in RStudio and…\n\nRender the document.\nUpdate your name and re-render.\nInspect components of the document and make one more update and re-render. Compare notes with neighbors about updates you’ve made and note any aspects of the document that are not clear after the tour and your first interaction with it"
+    "text": "Your Turn\nOpen hello-penguins.qmd in RStudio and…\n\nRender the document.\nReplace the name with your own and re-render.\nInspect the components of the document and modify one or two more and re-render. Consider changing the options at the top, the text, or the code.\nLook carefully through the source of hello-penguins.qmd. What do you notice that’s different from what it would look like in an Rmd document? Work with your neighbor to see if you can find the differences (there are at least 3).\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#articles",
@@ -599,18 +606,11 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#what-can-you-do-with-quarto-that-you-cant-with-r-markdown",
     "title": "Welcome to Quarto",
     "section": "What can you do with Quarto that you can’t with R Markdown?",
-    "text": "What can you do with Quarto that you can’t with R Markdown?\n\nEasier to organize appearance across documents\nFeatures (e.g. figures, tables) have better cross-format support\nBetter cross referencing\nUp-to-date revealjs slides\nEasier to customize websites and books with projects\nConvince your Python-user colleagues to use it\n\n\n\nNote: You can render existing R Markdown documents with Quarto and/or rename them to .qmd files to turn them into Quarto documents."
+    "text": "What can you do with Quarto that you can’t with R Markdown?\n\n\nEasier to organize appearance across documents\nFeatures (e.g. figures, tables) have better cross-format support\nBetter cross referencing\nUp-to-date revealjs slides\nEasier to customize websites and books with projects\nConvince your Python-user colleagues to use it\n\n\n\n\nNote: You can render existing R Markdown documents with Quarto and/or rename them to .qmd files to turn them into Quarto documents."
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-1",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-1",
-    "title": "Welcome to Quarto",
-    "section": "Your Turn",
-    "text": "Your Turn\nLet’s talk about syntax.\nLook carefully through the source of hello-penguins.qmd. What do you notice that’s different from what it would look like in an Rmd document? Work with your neighbor to see if you can find the differences (there are at least 3).\n\n\n\n−+\n02:00"
-  },
-  {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-9",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-9",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-10",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-10",
     "title": "Welcome to Quarto",
     "section": "",
     "text": "Inputs\n\n\n\n\n\n\n\n\n\n\n\n\n\nOutputs"
@@ -627,21 +627,21 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#three-ways-to-render",
     "title": "Welcome to Quarto",
     "section": "Three ways to render",
-    "text": "Three ways to render\n\n\nQuarto is integrated into RStudio\nClick  in Editor pane of RStudio.\n\n\n\n\nQuarto is an R package\nRun in R:\nquarto::quarto_render(input = ___, output_format = ___)\n\n\n\n\nQuarto is a command line tool\nRun at the terminal:\nquarto render &lt;input&gt; --to &lt;format&gt;`"
+    "text": "Three ways to render\n\n\nQuarto is integrated into RStudio\nClick  in Editor pane of RStudio.\n\n\n\n\nQuarto is an R package\nRun in R:\nquarto::quarto_render(input = ___, output_format = ___)\n\n\n\n\nQuarto has a command line interface (CLI)\nRun at the terminal:\nquarto render &lt;input&gt; --to &lt;format&gt;"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#element-expression-depends-on-format",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#element-expression-depends-on-format",
     "title": "Welcome to Quarto",
     "section": "Element expression depends on format",
-    "text": "Element expression depends on format\nEmphasis\nHTML\nA &lt;em&gt;spatial logical toy&lt;/em&gt;\nLATEX\nA \\emph{spatial logical toy}\n\n\nImage\nHTML\n&lt;img src=\"images/med-rubiks-cube.png\" class=\"img-fluid\"&gt;\nLATEX\n\\includegraphics{images/med-rubiks-cube.png}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNavigate to the terminal tab of the console pane\nRun quarto render demo.qmd –to html\nRun quarto render demo.qmd –to docx\nRun quarto render demo.qmd –to latex\nInspect how emphasis and the image is expressed"
+    "text": "Element expression depends on format\nEmphasis\nHTML\nA &lt;em&gt;spatial logical toy&lt;/em&gt;\nLATEX\nA \\emph{spatial logical toy}\n\n\nImage\nHTML\n&lt;img src=\"images/med-rubiks-cube.png\" class=\"img-fluid\"&gt;\nLATEX\n\\includegraphics{images/med-rubiks-cube.png}\n\n\nNavigate to the terminal tab of the console pane\nRun quarto render demo.qmd –to html\nRun quarto render demo.qmd –to docx\nRun quarto render demo.qmd –to latex\nInspect how emphasis and the image is expressed"
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-2",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-2",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-1",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-1",
     "title": "Welcome to Quarto",
     "section": "Your Turn",
-    "text": "Your Turn\nLet’s focus on using quarto at the command line. Within RStudio, this can be done in the Terminal tab in the Console pane.\n\nRender ex-1.qmd to html and view the html file in an editor. How is the list expressed in html?\nRender ex-1.qmd to latex and view the latex file in an editor. How is the list expressed in latex?\nTry changing the extension of ex-1.qmd to be .md and .Rmd and re-rendering. Does the output differ?\nExplore full list of commands available in Quarto by using quarto --help."
+    "text": "Your Turn\n\nRender 2-formats.qmd to html and view the html file in an editor. How is the list expressed in html? (you can click on it in the Files pane)\nRender 2-formats.qmd to latex and view the latex file in an editor. How is the list expressed in latex?\nChange the extension of 2-formats.qmd to be .md and .Rmd and re-render. Does the output differ?\nTry rendering the file to a pdf format but this time using the CLI (command line interval) in the Terminal tab.\nquarto render &lt;input&gt; --to &lt;format&gt;\n\n\n\n\n−+\n07:00"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#try-pandoc",
@@ -658,32 +658,25 @@
     "text": "Metadata: YAML\n“Yet Another Markup Language” or “YAML Ain’t Markup Language” is used to provide document level metadata …\n\n\n\n\n… in key-value pairs,\n… that can nest,\n… are fussy about indentation,\n… and are kept between ---.\n\n\n\n---\nformat: \n  html:\n    toc: true\n    code-fold: true\n---"
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-10",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-10",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-11",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-11",
     "title": "Welcome to Quarto",
     "section": "",
     "text": "Which of the following are valid ways to include metadata?\n\n\n\nA\n---\ntitle: US Patent: A Spatial Toy\nauthor: Erno Rubik\nformat: html\n---\n\nMy idea is to build a cube...\nC\n---\nformat: html\n---\n\nMy idea is to build a cube...\n\n---\ntitle: A Spatial Toy\nauthor: Erno Rubik\n---\n\nC\nMy idea is to build a cube...\n… then at the command line, run:\nquarto render patent.qmd --to html -M title:patent\nD\n---\ntitle: \"US Patent: A Spatial Toy\"\nauthor: \"Erno Rubik\"\nformat: \"html\"\n---\n\nMy idea is to build a cube..."
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-yaml-1",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-yaml-1",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-yaml-syntax-rules",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-yaml-syntax-rules",
     "title": "Welcome to Quarto",
-    "section": "Metadata: YAML",
-    "text": "Metadata: YAML\n\n\n---\ntitle: \"US Patent: A Spatial Toy\"\nauthor:\n  - Erno Rubrik\n  - Albert Einstein\nformat:\n  html:\n    toc: true\n    abstract: |\n      This is the abstract.\n\n      It has two paragraphs.\n---\n\nSome syntax rules:\n\n\nSet a single value with\nkey: value`\nSet a list of values either:\nkey: [val1, val2]`\nkey:\n  - val1\n  - val2\nQuote values that contain :\nNest key-value pairs with 2 space indent\nMulti-line strings follow |\nMultiple YAML blocks will be merged\n\n\n\n\n\n\nAn overview of YAML syntax: https://en.m.wikipedia.org/wiki/YAML#Syntax"
+    "section": "Metadata: YAML Syntax Rules",
+    "text": "Metadata: YAML Syntax Rules\n\n\n---\ntitle: \"US Patent: A Toy\"\nauthor:\n  - Erno Rubrik\n  - Albert Einstein\nformat:\n  html:\n    toc: true\n    abstract: |\n      This is the abstract.\n\n      It has two paragraphs.\n---\n\n\n\nSet a single value with\nkey: value\nSet a list of values either:\nkey: [val1, val2]\nkey:\n  - val1\n  - val2\nQuote values that contain :\nIndent 2 spaces to nest\nMulti-line strings follow |\nMultiple YAML blocks will be merged\n\n\n\n\n\n\nAn overview of YAML syntax: https://en.m.wikipedia.org/wiki/YAML#Syntax"
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-fussing-with-yaml-invalid",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-fussing-with-yaml-invalid",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-fussing-with-yaml",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-fussing-with-yaml",
     "title": "Welcome to Quarto",
-    "section": "Metadata: Fussing with YAML (invalid)",
-    "text": "Metadata: Fussing with YAML (invalid)\n\nInvalid: No space after :\n\n---\nformat:html\n---\n\nInvalid: Read as missing\n\n---\nformat:\nhtml\n---\n\nValid, but needs next object\n\n---\nformat: \n  html:\n---"
-  },
-  {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-fussing-with-yaml-valid",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#metadata-fussing-with-yaml-valid",
-    "title": "Welcome to Quarto",
-    "section": "Metadata: Fussing with YAML (valid)",
-    "text": "Metadata: Fussing with YAML (valid)\nThere are multiple ways of formatting valid YAML:\n\nValid: There’s a space after :\n\nformat: html\n\nValid: There are 2 spaces a new line and no trailing :\n\nformat:\n  html\n\nValid: format: html with additional options made with proper indentation\n\nformat: \n  html:\n    toc: true"
+    "section": "Metadata: Fussing with YAML",
+    "text": "Metadata: Fussing with YAML\nInvalid\n\n\n---\nformat:html\n---\n\n\n---\nformat:\nhtml\n---\n\n\n---\nformat: \n  html:\n---\n\nValid\nformat: html\n\n\nformat:\n  html\n\n\nformat: \n  html:\n    toc: true"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#quarto-linting",
@@ -700,29 +693,29 @@
     "text": "Quarto YAML Intelligence\nRStudio + VSCode provide rich tab-completion - start a word and tab to complete, or Ctrl + space to see all available options."
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-3",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-3",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-2",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-2",
     "title": "Welcome to Quarto",
     "section": "Your Turn",
     "text": "Your Turn\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options that sound interesting.\nBring back your two favorite to share in chat when we return from breakout rooms.\nUse the HTML reference as needed.\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-11",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-11",
-    "title": "Welcome to Quarto",
-    "section": "",
-    "text": "Markdown is designed to be easy to write and easy to read:\n\nA Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.\n-John Gruber\n\n\n\n\nQuarto uses extended version of Pandoc markdown.\nPandoc classifies markdown in terms of Inline and Block elements."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-12",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-12",
     "title": "Welcome to Quarto",
     "section": "",
-    "text": "Whenever I hear “Pandoc”, I picture . . .\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . . but there’s help!\n\n\n\n\n\nVia giphy."
+    "text": "Markdown is designed to be easy to write and easy to read:\n\nA Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.\n-John Gruber\n\n\n\n\nQuarto uses extended version of Pandoc markdown.\nPandoc classifies markdown in terms of Inline and Block elements."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-13",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-13",
+    "title": "Welcome to Quarto",
+    "section": "",
+    "text": "Whenever I hear “Pandoc”, I picture . . .\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . . but there’s help!\n\n\n\n\n\nVia giphy."
+  },
+  {
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-14",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-14",
     "title": "Welcome to Quarto",
     "section": "",
     "text": "Which of the following forms of text formatting are possible in pandoc markdown?\n\nitalics\nbold\nunderline\nsuperscript\nsubscript\nstrikethrough"
@@ -732,28 +725,28 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#inline-elements-text-formatting",
     "title": "Welcome to Quarto",
     "section": "Inline Elements: Text Formatting",
-    "text": "Inline Elements: Text Formatting\n\n\nMarkdown\nMarkdown allows you to format text with\n*emphasis* and **strong emphasis**. You can\nalso add superscripts^2^, subscripts~2~, and\ndisplay code `verbatim`. Little known fact:\nyou can also ~~strikethrough~~ text and\npresent it in [small caps]{.smallcaps}.\n\n\nOutput\nMarkdown allows you to format text with emphasis and strong emphasis. You can also add superscripts2, subscripts2, and display code verbatim. Little known fact: you can also strikethrough text and present it in small caps.\n\n\n\n1\n\nEither the * or _ can be used for emphasis and strong."
+    "text": "Inline Elements: Text Formatting\n\n\nMarkdown\nMarkdown allows you to format text\nwith *emphasis* and **strong emphasis**.\nYou can also add superscripts^2^, \nsubscripts~2~, and display code \n`verbatim`. Little known fact: you can \nalso ~~strikethrough~~ text and present\nit in [small caps]{.smallcaps}.\n\n\nOutput\nMarkdown allows you to format text with emphasis and strong emphasis. You can also add superscripts2, subscripts2, and display code verbatim. Little known fact: you can also strikethrough text and present it in small caps.\n\n\n\n1\n\nEither the * or _ can be used for emphasis and strong."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#inline-elements-math",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#inline-elements-math",
     "title": "Welcome to Quarto",
     "section": "Inline Elements: Math",
-    "text": "Inline Elements: Math\n\n\nMarkdown\nThe area of a circle is $A = \\pi r^2$,where\n$r$ is the radius and $\\pi$ is the constant\n$3.141592\\ldots$.\n\n\nOutput\nThe area of a circle is \\(A = \\pi r^2\\), where \\(r\\) is the radius and \\(\\pi\\) is the constant \\(3.141592\\ldots\\).\n\n\n\n\n\n\n\n\nTeX math lives between two $. Opening $ must have a non-space character immediately to its right, while the closing $ must have a non-space character immediately to its left, and must not be followed immediately by a digit."
+    "text": "Inline Elements: Math\n\n\nMarkdown\nThe area of a circle is $A = \\pi r^2$,\nwhere $r$ is the radius and $\\pi$ is\nthe constant $3.141592\\ldots$.\n\n\nOutput\nThe area of a circle is \\(A = \\pi r^2\\), where \\(r\\) is the radius and \\(\\pi\\) is the constant \\(3.141592\\ldots\\).\n\n\n\n\n\n\n\n\n\nTeX math lives between two $. Opening $ must have a non-space character immediately to its right, while the closing $ must have a non-space character immediately to its left, and must not be followed immediately by a digit.\n– the Pandoc Docs"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#inline-elements-links-and-images",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#inline-elements-links-and-images",
     "title": "Welcome to Quarto",
     "section": "Inline Elements: Links and Images",
-    "text": "Inline Elements: Links and Images\n\n\nMarkdown\nYou can embed [links with names](https://quarto.org/),\ndirect urls like &lt;https://quarto.org/&gt;, and links to\n[other places](#inline-elements-text-formatting) in\nthe document. The syntax is similar for embedding an\ninline image: ![render icon](images/render-icon.png).\n\n\nOutput\nYou can embed links with names, direct urls like https://quarto.org/, and links to other places in the document. The syntax is similar for embedding an inline image: ."
+    "text": "Inline Elements: Links and Images\nMarkdown\nYou can embed [links with names](https://quarto.org/), direct urls\nlike &lt;https://quarto.org/&gt;, and links to \n[other places](#inline-elements-text-formatting) in the document. \nThe syntax is similar for embedding an inline image:\n![render icon](images/render-icon.png).\n\n\n\n\nOutput\nYou can embed links with names, direct urls like https://quarto.org/, and links to other places in the document. The syntax is similar for embedding an inline image: ."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#inline-elements-footnotes",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#inline-elements-footnotes",
     "title": "Welcome to Quarto",
     "section": "Inline Elements: Footnotes",
-    "text": "Inline Elements: Footnotes\n\n\nMarkdown\nHere is a short note.^[Small enough to fit inline.]\n\n\nOutput\nHere is a short note.1\n\n\n\n\n\n\n\nHere is a longer footnote[^9]\n\n[^9]: This footnote can be placed in a separate block.\nThe identifier can be any alphanumeric string.\n\nHere is a longer footnote2\n\n\n\n\n\nPlacement of the actual footnote depends on the format: end of page for pdf, end of doc for HTML, bottom of slide for presentations.\n\n\nSmall enough to fit inline.This footnote can be placed in a separate block. The identifier can be any alphanumeric string."
+    "text": "Inline Elements: Footnotes\n\n\nMarkdown\nA short note.^[Fits inline.]\n\n\nOutput\nA short note.1\n\n\n\n\n\n\n\nA longer footnote[^9]\n\n[^9]:  Can be placed in a separate block.\nThe id can be any alphanumeric string.\n\nA longer footnote2\n\n\n\n\n\nPlacement of the actual footnote depends on the format: end of page for pdf, end of doc for HTML, bottom of slide for presentations.\n\n\nFits inline.Can be placed in a separate block. The id can be any alphanumeric string."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-paragraph",
@@ -777,46 +770,46 @@
     "text": "Block Elements: Lists\nCan use *, -, or + may be used for unordered list items.\n\n\nMarkdown\nUnordered list:\n\n* red\n* green\n* blue\n\nOrdered list:\n\n1. red\n1. green\n3. blue\n\nOutput\n\nUnordered list:\n\nred\ngreen\nblue\n\nOrdered list:\n\nred\ngreen\nblue\n\n\n\n\nPandoc gives you a lot of control over lists, including nesting, fancy lists, definition lists, blocks in lists, and example lists.\n\n\n\n\nRead the docs for details: https://pandoc.org/MANUAL.html#pandocs-markdown"
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-14",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-14",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-15",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-15",
     "title": "Welcome to Quarto",
     "section": "",
-    "text": "Which of the following will render to the output on the right?\n\n\n\nA\n1. I once has a sandwich.\n\n   It was deliiiicous.\n\n1. I then had coffee.\n\n   It gave me joy.\nC\n1. I once has a sandwich.\nIt was deliiiicous.\n\n2. I then had coffee.\nIt gave me joy.\n\nB\n1. I once has a sandwich.\n  It was deliiiicous.\n\n2. I then had coffee.\n  It gave me joy.\nD\n1. I once has a sandwich.\n\n    It was deliiiicous.\n\n2. I then had coffee.\n\n    It gave me joy.\n\nOutput\n\nI once has a sandwich.\nIt was deliiiicous.\nI then had coffee.\nIt gave me joy.\n\n\n\n\n\nIt’s hard to tell but there are two paragraphs in each list item in the output."
+    "text": "Which of the following will render to the output on the right?\n\n\n\nA\n1. I has a sandwich.\n\n   It was deliicous.\n\n1. I had coffee.\n\n   It gave me joy.\nC\n1. I has a sandwich.\nIt was deliicous.\n\n2. I had coffee.\nIt gave me joy.\n\nB\n1. I has a sandwich.\n  It was deliicous.\n\n2. I had coffee.\n  It gave me joy.\nD\n1. I has a sandwich.\n\n    It was deliicous.\n\n2. I had coffee.\n\n    It gave me joy.\n\nOutput\n\nI has a sandwich.\nIt was deliicous.\nI had coffee.\nIt gave me joy."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-lists-blocks-in-lists",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-lists-blocks-in-lists",
     "title": "Welcome to Quarto",
     "section": "Block Elements: Lists (blocks in lists)",
-    "text": "Block Elements: Lists (blocks in lists)\n“A list item may contain multiple paragraphs and other block-level content. Subsequent block elements must be preceded by a blank line and indented to line up with the first non-space content after the list marker.”\n\n\nMarkdown\n1. First item...\n\n   ...Continued.\n\n1. Second item\n\n   # header\n\n1. Third item\n\nOutput\n\nFirst item…\n…Continued.\nSecond item\nheader\nThird item"
+    "text": "Block Elements: Lists (blocks in lists)\n\nA list item may contain multiple paragraphs and other block-level content. Subsequent block elements must be preceded by a blank line and indented to line up with the first non-space content after the list marker. – the Pandoc Docs\n\n\n\nMarkdown\n1. First item...\n\n   ...Continued.\n\n1. Second item\n\n   # header\n\n1. Third item\n\nOutput\n\nFirst item…\n…Continued.\nSecond item\nheader\nThird item"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-lists-example-lists",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-lists-example-lists",
     "title": "Welcome to Quarto",
     "section": "Block Elements: Lists (example lists)",
-    "text": "Block Elements: Lists (example lists)\n“The first list item with a @ marker will be numbered 1., the next 2., etc. The numbered examples need not occur in a single list; each new list using @ will take up where the last stopped.”\n\n\nMarkdown\n(@)  My first example will be numbered (1).\n(@)  My second example will be numbered (2).\n\nExplanation of examples.\n\n(@)  My third example will be numbered (3).\n\nOutput\n\nMy first example will be numbered (1).\nMy second example will be numbered (2).\n\nExplanation of examples.\n\nMy third example will be numbered (3).\n\n\n\n\nYou can also label your examples: (@goodname)."
+    "text": "Block Elements: Lists (example lists)\n\nThe first list item with a @ marker will be numbered 1., the next 2., etc. The numbered examples need not occur in a single list; each new list using @ will take up where the last stopped. – the Pandoc Docs\n\n\n\nMarkdown\n(@)  The first example.\n(@)  The second example.\n\nExplanation of examples.\n\n(@)  The third example.\n\nOutput\n\nThe first example.\nThe second example.\n\nExplanation of examples.\n\nThe third example.\n\n\n\n\nYou can also label your examples: (@goodname)."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-math",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-math",
     "title": "Welcome to Quarto",
     "section": "Block Elements: Math",
-    "text": "Block Elements: Math\n\n\nMarkdown\nA larger equation:\n\n$$\nf(x)={\\sqrt{\\frac{\\tau}{2\\pi}}}\n      e^{-\\tau (x-\\mu )^{2}/2}\n$$\n\nThis breaks it:\n\n$$\n\n\\bar{x} = \\sum_{i=i}^n x_1\n$$\n\n\nOutput\nA larger equation:\n\\[\nf(x)=\\sqrt{\\frac{\\tau}{2\\pi}}\n    e^{-\\tau (x-\\mu )^{2}/2}\n\\]\nThis breaks it:\n$$\n{x} = _{i=i}^n x_1 $$\n\n\n\n\n\n\nFor “display” math, use $$ delimiters. The delimiters may be separated from the formula by whitespace. No blank lines between the opening and closing $$ delimiters."
+    "text": "Block Elements: Math\n\n\nMarkdown\nA larger equation:\n\n$$\nf(x)={\\sqrt{\\frac{\\tau}{2\\pi}}}\n      e^{-\\tau (x-\\mu )^{2}/2}\n$$\n\nThis breaks it:\n\n$$\n\n\\bar{x} = \\sum_{i=i}^n x_1\n$$\n\n\nOutput\nA larger equation:\n\\[\nf(x)=\\sqrt{\\frac{\\tau}{2\\pi}}\n    e^{-\\tau (x-\\mu )^{2}/2}\n\\]\nThis breaks it:\n$$\n{x} = _{i=i}^n x_1 $$\n\n\nFor “display” math, use $$ delimiters."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-images",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#block-elements-images",
     "title": "Welcome to Quarto",
     "section": "Block Elements: Images",
-    "text": "Block Elements: Images\nBlock images use the same syntax as inline images.\n\n\nMarkdown\nImages on their own line become a block:\n\n![Elephant](images/elephant.png)\n\nor do they?\n\n\nOutput\nImages on their own line become a block:\n\n\n\nElephant\n\n\nor do they?\n\n\n\n\n\n\n\n\n\nImages behave mostly like inline elements but actually live in a block (e.g. a paragraph). Their behavior depends on output format."
+    "text": "Block Elements: Images\nBlock images use the same syntax as inline images.\n\n\nMarkdown\nImages are a block element...\n\n![Elephant](images/elephant.png)\n\nor are they?\n\n\nOutput\nImages are a block element…\n\n\n\nElephant\n\n\nor are they?\n\n\n\n\n\n\n\n\n\nImages behave mostly like inline elements but actually live in a block (e.g. a paragraph). Their behavior depends on output format."
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-4",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-4",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-3",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-3",
     "title": "Welcome to Quarto",
     "section": "Your Turn",
-    "text": "Your Turn\nYour goal is to create from scratch the beautiful documents ex-2-goal.html and ex-2-goal.pdf. Add into ex-2.qmd the markdown syntax needed to create the various inline and block elements found in the output documents.\n\n\n\n\n\n\n\n\n\nInline\n\ntext formatting\nmath\nlinks and images\nfootnotes\n\n\n\nBlock\n\nparagraphs\nheaders\nlists\nmath\nimages\n\n\n\n\n\n\n\n\n\n\n\n−+\n10:00\n\n\n\n\n\nFor reference, see: https://pandoc.org/MANUAL.html#pandocs-markdown"
+    "text": "Your Turn\nYour goal is to create from scratch the beautiful documents 3-markdown-goal.html and 3-markdown-goal.pdf. Add into 3-markdown.qmd the markdown syntax needed to create the various inline and block elements found in the output documents.\n\n\n\n\n\n\n\n\n\nInline\n\ntext formatting\nmath\nlinks and images\nfootnotes\n\n\n\nBlock\n\nparagraphs\nheaders\nlists\nmath\nimages\n\n\n\n\n\n\n\n\n\n\n\n−+\n10:00\n\n\n\n\n\nFor reference, see: https://pandoc.org/MANUAL.html#pandocs-markdown"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#pandocs-fenced-code-block",
@@ -875,8 +868,8 @@
     "text": "Setting knitr options\nThe knitr syntax for passing options still works since Quarto uses knitr.\n\n\nSource\n```{r, error=TRUE}\n#| echo: true\n\nrnorm(5       # this is missing a parens\n```\n\n\nOutput\n\nrnorm(5       # this is missing a parens\n\nError: &lt;text&gt;:2:0: unexpected end of input\n1: rnorm(5       # this is missing a parens\n   ^\n\n\n\n\n\n\nWhile it’s possible to use R chunks options, hash pipe options are more portable across computational engines.\n\n\n\n\nWithout error=TRUE, this would error out on rendering and produce no output."
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-16",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-16",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-17",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-17",
     "title": "Welcome to Quarto",
     "section": "",
     "text": "Don’t forget to use tab-completion to see the available options!"
@@ -914,21 +907,21 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#example-figures-from-code",
     "title": "Welcome to Quarto",
     "section": "Example: Figures from Code",
-    "text": "Example: Figures from Code\n\n\n```{r}\nlibrary(palmerpenguins)\nlibrary(ggplot2)\n\nggplot(penguins, aes(x = bill_length_mm,\n                     y = bill_depth_mm,\n                     col = island)) +\n  geom_point()\n```"
+    "text": "Example: Figures from Code\n\n\n```{r}\nlibrary(palmerpenguins)\nlibrary(ggplot2)\n\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm,\n           col = island)) +\n  geom_point()\n```"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#example-figures-from-code-1",
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#example-figures-from-code-1",
     "title": "Welcome to Quarto",
     "section": "Example: Figures from Code",
-    "text": "Example: Figures from Code\n\n\n```{r}\n#| fig-width: 5\n#| fig-height: 3\n\nlibrary(palmerpenguins)\nlibrary(ggplot2)\n\nggplot(penguins, aes(x = bill_length_mm,\n                     y = bill_depth_mm,\n                     col = island)) +\n  geom_point()\n```\n\n\n\n\n\n\n\n\n\n\nSave time/code by moving figure sizing defaults up to the YAML."
+    "text": "Example: Figures from Code\n\n\n```{r}\n#| fig-width: 5\n#| fig-height: 3\n\nlibrary(palmerpenguins)\nlibrary(ggplot2)\n\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm,\n           col = island)) +\n  geom_point()\n```\n\n\n\n\n\n\n\n\n\n\nSave time/code by moving figure sizing defaults up to the YAML."
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-5",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-5",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-4",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-4",
     "title": "Welcome to Quarto",
     "section": "Your turn",
-    "text": "Your turn\n\n\nOpen code-cells.qmd and render the document.\nAdd echo: false to the code cell and re-render.\nAdd 2 more cell options by using Ctrl + Space after the #| or consult the Quarto Reference.\nAdd a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.\nPlease share your favorite code cell option on .\n\n\n\n\n\n−+\n07:00"
+    "text": "Your turn\n\n\nOpen 3-code-cells.qmd and render the document.\nAdd echo: false to the code cell and re-render.\nAdd 2 more cell options by using Ctrl + Space after the #| or consult the Quarto Reference.\nAdd a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.\nPlease share your favorite code cell option on .\n\n\n\n\n\n−+\n07:00"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#questions",
@@ -952,11 +945,256 @@
     "text": "References and further reading\n\nA Brief History of R Markdown: a presentation by Yihui Xie in 2021.\nPandoc documentation on type references: this section documents the tools needed to write Lua filters but included in this is a compendium of the different block and inline elements recognized by pandoc.\nBlock and Inline Elements: from Client-side Web Development by Ross and Freeman. Provides clear description of elements in the setting of HTML.\nCommand Line Essentials: a short primer on how to navigate through a file structure at the command line.sla\nSpatial Logical Toy: The US patent of what became the Rubik’s Cube. Several examples in these slides borrow figures and text from the patent.\n\n\n\nQuarto for R & RStudio"
   },
   {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#what-happens-when-you-pandoc-it",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#what-happens-when-you-pandoc-it",
+    "title": "Polishing Documents",
+    "section": "What happens when you pandoc it?",
+    "text": "What happens when you pandoc it?\nFrom the last exercise . . .\nquarto pandoc -f html -t markdown 3-markdow-goal.html -o answer.md\n\n\n\n\n\n\n\n\nThis looks familiar!"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#what-happens-when-you-pandoc-it-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#what-happens-when-you-pandoc-it-1",
+    "title": "Polishing Documents",
+    "section": "What happens when you pandoc it?",
+    "text": "What happens when you pandoc it?\nFrom the last exercise . . .\nquarto pandoc -f html -t markdown 3-markdow-goal.html -o answer.md\n\n\n\n\n\n\n\n\nThis looks familiar!\n\n\n            . . . but this does not."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span",
+    "title": "Polishing Documents",
+    "section": "The Bracketed Span",
+    "text": "The Bracketed Span"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-1",
+    "title": "Polishing Documents",
+    "section": "The Bracketed Span",
+    "text": "The Bracketed Span"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-2",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-2",
+    "title": "Polishing Documents",
+    "section": "The Bracketed Span",
+    "text": "The Bracketed Span"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-3",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-3",
+    "title": "Polishing Documents",
+    "section": "The Bracketed Span",
+    "text": "The Bracketed Span"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-4",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-4",
+    "title": "Polishing Documents",
+    "section": "The Bracketed Span",
+    "text": "The Bracketed Span"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-5",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#the-bracketed-span-5",
+    "title": "Polishing Documents",
+    "section": "The Bracketed Span",
+    "text": "The Bracketed Span"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#the-fenced-div",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#the-fenced-div",
+    "title": "Polishing Documents",
+    "section": "The Fenced Div",
+    "text": "The Fenced Div"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#poll",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#poll",
+    "title": "Polishing Documents",
+    "section": "Poll",
+    "text": "Poll\n\n What is your preferred method of adding a figure to an Rmd so that it displays in HTML at 300 pixels wide?\n\nA. markdown\n![A nice image.](foo/bar.png){width=300}\nB. html\n&lt;img src=\"foo/bar.png\" width=\"300\"&gt;\nC: knitr\n```{r, out.width=\"300px\"}\nknitr::includegraphics(\"foo/bar.png\")\n```"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#attributes",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#attributes",
+    "title": "Polishing Documents",
+    "section": "Attributes",
+    "text": "Attributes\nSet width, height, fig-align, add link, and alt-text (captions go inside []).\n![](images/dog-watch.png){width=300 fig-align=right}\n\n\n\n\n\n\n\n\n\n\nUnits default to px.\nOther choices 300in, 300% (relative to image size), 3em (relative to font size).\nEntire fig can be nested inside the link syntax ([fig](url)) to link the image"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#internal-links",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#internal-links",
+    "title": "Polishing Documents",
+    "section": "Internal links",
+    "text": "Internal links\nIn additional to external resources, links can go to elements of the same doc through its #id.\n\n\n\nMarkdown\n![A caption](images/dog-watch.png){#dog}\n\n&lt; Much more text &gt;\n\nA novelty clock, [watch](#dog), \nand the like for keeping time \nat an animal's rate . . .\n\n\nHTML output\n\n\n\n\nA caption\n\n\n\n&lt; Much more text &gt;\nA novelty clock, watch, and the like for keeping time at an animal’s rate . . .\n\n\n\n\n\n\nWorks for many elements,\nnot just figs!"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#markdown-tables",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#markdown-tables",
+    "title": "Polishing Documents",
+    "section": "Markdown tables",
+    "text": "Markdown tables\nMarkdown:\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\n\n: Sample markdown table. {#mytab}\n\nOutput:\n\nSample markdown table. {#mytab}\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#grid-tables",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#grid-tables",
+    "title": "Polishing Documents",
+    "section": "Grid tables",
+    "text": "Grid tables\nMarkdown:\n+---------------+---------------+--------------------+\n| Fruit         | Price         | Advantages         |\n+===============+===============+====================+\n| Bananas       | $1.34         | - built-in wrapper |\n|               |               | - bright color     |\n+---------------+---------------+--------------------+\n| Oranges       | $2.10         | - cures scurvy     |\n|               |               | - tasty            |\n+---------------+---------------+--------------------+\n\n: Sample grid table."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#tables-from-code",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#tables-from-code",
+    "title": "Polishing Documents",
+    "section": "Tables from code",
+    "text": "Tables from code\nThe knitr package can turn data frames into tables with knitr::kable():\n\n\nlibrary(knitr)\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\ns_penguins &lt;- penguins |&gt; \n  select(species,\n         island,\n         bill_length_mm) |&gt;\n  slice(1:5)\n\ns_penguins |&gt;\n  kable()\n\n\n\n\n\nspecies\nisland\nbill_length_mm\n\n\n\n\nAdelie\nTorgersen\n39.1\n\n\nAdelie\nTorgersen\n39.5\n\n\nAdelie\nTorgersen\n40.3\n\n\nAdelie\nTorgersen\nNA\n\n\nAdelie\nTorgersen\n36.7"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#tables-from-code-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#tables-from-code-1",
+    "title": "Polishing Documents",
+    "section": "Tables from code",
+    "text": "Tables from code\nIf you want fancier tables, try the gt package and all that it offers!\n\n\n\nlibrary(gt)\n\ns_penguins |&gt; \n  gt() |&gt;\n  tab_style(\n    style = list(\n      cell_fill(color = \"pink\"),\n      cell_text(style = \"italic\")\n      ),\n    locations = cells_body(\n      columns = bill_length_mm,\n      rows = bill_length_mm &gt; 40\n    )\n  )\n\n\n\n\n\n\n\n\n  \n    \n    \n      species\n      island\n      bill_length_mm\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n    Adelie\nTorgersen\n39.5\n    Adelie\nTorgersen\n40.3\n    Adelie\nTorgersen\nNA\n    Adelie\nTorgersen\n36.7"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#cross-references-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#cross-references-1",
+    "title": "Polishing Documents",
+    "section": "Cross references",
+    "text": "Cross references\n\nHelp readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.\nCross referencing steps:\n\nAdd a caption to your figure or table.\nGive an id to your figure or table, starting with fig- or tbl-.\nRefer to it with @fig-... or @tbl-...."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#figure-cross-references",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#figure-cross-references",
+    "title": "Polishing Documents",
+    "section": "Figure cross references",
+    "text": "Figure cross references\nThe presence of the caption (Dog watch) and label (#fig-dog-watch) make this figure referenceable:\nMarkdown:\nSee @fig-dog-watch for a dog wearing a watch.\n![Dog watch](images/dog-watch.png){#fig-dog-watch}\n\nOutput:\nSee Figure 1 for a dog wearing a watch.\n\n\n\n\n\nFigure 1: Dog watch"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#table-cross-references-from-code",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#table-cross-references-from-code",
+    "title": "Polishing Documents",
+    "section": "Table cross references (from code)",
+    "text": "Table cross references (from code)\nThe presence of the caption (A few penguins) and label (#tbl-penguins) make this table referenceable:\n\n\nMarkdown:\nSee @tbl-penguins for data on a few penguins.\n\n```{r}\n#| label: tbl-penguins\n#| tbl-cap: A few penguins\n\nhead(penguins) |&gt; \n  gt()\n```\n\nOutput:\nSee Table 1 for data on a few penguins.\n\n\n\n\n\n\nTable 1:  A few penguins \n  \n    \n    \n      species\n      island\n      bill_length_mm\n      bill_depth_mm\n      flipper_length_mm\n      body_mass_g\n      sex\n      year\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n    Adelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n    Adelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n    Adelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n    Adelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n    Adelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#table-cross-references-from-markdown",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#table-cross-references-from-markdown",
+    "title": "Polishing Documents",
+    "section": "Table cross references (from markdown)",
+    "text": "Table cross references (from markdown)\nThe presence of the caption (Numbers) and label (#tbl-numbers) make this table referenceable:\n\n\nMarkdown:\nSee @tbl-numbers for data.\n\n| Right | Left |\n|------:|:-----|\n|   12  |  12  |\n|  123  |  123 |\n\n: Numbers {#tbl-numbers}\n\nOutput:\nSee Table 2 for data.\n\n\nTable 2: Numbers\n\n\nRight\nLeft\n\n\n\n\n12\n12\n\n\n123\n123"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#your-turn",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#your-turn",
+    "title": "Polishing Documents",
+    "section": "Your Turn",
+    "text": "Your Turn\nOpen 1-tables-figures.qmd.\n\nCreate a 3 row x 2 col markdown table, populate with a column for restaurant + column for cuisine, and then add 3 examples. Then, cross reference it from text.\nInclude and image from the images/ folder and set its width.\nAdd a figure generated from code and cross reference it.\n\nhist(rnorm(100))\n\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#example-callout-blocks",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#example-callout-blocks",
+    "title": "Polishing Documents",
+    "section": "Example: Callout Blocks",
+    "text": "Example: Callout Blocks\nUse case: highlight content for the reader in multiple formats.\n\n\n\nMarkdown\n:::{.callout-note}\nLook - a squirrel!\n:::\n\n:::{.callout-important}\nLook - a squirrel!\n:::\n\n:::{.callout-tip}\nLook - a squirrel!\n:::\n\n\nHTML output\n\n\n\n\n\n\nNote\n\n\nLook - a squirrel!\n\n\n\n\n\n\n\n\n\nImportant\n\n\nLook - a squirrel!\n\n\n\n\n\n\n\n\n\nTip\n\n\nLook - a squirrel!"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#callout-blocks-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#callout-blocks-1",
+    "title": "Polishing Documents",
+    "section": "Callout Blocks",
+    "text": "Callout Blocks\nHighlight content for the reader in multiple formats.\n\n\nMarkdown\n:::{.callout-note}\nLook - a squirrel!\n:::\n\n:::{.callout-important}\nLook - a squirrel!\n:::\n\n:::{.callout-tip}\nLook - a squirrel!\n:::\n\npdf output"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#callout-blocks-2",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#callout-blocks-2",
+    "title": "Polishing Documents",
+    "section": "Callout Blocks",
+    "text": "Callout Blocks\nHighlight content for the reader in multiple formats.\n\n\nMarkdown\n:::{.callout-note}\nLook - a squirrel!\n:::\n\n:::{.callout-important}\nLook - a squirrel!\n:::\n\n:::{.callout-tip}\nLook - a squirrel!\n:::\n\ndocx output"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts",
+    "title": "Polishing Documents",
+    "section": "Element Layouts",
+    "text": "Element Layouts\nQuarto makes available several layout attributes that apply to broad range of block elements.\n\nlayout-ncol: split elements across n columns (2, 3, …).\nlayout-nrow: split elements across n rows (2, 3, …).\nlayout-valign: align elements (top, center, bottom, default).\nlayout: Split elements into a 2D array by rows and columns1.\n\nFor more control, see {.grid} which relies up the CSS Bootstrap Grid system. See the [Guide]{https://quarto.org/docs/output-formats/page-layout.html#article}."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts-1",
+    "title": "Polishing Documents",
+    "section": "Element Layouts",
+    "text": "Element Layouts\nlayout-ncol\n\n\nMarkdown\n:::{layout-ncol=2}\nA clock for keeping time at \nan animal's rate. The multiple\nfor dogs is seven, for example.\n\n![](images/dog-watch.png)\n:::\n\nHTML output\n\n\n\nA clock for keeping time at an animal’s rate. The multiple for dogs is seven, for example."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts-2",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts-2",
+    "title": "Polishing Documents",
+    "section": "Element Layouts",
+    "text": "Element Layouts\nlayout-ncol + layout-valign\n\n\nMarkdown\n:::{layout-ncol=2 layout-valign=middle}\nA clock for keeping time at \nan animal's rate. The multiple\nfor dogs is seven, for example.\n\n![](images/dog-watch.png)\n:::\n\nHTML output\n\n\n\nA clock for keeping time at an animal’s rate. The multiple for dogs is seven, for example."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array",
+    "title": "Polishing Documents",
+    "section": "Element Layout Array",
+    "text": "Element Layout Array\nlayout: The layout attribute1 is a 2-dimensional array where the first dimension defines rows and the second columns.\n\n\n\nlayout=\"[[1,1], [1]]\" translates to: create two rows, the first of which has two columns of equal size and the second of which has a single column.\nYou can scale the relative dimension of each panel by changing the 1s.\n\nFor more control with HTML output, see {.grid} which relies up the CSS Bootstrap Grid system. See the [Guide]{https://quarto.org/docs/output-formats/page-layout.html#article}."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array-1",
+    "title": "Polishing Documents",
+    "section": "Element Layout Array",
+    "text": "Element Layout Array\n\n\nMarkdown\n:::{layout=\"[[1,1], [1]]\"}\n![](images/watch-face.png)\n\n![](images/dog-watch.png)\n\n![](images/circuit.png)\n:::\n\n\nHTML output\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat would layout=\"[[1,5], [1]]\" do?"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array-2",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array-2",
+    "title": "Polishing Documents",
+    "section": "Element Layout Array",
+    "text": "Element Layout Array\n\n\nMarkdown\n:::{layout=\"[[1,5], [1]]\"}\n![](images/watch-face.png)\n\n![](images/dog-watch.png)\n\n![](images/circuit.png)\n:::\n\nHTML output"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#document-layout-column-classes",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#document-layout-column-classes",
+    "title": "Polishing Documents",
+    "section": "Document Layout: column classes",
+    "text": "Document Layout: column classes\nModify the width of the main body column for individual block elements (e.g. paragraph, figures). .column-body is the default.\n\n\n\nMarkdown\n:::{.column-body}\nA novelty clock, watch, and the like for \nkeeping time at an animal's rate, defined\nin terms of a multiple of human rate by \ndividing the average lifetime of a \nparticular animal into the average \nlifetime of a human being. The multiple\nfor dogs is seven, for example.\n:::\n\n:::{.column-screen}\nA novelty clock, watch, and the like for \nkeeping time at an animal's rate, defined\nin terms of a multiple of human rate by \ndividing the average lifetime of a \nparticular animal into the average \nlifetime of a human being. The multiple\nfor dogs is seven, for example.\n:::\n\n\nHTML output"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#document-layout-margin-classes",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#document-layout-margin-classes",
+    "title": "Polishing Documents",
+    "section": "Document Layout: margin classes",
+    "text": "Document Layout: margin classes\nPlace any inline or block element from the body to the margin.\n\n\n\nMarkdown\n![](images/dog-watch.png)\n\nWhat a brilliant idea.\n\nOutput"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#document-layout-margin-classes-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#document-layout-margin-classes-1",
+    "title": "Polishing Documents",
+    "section": "Document Layout: margin classes",
+    "text": "Document Layout: margin classes\nPlace any inline or block element from the body to the margin.\n\n\nMarkdown\n![](images/dog-watch.png)\n\n:::{.column-margin}\nWhat a brilliant idea.\n:::\n\nOutput"
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#your-turn-1",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#your-turn-1",
+    "title": "Polishing Documents",
+    "section": "Your Turn",
+    "text": "Your Turn\nOpen 2-layouts.qmd and follow the directions to create a document that describes your favorite place to visit on vacation.\n\n\nWhen you’re done, please share a screenshot of your document in Discord."
+  },
+  {
     "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#before-we-come-back",
     "href": "materials/1-single-docs/2-polishing-docs/slides.html#before-we-come-back",
     "title": "Polishing Documents",
     "section": "Before we come back…",
-    "text": "Before we come back…\nVisit https://quartopub.com/ and set up an account.\n\n\nQuarto for R & RStudio"
+    "text": "Before we come back…\nVisit https://quartopub.com/ and set up a free account."
+  },
+  {
+    "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#section",
+    "href": "materials/1-single-docs/2-polishing-docs/slides.html#section",
+    "title": "Polishing Documents",
+    "section": "",
+    "text": "On your way out the door for lunch, please write on the blue sticky note one that confused or frustrated you and on the pink sticky something that you enjoyed, or got your excited.\n\n\nQuarto for R & RStudio"
   },
   {
     "objectID": "materials/1-single-docs/3-presentations/slides.html#anatomy-of-a-document",
@@ -1054,7 +1292,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1]  1.1730572 -1.2217901 -1.0424368 -0.9318657  0.2584572"
+    "text": "Executing code\n\nrnorm(5)\n\n[1]  0.2321421 -0.6571410  1.2331236 -0.5998984 -0.5205186"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",

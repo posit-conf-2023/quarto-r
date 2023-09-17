@@ -15,7 +15,7 @@ Presentations, like any Quarto document,
 
 ## Output options
 
-## Our Turn {.out-turn}
+## Our Turn {.our-turn}
 
 This slide deck is in desperate need of some help. Let's...
 

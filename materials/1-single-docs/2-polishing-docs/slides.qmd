@@ -3,6 +3,849 @@ title: "Polishing Documents"
 format: qmdrslides-revealjs
 ---
 
+# Element Attributes
+
+## What happens when you pandoc it? {auto-animate="true"}
+
+From the last exercise . . .
+
+``` bash
+quarto pandoc -f html -t markdown 3-markdow-goal.html -o answer.md
+```
+
+. . .
+
+::: columns
+::: {.column width="80%"}
+![](images/pandoc-convert-1.png)
+:::
+
+::: {.column width="20%"}
+\
+\
+
+This looks familiar!
+:::
+:::
+
+## What happens when you pandoc it? {auto-animate="true"}
+
+From the last exercise . . .
+
+``` bash
+quarto pandoc -f html -t markdown 3-markdow-goal.html -o answer.md
+```
+
+::: columns
+::: {.column width="80%"}
+![](images/pandoc-convert-2.png)
+
+![](images/pandoc-convert-1.png)
+:::
+
+::: {.column width="20%"}
+\
+\
+
+This looks familiar!
+
+\
+
+|             . . . but this does not.
+:::
+:::
+
+
+<!-- ## {menu-title="Disclaimers"} -->
+
+<!-- :::{.columns align=center} -->
+<!-- :::{.column width=18%} -->
+<!-- ::: -->
+<!-- :::{.column .incremental width=64%} -->
+<!-- \ -->
+
+<!-- ### What you're about to see . . . -->
+
+<!-- - Extends the type of elements you can add to a doc -->
+<!-- - Will work across the main output formats (html, pdf, docx, pptx) -->
+
+<!-- :::{.fragment .fade-up} -->
+<!-- Ingredients: **Fenced Div** and **Bracketed Span** -->
+<!-- ::: -->
+
+<!-- ::: -->
+<!-- :::{.column width=18%} -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+## The Bracketed Span {transition="none"}
+
+## The Bracketed Span {transition="none"}
+
+![](images/quarto-workshop-07.jpg){fig-align="center"}
+
+## The Bracketed Span {transition="none"}
+
+![](images/quarto-workshop-08.jpg){fig-align="center"}
+
+## The Bracketed Span {transition="none"}
+
+![](images/quarto-workshop-09.jpg){fig-align="center"}
+
+## The Bracketed Span {transition="none"}
+
+![](images/quarto-workshop-10.jpg){fig-align="center"}
+
+## The Bracketed Span {transition="none"}
+
+![](images/quarto-workshop-11.jpg){fig-align="center"}
+
+## The Fenced Div {transition="none"}
+
+![](images/quarto-workshop-12.jpg){fig-align="center"}
+
+
+# Figures
+
+## Poll
+
+:::poll
+{{< fa brands discord >}} What is your preferred method of adding a figure to an Rmd so that it displays in HTML at 300 pixels wide?
+:::
+
+[A. markdown]{.smallcaps}
+```{.markdown}
+![A nice image.](foo/bar.png){width=300}
+```
+
+[B. html]{.smallcaps}
+```{.html}
+<img src="foo/bar.png" width="300">
+```
+
+[C: knitr]{.smallcaps}
+````
+```{{r, out.width="300px"}}
+knitr::includegraphics("foo/bar.png")
+```
+````
+
+## Attributes
+
+Set `width`, `height`, `fig-align`, add link, and alt-text (captions go inside `[]`).
+
+``` markdown
+![](images/dog-watch.png){width=300 fig-align=right}
+```
+
+. . .
+
+![](images/dog-watch.png){width=300 fig-align=right fig-alt="Dog watching a watch."}
+
+. . .
+
+::: {style="font-size: .8em"}
+-   Units default to `px`.
+-   Other choices `300in`, `300%` (relative to image size), `3em` (relative to font size).
+-   Entire fig can be nested inside the link syntax (`[fig](url)`) to link the image
+:::
+
+## Internal links
+
+In additional to external resources, links can go to elements of the same doc through its `#id`.
+
+. . .
+
+::: columns
+::: {.column width="65%"}
+#### Markdown
+
+``` markdown
+![A caption](images/dog-watch.png){#dog}
+
+< Much more text >
+
+A novelty clock, [watch](#dog), 
+and the like for keeping time 
+at an animal's rate . . .
+```
+:::
+
+::: {.column .fragment width="35%"}
+#### HTML output
+
+::: {style="border: 2px solid #5c5859"}
+![A caption](images/dog-watch.png){#dogwatch width="300"}
+
+::: {style="font-size: .7em"}
+\< Much more text \>
+
+A novelty clock, [watch](#dogwatch), and the like for keeping time at an animal's rate . . .
+:::
+:::
+:::
+:::
+
+::: {.fragment style="position: absolute; top: 720px; left: 80px; font-size: .8em"}
+-   Works for many elements,\
+    not just figs!
+:::
+
+
+
+
+# Tables
+
+## Markdown tables
+
+**Markdown:**
+
+``` markdown
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+
+: Sample markdown table. {#mytab}
+```
+
+. . .
+
+**Output:**
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+: Sample markdown table. {#mytab}
+
+## Grid tables
+
+**Markdown:**
+
+``` markdown
++---------------+---------------+--------------------+
+| Fruit         | Price         | Advantages         |
++===============+===============+====================+
+| Bananas       | $1.34         | - built-in wrapper |
+|               |               | - bright color     |
++---------------+---------------+--------------------+
+| Oranges       | $2.10         | - cures scurvy     |
+|               |               | - tasty            |
++---------------+---------------+--------------------+
+
+: Sample grid table.
+```
+
+## Tables from code
+
+The **knitr** package can turn data frames into tables with `knitr::kable()`:
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+library(knitr)
+library(dplyr)
+library(palmerpenguins)
+
+s_penguins <- penguins |> 
+  select(species,
+         island,
+         bill_length_mm) |>
+  slice(1:5)
+
+s_penguins |>
+  kable()
+```
+
+## Tables from code
+
+If you want fancier tables, try the **gt** package and [all that it offers](https://gt.rstudio.com/)!
+
+:::columns
+:::{.column width=56%}
+```{r}
+#| echo: true
+#| eval: false
+
+library(gt)
+
+s_penguins |> 
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "pink"),
+      cell_text(style = "italic")
+      ),
+    locations = cells_body(
+      columns = bill_length_mm,
+      rows = bill_length_mm > 40
+    )
+  )
+```
+:::
+
+:::{.column width=44%}
+```{r}
+#| echo: false
+
+library(gt)
+
+s_penguins |> 
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "pink"),
+      cell_text(style = "italic")
+      ),
+    locations = cells_body(
+      columns = bill_length_mm,
+      rows = bill_length_mm > 40
+    )
+  ) |>
+  tab_options(table.font.size="1em")
+```
+:::
+:::
+
+
+# Cross references
+
+## Cross references
+
+-   Help readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.
+
+-   Cross referencing steps:
+
+    1.   Add a caption to your figure or table.
+    2.   Give an id to your figure or table, starting with `fig-` or `tbl-`.
+    3.   Refer to it with `@fig-...` or `@tbl-...`.
+
+## Figure cross references
+
+The presence of the caption (`Dog watch`) and label (`#fig-dog-watch`) make this figure referenceable:
+
+**Markdown:**
+
+``` markdown
+See @fig-dog-watch for a dog wearing a watch.
+![Dog watch](images/dog-watch.png){#fig-dog-watch}
+```
+
+::: {.fragment}
+**Output:**
+
+See @fig-dog-watch for a dog wearing a watch.
+
+:::columns
+:::{.column width=40%}
+![Dog watch](images/dog-watch.png){#fig-dog-watch fig-alt="A dog wearing a watch" width="200"}
+:::
+:::{.column width=60%}
+:::
+:::
+:::
+
+## Table cross references (from code)
+
+The presence of the caption (`A few penguins`) and label (`#tbl-penguins`) make this table referenceable:
+
+::: columns
+::: {.column width="50%"}
+**Markdown:**
+
+```` markdown
+See @tbl-penguins for data on a few penguins.
+
+```{{r}}
+#| label: tbl-penguins
+#| tbl-cap: A few penguins
+
+head(penguins) |> 
+  gt()
+```
+````
+
+:::
+
+::: {.column width="50%" .fragment}
+**Output:**
+
+See @tbl-penguins for data on a few penguins.
+
+```{r}
+#| label: tbl-penguins
+#| tbl-cap: A few penguins
+
+head(penguins) |> 
+  gt()
+```
+:::
+:::
+
+## Table cross references (from markdown)
+
+The presence of the caption (`Numbers`) and label (`#tbl-numbers`) make this table referenceable:
+
+::: columns
+::: {.column width="50%"}
+**Markdown:**
+
+```` markdown
+See @tbl-numbers for data.
+
+| Right | Left |
+|------:|:-----|
+|   12  |  12  |
+|  123  |  123 |
+
+: Numbers {#tbl-numbers}
+
+````
+
+:::
+
+::: {.column width="50%" .fragment}
+**Output:**
+
+See @tbl-numbers for data.
+
+| Right | Left |
+|------:|:-----|
+|   12  |  12  |
+|  123  |  123 |
+
+: Numbers {#tbl-numbers}
+:::
+:::
+
+
+## Your Turn {.your-turn}
+
+Open `1-tables-figures.qmd`.
+
+1.  Create a 3 row x 2 col markdown table, populate with a column for restaurant + column for cuisine, and then add 3 examples. Then, cross reference it from text.
+
+2.  Include and image from the `images/` folder and set its width.
+
+3.  Add a figure generated from code and cross reference it.
+
+    ```{r}
+    #| echo: true
+    #| eval: false
+    hist(rnorm(100))
+    ```
+
+
+```{r}
+countdown::countdown(7)
+```
+
+
+# Callout Blocks
+
+## Example: Callout Blocks {auto-animate=true}
+
+Use case: highlight content for the reader in multiple formats.
+
+::: columns
+::: {.column width="50%" .fragment}
+#### Markdown
+
+``` markdown
+:::{.callout-note}
+Look - a squirrel!
+:::
+
+:::{.callout-important}
+Look - a squirrel!
+:::
+
+:::{.callout-tip}
+Look - a squirrel!
+:::
+```
+:::
+
+::: {.column .fragment width="50%"}
+#### HTML output
+
+::: callout-note
+Look - a squirrel!
+:::
+
+::: callout-important
+Look - a squirrel!
+:::
+
+::: callout-tip
+Look - a squirrel!
+:::
+:::
+:::
+
+## Callout Blocks {auto-animate=true}
+
+Highlight content for the reader in multiple formats.
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` markdown
+:::{.callout-note}
+Look - a squirrel!
+:::
+
+:::{.callout-important}
+Look - a squirrel!
+:::
+
+:::{.callout-tip}
+Look - a squirrel!
+:::
+```
+:::
+
+::: {.column width="50%"}
+#### pdf output
+
+![](images/callouts-pdf.png)
+:::
+:::
+
+## Callout Blocks {auto-animate=true}
+
+Highlight content for the reader in multiple formats.
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` markdown
+:::{.callout-note}
+Look - a squirrel!
+:::
+
+:::{.callout-important}
+Look - a squirrel!
+:::
+
+:::{.callout-tip}
+Look - a squirrel!
+:::
+```
+:::
+
+::: {.column width="50%"}
+#### docx output
+
+![](images/callouts-doc.png)
+:::
+
+\
+\
+:::
+
+
+# Layouts
+
+## Element Layouts
+
+Quarto makes available several layout *attributes* that apply to broad range of block elements.
+
+-   `layout-ncol`: split elements across n columns (`2`, `3`, ...).
+-   `layout-nrow`: split elements across n rows (`2`, `3`, ...).
+-   `layout-valign`: align elements (`top`, `center`, `bottom`, `default`).
+-   `layout`: Split elements into a 2D array by rows and columns[^1].
+
+[^1]: For more control, see `{.grid}` which relies up the CSS Bootstrap Grid system. See the \[Guide\]{https://quarto.org/docs/output-formats/page-layout.html#article}.
+
+## Element Layouts {auto-animate="true"}
+
+`layout-ncol`
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` markdown
+:::{layout-ncol=2}
+A clock for keeping time at 
+an animal's rate. The multiple
+for dogs is seven, for example.
+
+![](images/dog-watch.png)
+:::
+```
+:::
+
+::: {.column .border width="50%"}
+#### HTML output
+
+::: {layout-ncol="2" style="border: 2px solid #5c5859"}
+[A clock for keeping time at an animal's rate. The multiple for dogs is seven, for example.]{style="font-size: .5em"}
+
+![](images/dog-watch.png)
+:::
+:::
+:::
+
+## Element Layouts {auto-animate="true"}
+
+`layout-ncol` + `layout-valign`
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` {.markdown code-line-numbers="1"}
+:::{layout-ncol=2 layout-valign=middle}
+A clock for keeping time at 
+an animal's rate. The multiple
+for dogs is seven, for example.
+
+![](images/dog-watch.png)
+:::
+```
+:::
+
+::: {.column .border width="50%"}
+#### HTML output
+
+::: {layout-ncol="2" layout-valign="center" style="border: 2px solid #5c5859"}
+[A clock for keeping time at an animal's rate. The multiple for dogs is seven, for example.]{style="font-size: .5em"}
+
+![](images/dog-watch.png)
+:::
+:::
+:::
+
+<!-- ## Element Layouts {auto-animate="true"} -->
+
+<!-- `layout-ncol` with small image -->
+
+<!-- ::: columns -->
+<!-- ::: {.column width="50%"} -->
+<!-- #### Markdown -->
+
+<!-- ``` {.markdown code-line-numbers="10"} -->
+<!-- :::{layout-ncol=2} -->
+<!-- A novelty clock, watch, and the like for  -->
+<!-- keeping time at an animal's rate, defined -->
+<!-- in terms of a multiple of human rate by  -->
+<!-- dividing the average lifetime of a  -->
+<!-- particular animal into the average  -->
+<!-- lifetime of a human being. The multiple -->
+<!-- for dogs is seven, for example. -->
+
+<!-- ![](images/dog-watch-small.png) -->
+<!-- ::: -->
+<!-- ``` -->
+<!-- ::: -->
+
+<!-- ::: {.column .border width="50%"} -->
+<!-- #### HTML output -->
+
+<!-- ::: {layout-ncol="2" layout-valign="center" style="border: 2px solid #5c5859"} -->
+<!-- [A clock for keeping time at an animal's rate. The multiple for dogs is seven, for example.]{style="font-size: .5em"} -->
+
+<!-- ![](images/dog-watch.png){width="130px"} -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+## Element Layout Array
+
+`layout`: The layout attribute[^2] is a 2-dimensional array where the first dimension defines rows and the second columns.
+
+[^2]: For more control with HTML output, see `{.grid}` which relies up the CSS Bootstrap Grid system. See the \[Guide\]{https://quarto.org/docs/output-formats/page-layout.html#article}.
+
+\
+
+-   `layout="[[1,1], [1]]"` translates to: *create two rows, the first of which has two columns of equal size and the second of which has a single column*.
+-   You can scale the relative dimension of each panel by changing the `1`s.
+
+## Element Layout Array {auto-animate="true"}
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` {.markdown code-line-numbers="1"}
+:::{layout="[[1,1], [1]]"}
+![](images/watch-face.png)
+
+![](images/dog-watch.png)
+
+![](images/circuit.png)
+:::
+```
+:::
+
+::: {.column .border .fragment width="50%"}
+#### HTML output
+
+::: {layout="[[1,1], [1]]" style="border: 2px solid #5c5859"}
+![](images/watch-face.png){style="border: 2px solid #5c5859" width="250px"}
+
+![](images/dog-watch.png){style="border: 2px solid #5c5859" width="250px"}
+
+![](images/circuit.png){style="border: 2px solid #5c5859" width="750px"}
+:::
+:::
+:::
+
+::: {.fragment .poll style="position: absolute; top: 600px; left: 0px;font-size: .8em"}
+What would `layout="[[1,5], [1]]"` do? 
+:::
+
+## Element Layout Array {auto-animate="true"}
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` {.markdown code-line-numbers="1"}
+:::{layout="[[1,5], [1]]"}
+![](images/watch-face.png)
+
+![](images/dog-watch.png)
+
+![](images/circuit.png)
+:::
+```
+:::
+
+::: {.column .border width="50%"}
+#### HTML output
+
+::: {layout="[[1,5], [1]]" style="border: 2px solid #5c5859"}
+![](images/watch-face.png){style="border: 2px solid #5c5859" width="250px"}
+
+![](images/dog-watch.png){style="border: 2px solid #5c5859" width="250px"}
+
+![](images/circuit.png){style="border: 2px solid #5c5859" width="750px"}
+:::
+:::
+:::
+
+
+## Document Layout: column classes
+
+Modify the width of the main body column for individual block elements (e.g. paragraph, figures). `.column-body` is the default.
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` {.markdown code-line-numbers="1,11"}
+:::{.column-body}
+A novelty clock, watch, and the like for 
+keeping time at an animal's rate, defined
+in terms of a multiple of human rate by 
+dividing the average lifetime of a 
+particular animal into the average 
+lifetime of a human being. The multiple
+for dogs is seven, for example.
+:::
+
+:::{.column-screen}
+A novelty clock, watch, and the like for 
+keeping time at an animal's rate, defined
+in terms of a multiple of human rate by 
+dividing the average lifetime of a 
+particular animal into the average 
+lifetime of a human being. The multiple
+for dogs is seven, for example.
+:::
+```
+:::
+
+::: {.column .fragment width="50%"}
+#### HTML output
+
+![](images/doc-layout.png){fig-align="center"}
+:::
+:::
+
+## Document Layout: margin classes {auto-animate="true"}
+
+Place any inline or block element from the body to the margin.
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` markdown
+![](images/dog-watch.png)
+
+What a brilliant idea.
+```
+:::
+
+::: {.column width="50%"}
+#### Output
+
+![](images/margin-no.png){style="border: 2px solid #5c5859"}
+:::
+:::
+
+## Document Layout: margin classes {auto-animate="true"}
+
+Place any inline or block element from the body to the margin.
+
+::: columns
+::: {.column width="50%"}
+#### Markdown
+
+``` {.markdown code-line-numbers="3"}
+![](images/dog-watch.png)
+
+:::{.column-margin}
+What a brilliant idea.
+:::
+```
+:::
+ 
+::: {.column width="50%"}
+#### Output
+
+![](images/margin-yes.png){style="border: 2px solid #5c5859"}
+:::
+:::
+
+## Your Turn {.your-turn}
+
+Open `2-layouts.qmd` and follow the directions to create a document that describes your favorite place to visit on vacation.
+
+\
+
+When you're done, please share a screenshot of your document in Discord.
+
 ## Before we come back...
 
-Visit <https://quartopub.com/> and set up an account.
+Visit <https://quartopub.com/> and set up a free account.
+
+:::{style="text-align: center"}
+![](images/quartopub.png)
+:::
+
+## 
+
+:::{style="text-align:center"}
+{{< fa clone size=5x >}}
+:::
+
+\
+
+On your way out the door for lunch, please write on the blue sticky note one that confused or frustrated you and on the pink sticky something that you enjoyed, or got your excited.

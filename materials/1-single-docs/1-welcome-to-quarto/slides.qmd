@@ -76,22 +76,22 @@ Workshop materials are at:
 -   3:30-5:00 pm [Sharing your Work](materials/1-single-docs/4-sharing-your-work)
 :::
 
-## Discussions: Discord
+## Discussions: discord
 
 Ask questions at **#introduction-to-quarto-with-r-and-rstudio**.
 
 ![](images/discord.png){fig-alt="Screenshot of the discord server app that serves as the forum for the workshop." fig-align="center" width="546"}
 
-## Flow of the Workshop ZZQ
+## Flow of the Workshop
 
-:::{layout="[2, 2]"}
-normal slide
+:::{.r-stretch layout="[2, 2]" style="text-align: center"}
+![](images/slide-normal.png){width=540 .drop .fragment}
 
-discord poll
+![](images/slide-discord.png){width=540 .drop .fragment}
 
-our turn
+![](images/slide-our-turn.png){width=540 .drop .fragment}
 
-your turn
+![](images/slide-your-turn.png){width=540 .drop .fragment}
 :::
 
 ## Stickies
@@ -99,7 +99,7 @@ your turn
 :::{layout="[[4, 5, 1]]" layout-valign=center}
 ![](images/sticky.jpeg){fig-alt="Picture of a laptop with a red sticky note stuck to the top." width=540}
 
-During an activity, place a [**yellow**]{style="color: orange"} sticky on your laptop if you're good to go and a [**blue**]{style="color: blue"} sticky if you want help.
+During an activity, place a [**blue**]{style="color: blue"} sticky on your laptop if you're good to go and a [**red**]{style="color: red"} sticky if you want help.
 :::
 
 :::footer
@@ -109,20 +109,22 @@ Image by [Megan Duffy](https://dynamicecology.wordpress.com/2015/01/13/sticky-no
 ## Practicalities
 
 
-:::{layout="[[1, 1]]" style="font-size: .7em"}
-- WiFi:
-	- [Username:]{.smallcaps} **conf22**
-	- [Password:]{.smallcaps} **together!**
-- There are gender neutral bathrooms by the National Harbor rooms.
-- The meditation room is located at National Harbor 9. Open 8am - 5pm, Monday - Thursday. The hotel also has a dedicated room behind the reception.
-- The lactation room is located at Potomac Dressing Room. Open 8am - 5pm, Monday - Thursday.
-- Participants who do not wish to be photographed have red lanyards, please note everyone's lanyard colors before taking a photo and respect their choices.
+:::{.columns style="font-size: .7em"}
+:::{.column width=50%}
 
-[Code of Conduct]{.smallcaps}\
-Please carefully review the Code of Conduct and COVID policies[^coc] can be found at . Please review them carefully.  RStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces. We strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; we will have a limited supply available upon request. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.
+- WiFi:
+  - Network: Posit Conf 2023
+  - Password: conf2023
+- There are gender-neutral bathrooms located are among the Grand Suite Bathrooms.
+- There are two meditation/prayer rooms: Grand Suite 2A and Grand Suite 2B. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.
+- The lactation room is located in Grand Suite 1. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.
 :::
 
-[^coc]: <https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/>
+:::{.column width=50%}
+- Participants who do not wish to be photographed have red lanyards; please note everyone's lanyard colors before taking a photo and respect their choices.
+- The Code of Conduct and COVID policies can be found at https://posit.co/code-of-conduct/. Please review them carefully. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.
+:::
+:::
 
 # Hello Quarto!
 
@@ -130,14 +132,29 @@ Please carefully review the Code of Conduct and COVID policies[^coc] can be foun
 
 [Sit back and enjoy the tour!]{.bigadage}
 
-## Your Turn{.your-turn}
+## {menu-title="Posit Cloud"}
+
+:::{style="text-align: center"}
+{{< fa solid cloud size=8x >}}
+
+[Join me in Posit Cloud!]{.bigadage}
+:::
+
+
+
+## Your Turn {.your-turn}
 
 Open `hello-penguins.qmd` in RStudio and...
 
 1. Render the document.
-2. Update your name and re-render.
-3. Inspect components of the document and make one more update and re-render.
-Compare notes with neighbors about updates you’ve made and note any aspects of the document that are not clear after the tour and your first interaction with it
+2. Replace the name with your own and re-render.
+3. Inspect the components of the document and modify one or two more and re-render. Consider changing the options at the top, the text, or the code. 
+4. Look carefully through the source of `hello-penguins.qmd`. What do you notice that's different from what it would look like in an Rmd document? Work with your neighbor to see if you can find the differences (there are at least 3).
+
+```{r}
+countdown::countdown(10)
+```
+
 
 # What can you do with Quarto?
 
@@ -223,27 +240,18 @@ Compare notes with neighbors about updates you’ve made and note any aspects of
 
 ## What can you do with Quarto that you can't with R Markdown?
 
+:::incremental
 - Easier to organize appearance across documents
 - Features (e.g. figures, tables) have better cross-format support
 - Better cross referencing
 - Up-to-date revealjs slides
 - Easier to customize websites and books with projects
 - Convince your Python-user colleagues to use it
+:::
 
 . . .
 
 > Note: You can render existing R Markdown documents with Quarto and/or rename them to .qmd files to turn them into Quarto documents.
-
-
-## Your Turn {.your-turn}
-
-Let's talk about syntax.
-
-Look carefully through the source of `hello-penguins.qmd`. What do you notice that's different from what it would look like in an Rmd document? Work with your neighbor to see if you can find the differences (there are at least 3).
-
-```{r}
-countdown::countdown(2)
-```
 
 
 # Rendering in Quarto
@@ -331,24 +339,24 @@ Render input file to various document formats.
 
 . . .
 
-3. **Quarto is a command line tool**
+3. **Quarto has a command line interface (CLI)**
 
    Run at the terminal:
 
    ```bash
-   quarto render <input> --to <format>`
+   quarto render <input> --to <format>
    ```
 
 ## Element expression depends on format
 
 #### Emphasis
 
-[HTML]{.smallcaps style="font-size: .5em"}
+[HTML]{.smallcaps style="font-size: .7em"}
 ``` html
 A <em>spatial logical toy</em>
 ```
 
-[LATEX]{.smallcaps style="font-size: .5em"}
+[LATEX]{.smallcaps style="font-size: .7em"}
 ``` latex
 A \emph{spatial logical toy}
 ```
@@ -357,54 +365,15 @@ A \emph{spatial logical toy}
 
 #### Image
 
-[HTML]{.smallcaps style="font-size: .5em"}
+[HTML]{.smallcaps style="font-size: .7em"}
 ``` html
 <img src="images/med-rubiks-cube.png" class="img-fluid">
 ```
 
-[LATEX]{.smallcaps style="font-size: .5em"}
+[LATEX]{.smallcaps style="font-size: .7em"}
 ``` latex
 \includegraphics{images/med-rubiks-cube.png}
 ```
-
-<!-- ##  {auto-animate="true"} -->
-
-<!-- ![](images/rstudio-console.png){fig-align="center"} -->
-
-<!-- . . . -->
-
-<!-- ::: {data-id="spotlight" style="background: #f2a03d40; width: 60px; height: 25px; margin: 5px; position: absolute; top: 86px; left: 344px; border-radius: 8px; border: 4px solid #f2a03d"} -->
-<!-- ::: -->
-
-<!-- ##  {auto-animate="true"} -->
-
-<!-- ![](images/rstudio-console.png){fig-align="center"} -->
-
-<!-- ::: {data-id="spotlight" style="background: #f2a03d50; width: 60px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 91px; border-radius: 8px; border: 4px solid #f2a03d"} -->
-<!-- ::: -->
-
-<!-- ::: {data-id="typed-code" style="background: #02733e50; width: 308px; height: 22px; margin: 5px; position: absolute; top: 607px; left: 95px"} -->
-<!-- ::: -->
-
-<!-- ##  {auto-animate="true"} -->
-
-<!-- ![](images/rstudio-console.png){fig-align="center"} -->
-
-<!-- ::: {data-id="spotlight" style="background: #f2a03d50; width: 70px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 150px; border-radius: 8px; border: 4px solid #f2a03d"} -->
-<!-- ::: -->
-
-<!-- ::: {data-id="typed-code" style="background: #02733e50; width: 308px; height: 22px; margin: 5px; position: absolute; top: 607px; left: 95px"} -->
-<!-- ::: -->
-
-<!-- ## {auto-animate="true"} -->
-
-<!-- ![](images/rstudio-terminal.png){fig-align="center"} -->
-
-<!-- ::: {data-id="spotlight" style="background: #f2a03d50; width: 70px; height: 25px; margin: 5px; position: absolute; top: 393px; left: 150px; border-radius: 8px; border: 4px solid #f2a03d"} -->
-<!-- ::: -->
-
-<!-- ::: {data-id="typed-code" style="background: #02733e50; width: 537px; height: 22px; margin: 5px; position: absolute; top: 455px; left: 95px"} -->
-<!-- ::: -->
 
 ::: notes
 1.  Navigate to the terminal tab of the console pane
@@ -415,14 +384,21 @@ A \emph{spatial logical toy}
 :::
 
 
-##  Your Turn {.your-turn style="font-size: .8em"}
+##  Your Turn {.your-turn style="font-size: .9em"}
 
-Let's focus on using `quarto` at the command line. Within RStudio, this can be done in the Terminal tab in the Console pane.
+1.  Render `2-formats.qmd` to `html` and view the html file in an editor. How is the list expressed in html? (you can click on it in the Files pane)
+2.  Render `2-formats.qmd` to `latex` and view the latex file in an editor. How is the list expressed in latex?
+3.  Change the extension of `2-formats.qmd` to be `.md` and `.Rmd` and re-render. Does the output differ?
+4.  Try rendering the file to a pdf format but this time using the CLI (command line interval) in the Terminal tab.
 
-1.  Render `ex-1.qmd` to `html` and view the html file in an editor. How is the list expressed in html?
-2.  Render `ex-1.qmd` to `latex` and view the latex file in an editor. How is the list expressed in latex?
-3.  Try changing the extension of `ex-1.qmd` to be `.md` and `.Rmd` and re-rendering. Does the output differ?
-4.  Explore full list of commands available in Quarto by using `quarto --help`.
+    ```bash
+    quarto render <input> --to <format>
+    ```
+
+```{r}
+countdown::countdown(7)
+```
+
 
 ## Try Pandoc!
 
@@ -514,7 +490,7 @@ format:
 <!-- ::: -->
 
 
-## {menu-title="YAML Poll"}
+## {menu-title="YAML Poll" style="font-size: .8em"}
 
 ::: poll
 {{< fa brands discord >}} Which of the following are valid ways to include metadata?
@@ -556,7 +532,7 @@ author: Erno Rubik
 My idea is to build a cube...
 ```
 
-[... then at the command line, run:]{style="font-size: .8em"}
+... then at the command line, run:
 
 ```bash
 quarto render patent.qmd --to html -M title:patent
@@ -577,13 +553,13 @@ My idea is to build a cube...
 :::
 :::
 
-## [Metadata:]{.meta-el} YAML
+## [Metadata:]{.meta-el} YAML Syntax Rules
 
 :::columns
-:::{.column width="39%"}
+:::{.column width="50%" style="max-height: 1000px"}
 ```yaml
 ---
-title: "US Patent: A Spatial Toy"
+title: "US Patent: A Toy"
 author:
   - Erno Rubrik
   - Albert Einstein
@@ -595,21 +571,19 @@ format:
 
       It has two paragraphs.
 ---
-
 ```
 :::
 
-:::{.column width="61%" style="font-size: .85em"}
-Some syntax rules:
+:::{.column width="50%" style="font-size: .85em"}
 
 ::: incremental
 - Set a single value with
   ```yaml
-  key: value`
+  key: value
   ```
 - Set a list of values either:
   ```yaml
-  key: [val1, val2]`
+  key: [val1, val2]
   ```
   ```yaml
   key:
@@ -617,7 +591,7 @@ Some syntax rules:
     - val2
   ```
 - Quote values that contain `:`
-- Nest key-value pairs with 2 space indent
+- Indent 2 spaces to nest
 - Multi-line strings follow `|`
 - Multiple YAML blocks will be merged
 :::
@@ -629,58 +603,61 @@ Some syntax rules:
 An overview of YAML syntax: <https://en.m.wikipedia.org/wiki/YAML#Syntax>
 :::
 
-## [Metadata:]{.meta-el} Fussing with YAML (invalid) {.smaller}
+## [Metadata:]{.meta-el} Fussing with YAML
 
--   Invalid: No space after `:`
+[Invalid]{.inline-el}
 
-``` yaml
+:::columns
+:::{.column width=50%}
+``` yaml {.fragment}
 ---
 format:html
 ---
 ```
 
--   Invalid: Read as missing
+\
 
-``` yaml
+``` yaml {.fragment}
 ---
 format:
 html
 ---
 ```
 
--   Valid, but needs next object
+\
 
-``` yaml
+``` yaml {.fragment}
 ---
 format: 
   html:
 ---
 ```
 
-## [Metadata:]{.meta-el} Fussing with YAML (valid) {.smaller}
+:::
+:::{.column width=50%}
 
-There are multiple ways of formatting valid YAML:
+[Valid]{.block-el}
 
--   Valid: There's a space after `:`
-
-``` yaml
+``` yaml {.fragment}
 format: html
 ```
 
--   Valid: There are 2 spaces a new line and no trailing `:`
+\
 
-``` yaml
+``` yaml {.fragment}
 format:
   html
 ```
 
--   Valid: `format: html` with additional options made with proper indentation
+\
 
-``` yaml
+``` yaml {.fragment}
 format: 
   html:
     toc: true
 ```
+:::
+:::
 
 ## Quarto linting
 
@@ -776,20 +753,21 @@ Via giphy.
 ## [Inline Elements:]{.inline-el} Text Formatting
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="65%"}
 #### Markdown
 
 ```{.markdown}
-Markdown allows you to format text with
-*emphasis* and **strong emphasis**. You can
-also add superscripts^2^, subscripts~2~, and
-display code `verbatim`. Little known fact:
-you can also ~~strikethrough~~ text and
-present it in [small caps]{.smallcaps}.
+Markdown allows you to format text
+with *emphasis* and **strong emphasis**.
+You can also add superscripts^2^, 
+subscripts~2~, and display code 
+`verbatim`. Little known fact: you can 
+also ~~strikethrough~~ text and present
+it in [small caps]{.smallcaps}.
 ```
 :::
 
-::: {.column width="50%" .fragment}
+::: {.column width="35%" .fragment}
 #### Output
 
 Markdown allows you to format text with *emphasis* and **strong emphasis**. You can also add superscripts^2^, subscripts~2~, and display code `verbatim`. Little known fact: you can also ~~strikethrough~~ text and present it in [small caps]{.smallcaps}.
@@ -803,17 +781,17 @@ Markdown allows you to format text with *emphasis* and **strong emphasis**. You 
 ## [Inline Elements:]{.inline-el} Math
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="65%"}
 #### Markdown
 
 ```markdown
-The area of a circle is $A = \pi r^2$,where
-$r$ is the radius and $\pi$ is the constant
-$3.141592\ldots$.
+The area of a circle is $A = \pi r^2$,
+where $r$ is the radius and $\pi$ is
+the constant $3.141592\ldots$.
 ```
 :::
 
-::: {.column width="50%" .fragment}
+::: {.column width="35%" .fragment}
 #### Output
 
 The area of a circle is $A = \pi r^2$, where $r$ is the radius and $\pi$ is the constant $3.141592\ldots$.
@@ -826,50 +804,49 @@ The area of a circle is $A = \pi r^2$, where $r$ is the radius and $\pi$ is the 
 
 \
 
-:::{style="font-size: .8em"}
-TeX math lives between two `$`. Opening `$` must have a non-space character immediately to its right, while the closing `$` must have a non-space character immediately to its left, and must not be followed immediately by a digit.
-:::
+<!-- :::{style="font-size: .8em"} -->
+>TeX math lives between two `$`. Opening `$` must have a non-space character immediately to its right, while the closing `$` must have a non-space character immediately to its left, and must not be followed immediately by a digit.
+>
+> -- the Pandoc Docs
+<!-- ::: -->
 
 
-## [Inline Elements:]{.inline-el} Links and Images {style="font-size: .85em"}
+## [Inline Elements:]{.inline-el} Links and Images
 
-::: columns
-::: {.column width="50%"}
 #### Markdown
 
 ```markdown
-You can embed [links with names](https://quarto.org/),
-direct urls like <https://quarto.org/>, and links to
-[other places](#inline-elements-text-formatting) in
-the document. The syntax is similar for embedding an
-inline image: ![render icon](images/render-icon.png).
+You can embed [links with names](https://quarto.org/), direct urls
+like <https://quarto.org/>, and links to 
+[other places](#inline-elements-text-formatting) in the document. 
+The syntax is similar for embedding an inline image:
+![render icon](images/render-icon.png).
 ```
-:::
 
-::: {.column width="50%" .fragment}
+\
+
+:::{.fragment}
 #### Output
 
 You can embed [links with names](https://quarto.org/), direct urls like <https://quarto.org/>, and links to [other places](#inline-elements-text-formatting) in the document. The syntax is similar for embedding an inline image: ![render icon](images/render-icon.png){fig-alt="small icon of render arrow" width="100"}.
 :::
-:::
 
 
-## [Inline Elements:]{.inline-el} Footnotes {style="font-size: .85em"}
+## [Inline Elements:]{.inline-el} Footnotes
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="65%"}
 #### Markdown
 
 ```{.markdown}
-Here is a short note.^[Small enough to fit inline.]
+A short note.^[Fits inline.]
 ```
 :::
 
-::: {.column width="50%" .fragment}
+::: {.column width="35%" .fragment}
 #### Output
 
-Here is a short note.^[Small
-enough to fit inline.]
+A short note.^[Fits inline.]
 :::
 :::
 
@@ -878,21 +855,21 @@ enough to fit inline.]
 \
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="65%"}
 
 ```{.markdown}
-Here is a longer footnote[^9]
+A longer footnote[^9]
 
-[^9]: This footnote can be placed in a separate block.
-The identifier can be any alphanumeric string.
+[^9]:  Can be placed in a separate block.
+The id can be any alphanumeric string.
 ```
 :::
 
-::: {.column width="50%" .fragment}
-Here is a longer footnote[^9]
+::: {.column width="35%" .fragment}
+A longer footnote[^9]
 
-[^9]: This footnote can be placed in a
-separate block. The identifier can be any
+[^9]: Can be placed in a
+separate block. The id can be any
 alphanumeric string.
 
 :::
@@ -1023,70 +1000,66 @@ Read the docs for details: <https://pandoc.org/MANUAL.html#pandocs-markdown>
 :::
 
 :::columns
-:::{.column width=33%}
+:::{.column width=37%}
 [A]{.smallcaps}
 ```markdown
-1. I once has a sandwich.
+1. I has a sandwich.
 
-   It was deliiiicous.
+   It was deliicous.
 
-1. I then had coffee.
+1. I had coffee.
 
    It gave me joy.
 ```
 
 [C]{.smallcaps}
 ```markdown
-1. I once has a sandwich.
-It was deliiiicous.
+1. I has a sandwich.
+It was deliicous.
 
-2. I then had coffee.
+2. I had coffee.
 It gave me joy.
 ```
 :::
 
-:::{.column width=33%}
+:::{.column width=37%}
 [B]{.smallcaps}
 ```markdown
-1. I once has a sandwich.
-  It was deliiiicous.
+1. I has a sandwich.
+  It was deliicous.
 
-2. I then had coffee.
+2. I had coffee.
   It gave me joy.
 ```
 
 [D]{.smallcaps}
 ```markdown
-1. I once has a sandwich.
+1. I has a sandwich.
 
-    It was deliiiicous.
+    It was deliicous.
 
-2. I then had coffee.
+2. I had coffee.
 
     It gave me joy.
 ```
 :::
 
-:::{.column width=34%}
+:::{.column width=26%}
 #### Output
 
-1. I once has a sandwich.
+1. I has a sandwich.
 
-   It was deliiiicous.
+   It was deliicous.
 
-2. I then had coffee.
+2. I had coffee.
 
    It gave me joy.
 :::
 :::
 
-:::aside
-It's hard to tell but there are two paragraphs in each list item in the output.
-:::
-
 ## [Block Elements:]{.block-el} Lists (blocks in lists)
 
-"A list item may contain multiple paragraphs and other block-level content. Subsequent block elements must be preceded by a blank line and indented to line up with the first non-space content after the list marker."
+> A list item may contain multiple paragraphs and other block-level content. Subsequent block elements must be preceded by a blank line and indented to line up with the first non-space content after the list marker. -- the Pandoc Docs
 
 ::: columns
 ::: {.column width="50%"}
@@ -1123,31 +1096,31 @@ It's hard to tell but there are two paragraphs in each list item in the output.
 
 ## [Block Elements:]{.block-el} Lists (example lists)
 
-"The first list item with a `@` marker will be numbered 1., the next 2., etc. The numbered examples need not occur in a single list; each new list using `@` will take up where the last stopped."
+> The first list item with a `@` marker will be numbered 1., the next 2., etc. The numbered examples need not occur in a single list; each new list using `@` will take up where the last stopped. -- the Pandoc Docs
 
 ::: columns
 ::: {.column width="50%"}
 #### Markdown
 
 ```markdown
-(@)  My first example will be numbered (1).
-(@)  My second example will be numbered (2).
+(@)  The first example.
+(@)  The second example.
 
 Explanation of examples.
 
-(@)  My third example will be numbered (3).
+(@)  The third example.
 ```
 :::
 
 ::: {.column width="50%"}
 #### Output
 
-(@)  My first example will be numbered (1).
-(@)  My second example will be numbered (2).
+(@)  The first example.
+(@)  The second example.
 
 Explanation of examples.
 
-(@)  My third example will be numbered (3).
+(@)  The third example.
 :::
 :::
 
@@ -1193,43 +1166,39 @@ $$
 
 \bar{x} = \sum_{i=i}^n x_1
 $$
-:::
-:::
 
-. . .
-
-\
-
-:::{style="font-size: .8em"}
-For "display" math, use `$$` delimiters. The delimiters may be separated from the formula by whitespace. No blank lines between the opening and closing `$$` delimiters.
+:::{.fragment}
+> For "display" math, use `$$` delimiters.
 :::
 
+:::
+:::
 
 ## [Block Elements:]{.block-el} Images
 
 Block images use the same syntax as inline images.
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="55%"}
 #### Markdown
 
 ```markdown
-Images on their own line become a block:
+Images are a block element...
 
 ![Elephant](images/elephant.png)
 
-or do they?
+or are they?
 ```
 :::
 
-::: {.column width="50%" .fragment}
+::: {.column width="45%" .fragment}
 #### Output
 
-Images on their own line become a block:
+Images are a block element...
 
 ![Elephant](images/elephant.png){width="20%"}
 
-or do they?
+or are they?
 :::
 :::
 
@@ -1249,7 +1218,7 @@ or do they?
 
 ## Your Turn {.your-turn style="font-size: .9em"}
 
-Your goal is to create from scratch the beautiful documents `ex-2-goal.html` and `ex-2-goal.pdf`. Add into `ex-2.qmd` the markdown syntax needed to create the various inline and block elements found in the output documents.
+Your goal is to create from scratch the beautiful documents `3-markdown-goal.html` and `3-markdown-goal.pdf`. Add into `3-markdown.qmd` the markdown syntax needed to create the various inline and block elements found in the output documents.
 
 \
 
@@ -1318,7 +1287,7 @@ Sandwich the code between "fences" of at least three backticks[^1]. An optional 
 ::: {.column width=25%}
 :::
 
-::: {.column width=50% style="font-size: 2em"}
+::: {.column width=50%}
     ```{{r, echo=FALSE}}
     rnorm(3)
     ```
@@ -1607,28 +1576,30 @@ pi + 1
 ## Example: Figures from Code {auto-animate=true}
 
 :::columns
-:::{.column width=50%}
+:::{.column width=54%}
 ````markdown
 ```{{r}}
 library(palmerpenguins)
 library(ggplot2)
 
-ggplot(penguins, aes(x = bill_length_mm,
-                     y = bill_depth_mm,
-                     col = island)) +
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm,
+           col = island)) +
   geom_point()
 ```
 ````
 :::
-:::{.column width=50% .fragment}
+:::{.column width=46% .fragment}
 ```{r}
 #| echo: false
 library(palmerpenguins)
 library(ggplot2)
 
-ggplot(penguins, aes(x = bill_length_mm,
-                     y = bill_depth_mm,
-                     col = island)) +
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm,
+           col = island)) +
   geom_point() +
   theme_grey(base_size = 18)
 ```
@@ -1638,7 +1609,7 @@ ggplot(penguins, aes(x = bill_length_mm,
 ## Example: Figures from Code {auto-animate=true}
 
 :::columns
-:::{.column width=50%}
+:::{.column width=54%}
 ````markdown
 ```{{r}}
 #| fig-width: 5
@@ -1647,14 +1618,15 @@ ggplot(penguins, aes(x = bill_length_mm,
 library(palmerpenguins)
 library(ggplot2)
 
-ggplot(penguins, aes(x = bill_length_mm,
-                     y = bill_depth_mm,
-                     col = island)) +
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm,
+           col = island)) +
   geom_point()
 ```
 ````
 :::
-:::{.column width=50% .fragment}
+:::{.column width=46% .fragment}
 ```{r}
 #| echo: false
 #| fig-width: 5
@@ -1663,9 +1635,10 @@ ggplot(penguins, aes(x = bill_length_mm,
 library(palmerpenguins)
 library(ggplot2)
 
-ggplot(penguins, aes(x = bill_length_mm,
-                     y = bill_depth_mm,
-                     col = island)) +
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm,
+           col = island)) +
   geom_point() +
   theme_grey(base_size = 18)
 ```
@@ -1681,7 +1654,7 @@ ggplot(penguins, aes(x = bill_length_mm,
 ## Your turn {.your-turn}
 
 ::: task
--   Open `code-cells.qmd` and render the document.
+-   Open `3-code-cells.qmd` and render the document.
 -   Add `echo: false` to the code cell and re-render.
 -   Add 2 more cell options by using  Ctrl + Space after the `#|` or consult the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html).
 -   Add a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.
@@ -1689,15 +1662,13 @@ ggplot(penguins, aes(x = bill_length_mm,
 :::
 
 ```{r}
-#| echo: false
 countdown(minutes = 7)
 ```
 
 
-
 ## Questions
 
-::: task
+::: poll
 Any questions / anything you'd like to review before we wrap up this module?
 :::
 

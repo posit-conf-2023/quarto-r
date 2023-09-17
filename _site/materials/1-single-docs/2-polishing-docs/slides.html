@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -320,6 +385,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../../../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
 <div style="display:none;"></div>
@@ -334,14 +401,1821 @@
 </div>
 
 </section>
+<section>
+<section id="element-attributes" class="title-slide slide level1 center">
+<h1>Element Attributes</h1>
+
+</section>
+<section id="what-happens-when-you-pandoc-it" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What happens when you pandoc it?</h2>
+<p>From the last exercise . . .</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode bash hljs"><span id="cb1-1" class="hljs-ln-code"><a href="#cb1-1"></a><span class="ex">quarto</span> pandoc <span class="at">-f</span> html <span class="at">-t</span> markdown 3-markdow-goal.html <span class="at">-o</span> answer.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:80%;">
+<p><img data-src="images/pandoc-convert-1.png"></p>
+</div><div class="column" style="width:20%;">
+<p><br>
+<br>
+</p>
+<p>This looks familiar!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-happens-when-you-pandoc-it-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What happens when you pandoc it?</h2>
+<p>From the last exercise . . .</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode bash hljs"><span id="cb2-1" class="hljs-ln-code"><a href="#cb2-1"></a><span class="ex">quarto</span> pandoc <span class="at">-f</span> html <span class="at">-t</span> markdown 3-markdow-goal.html <span class="at">-o</span> answer.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="columns">
+<div class="column" style="width:80%;">
+<p><img data-src="images/pandoc-convert-2.png"></p>
+<p><img data-src="images/pandoc-convert-1.png"></p>
+</div><div class="column" style="width:20%;">
+<p><br>
+<br>
+</p>
+<p>This looks familiar!</p>
+<p><br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . . but this does not.</p>
+</div>
+</div>
+<!-- ## {menu-title="Disclaimers"} -->
+<!-- :::{.columns align=center} -->
+<!-- :::{.column width=18%} -->
+<!-- ::: -->
+<!-- :::{.column .incremental width=64%} -->
+<!-- \ -->
+<!-- ### What you're about to see . . . -->
+<!-- - Extends the type of elements you can add to a doc -->
+<!-- - Will work across the main output formats (html, pdf, docx, pptx) -->
+<!-- :::{.fragment .fade-up} -->
+<!-- Ingredients: **Fenced Div** and **Bracketed Span** -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- :::{.column width=18%} -->
+<!-- ::: -->
+<!-- ::: -->
+</section>
+<section id="the-bracketed-span" class="slide level2" data-transition="none">
+<h2>The Bracketed Span</h2>
+</section>
+<section id="the-bracketed-span-1" class="slide level2" data-transition="none">
+<h2>The Bracketed Span</h2>
+
+<img data-src="images/quarto-workshop-07.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="the-bracketed-span-2" class="slide level2" data-transition="none">
+<h2>The Bracketed Span</h2>
+
+<img data-src="images/quarto-workshop-08.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="the-bracketed-span-3" class="slide level2" data-transition="none">
+<h2>The Bracketed Span</h2>
+
+<img data-src="images/quarto-workshop-09.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="the-bracketed-span-4" class="slide level2" data-transition="none">
+<h2>The Bracketed Span</h2>
+
+<img data-src="images/quarto-workshop-10.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="the-bracketed-span-5" class="slide level2" data-transition="none">
+<h2>The Bracketed Span</h2>
+
+<img data-src="images/quarto-workshop-11.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="the-fenced-div" class="slide level2" data-transition="none">
+<h2>The Fenced Div</h2>
+
+<img data-src="images/quarto-workshop-12.jpg" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="figures" class="title-slide slide level1 center">
+<h1>Figures</h1>
+
+</section>
+<section id="poll" class="slide level2">
+<h2>Poll</h2>
+<div class="poll">
+<p><i class="fa-brands fa-discord" aria-label="discord"></i> What is your preferred method of adding a figure to an Rmd so that it displays in HTML at 300 pixels wide?</p>
+</div>
+<p><span class="smallcaps">A. markdown</span></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="al">![A nice image.](foo/bar.png)</span>{width=300}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="smallcaps">B. html</span></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"foo/bar.png"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"300"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="smallcaps">C: knitr</span></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, out.width="300px"}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">includegraphics</span>(<span class="st">"foo/bar.png"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="attributes" class="slide level2">
+<h2>Attributes</h2>
+<p>Set <code>width</code>, <code>height</code>, <code>fig-align</code>, add link, and alt-text (captions go inside <code>[]</code>).</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="al">![](images/dog-watch.png)</span>{width=300 fig-align=right}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/dog-watch.png" alt="Dog watching a watch." width="300"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size: .8em">
+<ul>
+<li>Units default to <code>px</code>.</li>
+<li>Other choices <code>300in</code>, <code>300%</code> (relative to image size), <code>3em</code> (relative to font size).</li>
+<li>Entire fig can be nested inside the link syntax (<code>[fig](url)</code>) to link the image</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="internal-links" class="slide level2">
+<h2>Internal links</h2>
+<p>In additional to external resources, links can go to elements of the same doc through its <code>#id</code>.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:65%;">
+<h4 id="markdown">Markdown</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="al">![A caption](images/dog-watch.png)</span>{#dog}</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>&lt; Much more text &gt;</span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a>A novelty clock, <span class="co">[</span><span class="ot">watch</span><span class="co">](#dog)</span>, </span>
+<span id="cb7-6"><a href="#cb7-6"></a>and the like for keeping time </span>
+<span id="cb7-7"><a href="#cb7-7"></a>at an animal's rate . . .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment" style="width:35%;">
+<!-- -->
+<h4 id="html-output">HTML output</h4>
+<div style="border: 2px solid #5c5859">
+<div id="dogwatch" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/dog-watch.png" width="300"></p>
+<figcaption>A caption</figcaption>
+</figure>
+</div>
+<div style="font-size: .7em">
+<p>&lt; Much more text &gt;</p>
+<p>A novelty clock, <a href="#/internal-links">watch</a>, and the like for keeping time at an animal’s rate . . .</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment" style="position: absolute; top: 720px; left: 80px; font-size: .8em">
+<ul>
+<li>Works for many elements,<br>
+not just figs!</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="tables" class="title-slide slide level1 center">
+<h1>Tables</h1>
+
+</section>
+<section id="markdown-tables" class="slide level2">
+<h2>Markdown tables</h2>
+<p><strong>Markdown:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a>| Right | Left | Default | Center |</span>
+<span id="cb8-2"><a href="#cb8-2"></a>|------:|:-----|---------|:------:|</span>
+<span id="cb8-3"><a href="#cb8-3"></a>|   12  |  12  |    12   |    12  |</span>
+<span id="cb8-4"><a href="#cb8-4"></a>|  123  |  123 |   123   |   123  |</span>
+<span id="cb8-5"><a href="#cb8-5"></a>|    1  |    1 |     1   |     1  |</span>
+<span id="cb8-6"><a href="#cb8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7"></a>: Sample markdown table. {#mytab}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p><strong>Output:</strong></p>
+<table>
+<caption>Sample markdown table. {#mytab}</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Right</th>
+<th style="text-align: left;">Left</th>
+<th>Default</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">12</td>
+<td>12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">123</td>
+<td>123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1</td>
+<td>1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="grid-tables" class="slide level2">
+<h2>Grid tables</h2>
+<p><strong>Markdown:</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a>+---------------+---------------+--------------------+</span>
+<span id="cb9-2"><a href="#cb9-2"></a>| Fruit         | Price         | Advantages         |</span>
+<span id="cb9-3"><a href="#cb9-3"></a>+===============+===============+====================+</span>
+<span id="cb9-4"><a href="#cb9-4"></a>| Bananas       | $1.34         | - built-in wrapper |</span>
+<span id="cb9-5"><a href="#cb9-5"></a>|               |               | - bright color     |</span>
+<span id="cb9-6"><a href="#cb9-6"></a>+---------------+---------------+--------------------+</span>
+<span id="cb9-7"><a href="#cb9-7"></a>| Oranges       | $2.10         | - cures scurvy     |</span>
+<span id="cb9-8"><a href="#cb9-8"></a>|               |               | - tasty            |</span>
+<span id="cb9-9"><a href="#cb9-9"></a>+---------------+---------------+--------------------+</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a>: Sample grid table.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tables-from-code" class="slide level2">
+<h2>Tables from code</h2>
+<p>The <strong>knitr</strong> package can turn data frames into tables with <code>knitr::kable()</code>:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb10-4"><a href="#cb10-4"></a></span>
+<span id="cb10-5"><a href="#cb10-5"></a>s_penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> </span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">select</span>(species,</span>
+<span id="cb10-7"><a href="#cb10-7"></a>         island,</span>
+<span id="cb10-8"><a href="#cb10-8"></a>         bill_length_mm) <span class="sc">|&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb10-10"><a href="#cb10-10"></a></span>
+<span id="cb10-11"><a href="#cb10-11"></a>s_penguins <span class="sc">|&gt;</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>  <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output-display">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: left;">island</th>
+<th style="text-align: right;">bill_length_mm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">40.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">36.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="tables-from-code-1" class="slide level2">
+<h2>Tables from code</h2>
+<p>If you want fancier tables, try the <strong>gt</strong> package and <a href="https://gt.rstudio.com/">all that it offers</a>!</p>
+<div class="columns">
+<div class="column" style="width:56%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>s_penguins <span class="sc">|&gt;</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb11-6"><a href="#cb11-6"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb11-7"><a href="#cb11-7"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"pink"</span>),</span>
+<span id="cb11-8"><a href="#cb11-8"></a>      <span class="fu">cell_text</span>(<span class="at">style =</span> <span class="st">"italic"</span>)</span>
+<span id="cb11-9"><a href="#cb11-9"></a>      ),</span>
+<span id="cb11-10"><a href="#cb11-10"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(</span>
+<span id="cb11-11"><a href="#cb11-11"></a>      <span class="at">columns =</span> bill_length_mm,</span>
+<span id="cb11-12"><a href="#cb11-12"></a>      <span class="at">rows =</span> bill_length_mm <span class="sc">&gt;</span> <span class="dv">40</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a>    )</span>
+<span id="cb11-14"><a href="#cb11-14"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:44%;">
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="xtobibyirk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xtobibyirk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xtobibyirk thead, #xtobibyirk tbody, #xtobibyirk tfoot, #xtobibyirk tr, #xtobibyirk td, #xtobibyirk th {
+  border-style: none;
+}
+
+#xtobibyirk p {
+  margin: 0;
+  padding: 0;
+}
+
+#xtobibyirk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xtobibyirk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xtobibyirk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xtobibyirk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xtobibyirk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xtobibyirk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xtobibyirk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xtobibyirk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xtobibyirk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xtobibyirk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xtobibyirk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xtobibyirk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xtobibyirk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xtobibyirk .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xtobibyirk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xtobibyirk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xtobibyirk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xtobibyirk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xtobibyirk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xtobibyirk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xtobibyirk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xtobibyirk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xtobibyirk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xtobibyirk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xtobibyirk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xtobibyirk .gt_left {
+  text-align: left;
+}
+
+#xtobibyirk .gt_center {
+  text-align: center;
+}
+
+#xtobibyirk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xtobibyirk .gt_font_normal {
+  font-weight: normal;
+}
+
+#xtobibyirk .gt_font_bold {
+  font-weight: bold;
+}
+
+#xtobibyirk .gt_font_italic {
+  font-style: italic;
+}
+
+#xtobibyirk .gt_super {
+  font-size: 65%;
+}
+
+#xtobibyirk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xtobibyirk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xtobibyirk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xtobibyirk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xtobibyirk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xtobibyirk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xtobibyirk .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="species">species</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="island">island</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="bill_length_mm">bill_length_mm</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">39.1</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">39.5</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right" style="background-color: #FFC0CB; font-style: italic;">40.3</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">36.7</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="cross-references" class="title-slide slide level1 center">
+<h1>Cross references</h1>
+
+</section>
+<section id="cross-references-1" class="slide level2">
+<h2>Cross references</h2>
+<ul>
+<li><p>Help readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.</p></li>
+<li><p>Cross referencing steps:</p>
+<ol type="1">
+<li>Add a caption to your figure or table.</li>
+<li>Give an id to your figure or table, starting with <code>fig-</code> or <code>tbl-</code>.</li>
+<li>Refer to it with <code>@fig-...</code> or <code>@tbl-...</code>.</li>
+</ol></li>
+</ul>
+</section>
+<section id="figure-cross-references" class="slide level2">
+<h2>Figure cross references</h2>
+<p>The presence of the caption (<code>Dog watch</code>) and label (<code>#fig-dog-watch</code>) make this figure referenceable:</p>
+<p><strong>Markdown:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a>See @fig-dog-watch for a dog wearing a watch.</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="al">![Dog watch](images/dog-watch.png)</span>{#fig-dog-watch}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p><strong>Output:</strong></p>
+<p>See <a href="#/figure-cross-references">Figure&nbsp;1</a> for a dog wearing a watch.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div id="fig-dog-watch" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/dog-watch.png" alt="A dog wearing a watch" width="200"></p>
+<figcaption>Figure&nbsp;1: Dog watch</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+
+</div>
+</div>
+</div>
+</section>
+<section id="table-cross-references-from-code" class="slide level2">
+<h2>Table cross references (from code)</h2>
+<p>The presence of the caption (<code>A few penguins</code>) and label (<code>#tbl-penguins</code>) make this table referenceable:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Markdown:</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a>See @tbl-penguins for data on a few penguins.</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="in">```{r}</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co">#| label: tbl-penguins</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">#| tbl-cap: A few penguins</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="fu">head</span>(penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="fu">gt</span>()</span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment" style="width:50%;">
+<p><strong>Output:</strong></p>
+<p>See <a href="#/table-cross-references-from-code">Table&nbsp;1</a> for data on a few penguins.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-penguins">
+
+<div id="jjowbsbdny" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jjowbsbdny table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jjowbsbdny thead, #jjowbsbdny tbody, #jjowbsbdny tfoot, #jjowbsbdny tr, #jjowbsbdny td, #jjowbsbdny th {
+  border-style: none;
+}
+
+#jjowbsbdny p {
+  margin: 0;
+  padding: 0;
+}
+
+#jjowbsbdny .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jjowbsbdny .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jjowbsbdny .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jjowbsbdny .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jjowbsbdny .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jjowbsbdny .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jjowbsbdny .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jjowbsbdny .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jjowbsbdny .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jjowbsbdny .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jjowbsbdny .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jjowbsbdny .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jjowbsbdny .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jjowbsbdny .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jjowbsbdny .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjowbsbdny .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jjowbsbdny .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jjowbsbdny .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jjowbsbdny .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjowbsbdny .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jjowbsbdny .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjowbsbdny .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jjowbsbdny .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjowbsbdny .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jjowbsbdny .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjowbsbdny .gt_left {
+  text-align: left;
+}
+
+#jjowbsbdny .gt_center {
+  text-align: center;
+}
+
+#jjowbsbdny .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jjowbsbdny .gt_font_normal {
+  font-weight: normal;
+}
+
+#jjowbsbdny .gt_font_bold {
+  font-weight: bold;
+}
+
+#jjowbsbdny .gt_font_italic {
+  font-style: italic;
+}
+
+#jjowbsbdny .gt_super {
+  font-size: 65%;
+}
+
+#jjowbsbdny .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jjowbsbdny .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jjowbsbdny .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jjowbsbdny .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jjowbsbdny .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jjowbsbdny .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jjowbsbdny .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;1:  <p>A few penguins</p> </caption>
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="species">species</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="island">island</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="bill_length_mm">bill_length_mm</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="bill_depth_mm">bill_depth_mm</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="flipper_length_mm">flipper_length_mm</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="body_mass_g">body_mass_g</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="sex">sex</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="year">year</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">39.1</td>
+<td headers="bill_depth_mm" class="gt_row gt_right">18.7</td>
+<td headers="flipper_length_mm" class="gt_row gt_right">181</td>
+<td headers="body_mass_g" class="gt_row gt_right">3750</td>
+<td headers="sex" class="gt_row gt_center">male</td>
+<td headers="year" class="gt_row gt_right">2007</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">39.5</td>
+<td headers="bill_depth_mm" class="gt_row gt_right">17.4</td>
+<td headers="flipper_length_mm" class="gt_row gt_right">186</td>
+<td headers="body_mass_g" class="gt_row gt_right">3800</td>
+<td headers="sex" class="gt_row gt_center">female</td>
+<td headers="year" class="gt_row gt_right">2007</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">40.3</td>
+<td headers="bill_depth_mm" class="gt_row gt_right">18.0</td>
+<td headers="flipper_length_mm" class="gt_row gt_right">195</td>
+<td headers="body_mass_g" class="gt_row gt_right">3250</td>
+<td headers="sex" class="gt_row gt_center">female</td>
+<td headers="year" class="gt_row gt_right">2007</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">NA</td>
+<td headers="bill_depth_mm" class="gt_row gt_right">NA</td>
+<td headers="flipper_length_mm" class="gt_row gt_right">NA</td>
+<td headers="body_mass_g" class="gt_row gt_right">NA</td>
+<td headers="sex" class="gt_row gt_center">NA</td>
+<td headers="year" class="gt_row gt_right">2007</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">36.7</td>
+<td headers="bill_depth_mm" class="gt_row gt_right">19.3</td>
+<td headers="flipper_length_mm" class="gt_row gt_right">193</td>
+<td headers="body_mass_g" class="gt_row gt_right">3450</td>
+<td headers="sex" class="gt_row gt_center">female</td>
+<td headers="year" class="gt_row gt_right">2007</td></tr>
+    <tr><td headers="species" class="gt_row gt_center">Adelie</td>
+<td headers="island" class="gt_row gt_center">Torgersen</td>
+<td headers="bill_length_mm" class="gt_row gt_right">39.3</td>
+<td headers="bill_depth_mm" class="gt_row gt_right">20.6</td>
+<td headers="flipper_length_mm" class="gt_row gt_right">190</td>
+<td headers="body_mass_g" class="gt_row gt_right">3650</td>
+<td headers="sex" class="gt_row gt_center">male</td>
+<td headers="year" class="gt_row gt_right">2007</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="table-cross-references-from-markdown" class="slide level2">
+<h2>Table cross references (from markdown)</h2>
+<p>The presence of the caption (<code>Numbers</code>) and label (<code>#tbl-numbers</code>) make this table referenceable:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Markdown:</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a>See @tbl-numbers for data.</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a>| Right | Left |</span>
+<span id="cb14-4"><a href="#cb14-4"></a>|------:|:-----|</span>
+<span id="cb14-5"><a href="#cb14-5"></a>|   12  |  12  |</span>
+<span id="cb14-6"><a href="#cb14-6"></a>|  123  |  123 |</span>
+<span id="cb14-7"><a href="#cb14-7"></a></span>
+<span id="cb14-8"><a href="#cb14-8"></a>: Numbers {#tbl-numbers}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment" style="width:50%;">
+<p><strong>Output:</strong></p>
+<p>See <a href="#/table-cross-references-from-markdown">Table&nbsp;2</a> for data.</p>
+<div id="tbl-numbers">
+<table>
+<caption>Table&nbsp;2: Numbers</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Right</th>
+<th style="text-align: left;">Left</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">123</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="your-turn" class="slide level2 your-turn">
+<h2>Your Turn</h2>
+<p>Open <code>1-tables-figures.qmd</code>.</p>
+<ol type="1">
+<li><p>Create a 3 row x 2 col markdown table, populate with a column for restaurant + column for cuisine, and then add 3 examples. Then, cross reference it from text.</p></li>
+<li><p>Include and image from the <code>images/</code> folder and set its width.</p></li>
+<li><p>Add a figure generated from code and cross reference it.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">hist</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_f25186eb" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="callout-blocks" class="title-slide slide level1 center">
+<h1>Callout Blocks</h1>
+
+</section>
+<section id="example-callout-blocks" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Example: Callout Blocks</h2>
+<p>Use case: highlight content for the reader in multiple formats.</p>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<!-- -->
+<h4 id="markdown-1">Markdown</h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb16-1" class="hljs-ln-code"><a href="#cb16-1"></a>:::{.callout-note}</span>
+<span id="cb16-2" class="hljs-ln-code"><a href="#cb16-2"></a>Look - a squirrel!</span>
+<span id="cb16-3" class="hljs-ln-code"><a href="#cb16-3"></a>:::</span>
+<span id="cb16-4" class="hljs-ln-code"><a href="#cb16-4"></a></span>
+<span id="cb16-5" class="hljs-ln-code"><a href="#cb16-5"></a>:::{.callout-important}</span>
+<span id="cb16-6" class="hljs-ln-code"><a href="#cb16-6"></a>Look - a squirrel!</span>
+<span id="cb16-7" class="hljs-ln-code"><a href="#cb16-7"></a>:::</span>
+<span id="cb16-8" class="hljs-ln-code"><a href="#cb16-8"></a></span>
+<span id="cb16-9" class="hljs-ln-code"><a href="#cb16-9"></a>:::{.callout-tip}</span>
+<span id="cb16-10" class="hljs-ln-code"><a href="#cb16-10"></a>Look - a squirrel!</span>
+<span id="cb16-11" class="hljs-ln-code"><a href="#cb16-11"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment" style="width:50%;">
+<!-- -->
+<h4 id="html-output-1">HTML output</h4>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Look - a squirrel!</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Look - a squirrel!</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Look - a squirrel!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="callout-blocks-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Callout Blocks</h2>
+<p>Highlight content for the reader in multiple formats.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-2">Markdown</h4>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb17-1" class="hljs-ln-code"><a href="#cb17-1"></a>:::{.callout-note}</span>
+<span id="cb17-2" class="hljs-ln-code"><a href="#cb17-2"></a>Look - a squirrel!</span>
+<span id="cb17-3" class="hljs-ln-code"><a href="#cb17-3"></a>:::</span>
+<span id="cb17-4" class="hljs-ln-code"><a href="#cb17-4"></a></span>
+<span id="cb17-5" class="hljs-ln-code"><a href="#cb17-5"></a>:::{.callout-important}</span>
+<span id="cb17-6" class="hljs-ln-code"><a href="#cb17-6"></a>Look - a squirrel!</span>
+<span id="cb17-7" class="hljs-ln-code"><a href="#cb17-7"></a>:::</span>
+<span id="cb17-8" class="hljs-ln-code"><a href="#cb17-8"></a></span>
+<span id="cb17-9" class="hljs-ln-code"><a href="#cb17-9"></a>:::{.callout-tip}</span>
+<span id="cb17-10" class="hljs-ln-code"><a href="#cb17-10"></a>Look - a squirrel!</span>
+<span id="cb17-11" class="hljs-ln-code"><a href="#cb17-11"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h4 id="pdf-output">pdf output</h4>
+<p><img data-src="images/callouts-pdf.png"></p>
+</div>
+</div>
+</section>
+<section id="callout-blocks-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Callout Blocks</h2>
+<p>Highlight content for the reader in multiple formats.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-3">Markdown</h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb18-1" class="hljs-ln-code"><a href="#cb18-1"></a>:::{.callout-note}</span>
+<span id="cb18-2" class="hljs-ln-code"><a href="#cb18-2"></a>Look - a squirrel!</span>
+<span id="cb18-3" class="hljs-ln-code"><a href="#cb18-3"></a>:::</span>
+<span id="cb18-4" class="hljs-ln-code"><a href="#cb18-4"></a></span>
+<span id="cb18-5" class="hljs-ln-code"><a href="#cb18-5"></a>:::{.callout-important}</span>
+<span id="cb18-6" class="hljs-ln-code"><a href="#cb18-6"></a>Look - a squirrel!</span>
+<span id="cb18-7" class="hljs-ln-code"><a href="#cb18-7"></a>:::</span>
+<span id="cb18-8" class="hljs-ln-code"><a href="#cb18-8"></a></span>
+<span id="cb18-9" class="hljs-ln-code"><a href="#cb18-9"></a>:::{.callout-tip}</span>
+<span id="cb18-10" class="hljs-ln-code"><a href="#cb18-10"></a>Look - a squirrel!</span>
+<span id="cb18-11" class="hljs-ln-code"><a href="#cb18-11"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h4 id="docx-output">docx output</h4>
+<p><img data-src="images/callouts-doc.png"></p>
+</div><p><br>
+<br>
+</p>
+</div>
+</section></section>
+<section>
+<section id="layouts" class="title-slide slide level1 center">
+<h1>Layouts</h1>
+
+</section>
+<section id="element-layouts" class="slide level2">
+<h2>Element Layouts</h2>
+<p>Quarto makes available several layout <em>attributes</em> that apply to broad range of block elements.</p>
+<ul>
+<li><code>layout-ncol</code>: split elements across n columns (<code>2</code>, <code>3</code>, …).</li>
+<li><code>layout-nrow</code>: split elements across n rows (<code>2</code>, <code>3</code>, …).</li>
+<li><code>layout-valign</code>: align elements (<code>top</code>, <code>center</code>, <code>bottom</code>, <code>default</code>).</li>
+<li><code>layout</code>: Split elements into a 2D array by rows and columns<sup>1</sup>.</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>For more control, see <code>{.grid}</code> which relies up the CSS Bootstrap Grid system. See the [Guide]{https://quarto.org/docs/output-formats/page-layout.html#article}.</p></li></ol></aside></section>
+<section id="element-layouts-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Element Layouts</h2>
+<p><code>layout-ncol</code></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-4">Markdown</h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb19-1" class="hljs-ln-code"><a href="#cb19-1"></a>:::{layout-ncol=2}</span>
+<span id="cb19-2" class="hljs-ln-code"><a href="#cb19-2"></a>A clock for keeping time at </span>
+<span id="cb19-3" class="hljs-ln-code"><a href="#cb19-3"></a>an animal's rate. The multiple</span>
+<span id="cb19-4" class="hljs-ln-code"><a href="#cb19-4"></a>for dogs is seven, for example.</span>
+<span id="cb19-5" class="hljs-ln-code"><a href="#cb19-5"></a></span>
+<span id="cb19-6" class="hljs-ln-code"><a href="#cb19-6"></a><span class="al">![](images/dog-watch.png)</span></span>
+<span id="cb19-7" class="hljs-ln-code"><a href="#cb19-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column border" style="width:50%;">
+<h4 id="html-output-2">HTML output</h4>
+<div class="quarto-layout-panel" style="border: 2px solid #5c5859">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><span style="font-size: .5em">A clock for keeping time at an animal’s rate. The multiple for dogs is seven, for example.</span></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/dog-watch.png"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="element-layouts-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Element Layouts</h2>
+<p><code>layout-ncol</code> + <code>layout-valign</code></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-5">Markdown</h4>
+<div class="sourceCode" id="cb20" data-code-line-numbers="1"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb20-1" class="hljs-ln-code"><a href="#cb20-1"></a>:::{layout-ncol=2 layout-valign=middle}</span>
+<span id="cb20-2" class="hljs-ln-code"><a href="#cb20-2"></a>A clock for keeping time at </span>
+<span id="cb20-3" class="hljs-ln-code"><a href="#cb20-3"></a>an animal's rate. The multiple</span>
+<span id="cb20-4" class="hljs-ln-code"><a href="#cb20-4"></a>for dogs is seven, for example.</span>
+<span id="cb20-5" class="hljs-ln-code"><a href="#cb20-5"></a></span>
+<span id="cb20-6" class="hljs-ln-code"><a href="#cb20-6"></a><span class="al">![](images/dog-watch.png)</span></span>
+<span id="cb20-7" class="hljs-ln-code"><a href="#cb20-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column border" style="width:50%;">
+<h4 id="html-output-3">HTML output</h4>
+<div class="quarto-layout-panel" style="border: 2px solid #5c5859">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><span style="font-size: .5em">A clock for keeping time at an animal’s rate. The multiple for dogs is seven, for example.</span></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/dog-watch.png"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ## Element Layouts {auto-animate="true"} -->
+<!-- `layout-ncol` with small image -->
+<!-- ::: columns -->
+<!-- ::: {.column width="50%"} -->
+<!-- #### Markdown -->
+<!-- ``` {.markdown code-line-numbers="10"} -->
+<!-- :::{layout-ncol=2} -->
+<!-- A novelty clock, watch, and the like for  -->
+<!-- keeping time at an animal's rate, defined -->
+<!-- in terms of a multiple of human rate by  -->
+<!-- dividing the average lifetime of a  -->
+<!-- particular animal into the average  -->
+<!-- lifetime of a human being. The multiple -->
+<!-- for dogs is seven, for example. -->
+<!-- ![](images/dog-watch-small.png) -->
+<!-- ::: -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: {.column .border width="50%"} -->
+<!-- #### HTML output -->
+<!-- ::: {layout-ncol="2" layout-valign="center" style="border: 2px solid #5c5859"} -->
+<!-- [A clock for keeping time at an animal's rate. The multiple for dogs is seven, for example.]{style="font-size: .5em"} -->
+<!-- ![](images/dog-watch.png){width="130px"} -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: -->
+</section>
+<section id="element-layout-array" class="slide level2">
+<h2>Element Layout Array</h2>
+<p><code>layout</code>: The layout attribute<sup>1</sup> is a 2-dimensional array where the first dimension defines rows and the second columns.</p>
+<p><br>
+</p>
+<ul>
+<li><code>layout="[[1,1], [1]]"</code> translates to: <em>create two rows, the first of which has two columns of equal size and the second of which has a single column</em>.</li>
+<li>You can scale the relative dimension of each panel by changing the <code>1</code>s.</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>For more control with HTML output, see <code>{.grid}</code> which relies up the CSS Bootstrap Grid system. See the [Guide]{https://quarto.org/docs/output-formats/page-layout.html#article}.</p></li></ol></aside></section>
+<section id="element-layout-array-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Element Layout Array</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-6">Markdown</h4>
+<div class="sourceCode" id="cb21" data-code-line-numbers="1"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb21-1" class="hljs-ln-code"><a href="#cb21-1"></a>:::{layout="[<span class="co">[</span><span class="ot">1,1</span><span class="co">]</span>, <span class="co">[</span><span class="ot">1</span><span class="co">]</span>]"}</span>
+<span id="cb21-2" class="hljs-ln-code"><a href="#cb21-2"></a><span class="al">![](images/watch-face.png)</span></span>
+<span id="cb21-3" class="hljs-ln-code"><a href="#cb21-3"></a></span>
+<span id="cb21-4" class="hljs-ln-code"><a href="#cb21-4"></a><span class="al">![](images/dog-watch.png)</span></span>
+<span id="cb21-5" class="hljs-ln-code"><a href="#cb21-5"></a></span>
+<span id="cb21-6" class="hljs-ln-code"><a href="#cb21-6"></a><span class="al">![](images/circuit.png)</span></span>
+<span id="cb21-7" class="hljs-ln-code"><a href="#cb21-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column border fragment" style="width:50%;">
+<!-- -->
+<h4 id="html-output-4">HTML output</h4>
+<div class="quarto-layout-panel" style="border: 2px solid #5c5859">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/watch-face.png" style="border: 2px solid #5c5859" width="250"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/dog-watch.png" style="border: 2px solid #5c5859" width="250"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="images/circuit.png" style="border: 2px solid #5c5859" width="750"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment poll" style="position: absolute; top: 600px; left: 0px;font-size: .8em">
+<p>What would <code>layout="[[1,5], [1]]"</code> do?</p>
+</div>
+</section>
+<section id="element-layout-array-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Element Layout Array</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-7">Markdown</h4>
+<div class="sourceCode" id="cb22" data-code-line-numbers="1"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb22-1" class="hljs-ln-code"><a href="#cb22-1"></a>:::{layout="[<span class="co">[</span><span class="ot">1,5</span><span class="co">]</span>, <span class="co">[</span><span class="ot">1</span><span class="co">]</span>]"}</span>
+<span id="cb22-2" class="hljs-ln-code"><a href="#cb22-2"></a><span class="al">![](images/watch-face.png)</span></span>
+<span id="cb22-3" class="hljs-ln-code"><a href="#cb22-3"></a></span>
+<span id="cb22-4" class="hljs-ln-code"><a href="#cb22-4"></a><span class="al">![](images/dog-watch.png)</span></span>
+<span id="cb22-5" class="hljs-ln-code"><a href="#cb22-5"></a></span>
+<span id="cb22-6" class="hljs-ln-code"><a href="#cb22-6"></a><span class="al">![](images/circuit.png)</span></span>
+<span id="cb22-7" class="hljs-ln-code"><a href="#cb22-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column border" style="width:50%;">
+<h4 id="html-output-5">HTML output</h4>
+<div class="quarto-layout-panel" style="border: 2px solid #5c5859">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img data-src="images/watch-face.png" style="border: 2px solid #5c5859" width="250"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 83.3%;justify-content: center;">
+<p><img data-src="images/dog-watch.png" style="border: 2px solid #5c5859" width="250"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="images/circuit.png" style="border: 2px solid #5c5859" width="750"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="document-layout-column-classes" class="slide level2">
+<h2>Document Layout: column classes</h2>
+<p>Modify the width of the main body column for individual block elements (e.g.&nbsp;paragraph, figures). <code>.column-body</code> is the default.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-8">Markdown</h4>
+<div class="sourceCode" id="cb23" data-code-line-numbers="1,11"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1"></a>:::{.column-body}</span>
+<span id="cb23-2"><a href="#cb23-2"></a>A novelty clock, watch, and the like for </span>
+<span id="cb23-3"><a href="#cb23-3"></a>keeping time at an animal's rate, defined</span>
+<span id="cb23-4"><a href="#cb23-4"></a>in terms of a multiple of human rate by </span>
+<span id="cb23-5"><a href="#cb23-5"></a>dividing the average lifetime of a </span>
+<span id="cb23-6"><a href="#cb23-6"></a>particular animal into the average </span>
+<span id="cb23-7"><a href="#cb23-7"></a>lifetime of a human being. The multiple</span>
+<span id="cb23-8"><a href="#cb23-8"></a>for dogs is seven, for example.</span>
+<span id="cb23-9"><a href="#cb23-9"></a>:::</span>
+<span id="cb23-10"><a href="#cb23-10"></a></span>
+<span id="cb23-11"><a href="#cb23-11"></a>:::{.column-screen}</span>
+<span id="cb23-12"><a href="#cb23-12"></a>A novelty clock, watch, and the like for </span>
+<span id="cb23-13"><a href="#cb23-13"></a>keeping time at an animal's rate, defined</span>
+<span id="cb23-14"><a href="#cb23-14"></a>in terms of a multiple of human rate by </span>
+<span id="cb23-15"><a href="#cb23-15"></a>dividing the average lifetime of a </span>
+<span id="cb23-16"><a href="#cb23-16"></a>particular animal into the average </span>
+<span id="cb23-17"><a href="#cb23-17"></a>lifetime of a human being. The multiple</span>
+<span id="cb23-18"><a href="#cb23-18"></a>for dogs is seven, for example.</span>
+<span id="cb23-19"><a href="#cb23-19"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment" style="width:50%;">
+<!-- -->
+<h4 id="html-output-6">HTML output</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/doc-layout.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="document-layout-margin-classes" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Document Layout: margin classes</h2>
+<p>Place any inline or block element from the body to the margin.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-9">Markdown</h4>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb24-1" class="hljs-ln-code"><a href="#cb24-1"></a><span class="al">![](images/dog-watch.png)</span></span>
+<span id="cb24-2" class="hljs-ln-code"><a href="#cb24-2"></a></span>
+<span id="cb24-3" class="hljs-ln-code"><a href="#cb24-3"></a>What a brilliant idea.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h4 id="output">Output</h4>
+<p><img data-src="images/margin-no.png" style="border: 2px solid #5c5859"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="document-layout-margin-classes-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Document Layout: margin classes</h2>
+<p>Place any inline or block element from the body to the margin.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-10">Markdown</h4>
+<div class="sourceCode" id="cb25" data-code-line-numbers="3"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb25-1" class="hljs-ln-code"><a href="#cb25-1"></a><span class="al">![](images/dog-watch.png)</span></span>
+<span id="cb25-2" class="hljs-ln-code"><a href="#cb25-2"></a></span>
+<span id="cb25-3" class="hljs-ln-code"><a href="#cb25-3"></a>:::{.column-margin}</span>
+<span id="cb25-4" class="hljs-ln-code"><a href="#cb25-4"></a>What a brilliant idea.</span>
+<span id="cb25-5" class="hljs-ln-code"><a href="#cb25-5"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h4 id="output-1">Output</h4>
+<p><img data-src="images/margin-yes.png" style="border: 2px solid #5c5859"></p>
+</div>
+</div>
+</section>
+<section id="your-turn-1" class="slide level2 your-turn">
+<h2>Your Turn</h2>
+<p>Open <code>2-layouts.qmd</code> and follow the directions to create a document that describes your favorite place to visit on vacation.</p>
+<p><br>
+</p>
+<p>When you’re done, please share a screenshot of your document in Discord.</p>
+</section>
 <section id="before-we-come-back" class="slide level2">
 <h2>Before we come back…</h2>
-<p>Visit <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a> and set up an account.</p>
+<p>Visit <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a> and set up a free account.</p>
+<div style="text-align: center">
+<p><img data-src="images/quartopub.png"></p>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div style="text-align:center">
+<p><i class="fa-solid fa-clone fa-5x" aria-label="clone"></i></p>
+</div>
+<p><br>
+</p>
+<p>On your way out the door for lunch, please write on the blue sticky note one that confused or frustrated you and on the pink sticky something that you enjoyed, or got your excited.</p>
 
 <div class="footer footer-default">
 <p><a href="index.html">Quarto for R &amp; RStudio</a></p>
 </div>
-</section>
+</section></section>
+
     </div>
   </div>
 
@@ -553,6 +2427,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
