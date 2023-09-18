@@ -49,7 +49,7 @@ These workshops will prepare you to author a rich array of documents in Quarto, 
 -   2-3 pm [Books](materials/2-projects/4-books)
 -   3-3:30 pm Coffee Break
 -   3:30-4:30 [Extensions](materials/2-projects/5-extensions)
--   4:30-5 pm Panel Discussion with the Quarto Dev Team
+-   4:30-5 pm [Quarto Dev Q&A](materials/2-projects/6-dev-panel/slides.qmd)
 :::
 :::
 :::
