@@ -4,9 +4,9 @@ author: Emil Hvitfeldt
 author-title: "Guest speaker"
 ---
 
-[Full Screen](slides.qmd)
+[Full Screen](https://emilhvitfeldt.github.io/talk-positconf2023-fancy-slides/)
 
 ```{=html}
-<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/talk-positconf2023-fancy-slides/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
