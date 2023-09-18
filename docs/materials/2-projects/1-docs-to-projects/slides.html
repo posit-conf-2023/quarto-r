@@ -417,7 +417,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_9d327583" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_cdbd81e1" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -611,7 +611,7 @@
 <p><strong>Render</strong> after each change to your document to check your progress!</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_2b98947d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_4c073511" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1645,7 +1645,7 @@
 <p><i class="fa-brands fa-discord" aria-label="discord"></i> Post to Discord one piece of Quarto syntax or YAML option that you have never seen before.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6dbc683e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_e57b7811" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1735,10 +1735,41 @@
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_42d8302d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a4d35288" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
+</div>
+</div>
+</section>
+<section id="other-useful-_.yml" class="slide level2">
+<h2>Other useful _….yml</h2>
+<div class="fragment">
+<p><code>_metadata.yml</code>: Used to store directory level metadata.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_metadata.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="at">    </span><span class="fu">menu</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="at">    </span><span class="fu">progress</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p><code>_var.yml</code>: Used to store directory level metadata.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_variables.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">semester</span><span class="kw">:</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2023</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="at">  </span><span class="fu">term</span><span class="kw">:</span><span class="at"> fall</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># [The year is {{&lt; var semester.year &gt;}}]{.filename}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1775,6 +1806,12 @@
 <section id="enable-conditional-content" class="title-slide slide level1 center">
 <h1>3. Enable conditional content</h1>
 
+</section>
+<section id="conditional-content" class="slide level2">
+<h2>Conditional Content</h2>
+<div style="text-align: center">
+<iframe src="https://quarto.org/docs/authoring/conditional.html" title="Quarto Conditional Content" frameborder="1" height="800" width="1450" style="border: 1px solid black"></iframe>
+</div>
 </section>
 <section id="our-turn" class="slide level2 our-turn">
 <h2>Our Turn</h2>
@@ -1830,7 +1867,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_297ae209" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_790cfdb2" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">30</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1903,9 +1940,9 @@
 <div class="code-with-filename-file">
 <pre><strong>_variables.yml</strong></pre>
 </div>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">semester</span><span class="kw">:</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2023</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a><span class="at">  </span><span class="fu">term</span><span class="kw">:</span><span class="at"> fall</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">semester</span><span class="kw">:</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2023</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="at">  </span><span class="fu">term</span><span class="kw">:</span><span class="at"> fall</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p>Those values can be injected into a document using the shortcode syntax</p>
 <p><code>{{&lt;var semester.year &gt;}}</code> will evaluate to <code>2023</code>.</p></li>

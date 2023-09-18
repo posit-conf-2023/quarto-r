@@ -1390,6 +1390,36 @@ Let's test out controlling the render.
 countdown::countdown(5)
 ```
 
+## Other useful _....yml
+
+. . .
+
+`_metadata.yml`: Used to store directory level metadata.
+
+```yaml {filename="_metadata.yml"}
+format:
+  revealjs: 
+    menu: false
+    progress: false
+```
+
+. . .
+
+`_var.yml`: Used to store directory level metadata.
+
+```yaml {filename="_variables.yml"}
+semester:
+  year: 2023
+  term: fall
+```
+
+. . .
+
+```{r}
+#| echo: true
+# [The year is {{< var semester.year >}}]{.filename}
+```
+
 
 ## Our Turn {.our-turn #store-meta}
 
@@ -1420,6 +1450,14 @@ countdown::countdown(5)
 4.  Structure the navigation between docs
 
 # 3. Enable conditional content
+
+## Conditional Content
+
+:::{style="text-align: center"}
+```{=html}
+<iframe src="https://quarto.org/docs/authoring/conditional.html" title = "Quarto Conditional Content" frameborder="1" height="800" width="1450" style="border: 1px solid black"></iframe>
+```
+:::
 
 ## Our Turn {.our-turn}
 

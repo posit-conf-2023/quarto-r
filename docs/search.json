@@ -364,6 +364,13 @@
     "text": "Your Turn\n\nMove the rest of the metadata shared by all four files into _quarto.yml\nAdd your name to the author: key in one of the documents. Does the document- or project-level author take precedence?\n\n\n\n\n−+\n05:00"
   },
   {
+    "objectID": "materials/2-projects/1-docs-to-projects/slides.html#other-useful-_.yml",
+    "href": "materials/2-projects/1-docs-to-projects/slides.html#other-useful-_.yml",
+    "title": "From Documents to Projects",
+    "section": "Other useful _….yml",
+    "text": "Other useful _….yml\n\n_metadata.yml: Used to store directory level metadata.\n\n\n_metadata.yml\n\nformat:\n  revealjs: \n    menu: false\n    progress: false\n\n\n\n_var.yml: Used to store directory level metadata.\n\n\n_variables.yml\n\nsemester:\n  year: 2023\n  term: fall\n\n\n\n\n# [The year is {{&lt; var semester.year &gt;}}]{.filename}"
+  },
+  {
     "objectID": "materials/2-projects/1-docs-to-projects/slides.html#store-meta",
     "href": "materials/2-projects/1-docs-to-projects/slides.html#store-meta",
     "title": "From Documents to Projects",
@@ -383,6 +390,13 @@
     "title": "From Documents to Projects",
     "section": "The 4 roles of a Quarto Project",
     "text": "The 4 roles of a Quarto Project\n\nControl which files get rendered\nStore shared metadata\nEnable conditional content\nStructure the navigation between docs"
+  },
+  {
+    "objectID": "materials/2-projects/1-docs-to-projects/slides.html#conditional-content",
+    "href": "materials/2-projects/1-docs-to-projects/slides.html#conditional-content",
+    "title": "From Documents to Projects",
+    "section": "Conditional Content",
+    "text": "Conditional Content"
   },
   {
     "objectID": "materials/2-projects/1-docs-to-projects/slides.html#our-turn",
@@ -718,7 +732,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1]  1.3850543  0.6406014  0.6296015  1.2330285 -0.2350884"
+    "text": "Executing code\n\nrnorm(5)\n\n[1]  0.71382481 -0.04337225  0.59674098 -0.60324260 -1.61063204"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",
