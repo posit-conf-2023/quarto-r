@@ -8,8 +8,6 @@ format: qmdrslides-revealjs
 library(countdown)
 ```
 
-
-
 ## Introductions
 
 Take \~2 minutes to introduce yourself to your neighbors.
