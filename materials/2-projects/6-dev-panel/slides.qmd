@@ -1,0 +1,6 @@
+---
+title: "Quarto Dev Q&A"
+subtitle: Carlos Scheidegger, JJ Allaire, and Charles Teague
+format: qmdrslides-revealjs
+---
+
