@@ -2,7 +2,7 @@
 title: "Sharing Your Work"
 ---
 
-> The best way to share your work with others (and with future you) is to put together a custom format. Create a new custom format for pdfs.
+> Now that you know how to put together beautiful documents, it's time to share them with the world. Learn to use Quarto's fast and easy publishing command then learn to add in custom formats made by the Quarto community.
 
 [Full Screen](slides.qmd)
 
