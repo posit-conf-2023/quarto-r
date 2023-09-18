@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -320,6 +385,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../../../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
 <div style="display:none;"></div>
@@ -334,327 +401,1524 @@
 </div>
 
 </section>
-<section class="slide level2">
+<section id="introductions" class="slide level2">
+<h2>Introductions</h2>
+<p>Take ~2 minutes to introduce yourself to your neighbors.</p>
+<p><br>
+</p>
+<div class="poll">
+<p>Please share …</p>
+<ol type="1">
+<li>Your name</li>
+<li>Where you’re from</li>
+<li>What you work on in 3 words or fewer</li>
+<li>Name one thing you’ve made that you’re proud of</li>
+</ol>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_9d327583" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="about-the-workshop" class="title-slide slide level1 center">
+<h1>About the Workshop</h1>
 
-<!-- ## Your Turn {.your-turn style="font-size: .85em"} -->
-<!-- 1. Open the *Quarto Puzzle* project on Posit Cloud. -->
-<!-- 2. Open `quarto-puzzle.qmd` and render it. -->
-<!-- 3. Modify the document to add five features: -->
-<!--    1. Add an author to the yaml. -->
-<!--    2. Convert "Advanced Quarto" to be a level two header. -->
-<!--    3. Add a link to the Quarto website (https://quarto.org/) on the word "Quarto" that appears before the comma in the first sentence. -->
-<!--    4. Turn the schedule into a bulleted list with 8 items. -->
-<!--    5. At the end of the document, insert the image `quarto-logo.png` found in the same directory. -->
-<!-- Render after each change to your document to check your progress! -->
-<!-- ```{r} -->
-<!-- countdown::countdown(7) -->
-<!-- ``` -->
-<!-- # Fundamentals of a Quarto Document -->
-<!-- # The Structure of a Document -->
-<!-- ## What Defines a Document? -->
-<!-- A document consists of *content*, *structure*, *appearance*, *format*. -->
-<!-- ::: columns -->
-<!-- :::{.column width="50%" .fragment .fade-right} -->
-<!-- ![](images/rubiks-patent.png) -->
-<!-- ::: -->
-<!-- ::: {.column width="50%" .fragment} -->
-<!-- \ -->
-<!-- - **Content:** text, code, graphics -->
-<!-- - **Structure:** paragraphs, lists, emphasis, etc. -->
-<!-- - **Appearance:** fonts, colors, layout -->
-<!-- - **Format:** functionality -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ##  {data-menu-title="Document Structure" auto-animate="true"} -->
-<!-- \ -->
-<!-- \ -->
-<!-- ### What defines the *structure* of a document? {style="text-align: center"} -->
-<!-- \ -->
-<!-- ::: {style="text-align: center"} -->
-<!-- [A document is a list of [block elements]{.block-el}]{.fragment} [that contain [inline elements]{.inline-el} or other blocks,]{.fragment} [along with associated [metadata]{.meta-el}.]{.fragment} -->
-<!-- ::: -->
-<!-- ##  {data-menu-title="Block Elements" auto-animate="true"} -->
-<!-- ::: {style="text-align: center"} -->
-<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
-<!-- ::: -->
-<!-- \ -->
-<!-- . . . -->
-<!-- [Block Element]{.block-el} -->
-<!-- :   Starts on a new line and followed by an empty line. Forms a visible block. -->
-<!-- . . . -->
-<!-- ::: {layout-ncol="2"} -->
-<!-- ::: {#leftcol} -->
-<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px"} -->
-<!-- Block 1 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px"} -->
-<!-- Block 2 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px"} -->
-<!-- Block 3 -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: {#rightcol style="font-size: .7em"} -->
-<!-- \ -->
-<!-- Examples: -->
-<!-- -   Paragraph -->
-<!-- -   Heading -->
-<!-- -   Image -->
-<!-- -   List -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ##  {data-menu-title="Inline Elements" auto-animate="true"} -->
-<!-- ::: {style="text-align: center"} -->
-<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
-<!-- ::: -->
-<!-- \ -->
-<!-- [Inline Element]{.inline-el} -->
-<!-- :   Modifies content inline and is not followed by a new line. -->
-<!-- ::: {layout-ncol="2"} -->
-<!-- <div> -->
-<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px"} -->
-<!-- Block 1 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px"} -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 105px; font-size: .7em"} -->
-<!-- Inline 1 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 250px; font-size: .7em"} -->
-<!-- Inline 2 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px"} -->
-<!-- Block 3 -->
-<!-- ::: -->
-<!-- </div> -->
-<!-- ::: {style="font-size: .7em"} -->
-<!-- \ -->
-<!-- Examples: -->
-<!-- -   Emphasis -->
-<!-- -   Link -->
-<!-- -   Footnote -->
-<!-- -   Citation -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ##  {data-menu-title="Metadata" auto-animate="true"} -->
-<!-- ::: {style="text-align: center"} -->
-<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
-<!-- ::: -->
-<!-- \ -->
-<!-- [Metadata]{.meta-el} -->
-<!-- :   Ancillary info about the document's origin, format, look, etc. -->
-<!-- ::: {layout-ncol="2"} -->
-<!-- <div> -->
-<!-- ::: {.v-center-container .meta-el data-id="metadata" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 30px; left: 95px"} -->
-<!-- Metadata -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 100px; left: 95px"} -->
-<!-- Block 1 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 210px; left: 95px"} -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 105px; font-size: .7em"} -->
-<!-- Inline 1 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="purple; width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 250px; font-size: .7em"} -->
-<!-- Inline 2 -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 320px; left: 95px"} -->
-<!-- Block 3 -->
-<!-- ::: -->
-<!-- </div> -->
-<!-- ::: {style="font-size: .7em"} -->
-<!-- \ -->
-<!-- Examples: -->
-<!-- -   Author -->
-<!-- -   Keywords -->
-<!-- -   Character set -->
-<!-- -   Appearance/style -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ##  {data-menu-title="Document Formats" auto-animate="true"} -->
-<!-- ::: {style="text-align: center"} -->
-<!-- A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}. -->
-<!-- ::: -->
-<!-- ::: {layout-ncol="2"} -->
-<!-- ::: {#\"leftcol} -->
-<!-- ::: {.v-center-container .block-el data-id="block-1" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 60px; left: 95px"} -->
-<!-- Header -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-2" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 130px; left: 95px"} -->
-<!-- Paragraph -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .inline-el data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 140px; left: 125px; font-size: .6em"} -->
-<!-- Emphasis -->
-<!-- ::: -->
-<!-- ::: {.v-center-container .block-el data-id="block-3" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 290px; left: 95px"} -->
-<!-- Image -->
-<!-- ::: -->
-<!-- ::: {.fragment .fade-right fragment-index="4"} -->
-<!-- ![](images/demo-md.png) -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: r-stack -->
-<!-- ::: {.fragment .fade-left fragment-index="1"} -->
-<!-- ![](images/demo-pdf.png) -->
-<!-- ::: -->
-<!-- ::: {.fragment .fade-left fragment-index="2"} -->
-<!-- ![](images/demo-html.png) -->
-<!-- ::: -->
-<!-- ::: {.fragment .fade-left fragment-index="3"} -->
-<!-- ![](images/demo-docx.png) -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- # Exercise 2  -->
-<!-- # Fundamentals of a Quarto Project -->
-<!-- ## What defines a Quarto Project? -->
-<!-- :::{.r-fit-text} -->
-<!-- > [A Quarto Project is a directory]{.fragment} [that contains a file called `_quarto.yml`.]{.fragment} -->
-<!-- ::: -->
-<!-- \ -->
-<!-- :::{.columns} -->
-<!-- :::{.column .fragment .fade-right width=50%} -->
-<!-- This is a Quarto Project. -->
-<!-- ![](images/quarto-project.png){.drop fig-alt="Files panel in RStudio showing my-doc.qmd and _quarto.yml."} -->
-<!-- ::: -->
-<!-- :::{.column .fragment .fade-left width=50%} -->
-<!-- This is not. -->
-<!-- ![](images/not-quarto-project.png){.drop fig-alt="Files panel in RStudio showing only my-doc.qmd."} -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ## _quarto.yml -->
-<!-- A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored. -->
-<!-- ## Quarto Project vs RStudio Project -->
+</section>
+<section id="section" class="slide level2" data-menu-title="Website Link" style="text-align: center">
+<h2></h2>
+<p><br>
+<br>
+<br>
+</p>
+<div class="r-fit-text">
+<p>Workshop materials are at:</p>
+<p><a href="pos.it/quarto-r-conf23">pos.it/quarto-r-conf23</a></p>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-menu-item="Workshop Goals">
+<h2></h2>
+<p><br>
+<br>
+</p>
+<h3 style="font-size: 2.5em; text-align: center" id="goals-for-the-workshop">Goals for the Workshop</h3>
+<div style="font-size: 1.5em">
+<ol type="1">
+<li class="fragment"><p>Everyone leaves with a website and a book.</p></li>
+<li class="fragment"><p>Learn from one another.</p></li>
+<li class="fragment"><p>Build an understanding of the big picture.</p></li>
+</ol>
+</div>
+</section>
+<section id="from-magic-to-magical-machines" class="slide level2">
+<h2>From Magic to Magical Machines</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/rmarkdown_wizards.png" class="fragment fade-in-then-semi-out" alt="Two fuzzy round monsters dressed as wizards, working together to brew different things together from a pantry (code, text, figures, etc.) in a cauldron labeled “R Markdown”. The monster wizard at the cauldron is reading a recipe that includes steps “1. Add text. 2. Add code. 3. Knit. 4. (magic) 5. Celebrate perceived wizardry.” The R Markdown potion then travels through a tube, and is converted to markdown by a monster on a broom with a magic wand, and eventually converted to an output by pandoc. Stylized text (in a font similar to Harry Potter) reads “R Markdown. Text. Code. Output. Get it together, people.”" width="1100"></p>
+<figcaption>Artwork by Allison Horst</figcaption>
+</figure>
+</div>
+<p><img data-src="images/edison-bulb.png" class="fragment fade-left" style="position: absolute; top: 180px; left: 450px; height: 600px; border: 3px solid orange; filter: drop-shadow(10px 10px 4px #5c5859)" alt="A technical sketch of a lightbulb"></p>
+</section>
+<section id="quartoing-as-coding" class="slide level2">
+<h2>Quartoing as Coding</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div>
+<ol type="1">
+<li class="fragment"><p>DRY out your document (Don’t Repeat Yourself)</p></li>
+<li class="fragment"><p>Use control flow (if/then)</p></li>
+<li class="fragment"><p>Think about data structures</p></li>
+</ol>
+</div>
+</div><div class="column" style="width:60%;">
+<p><img data-src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2369&amp;q=80"></p>
+</div>
+</div>
+</section>
+<section id="workshop-schedule" class="slide level2">
+<h2>Workshop Schedule</h2>
+<div style="text-align: center">
+<ul>
+<li>9-10:30 am <a href="materials/2-projects/1-docs-to-projects">From Docs to Projects</a></li>
+<li>10:30-11 am Coffee Break</li>
+<li>11-12:30 pm <a href="materials/2-projects/2-websites">Websites</a></li>
+<li>12:30-1:30 pm Lunch</li>
+<li>1:30-2 pm <a href="materials/2-projects/3-slidecraft">Advanced Slidecraft</a></li>
+<li>2-3 pm <a href="materials/2-projects/4-books">Books</a></li>
+<li>3-3:30 pm Coffee Break</li>
+<li>3:30-4:30 <a href="materials/2-projects/5-extensions">Extensions</a></li>
+<li>4:30-5 pm <a href="materials/2-projects/6-dev-panel/slides.qmd">Quarto Dev Q&amp;A</a></li>
+</ul>
+</div>
+</section>
+<section id="discussions-discord" class="slide level2">
+<h2>Discussions: Discord</h2>
+<p>Ask questions at <strong>#advanced-quarto-with-r-and-rstudio</strong>.</p>
+
+<img data-src="images/adv-discord.png" alt="Screenshot of the discord server app that serves as the forum for the workshop." width="546" class="r-stretch quarto-figure-center"></section>
+<section id="flow-of-the-workshop" class="slide level2">
+<h2>Flow of the Workshop</h2>
+<div class="r-stretch quarto-layout-panel" style="text-align: center">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/slide-normal.png" class="drop fragment" width="540"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/slide-discord.png" class="drop fragment" width="540"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/slide-our-turn.png" class="drop fragment" width="540"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/slide-your-turn.png" class="drop fragment" width="540"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="stickies" class="slide level2">
+<h2>Stickies</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><img data-src="images/sticky.jpeg" alt="Picture of a laptop with a red sticky note stuck to the top." width="540"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>During an activity, place a <span style="color: blue"><strong>blue</strong></span> sticky on your laptop if you’re good to go and a <span style="color: red"><strong>red</strong></span> sticky if you want help.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Image by <a href="https://dynamicecology.wordpress.com/2015/01/13/sticky-notes-as-a-teaching-and-lab-meeting-tool/">Megan Duffy</a></p>
+</div>
+</section>
+<section id="practicalities" class="slide level2">
+<h2>Practicalities</h2>
+<div class="columns" style="font-size: .7em">
+<div class="column" style="width:50%;">
+<ul>
+<li>WiFi:
+<ul>
+<li>Network: Posit Conf 2023</li>
+<li>Password: conf2023</li>
+</ul></li>
+<li>There are gender-neutral bathrooms located are among the Grand Suite Bathrooms.</li>
+<li>There are two meditation/prayer rooms: Grand Suite 2A and Grand Suite 2B. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.</li>
+<li>The lactation room is located in Grand Suite 1. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Participants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.</li>
+<li>The Code of Conduct and COVID policies can be found at https://posit.co/code-of-conduct/. Please review them carefully. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="a-challenge" class="title-slide slide level1 center">
+<h1>A Challenge</h1>
+
+</section>
+<section id="section-2" class="slide level2" data-menu-title="Posit Cloud">
+<h2></h2>
+<div style="text-align: center">
+<p><i class="fa-solid fa-cloud fa-4x" aria-label="cloud"></i></p>
+<p><span class="bigadage">Join me in Posit Cloud!</span></p>
+<div class="fragment">
+<p>If having not yet accepted an invite:</p>
+<p><span style="font-size: 2em"><a href="https://tinyurl.com/adv-quarto" class="uri">https://tinyurl.com/adv-quarto</a></span></p>
+</div>
+<div class="fragment">
+<p>If you have:</p>
+<p><span style="font-size: 2em"><a href="https://posit.cloud/spaces/397249" class="uri">https://posit.cloud/spaces/397249</a></span></p>
+</div>
+</div>
+</section>
+<section id="paired-programming" class="slide level2">
+<h2>Paired programming</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/pair-programming.png"></p>
+</div><div class="column" style="width:50%;">
+<p><br>
+<br>
+<br>
+</p>
+<p>Talk through your code.</p>
+<p><br>
+</p>
+<p>Two people. One laptop.</p>
+</div>
+</div>
+</section>
+<section id="your-turn" class="slide level2 your-turn">
+<h2>Your Turn</h2>
+<p>Click in the <code>quarto-puzzle</code> project, open <code>quarto-puzzle.qmd</code> and <strong>render</strong> it. Then modify the document to add five features:</p>
+<div class="fragment">
+<ol type="1">
+<li>Add an author to the yaml.</li>
+<li>Convert “Advanced Quarto” to be a level two header.</li>
+<li>Add a link to the Quarto website (https://quarto.org/) on the word “Quarto” that appears before the comma in the first sentence.</li>
+<li>Turn the schedule into a bulleted list with 8 items.</li>
+<li>At the end of the document, insert the image <code>quarto-logo.png</code> found in the same directory and make it 150 pixels wide.</li>
+</ol>
+<p><strong>Render</strong> after each change to your document to check your progress!</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_2b98947d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="pandocs-document-model" class="title-slide slide level1 center">
+<h1>Pandoc’s Document Model</h1>
+
+</section>
+<section id="what-defines-a-document" class="slide level2">
+<h2>What Defines a Document?</h2>
+<div class="fragment">
+<p>A document consists of <em>content</em>, <em>format</em>, <em>appearance</em>, <em>structure</em>.</p>
+<div class="columns">
+<div class="column fragment fade-right" style="width:50%;">
+<p><img data-src="images/rubiks-patent.png"></p>
+</div><div class="column fragment" style="width:50%;">
+<p><br>
+</p>
+<ul>
+<li><strong>Content:</strong> text, code, graphics</li>
+<li><strong>Format:</strong> functionality, technology</li>
+<li><strong>Appearance:</strong> fonts, colors, layout</li>
+<li><strong>Structure:</strong> paragraphs, lists, emphasis, etc.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-3" class="slide level2" data-menu-title="Document Structure" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p><br>
+<br>
+</p>
+<h3 style="text-align: center" id="what-defines-the-structure-of-a-document">What defines the <em>structure</em> of a document?</h3>
+<p><br>
+</p>
+<div style="text-align: center">
+<p><span class="fragment">A document is a list of <span class="block-el">block elements</span></span> <span class="fragment">that may contain <span class="inline-el">inline elements</span> or other blocks,</span> <span class="fragment">along with associated <span class="meta-el">metadata</span>.</span></p>
+</div>
+</section>
+<section id="section-4" class="slide level2" data-menu-title="Block Elements" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="text-align: center">
+<p>A document is a list of <span class="block-el">block elements</span> that may contain <span class="inline-el">inline elements</span> or other blocks, along with associated <span class="meta-el">metadata</span>.</p>
+</div>
+<p><br>
+</p>
+<div class="fragment">
+<dl>
+<dt><span class="block-el">Block Element</span></dt>
+<dd>
+<p>Starts on a new line and followed by an empty line. Forms a visible block.</p>
+</dd>
+</dl>
+</div>
+<div class="fragment">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="leftcol" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="v-center-container block-el" data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px">
+<p>Block 1</p>
+</div>
+<div class="v-center-container block-el" data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px">
+<p>Block 2</p>
+</div>
+<div class="v-center-container block-el" data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px">
+<p>Block 3</p>
+</div>
+</div>
+<div id="rightcol" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><br>
+</p>
+<p>Examples:</p>
+<ul>
+<li>Paragraph</li>
+<li>Heading</li>
+<li>Image</li>
+<li>List</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-5" class="slide level2" data-menu-title="Inline Elements" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="text-align: center">
+<p>A document is a list of <span class="block-el">block elements</span> that may contain <span class="inline-el">inline elements</span> or other blocks, along with associated <span class="meta-el">metadata</span>.</p>
+</div>
+<p><br>
+</p>
+<dl>
+<dt><span class="inline-el">Inline Element</span></dt>
+<dd>
+<p>Modifies content inline and is not followed by a new line.</p>
+</dd>
+</dl>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="v-center-container block-el" data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 30px; left: 95px">
+<p>Block 1</p>
+</div>
+<div class="v-center-container block-el" data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 140px; left: 95px">
+
+</div>
+<div class="v-center-container inline-el" data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 105px; font-size: .7em">
+<p>Inline 1</p>
+</div>
+<div class="v-center-container inline-el" data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 150px; left: 250px; font-size: .7em">
+<p>Inline 2</p>
+</div>
+<div class="v-center-container block-el" data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 250px; left: 95px">
+<p>Block 3</p>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><br>
+</p>
+<p>Examples:</p>
+<ul>
+<li>Emphasis</li>
+<li>Link</li>
+<li>Footnote</li>
+<li>Citation</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-6" class="slide level2" data-menu-title="Metadata" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="text-align: center">
+<p>A document is a list of <span class="block-el">block elements</span> that may contain <span class="inline-el">inline elements</span> or other blocks, along with associated <span class="meta-el">metadata</span>.</p>
+</div>
+<p><br>
+</p>
+<dl>
+<dt><span class="meta-el">Metadata</span></dt>
+<dd>
+<p>Ancillary info about the document’s origin, format, look, etc.</p>
+</dd>
+</dl>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="v-center-container meta-el" data-id="metadata" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 30px; left: 95px">
+<p>Metadata</p>
+</div>
+<div class="v-center-container block-el" data-id="block-1" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 100px; left: 95px">
+<p>Block 1</p>
+</div>
+<div class="v-center-container block-el" data-id="block-2" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 210px; left: 95px">
+
+</div>
+<div class="v-center-container inline-el" data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 105px; font-size: .7em">
+<p>Inline 1</p>
+</div>
+<div class="v-center-container inline-el" data-id="inline-1" style="purple; width: 135px; height: 40px; margin: 5px; position: absolute; top: 220px; left: 250px; font-size: .7em">
+<p>Inline 2</p>
+</div>
+<div class="v-center-container block-el" data-id="block-3" style="width: 300px; height: 100px; margin: 5px; position: absolute; top: 320px; left: 95px">
+<p>Block 3</p>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><br>
+</p>
+<p>Examples:</p>
+<ul>
+<li>Author</li>
+<li>Keywords</li>
+<li>Character set</li>
+<li>Appearance/style</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7" class="slide level2" data-menu-title="Document Formats" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="text-align: center">
+<p>A document is a list of <span class="block-el">block elements</span> that may contain <span class="inline-el">inline elements</span> or other blocks, along with associated <span class="meta-el">metadata</span>.</p>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="{#\&quot;leftcol} quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="v-center-container block-el" data-id="block-1" style="width: 300px; height: 60px; margin: 5px; position: absolute; top: 60px; left: 95px">
+<p>Header</p>
+</div>
+<div class="v-center-container block-el" data-id="block-2" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 130px; left: 95px">
+<p>Paragraph</p>
+</div>
+<div class="v-center-container inline-el" data-id="inline-1" style="width: 135px; height: 40px; margin: 5px; position: absolute; top: 140px; left: 125px; font-size: .6em">
+<p>Emphasis</p>
+</div>
+<div class="v-center-container block-el" data-id="block-3" style="width: 300px; height: 150px; margin: 5px; position: absolute; top: 290px; left: 95px">
+<p>Image</p>
+</div>
+<div class="fragment fade-right" data-fragment-index="4">
+<p><img data-src="images/demo-md.png"></p>
+</div>
+</div>
+<div class="r-stack quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="fragment fade-left" data-fragment-index="1">
+<p><img data-src="images/demo-pdf.png"></p>
+</div>
+<div class="fragment fade-left" data-fragment-index="2">
+<p><img data-src="images/demo-html.png"></p>
+</div>
+<div class="fragment fade-left" data-fragment-index="3">
+<p><img data-src="images/demo-docx.png"></p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="review-yaml" class="title-slide slide level1 center">
+<h1>Review: YAML</h1>
+
+</section>
+<section id="metadata-yaml" class="slide level2">
+<h2><span class="meta-el">Metadata:</span> YAML</h2>
+<p>“Yet Another Markup Language” or “YAML Ain’t Markup Language” is used to provide document level metadata …</p>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:50%;">
+<p><span class="fragment">… in key-value pairs,</span></p>
+<p><span class="fragment">… that can nest,</span></p>
+<p><span class="fragment">… are fussy about indentation,</span></p>
+<p><span class="fragment">… and are kept between <code>---</code>.</span></p>
+</div><div class="column fragment" style="width:40%;">
+<p><br>
+</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<!-- ## [Metadata:]{.meta-el} Types of values -->
+<!-- ZZQ could add slide talking about single value, [] list and - lists. -->
 <!-- :::columns -->
-<!-- :::{.column width=50% .smaller} -->
-<!-- - Quarto Projects determine how `quarto render`, `quarto preview` and `quarto publish` work when run inside the directory. -->
-<!-- - RStudio Projects store configuration info for the IDE when working from the directory. -->
-<!-- - A directory can have one or both! -->
-<!-- ::: -->
-<!-- :::{.column width=50% .fragment .fade-left } -->
-<!-- \ -->
-<!-- ![This is both a Quarto Project and an RStudio Project.](images/quarto-rstudio-project.png){.drop fig-alt="Files panel in RStudio showing my-doc.qmd, _quarto.yml, and an .Rproj file."} -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ## Our Running Example: Course Materials -->
-<!-- :::{.centered} -->
-<!-- ![](images/stat20.png){fig-alt="Screenshot of stat20.org"} -->
-<!-- ::: -->
-<!-- ## Kick the Tires -->
-<!-- :::{.poll} -->
-<!-- **Poll**: Open `1-docs-to-projects-activity` and click through the file directories to see what's inside. Try rendering a document or two. -->
-<!-- *Post to Discord one piece of Quarto syntax or YAML option that you have never seen before*. -->
-<!-- ::: -->
-<!-- ```{r} -->
-<!-- #| echo: false -->
-<!-- countdown::countdown(3) -->
+<!-- :::{.column width=50%} -->
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: something -->
+<!-- --- -->
 <!-- ``` -->
-<!-- ## The 4 roles of a Quarto Project -->
-<!-- :::incremental -->
-<!-- 1. Control which files get rendered -->
-<!-- 2. Store shared metadata -->
-<!-- 3. Enable conditional content -->
-<!-- 4. Structure the navigation between docs -->
 <!-- ::: -->
-<!-- # 1. Control which files get rendered -->
-<!-- ## Render Targets -->
-<!-- When you call `quarto render` inside a project, it defaults to rendering *all* .qmd files. There are two ways to exert finer control over this. -->
-<!-- . . . -->
-<!-- \ -->
-<!-- \ -->
-<!-- You can ignore files from the render by: -->
-<!-- 1. Adding them to the render targets list. -->
-<!-- 2. Renaming the file (or a dir along its path) to begin with `_`. -->
-<!-- ## Live Code {.live-code} -->
-<!-- Let's start with a first baby step. -->
-<!-- 1. [Create a blank project] -->
-<!-- 2. [Render all of the files] -->
-<!-- 3. [Exclude one particular note] -->
-<!-- 4. [Exclude a subdirectory] -->
-<!-- # 2. Store shared metadata -->
-<!-- ## Activity -->
-<!-- **Goal**: Let's reorganize the metadata that exists in a repo of class notes. -->
-<!-- Screenshot of `1-docs-to-projects-activity` project. -->
-<!-- ## Live Code {.live-code} -->
-<!-- Let's start with a first baby step. -->
-<!-- 1. [Create a blank project]. -->
-<!-- ## Your Turn {.your-turn} -->
-<!-- 1. Move the metadata shared by all three files into `_quarto.yml` -->
-<!-- 2. Add your name to the `author:` key in one of the documents. Does the document- or project-level author take precedence? -->
-<!-- ## Live Code {.live-code} -->
-<!-- 1. [Create a blank project]. -->
-<!-- 2. [Split off notes written by colleague]{#_metadata.yml}. -->
-<!-- 3. [Treat the semester as a variable]{#_variables.yml}. -->
-<!-- ## Takeaways -->
-<!-- :::incremental -->
-<!-- - Metadata can live in a document, in _metadata.yml, or in _quarto.yml. -->
-<!-- - DRY^["Don't Repeat Yourself". A coding maxim to encourage writing functions.] out your metadata by moving it upstream. -->
-<!-- - Precedence of Metadata -->
-<!--   :::{style="text-align: center"} -->
-<!--   _quarto.yml < _metadata.yml < foo.qmd < -M -->
-<!--   ::: -->
+<!-- :::{.column width=50% .fragment} -->
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: html -->
+<!-- --- -->
+<!-- ``` -->
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: pdf -->
+<!-- --- -->
+<!-- ``` -->
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: revealjs -->
+<!-- --- -->
+<!-- ``` -->
 <!-- ::: -->
-<!-- ## The 4 roles of a Quarto Project -->
-<!-- 1. Control which files get rendered -->
-<!-- 2. [Store shared metadata]{.fragment .highlight-current-red} -->
-<!-- 3. [Enable conditional content]{.fragment .highlight-current-red} -->
-<!-- 4. Structure the navigation between docs -->
-<!-- # 3. Enable conditional content -->
-<!-- ## The 4 roles of a Quarto Project -->
-<!-- 1. Control which files get rendered -->
-<!-- 2. Store shared metadata -->
-<!-- 3. [Enable conditional content]{.fragment .highlight-current-red} -->
-<!-- 4. [Structure the navigation between docs]{.fragment .highlight-current-red} -->
-<!-- :::{.fragment style="text-align:center"} -->
-<!-- Sounds like a [website]{.smalladage}! -->
 <!-- ::: -->
-<!-- # Appendix -->
-<!-- ## Create a blank project -->
-<!-- 1. You can create a blank project by running `quarto create-project` at the command line. -->
-<!-- 2. Note the files that it creates: a largely empty `_quarto.yml` and a demo doc called `project.qmd`. That's just there to give you something to render - it can be deleted! -->
-<!-- 3. Learn more by running `quarto create-project --help` at the command line. -->
-<!-- :::{style="text-align: center"} -->
-<!--  [Return to Live Code](#fa-bolt-live-code)  -->
-<!-- ::: -->
-<!-- 1. [Create a blank project] -->
-<!-- 2. [Render all of the files] -->
-<!-- 3. [Exclude one particular note] -->
-<!-- 4. [Exclude a subdirectory] -->
-<!-- ## Render all of the files -->
-<!-- :::{style="text-align: center"} -->
-<!--  [Return to Live Code](#fa-bolt-live-code)  -->
-<!-- ::: -->
-<!-- ## Exclude one particular note -->
-<!-- :::{style="text-align: center"} -->
-<!--  [Return to Live Code](#fa-bolt-live-code)  -->
-<!-- ::: -->
-<!-- ## Exclude a subdirectory -->
-<!-- :::{style="text-align: center"} -->
-<!--  [Return to Live Code](#fa-bolt-live-code)  -->
-<!-- ::: -->
-<!-- ## _metadata.yml -->
-<!-- In addition to storing project-wide metadata in `_quarto.yml`, you can store sub-directory specific metadata in a `_metadata.yml`. -->
-<!-- :::{style="text-align: center"} -->
-<!--  [Return to Live Code](#fa-bolt-live-code)  -->
-<!-- ::: -->
-<!-- ## _variables.yml -->
-<!-- - You can store any information you like in YAML format in a file called `_variables.yml` at the root of the project directory ([docs](https://quarto.org/docs/authoring/variables.html#var)). -->
-<!--   ```yml {filename="_variables.yml"} -->
-<!--   semester: -->
-<!--     year: 2023 -->
-<!--     term: fall -->
-<!--   ``` -->
-<!-- - Those values can be injected into a document using the shortcode syntax -->
-<!--   `{{<var semester.year >}}` will evaluate to `2023`. -->
-<!-- :::{style="text-align: center"} -->
-<!--  [Return to Live Code](#fa-bolt-live-code)  -->
-<!-- ::: -->
+</section>
+<section id="section-8" class="slide level2" data-menu-title="YAML Poll" style="font-size: .8em">
+<h2></h2>
+<div class="poll">
+<p><i class="fa-brands fa-discord" aria-label="discord"></i> Which of the following are valid ways to include metadata?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="smallcaps">A</span></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> US Patent: A Spatial Toy</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="an">author:</span><span class="co"> Erno Rubik</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co">---</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>My idea is to build a cube...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="smallcaps">C</span></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co">---</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>My idea is to build a cube...</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a>---</span>
+<span id="cb3-8"><a href="#cb3-8"></a>title: A Spatial Toy</span>
+<span id="cb3-9"><a href="#cb3-9"></a>author: Erno Rubik</span>
+<span id="cb3-10"><a href="#cb3-10"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><span class="smallcaps">B</span></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>My idea is to build a cube...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>… then at the command line, run:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">quarto</span> render patent.qmd <span class="at">--to</span> html <span class="at">-M</span> title:patent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>&nbsp;</p>
+<p><span class="smallcaps">D</span></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> "US Patent: A Spatial Toy"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="an">author:</span><span class="co"> "Erno Rubik"</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="an">format:</span><span class="co"> "html"</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">---</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a>My idea is to build a cube...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="metadata-yaml-syntax-rules" class="slide level2">
+<h2><span class="meta-el">Metadata:</span> YAML Syntax Rules</h2>
+<div class="columns">
+<div class="column" style="max-height: 1000px">
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1"></a><span class="pp">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"US Patent: A Toy"</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Erno Rubrik</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Albert Einstein</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="fu">    abstract</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>      This is the abstract.</span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a>      It has two paragraphs.</span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="font-size: .85em">
+<div>
+<ul>
+<li class="fragment"><p>Set a single value with</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">key</span><span class="kw">:</span><span class="at"> value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment"><p>Set a list of values either:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">key</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">val1</span><span class="kw">,</span><span class="at"> val2</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">key</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> val1</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> val2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment"><p>Quote values that contain <code>:</code></p></li>
+<li class="fragment"><p>Indent 2 spaces to nest</p></li>
+<li class="fragment"><p>Multi-line strings follow <code>|</code></p></li>
+<li class="fragment"><p>Multiple YAML blocks will be merged</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>An overview of YAML syntax: <a href="https://en.m.wikipedia.org/wiki/YAML#Syntax" class="uri">https://en.m.wikipedia.org/wiki/YAML#Syntax</a></p>
+</div></aside></section>
+<section id="metadata-fussing-with-yaml" class="slide level2">
+<h2><span class="meta-el">Metadata:</span> Fussing with YAML</h2>
+<p><span class="inline-el">Invalid</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1"></a><span class="pp">---</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="at">format:html</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1"></a><span class="pp">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="at">html</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1"></a><span class="pp">---</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><span class="block-el">Valid</span></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="at">  html</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="quarto-linting" class="slide level2">
+<h2>Quarto linting</h2>
+<p>Lint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs.</p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lint-rstudio.png" class="drop"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Lint_(software)" class="uri">https://en.wikipedia.org/wiki/Lint_(software)</a></p>
+</div></aside></section>
+<section id="quarto-yaml-intelligence" class="slide level2">
+<h2>Quarto YAML Intelligence</h2>
+<p>RStudio + VSCode provide rich tab-completion - start a word and tab to complete, or <kbd><code>Ctrl + space</code></kbd> to see all available options.</p>
+<p><br>
+</p>
+
+<img data-src="images/quarto-tab-complete.png" class="drop r-stretch quarto-figure-center" width="600"></section></section>
+<section>
+<section id="fundamentals-of-a-quarto-project" class="title-slide slide level1 center">
+<h1>Fundamentals of a Quarto Project</h1>
+
+</section>
+<section id="what-defines-a-quarto-project" class="slide level2">
+<h2>What defines a Quarto Project?</h2>
+<div class="r-fit-text">
+<blockquote>
+<p><span class="fragment">A Quarto Project is a directory</span> <span class="fragment">that contains a file called <code>_quarto.yml</code>.</span></p>
+</blockquote>
+</div>
+<p><br>
+</p>
+<div class="columns">
+<div class="column fragment fade-right" style="width:50%;">
+<p>This is a Quarto Project.</p>
+<p><img data-src="images/quarto-project.png" class="drop" alt="Files panel in RStudio showing my-doc.qmd and _quarto.yml."></p>
+</div><div class="column fragment fade-left" style="width:50%;">
+<p>This is not.</p>
+<p><img data-src="images/not-quarto-project.png" class="drop" alt="Files panel in RStudio showing only my-doc.qmd."></p>
+</div>
+</div>
+</section>
+<section id="quarto.yml" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">_quarto.yml</h2>
+<p>A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb17-1" class="hljs-ln-code"><a href="#cb17-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb17-2" class="hljs-ln-code"><a href="#cb17-2"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A Barebones Project"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="quarto.yml-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">_quarto.yml</h2>
+<p>A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb18" data-code-line-numbers="1-20|528-548"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb18-1" class="hljs-ln-code"><a href="#cb18-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb18-2" class="hljs-ln-code"><a href="#cb18-2"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb18-3" class="hljs-ln-code"><a href="#cb18-3"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _site</span></span>
+<span id="cb18-4" class="hljs-ln-code"><a href="#cb18-4"></a><span class="at">  </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb18-5" class="hljs-ln-code"><a href="#cb18-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"/docs/download/_download.json"</span></span>
+<span id="cb18-6" class="hljs-ln-code"><a href="#cb18-6"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"/docs/download/_prerelease.json"</span></span>
+<span id="cb18-7" class="hljs-ln-code"><a href="#cb18-7"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"/_redirects"</span></span>
+<span id="cb18-8" class="hljs-ln-code"><a href="#cb18-8"></a></span>
+<span id="cb18-9" class="hljs-ln-code"><a href="#cb18-9"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb18-10" class="hljs-ln-code"><a href="#cb18-10"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto"</span></span>
+<span id="cb18-11" class="hljs-ln-code"><a href="#cb18-11"></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> </span><span class="st">"quarto-dark-bg.jpeg"</span></span>
+<span id="cb18-12" class="hljs-ln-code"><a href="#cb18-12"></a><span class="at">  </span><span class="fu">favicon</span><span class="kw">:</span><span class="at"> </span><span class="st">"favicon.png"</span></span>
+<span id="cb18-13" class="hljs-ln-code"><a href="#cb18-13"></a><span class="at">  </span><span class="fu">google-analytics</span><span class="kw">:</span><span class="at"> </span><span class="st">"G-FV9Z7SDZ0M"</span></span>
+<span id="cb18-14" class="hljs-ln-code"><a href="#cb18-14"></a><span class="at">  </span><span class="fu">open-graph</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-15" class="hljs-ln-code"><a href="#cb18-15"></a><span class="at">  </span><span class="fu">twitter-card</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-16" class="hljs-ln-code"><a href="#cb18-16"></a><span class="at">  </span><span class="fu">site-url</span><span class="kw">:</span><span class="at"> https://quarto.org</span></span>
+<span id="cb18-17" class="hljs-ln-code"><a href="#cb18-17"></a><span class="at">  </span><span class="fu">repo-url</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-web</span></span>
+<span id="cb18-18" class="hljs-ln-code"><a href="#cb18-18"></a><span class="at">  </span><span class="fu">issue-url</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-cli/issues/new/choose</span></span>
+<span id="cb18-19" class="hljs-ln-code"><a href="#cb18-19"></a><span class="at">  </span><span class="fu">repo-actions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">edit</span><span class="kw">,</span><span class="at"> issue</span><span class="kw">]</span></span>
+<span id="cb18-20" class="hljs-ln-code"><a href="#cb18-20"></a><span class="at">  </span><span class="fu">page-navigation</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-21" class="hljs-ln-code"><a href="#cb18-21"></a><span class="at">  </span><span class="fu">bread-crumbs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-22" class="hljs-ln-code"><a href="#cb18-22"></a><span class="at">  </span><span class="fu">search</span><span class="kw">:</span></span>
+<span id="cb18-23" class="hljs-ln-code"><a href="#cb18-23"></a><span class="at">    </span><span class="fu">show-item-context</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-24" class="hljs-ln-code"><a href="#cb18-24"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> overlay</span></span>
+<span id="cb18-25" class="hljs-ln-code"><a href="#cb18-25"></a><span class="at">    </span><span class="fu">algolia</span><span class="kw">:</span></span>
+<span id="cb18-26" class="hljs-ln-code"><a href="#cb18-26"></a><span class="at">      </span><span class="fu">index-name</span><span class="kw">:</span><span class="at"> prod_QUARTO</span></span>
+<span id="cb18-27" class="hljs-ln-code"><a href="#cb18-27"></a><span class="at">      </span><span class="fu">application-id</span><span class="kw">:</span><span class="at"> ZPJB5I1QN7</span></span>
+<span id="cb18-28" class="hljs-ln-code"><a href="#cb18-28"></a><span class="at">      </span><span class="fu">search-only-api-key</span><span class="kw">:</span><span class="at"> 41be6c1e0a7fea4a51b107810facf577</span></span>
+<span id="cb18-29" class="hljs-ln-code"><a href="#cb18-29"></a><span class="at">      </span><span class="fu">analytics-events</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-30" class="hljs-ln-code"><a href="#cb18-30"></a><span class="at">      </span><span class="fu">show-logo</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-31" class="hljs-ln-code"><a href="#cb18-31"></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span></span>
+<span id="cb18-32" class="hljs-ln-code"><a href="#cb18-32"></a><span class="fu">    left</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb18-33" class="hljs-ln-code"><a href="#cb18-33"></a>      Proudly supported by</span>
+<span id="cb18-34" class="hljs-ln-code"><a href="#cb18-34"></a>      [![](https://www.rstudio.com/assets/img/posit-logo-fullcolor-TM.svg){fig-alt="Posit" width=65px}](https://posit.co)</span>
+<span id="cb18-35" class="hljs-ln-code"><a href="#cb18-35"></a><span class="at">    </span><span class="fu">center</span><span class="kw">:</span></span>
+<span id="cb18-36" class="hljs-ln-code"><a href="#cb18-36"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"About"</span></span>
+<span id="cb18-37" class="hljs-ln-code"><a href="#cb18-37"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> about.qmd</span></span>
+<span id="cb18-38" class="hljs-ln-code"><a href="#cb18-38"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"FAQ"</span></span>
+<span id="cb18-39" class="hljs-ln-code"><a href="#cb18-39"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/faq/index.qmd</span></span>
+<span id="cb18-40" class="hljs-ln-code"><a href="#cb18-40"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"License"</span></span>
+<span id="cb18-41" class="hljs-ln-code"><a href="#cb18-41"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> license.qmd</span></span>
+<span id="cb18-42" class="hljs-ln-code"><a href="#cb18-42"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Trademark"</span></span>
+<span id="cb18-43" class="hljs-ln-code"><a href="#cb18-43"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> trademark.qmd</span></span>
+<span id="cb18-44" class="hljs-ln-code"><a href="#cb18-44"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb18-45" class="hljs-ln-code"><a href="#cb18-45"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb18-46" class="hljs-ln-code"><a href="#cb18-46"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com/quarto_pub</span></span>
+<span id="cb18-47" class="hljs-ln-code"><a href="#cb18-47"></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Quarto Twitter</span></span>
+<span id="cb18-48" class="hljs-ln-code"><a href="#cb18-48"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb18-49" class="hljs-ln-code"><a href="#cb18-49"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-cli</span></span>
+<span id="cb18-50" class="hljs-ln-code"><a href="#cb18-50"></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Quarto GitHub</span></span>
+<span id="cb18-51" class="hljs-ln-code"><a href="#cb18-51"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> rss</span></span>
+<span id="cb18-52" class="hljs-ln-code"><a href="#cb18-52"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://quarto.org/docs/blog/index.xml</span></span>
+<span id="cb18-53" class="hljs-ln-code"><a href="#cb18-53"></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Quarto Blog RSS        </span></span>
+<span id="cb18-54" class="hljs-ln-code"><a href="#cb18-54"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb18-55" class="hljs-ln-code"><a href="#cb18-55"></a><span class="at">    </span><span class="fu">background</span><span class="kw">:</span><span class="at"> light</span></span>
+<span id="cb18-56" class="hljs-ln-code"><a href="#cb18-56"></a><span class="at">    </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> quarto.png</span></span>
+<span id="cb18-57" class="hljs-ln-code"><a href="#cb18-57"></a><span class="at">    </span><span class="fu">logo-alt</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto logo."</span></span>
+<span id="cb18-58" class="hljs-ln-code"><a href="#cb18-58"></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb18-59" class="hljs-ln-code"><a href="#cb18-59"></a><span class="at">    </span><span class="fu">collapse-below</span><span class="kw">:</span><span class="at"> lg</span></span>
+<span id="cb18-60" class="hljs-ln-code"><a href="#cb18-60"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb18-61" class="hljs-ln-code"><a href="#cb18-61"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb18-62" class="hljs-ln-code"><a href="#cb18-62"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb18-63" class="hljs-ln-code"><a href="#cb18-63"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Get Started"</span></span>
+<span id="cb18-64" class="hljs-ln-code"><a href="#cb18-64"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/index.qmd</span></span>
+<span id="cb18-65" class="hljs-ln-code"><a href="#cb18-65"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Guide"</span></span>
+<span id="cb18-66" class="hljs-ln-code"><a href="#cb18-66"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/guide/index.qmd</span></span>
+<span id="cb18-67" class="hljs-ln-code"><a href="#cb18-67"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Extensions</span></span>
+<span id="cb18-68" class="hljs-ln-code"><a href="#cb18-68"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/index.qmd</span></span>
+<span id="cb18-69" class="hljs-ln-code"><a href="#cb18-69"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reference"</span></span>
+<span id="cb18-70" class="hljs-ln-code"><a href="#cb18-70"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/index.qmd</span></span>
+<span id="cb18-71" class="hljs-ln-code"><a href="#cb18-71"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Gallery"</span></span>
+<span id="cb18-72" class="hljs-ln-code"><a href="#cb18-72"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/gallery/index.qmd</span></span>
+<span id="cb18-73" class="hljs-ln-code"><a href="#cb18-73"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Blog"</span></span>
+<span id="cb18-74" class="hljs-ln-code"><a href="#cb18-74"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/blog/index.qmd</span></span>
+<span id="cb18-75" class="hljs-ln-code"><a href="#cb18-75"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Help"</span></span>
+<span id="cb18-76" class="hljs-ln-code"><a href="#cb18-76"></a><span class="at">        </span><span class="fu">menu</span><span class="kw">:</span></span>
+<span id="cb18-77" class="hljs-ln-code"><a href="#cb18-77"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Report a Bug"</span></span>
+<span id="cb18-78" class="hljs-ln-code"><a href="#cb18-78"></a><span class="at">            </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> </span><span class="st">"bug"</span></span>
+<span id="cb18-79" class="hljs-ln-code"><a href="#cb18-79"></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/quarto-dev/quarto-cli/issues"</span></span>
+<span id="cb18-80" class="hljs-ln-code"><a href="#cb18-80"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ask a Question"</span></span>
+<span id="cb18-81" class="hljs-ln-code"><a href="#cb18-81"></a><span class="at">            </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> </span><span class="st">"chat-right-text"</span></span>
+<span id="cb18-82" class="hljs-ln-code"><a href="#cb18-82"></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/quarto-dev/quarto-cli/discussions"</span></span>
+<span id="cb18-83" class="hljs-ln-code"><a href="#cb18-83"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"FAQ"</span></span>
+<span id="cb18-84" class="hljs-ln-code"><a href="#cb18-84"></a><span class="at">            </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> </span><span class="st">"question-circle"</span></span>
+<span id="cb18-85" class="hljs-ln-code"><a href="#cb18-85"></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/faq/index.qmd</span></span>
+<span id="cb18-86" class="hljs-ln-code"><a href="#cb18-86"></a><span class="at">    </span><span class="fu">tools</span><span class="kw">:</span></span>
+<span id="cb18-87" class="hljs-ln-code"><a href="#cb18-87"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb18-88" class="hljs-ln-code"><a href="#cb18-88"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com/quarto_pub</span></span>
+<span id="cb18-89" class="hljs-ln-code"><a href="#cb18-89"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Quarto Twitter</span></span>
+<span id="cb18-90" class="hljs-ln-code"><a href="#cb18-90"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb18-91" class="hljs-ln-code"><a href="#cb18-91"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-cli</span></span>
+<span id="cb18-92" class="hljs-ln-code"><a href="#cb18-92"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Quarto GitHub</span></span>
+<span id="cb18-93" class="hljs-ln-code"><a href="#cb18-93"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> rss</span></span>
+<span id="cb18-94" class="hljs-ln-code"><a href="#cb18-94"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://quarto.org/docs/blog/index.xml</span></span>
+<span id="cb18-95" class="hljs-ln-code"><a href="#cb18-95"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Quarto Blog RSS        </span></span>
+<span id="cb18-96" class="hljs-ln-code"><a href="#cb18-96"></a></span>
+<span id="cb18-97" class="hljs-ln-code"><a href="#cb18-97"></a><span class="at">  </span><span class="fu">sidebar</span><span class="kw">:</span></span>
+<span id="cb18-98" class="hljs-ln-code"><a href="#cb18-98"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> get-started</span></span>
+<span id="cb18-99" class="hljs-ln-code"><a href="#cb18-99"></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Get Started"</span></span>
+<span id="cb18-100" class="hljs-ln-code"><a href="#cb18-100"></a><span class="at">      </span><span class="fu">style</span><span class="kw">:</span><span class="at"> </span><span class="st">"floating"</span></span>
+<span id="cb18-101" class="hljs-ln-code"><a href="#cb18-101"></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb18-102" class="hljs-ln-code"><a href="#cb18-102"></a><span class="at">      </span><span class="fu">align</span><span class="kw">:</span><span class="at"> left</span></span>
+<span id="cb18-103" class="hljs-ln-code"><a href="#cb18-103"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-104" class="hljs-ln-code"><a href="#cb18-104"></a><span class="at">        </span><span class="kw">-</span><span class="at"> docs/get-started/index.qmd</span></span>
+<span id="cb18-105" class="hljs-ln-code"><a href="#cb18-105"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tutorial: Hello, Quarto"</span></span>
+<span id="cb18-106" class="hljs-ln-code"><a href="#cb18-106"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/hello/</span></span>
+<span id="cb18-107" class="hljs-ln-code"><a href="#cb18-107"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tutorial: Computations"</span></span>
+<span id="cb18-108" class="hljs-ln-code"><a href="#cb18-108"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/computations/</span></span>
+<span id="cb18-109" class="hljs-ln-code"><a href="#cb18-109"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tutorial: Authoring"</span></span>
+<span id="cb18-110" class="hljs-ln-code"><a href="#cb18-110"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/authoring/</span></span>
+<span id="cb18-111" class="hljs-ln-code"><a href="#cb18-111"></a></span>
+<span id="cb18-112" class="hljs-ln-code"><a href="#cb18-112"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> guide</span></span>
+<span id="cb18-113" class="hljs-ln-code"><a href="#cb18-113"></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb18-114" class="hljs-ln-code"><a href="#cb18-114"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-115" class="hljs-ln-code"><a href="#cb18-115"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Guide"</span></span>
+<span id="cb18-116" class="hljs-ln-code"><a href="#cb18-116"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/guide/index.qmd</span></span>
+<span id="cb18-117" class="hljs-ln-code"><a href="#cb18-117"></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-118" class="hljs-ln-code"><a href="#cb18-118"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Authoring"</span></span>
+<span id="cb18-119" class="hljs-ln-code"><a href="#cb18-119"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-120" class="hljs-ln-code"><a href="#cb18-120"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/markdown-basics.qmd</span></span>
+<span id="cb18-121" class="hljs-ln-code"><a href="#cb18-121"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/figures.qmd</span></span>
+<span id="cb18-122" class="hljs-ln-code"><a href="#cb18-122"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/tables.qmd</span></span>
+<span id="cb18-123" class="hljs-ln-code"><a href="#cb18-123"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/diagrams.qmd</span></span>
+<span id="cb18-124" class="hljs-ln-code"><a href="#cb18-124"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/videos.qmd</span></span>
+<span id="cb18-125" class="hljs-ln-code"><a href="#cb18-125"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jupyter Notebooks"</span></span>
+<span id="cb18-126" class="hljs-ln-code"><a href="#cb18-126"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/notebook-embed.qmd</span></span>
+<span id="cb18-127" class="hljs-ln-code"><a href="#cb18-127"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/callouts.qmd</span></span>
+<span id="cb18-128" class="hljs-ln-code"><a href="#cb18-128"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/code-annotation.qmd</span></span>
+<span id="cb18-129" class="hljs-ln-code"><a href="#cb18-129"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/article-layout.qmd</span></span>
+<span id="cb18-130" class="hljs-ln-code"><a href="#cb18-130"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Scholarly Writing"</span></span>
+<span id="cb18-131" class="hljs-ln-code"><a href="#cb18-131"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-132" class="hljs-ln-code"><a href="#cb18-132"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/front-matter.qmd</span></span>
+<span id="cb18-133" class="hljs-ln-code"><a href="#cb18-133"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/title-blocks.qmd</span></span>
+<span id="cb18-134" class="hljs-ln-code"><a href="#cb18-134"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/footnotes-and-citations.qmd</span></span>
+<span id="cb18-135" class="hljs-ln-code"><a href="#cb18-135"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/cross-references.qmd</span></span>
+<span id="cb18-136" class="hljs-ln-code"><a href="#cb18-136"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/create-citeable-articles.qmd</span></span>
+<span id="cb18-137" class="hljs-ln-code"><a href="#cb18-137"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/appendices.qmd</span></span>
+<span id="cb18-138" class="hljs-ln-code"><a href="#cb18-138"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Computations"</span></span>
+<span id="cb18-139" class="hljs-ln-code"><a href="#cb18-139"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-140" class="hljs-ln-code"><a href="#cb18-140"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/python.qmd</span></span>
+<span id="cb18-141" class="hljs-ln-code"><a href="#cb18-141"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/r.qmd</span></span>
+<span id="cb18-142" class="hljs-ln-code"><a href="#cb18-142"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/julia.qmd</span></span>
+<span id="cb18-143" class="hljs-ln-code"><a href="#cb18-143"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/ojs.qmd</span></span>
+<span id="cb18-144" class="hljs-ln-code"><a href="#cb18-144"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/execution-options.qmd</span></span>
+<span id="cb18-145" class="hljs-ln-code"><a href="#cb18-145"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/parameters.qmd</span></span>
+<span id="cb18-146" class="hljs-ln-code"><a href="#cb18-146"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tools"</span></span>
+<span id="cb18-147" class="hljs-ln-code"><a href="#cb18-147"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-148" class="hljs-ln-code"><a href="#cb18-148"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"JupyterLab"</span></span>
+<span id="cb18-149" class="hljs-ln-code"><a href="#cb18-149"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-150" class="hljs-ln-code"><a href="#cb18-150"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"JupyterLab Basics"</span></span>
+<span id="cb18-151" class="hljs-ln-code"><a href="#cb18-151"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/jupyter-lab.qmd</span></span>
+<span id="cb18-152" class="hljs-ln-code"><a href="#cb18-152"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"JupyterLab Extension"</span></span>
+<span id="cb18-153" class="hljs-ln-code"><a href="#cb18-153"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/jupyter-lab-extension.qmd</span></span>
+<span id="cb18-154" class="hljs-ln-code"><a href="#cb18-154"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"RStudio IDE"</span></span>
+<span id="cb18-155" class="hljs-ln-code"><a href="#cb18-155"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb18-156" class="hljs-ln-code"><a href="#cb18-156"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"RStudio Basics"</span></span>
+<span id="cb18-157" class="hljs-ln-code"><a href="#cb18-157"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/rstudio.qmd</span></span>
+<span id="cb18-158" class="hljs-ln-code"><a href="#cb18-158"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Visual Editor"</span></span>
+<span id="cb18-159" class="hljs-ln-code"><a href="#cb18-159"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/visual-editor/index.qmd</span></span>
+<span id="cb18-160" class="hljs-ln-code"><a href="#cb18-160"></a><span class="at">                    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-161" class="hljs-ln-code"><a href="#cb18-161"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Editor Basics</span></span>
+<span id="cb18-162" class="hljs-ln-code"><a href="#cb18-162"></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/visual-editor/index.qmd</span></span>
+<span id="cb18-163" class="hljs-ln-code"><a href="#cb18-163"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/technical.qmd</span></span>
+<span id="cb18-164" class="hljs-ln-code"><a href="#cb18-164"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/content.qmd</span></span>
+<span id="cb18-165" class="hljs-ln-code"><a href="#cb18-165"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/options.qmd</span></span>
+<span id="cb18-166" class="hljs-ln-code"><a href="#cb18-166"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/markdown.qmd</span></span>
+<span id="cb18-167" class="hljs-ln-code"><a href="#cb18-167"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"VS Code"</span></span>
+<span id="cb18-168" class="hljs-ln-code"><a href="#cb18-168"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/vscode.qmd</span></span>
+<span id="cb18-169" class="hljs-ln-code"><a href="#cb18-169"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-170" class="hljs-ln-code"><a href="#cb18-170"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"VS Code Basics"</span></span>
+<span id="cb18-171" class="hljs-ln-code"><a href="#cb18-171"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/vscode.qmd</span></span>
+<span id="cb18-172" class="hljs-ln-code"><a href="#cb18-172"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Visual Editor"</span></span>
+<span id="cb18-173" class="hljs-ln-code"><a href="#cb18-173"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/visual-editor/vscode/index.qmd</span></span>
+<span id="cb18-174" class="hljs-ln-code"><a href="#cb18-174"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Notebook Editor"</span></span>
+<span id="cb18-175" class="hljs-ln-code"><a href="#cb18-175"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/vscode-notebook.qmd</span></span>
+<span id="cb18-176" class="hljs-ln-code"><a href="#cb18-176"></a><span class="at">                </span></span>
+<span id="cb18-177" class="hljs-ln-code"><a href="#cb18-177"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/tools/neovim.qmd</span></span>
+<span id="cb18-178" class="hljs-ln-code"><a href="#cb18-178"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/tools/text-editors.qmd</span></span>
+<span id="cb18-179" class="hljs-ln-code"><a href="#cb18-179"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Documents"</span></span>
+<span id="cb18-180" class="hljs-ln-code"><a href="#cb18-180"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-181" class="hljs-ln-code"><a href="#cb18-181"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"HTML"</span></span>
+<span id="cb18-182" class="hljs-ln-code"><a href="#cb18-182"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-183" class="hljs-ln-code"><a href="#cb18-183"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-basics.qmd</span></span>
+<span id="cb18-184" class="hljs-ln-code"><a href="#cb18-184"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-code.qmd</span></span>
+<span id="cb18-185" class="hljs-ln-code"><a href="#cb18-185"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-themes.qmd</span></span>
+<span id="cb18-186" class="hljs-ln-code"><a href="#cb18-186"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-multi-format.qmd</span></span>
+<span id="cb18-187" class="hljs-ln-code"><a href="#cb18-187"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-publishing.qmd</span></span>
+<span id="cb18-188" class="hljs-ln-code"><a href="#cb18-188"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"PDF"</span></span>
+<span id="cb18-189" class="hljs-ln-code"><a href="#cb18-189"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-190" class="hljs-ln-code"><a href="#cb18-190"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/pdf-basics.qmd</span></span>
+<span id="cb18-191" class="hljs-ln-code"><a href="#cb18-191"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/pdf-engine.qmd</span></span>
+<span id="cb18-192" class="hljs-ln-code"><a href="#cb18-192"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"MS Word"</span></span>
+<span id="cb18-193" class="hljs-ln-code"><a href="#cb18-193"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-194" class="hljs-ln-code"><a href="#cb18-194"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/ms-word.qmd</span></span>
+<span id="cb18-195" class="hljs-ln-code"><a href="#cb18-195"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/ms-word-templates.qmd</span></span>
+<span id="cb18-196" class="hljs-ln-code"><a href="#cb18-196"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Markdown"</span></span>
+<span id="cb18-197" class="hljs-ln-code"><a href="#cb18-197"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-198" class="hljs-ln-code"><a href="#cb18-198"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/gfm.qmd</span></span>
+<span id="cb18-199" class="hljs-ln-code"><a href="#cb18-199"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/hugo.qmd</span></span>
+<span id="cb18-200" class="hljs-ln-code"><a href="#cb18-200"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/docusaurus.qmd</span></span>
+<span id="cb18-201" class="hljs-ln-code"><a href="#cb18-201"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/output-formats/all-formats.qmd</span></span>
+<span id="cb18-202" class="hljs-ln-code"><a href="#cb18-202"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Presentations"</span></span>
+<span id="cb18-203" class="hljs-ln-code"><a href="#cb18-203"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-204" class="hljs-ln-code"><a href="#cb18-204"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb18-205" class="hljs-ln-code"><a href="#cb18-205"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/presentations/index.qmd</span></span>
+<span id="cb18-206" class="hljs-ln-code"><a href="#cb18-206"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/presentations/revealjs/index.qmd</span></span>
+<span id="cb18-207" class="hljs-ln-code"><a href="#cb18-207"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-208" class="hljs-ln-code"><a href="#cb18-208"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reveal Basics"</span></span>
+<span id="cb18-209" class="hljs-ln-code"><a href="#cb18-209"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/presentations/revealjs/index.qmd</span></span>
+<span id="cb18-210" class="hljs-ln-code"><a href="#cb18-210"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/presentations/revealjs/presenting.qmd</span></span>
+<span id="cb18-211" class="hljs-ln-code"><a href="#cb18-211"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/presentations/revealjs/advanced.qmd</span></span>
+<span id="cb18-212" class="hljs-ln-code"><a href="#cb18-212"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/presentations/revealjs/themes.qmd</span></span>
+<span id="cb18-213" class="hljs-ln-code"><a href="#cb18-213"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/presentations/powerpoint.qmd</span></span>
+<span id="cb18-214" class="hljs-ln-code"><a href="#cb18-214"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/presentations/beamer.qmd</span></span>
+<span id="cb18-215" class="hljs-ln-code"><a href="#cb18-215"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Websites"</span></span>
+<span id="cb18-216" class="hljs-ln-code"><a href="#cb18-216"></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/websites/website-basics.qmd</span></span>
+<span id="cb18-217" class="hljs-ln-code"><a href="#cb18-217"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-218" class="hljs-ln-code"><a href="#cb18-218"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-basics.qmd</span></span>
+<span id="cb18-219" class="hljs-ln-code"><a href="#cb18-219"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-navigation.qmd</span></span>
+<span id="cb18-220" class="hljs-ln-code"><a href="#cb18-220"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-blog.qmd</span></span>
+<span id="cb18-221" class="hljs-ln-code"><a href="#cb18-221"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-search.qmd</span></span>
+<span id="cb18-222" class="hljs-ln-code"><a href="#cb18-222"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-tools.qmd</span></span>
+<span id="cb18-223" class="hljs-ln-code"><a href="#cb18-223"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-about.qmd</span></span>
+<span id="cb18-224" class="hljs-ln-code"><a href="#cb18-224"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Listing Pages"</span></span>
+<span id="cb18-225" class="hljs-ln-code"><a href="#cb18-225"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/websites/website-listings.qmd</span></span>
+<span id="cb18-226" class="hljs-ln-code"><a href="#cb18-226"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-227" class="hljs-ln-code"><a href="#cb18-227"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/websites/website-listings.qmd</span></span>
+<span id="cb18-228" class="hljs-ln-code"><a href="#cb18-228"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/websites/website-listings-custom.qmd</span></span>
+<span id="cb18-229" class="hljs-ln-code"><a href="#cb18-229"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Books"</span></span>
+<span id="cb18-230" class="hljs-ln-code"><a href="#cb18-230"></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/books/book-basics.qmd</span></span>
+<span id="cb18-231" class="hljs-ln-code"><a href="#cb18-231"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-232" class="hljs-ln-code"><a href="#cb18-232"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/books/book-basics.qmd</span></span>
+<span id="cb18-233" class="hljs-ln-code"><a href="#cb18-233"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/books/book-structure.qmd</span></span>
+<span id="cb18-234" class="hljs-ln-code"><a href="#cb18-234"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/books/book-crossrefs.qmd</span></span>
+<span id="cb18-235" class="hljs-ln-code"><a href="#cb18-235"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Customizing Output"</span></span>
+<span id="cb18-236" class="hljs-ln-code"><a href="#cb18-236"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/books/book-output.qmd</span></span>
+<span id="cb18-237" class="hljs-ln-code"><a href="#cb18-237"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Interactivity"</span></span>
+<span id="cb18-238" class="hljs-ln-code"><a href="#cb18-238"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-239" class="hljs-ln-code"><a href="#cb18-239"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb18-240" class="hljs-ln-code"><a href="#cb18-240"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/interactive/index.qmd</span></span>
+<span id="cb18-241" class="hljs-ln-code"><a href="#cb18-241"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/interactive/ojs/index.qmd</span></span>
+<span id="cb18-242" class="hljs-ln-code"><a href="#cb18-242"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-243" class="hljs-ln-code"><a href="#cb18-243"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction"</span></span>
+<span id="cb18-244" class="hljs-ln-code"><a href="#cb18-244"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/interactive/ojs/index.qmd</span></span>
+<span id="cb18-245" class="hljs-ln-code"><a href="#cb18-245"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/libraries.qmd</span></span>
+<span id="cb18-246" class="hljs-ln-code"><a href="#cb18-246"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/data-sources.qmd</span></span>
+<span id="cb18-247" class="hljs-ln-code"><a href="#cb18-247"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/ojs-cells.qmd</span></span>
+<span id="cb18-248" class="hljs-ln-code"><a href="#cb18-248"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/shiny.qmd</span></span>
+<span id="cb18-249" class="hljs-ln-code"><a href="#cb18-249"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/code-reuse.qmd</span></span>
+<span id="cb18-250" class="hljs-ln-code"><a href="#cb18-250"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Examples"</span></span>
+<span id="cb18-251" class="hljs-ln-code"><a href="#cb18-251"></a><span class="at">                    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-252" class="hljs-ln-code"><a href="#cb18-252"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/penguins.qmd</span></span>
+<span id="cb18-253" class="hljs-ln-code"><a href="#cb18-253"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/sunburst.qmd</span></span>
+<span id="cb18-254" class="hljs-ln-code"><a href="#cb18-254"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/arquero.qmd</span></span>
+<span id="cb18-255" class="hljs-ln-code"><a href="#cb18-255"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/population.qmd</span></span>
+<span id="cb18-256" class="hljs-ln-code"><a href="#cb18-256"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/noaa-co2.qmd</span></span>
+<span id="cb18-257" class="hljs-ln-code"><a href="#cb18-257"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/github.qmd</span></span>
+<span id="cb18-258" class="hljs-ln-code"><a href="#cb18-258"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/layout.qmd</span></span>
+<span id="cb18-259" class="hljs-ln-code"><a href="#cb18-259"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Shiny"</span></span>
+<span id="cb18-260" class="hljs-ln-code"><a href="#cb18-260"></a><span class="at">                        </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-261" class="hljs-ln-code"><a href="#cb18-261"></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"K-Means"</span></span>
+<span id="cb18-262" class="hljs-ln-code"><a href="#cb18-262"></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/kmeans-shiny-ojs/</span></span>
+<span id="cb18-263" class="hljs-ln-code"><a href="#cb18-263"></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Binning"</span></span>
+<span id="cb18-264" class="hljs-ln-code"><a href="#cb18-264"></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/binning-shiny-ojs/</span></span>
+<span id="cb18-265" class="hljs-ln-code"><a href="#cb18-265"></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Data Binding"</span></span>
+<span id="cb18-266" class="hljs-ln-code"><a href="#cb18-266"></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/data-shiny-ojs/</span></span>
+<span id="cb18-267" class="hljs-ln-code"><a href="#cb18-267"></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Covid Map"</span></span>
+<span id="cb18-268" class="hljs-ln-code"><a href="#cb18-268"></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/covid19-bicartogram/</span></span>
+<span id="cb18-269" class="hljs-ln-code"><a href="#cb18-269"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/interactive/shiny/index.qmd</span></span>
+<span id="cb18-270" class="hljs-ln-code"><a href="#cb18-270"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-271" class="hljs-ln-code"><a href="#cb18-271"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction"</span></span>
+<span id="cb18-272" class="hljs-ln-code"><a href="#cb18-272"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/interactive/shiny/index.qmd</span></span>
+<span id="cb18-273" class="hljs-ln-code"><a href="#cb18-273"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/shiny/running.qmd</span></span>
+<span id="cb18-274" class="hljs-ln-code"><a href="#cb18-274"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/shiny/execution.qmd</span></span>
+<span id="cb18-275" class="hljs-ln-code"><a href="#cb18-275"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/shiny/resources.qmd</span></span>
+<span id="cb18-276" class="hljs-ln-code"><a href="#cb18-276"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Examples"</span></span>
+<span id="cb18-277" class="hljs-ln-code"><a href="#cb18-277"></a><span class="at">                    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-278" class="hljs-ln-code"><a href="#cb18-278"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Old Faithful"</span></span>
+<span id="cb18-279" class="hljs-ln-code"><a href="#cb18-279"></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/shiny-old-faithful/</span></span>
+<span id="cb18-280" class="hljs-ln-code"><a href="#cb18-280"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"K-Means"</span></span>
+<span id="cb18-281" class="hljs-ln-code"><a href="#cb18-281"></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/shiny-k-means/</span></span>
+<span id="cb18-282" class="hljs-ln-code"><a href="#cb18-282"></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Diamonds"</span></span>
+<span id="cb18-283" class="hljs-ln-code"><a href="#cb18-283"></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/shiny-diamonds/</span></span>
+<span id="cb18-284" class="hljs-ln-code"><a href="#cb18-284"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Widgets"</span></span>
+<span id="cb18-285" class="hljs-ln-code"><a href="#cb18-285"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-286" class="hljs-ln-code"><a href="#cb18-286"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/widgets/jupyter.qmd</span></span>
+<span id="cb18-287" class="hljs-ln-code"><a href="#cb18-287"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/widgets/htmlwidgets.qmd</span></span>
+<span id="cb18-288" class="hljs-ln-code"><a href="#cb18-288"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/interactive/layout.qmd</span></span>
+<span id="cb18-289" class="hljs-ln-code"><a href="#cb18-289"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Publishing"</span></span>
+<span id="cb18-290" class="hljs-ln-code"><a href="#cb18-290"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-291" class="hljs-ln-code"><a href="#cb18-291"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/index.qmd</span></span>
+<span id="cb18-292" class="hljs-ln-code"><a href="#cb18-292"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/quarto-pub.qmd</span></span>
+<span id="cb18-293" class="hljs-ln-code"><a href="#cb18-293"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/github-pages.qmd</span></span>
+<span id="cb18-294" class="hljs-ln-code"><a href="#cb18-294"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/rstudio-connect.qmd</span></span>
+<span id="cb18-295" class="hljs-ln-code"><a href="#cb18-295"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/netlify.qmd</span></span>
+<span id="cb18-296" class="hljs-ln-code"><a href="#cb18-296"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/confluence.qmd</span></span>
+<span id="cb18-297" class="hljs-ln-code"><a href="#cb18-297"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/other.qmd</span></span>
+<span id="cb18-298" class="hljs-ln-code"><a href="#cb18-298"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Publishing with CI"</span></span>
+<span id="cb18-299" class="hljs-ln-code"><a href="#cb18-299"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/publishing/ci.qmd</span></span>
+<span id="cb18-300" class="hljs-ln-code"><a href="#cb18-300"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Projects"</span></span>
+<span id="cb18-301" class="hljs-ln-code"><a href="#cb18-301"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-302" class="hljs-ln-code"><a href="#cb18-302"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/quarto-projects.qmd</span></span>
+<span id="cb18-303" class="hljs-ln-code"><a href="#cb18-303"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/code-execution.qmd</span></span>
+<span id="cb18-304" class="hljs-ln-code"><a href="#cb18-304"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/profiles.qmd</span></span>
+<span id="cb18-305" class="hljs-ln-code"><a href="#cb18-305"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/environment.qmd</span></span>
+<span id="cb18-306" class="hljs-ln-code"><a href="#cb18-306"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/scripts.qmd</span></span>
+<span id="cb18-307" class="hljs-ln-code"><a href="#cb18-307"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/virtual-environments.qmd</span></span>
+<span id="cb18-308" class="hljs-ln-code"><a href="#cb18-308"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Advanced"</span></span>
+<span id="cb18-309" class="hljs-ln-code"><a href="#cb18-309"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-310" class="hljs-ln-code"><a href="#cb18-310"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/includes.qmd</span></span>
+<span id="cb18-311" class="hljs-ln-code"><a href="#cb18-311"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/variables.qmd</span></span>
+<span id="cb18-312" class="hljs-ln-code"><a href="#cb18-312"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/output-formats/page-layout.qmd</span></span>
+<span id="cb18-313" class="hljs-ln-code"><a href="#cb18-313"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/language.qmd</span></span>
+<span id="cb18-314" class="hljs-ln-code"><a href="#cb18-314"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/conditional.qmd</span></span>
+<span id="cb18-315" class="hljs-ln-code"><a href="#cb18-315"></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/extensions/nbfilter.qmd</span></span>
+<span id="cb18-316" class="hljs-ln-code"><a href="#cb18-316"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> extensions</span></span>
+<span id="cb18-317" class="hljs-ln-code"><a href="#cb18-317"></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Extensions"</span></span>
+<span id="cb18-318" class="hljs-ln-code"><a href="#cb18-318"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-319" class="hljs-ln-code"><a href="#cb18-319"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb18-320" class="hljs-ln-code"><a href="#cb18-320"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/extensions/index.qmd</span></span>
+<span id="cb18-321" class="hljs-ln-code"><a href="#cb18-321"></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb18-322" class="hljs-ln-code"><a href="#cb18-322"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Shortcodes &amp; Filters"</span></span>
+<span id="cb18-323" class="hljs-ln-code"><a href="#cb18-323"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-filters.qmd</span></span>
+<span id="cb18-324" class="hljs-ln-code"><a href="#cb18-324"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Journal Articles"</span></span>
+<span id="cb18-325" class="hljs-ln-code"><a href="#cb18-325"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-journals.qmd</span></span>
+<span id="cb18-326" class="hljs-ln-code"><a href="#cb18-326"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Custom Formats"</span></span>
+<span id="cb18-327" class="hljs-ln-code"><a href="#cb18-327"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-formats.qmd</span></span>
+<span id="cb18-328" class="hljs-ln-code"><a href="#cb18-328"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Revealjs Extensions"</span></span>
+<span id="cb18-329" class="hljs-ln-code"><a href="#cb18-329"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-revealjs.qmd</span></span>
+<span id="cb18-330" class="hljs-ln-code"><a href="#cb18-330"></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/managing.qmd</span></span>
+<span id="cb18-331" class="hljs-ln-code"><a href="#cb18-331"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb18-332" class="hljs-ln-code"><a href="#cb18-332"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/extensions/creating.qmd</span></span>
+<span id="cb18-333" class="hljs-ln-code"><a href="#cb18-333"></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-334" class="hljs-ln-code"><a href="#cb18-334"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb18-335" class="hljs-ln-code"><a href="#cb18-335"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/creating.qmd</span></span>
+<span id="cb18-336" class="hljs-ln-code"><a href="#cb18-336"></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/lua.qmd</span></span>
+<span id="cb18-337" class="hljs-ln-code"><a href="#cb18-337"></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/lua-api.qmd</span></span>
+<span id="cb18-338" class="hljs-ln-code"><a href="#cb18-338"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Distribution"</span></span>
+<span id="cb18-339" class="hljs-ln-code"><a href="#cb18-339"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/distributing.qmd</span></span>
+<span id="cb18-340" class="hljs-ln-code"><a href="#cb18-340"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb18-341" class="hljs-ln-code"><a href="#cb18-341"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Shortcodes"</span></span>
+<span id="cb18-342" class="hljs-ln-code"><a href="#cb18-342"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/shortcodes.qmd</span></span>
+<span id="cb18-343" class="hljs-ln-code"><a href="#cb18-343"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Filters"</span></span>
+<span id="cb18-344" class="hljs-ln-code"><a href="#cb18-344"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/filters.qmd</span></span>
+<span id="cb18-345" class="hljs-ln-code"><a href="#cb18-345"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Journal Articles"</span></span>
+<span id="cb18-346" class="hljs-ln-code"><a href="#cb18-346"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/journals/formats.qmd</span></span>
+<span id="cb18-347" class="hljs-ln-code"><a href="#cb18-347"></a><span class="at">              </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-348" class="hljs-ln-code"><a href="#cb18-348"></a><span class="at">                </span><span class="kw">-</span><span class="at"> docs/journals/formats.qmd</span></span>
+<span id="cb18-349" class="hljs-ln-code"><a href="#cb18-349"></a><span class="at">                </span><span class="kw">-</span><span class="at"> docs/journals/templates.qmd</span></span>
+<span id="cb18-350" class="hljs-ln-code"><a href="#cb18-350"></a><span class="at">                </span><span class="kw">-</span><span class="at"> docs/journals/authors.qmd</span></span>
+<span id="cb18-351" class="hljs-ln-code"><a href="#cb18-351"></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/formats.qmd</span></span>
+<span id="cb18-352" class="hljs-ln-code"><a href="#cb18-352"></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/revealjs.qmd</span></span>
+<span id="cb18-353" class="hljs-ln-code"><a href="#cb18-353"></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/project-types.qmd</span></span>
+<span id="cb18-354" class="hljs-ln-code"><a href="#cb18-354"></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/starter-templates.qmd</span></span>
+<span id="cb18-355" class="hljs-ln-code"><a href="#cb18-355"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> manuscripts</span></span>
+<span id="cb18-356" class="hljs-ln-code"><a href="#cb18-356"></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Manuscripts"</span></span>
+<span id="cb18-357" class="hljs-ln-code"><a href="#cb18-357"></a><span class="at">      </span><span class="fu">style</span><span class="kw">:</span><span class="at"> </span><span class="st">"floating"</span></span>
+<span id="cb18-358" class="hljs-ln-code"><a href="#cb18-358"></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb18-359" class="hljs-ln-code"><a href="#cb18-359"></a><span class="at">      </span><span class="fu">align</span><span class="kw">:</span><span class="at"> left</span></span>
+<span id="cb18-360" class="hljs-ln-code"><a href="#cb18-360"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-361" class="hljs-ln-code"><a href="#cb18-361"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Manuscripts Overview</span></span>
+<span id="cb18-362" class="hljs-ln-code"><a href="#cb18-362"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/index.qmd</span></span>
+<span id="cb18-363" class="hljs-ln-code"><a href="#cb18-363"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Authoring Manuscripts"</span></span>
+<span id="cb18-364" class="hljs-ln-code"><a href="#cb18-364"></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb18-365" class="hljs-ln-code"><a href="#cb18-365"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Jupyter Lab</span></span>
+<span id="cb18-366" class="hljs-ln-code"><a href="#cb18-366"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/authoring/jupyterlab.qmd</span></span>
+<span id="cb18-367" class="hljs-ln-code"><a href="#cb18-367"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> VS Code</span></span>
+<span id="cb18-368" class="hljs-ln-code"><a href="#cb18-368"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/authoring/vscode.qmd</span></span>
+<span id="cb18-369" class="hljs-ln-code"><a href="#cb18-369"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> RStudio</span></span>
+<span id="cb18-370" class="hljs-ln-code"><a href="#cb18-370"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/authoring/rstudio.qmd</span></span>
+<span id="cb18-371" class="hljs-ln-code"><a href="#cb18-371"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Publishing Manuscripts"</span></span>
+<span id="cb18-372" class="hljs-ln-code"><a href="#cb18-372"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/publishing.qmd</span></span>
+<span id="cb18-373" class="hljs-ln-code"><a href="#cb18-373"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Next Steps"</span></span>
+<span id="cb18-374" class="hljs-ln-code"><a href="#cb18-374"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/next-steps.qmd</span></span>
+<span id="cb18-375" class="hljs-ln-code"><a href="#cb18-375"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb18-376" class="hljs-ln-code"><a href="#cb18-376"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Manuscript Components"</span></span>
+<span id="cb18-377" class="hljs-ln-code"><a href="#cb18-377"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/components.qmd</span></span>
+<span id="cb18-378" class="hljs-ln-code"><a href="#cb18-378"></a><span class="at">          </span></span>
+<span id="cb18-379" class="hljs-ln-code"><a href="#cb18-379"></a><span class="at">        </span></span>
+<span id="cb18-380" class="hljs-ln-code"><a href="#cb18-380"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> reference</span></span>
+<span id="cb18-381" class="hljs-ln-code"><a href="#cb18-381"></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reference"</span></span>
+<span id="cb18-382" class="hljs-ln-code"><a href="#cb18-382"></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb18-383" class="hljs-ln-code"><a href="#cb18-383"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-384" class="hljs-ln-code"><a href="#cb18-384"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reference"</span></span>
+<span id="cb18-385" class="hljs-ln-code"><a href="#cb18-385"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/index.qmd</span></span>
+<span id="cb18-386" class="hljs-ln-code"><a href="#cb18-386"></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-387" class="hljs-ln-code"><a href="#cb18-387"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Formats"</span></span>
+<span id="cb18-388" class="hljs-ln-code"><a href="#cb18-388"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-389" class="hljs-ln-code"><a href="#cb18-389"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"HTML"</span></span>
+<span id="cb18-390" class="hljs-ln-code"><a href="#cb18-390"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/html.qmd</span></span>
+<span id="cb18-391" class="hljs-ln-code"><a href="#cb18-391"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"PDF"</span></span>
+<span id="cb18-392" class="hljs-ln-code"><a href="#cb18-392"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/pdf.qmd</span></span>
+<span id="cb18-393" class="hljs-ln-code"><a href="#cb18-393"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"MS Word"</span></span>
+<span id="cb18-394" class="hljs-ln-code"><a href="#cb18-394"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/docx.qmd</span></span>
+<span id="cb18-395" class="hljs-ln-code"><a href="#cb18-395"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"OpenOffice"</span></span>
+<span id="cb18-396" class="hljs-ln-code"><a href="#cb18-396"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/odt.qmd</span></span>
+<span id="cb18-397" class="hljs-ln-code"><a href="#cb18-397"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"ePub"</span></span>
+<span id="cb18-398" class="hljs-ln-code"><a href="#cb18-398"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/epub.qmd</span></span>
+<span id="cb18-399" class="hljs-ln-code"><a href="#cb18-399"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Presentations"</span></span>
+<span id="cb18-400" class="hljs-ln-code"><a href="#cb18-400"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-401" class="hljs-ln-code"><a href="#cb18-401"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Revealjs"</span></span>
+<span id="cb18-402" class="hljs-ln-code"><a href="#cb18-402"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/presentations/revealjs.qmd</span></span>
+<span id="cb18-403" class="hljs-ln-code"><a href="#cb18-403"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"PowerPoint"</span></span>
+<span id="cb18-404" class="hljs-ln-code"><a href="#cb18-404"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/presentations/pptx.qmd</span></span>
+<span id="cb18-405" class="hljs-ln-code"><a href="#cb18-405"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Beamer"</span></span>
+<span id="cb18-406" class="hljs-ln-code"><a href="#cb18-406"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/presentations/beamer.qmd</span></span>
+<span id="cb18-407" class="hljs-ln-code"><a href="#cb18-407"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Markdown"</span></span>
+<span id="cb18-408" class="hljs-ln-code"><a href="#cb18-408"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-409" class="hljs-ln-code"><a href="#cb18-409"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"GitHub"</span></span>
+<span id="cb18-410" class="hljs-ln-code"><a href="#cb18-410"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/markdown/gfm.qmd</span></span>
+<span id="cb18-411" class="hljs-ln-code"><a href="#cb18-411"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"CommonMark"</span></span>
+<span id="cb18-412" class="hljs-ln-code"><a href="#cb18-412"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/markdown/commonmark.qmd</span></span>
+<span id="cb18-413" class="hljs-ln-code"><a href="#cb18-413"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Markua"</span></span>
+<span id="cb18-414" class="hljs-ln-code"><a href="#cb18-414"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/markdown/markua.qmd</span></span>
+<span id="cb18-415" class="hljs-ln-code"><a href="#cb18-415"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Wikis"</span></span>
+<span id="cb18-416" class="hljs-ln-code"><a href="#cb18-416"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-417" class="hljs-ln-code"><a href="#cb18-417"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"MediaWiki"</span></span>
+<span id="cb18-418" class="hljs-ln-code"><a href="#cb18-418"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/mediawiki.qmd</span></span>
+<span id="cb18-419" class="hljs-ln-code"><a href="#cb18-419"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"DokuWiki"</span></span>
+<span id="cb18-420" class="hljs-ln-code"><a href="#cb18-420"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/dokuwiki.qmd</span></span>
+<span id="cb18-421" class="hljs-ln-code"><a href="#cb18-421"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"ZimWiki"</span></span>
+<span id="cb18-422" class="hljs-ln-code"><a href="#cb18-422"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/zimwiki.qmd</span></span>
+<span id="cb18-423" class="hljs-ln-code"><a href="#cb18-423"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jira Wiki"</span></span>
+<span id="cb18-424" class="hljs-ln-code"><a href="#cb18-424"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/jira.qmd</span></span>
+<span id="cb18-425" class="hljs-ln-code"><a href="#cb18-425"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"XWiki"</span></span>
+<span id="cb18-426" class="hljs-ln-code"><a href="#cb18-426"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/xwiki.qmd</span></span>
+<span id="cb18-427" class="hljs-ln-code"><a href="#cb18-427"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"More Formats"</span></span>
+<span id="cb18-428" class="hljs-ln-code"><a href="#cb18-428"></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-429" class="hljs-ln-code"><a href="#cb18-429"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"JATS"</span></span>
+<span id="cb18-430" class="hljs-ln-code"><a href="#cb18-430"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/jats.qmd</span></span>
+<span id="cb18-431" class="hljs-ln-code"><a href="#cb18-431"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jupyter"</span></span>
+<span id="cb18-432" class="hljs-ln-code"><a href="#cb18-432"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/ipynb.qmd</span></span>
+<span id="cb18-433" class="hljs-ln-code"><a href="#cb18-433"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"ConTeXt"</span></span>
+<span id="cb18-434" class="hljs-ln-code"><a href="#cb18-434"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/context.qmd</span></span>
+<span id="cb18-435" class="hljs-ln-code"><a href="#cb18-435"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"RTF"</span></span>
+<span id="cb18-436" class="hljs-ln-code"><a href="#cb18-436"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/rtf.qmd</span></span>
+<span id="cb18-437" class="hljs-ln-code"><a href="#cb18-437"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"reST"</span></span>
+<span id="cb18-438" class="hljs-ln-code"><a href="#cb18-438"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/rst.qmd</span></span>
+<span id="cb18-439" class="hljs-ln-code"><a href="#cb18-439"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"AsciiDoc"</span></span>
+<span id="cb18-440" class="hljs-ln-code"><a href="#cb18-440"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/asciidoc.qmd</span></span>
+<span id="cb18-441" class="hljs-ln-code"><a href="#cb18-441"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Org-Mode"</span></span>
+<span id="cb18-442" class="hljs-ln-code"><a href="#cb18-442"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/org.qmd</span></span>
+<span id="cb18-443" class="hljs-ln-code"><a href="#cb18-443"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Muse"</span></span>
+<span id="cb18-444" class="hljs-ln-code"><a href="#cb18-444"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/muse.qmd</span></span>
+<span id="cb18-445" class="hljs-ln-code"><a href="#cb18-445"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"GNU TexInfo"</span></span>
+<span id="cb18-446" class="hljs-ln-code"><a href="#cb18-446"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/texinfo.qmd</span></span>
+<span id="cb18-447" class="hljs-ln-code"><a href="#cb18-447"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Groff Man Page"</span></span>
+<span id="cb18-448" class="hljs-ln-code"><a href="#cb18-448"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/man.qmd</span></span>
+<span id="cb18-449" class="hljs-ln-code"><a href="#cb18-449"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Groff Manuscript"</span></span>
+<span id="cb18-450" class="hljs-ln-code"><a href="#cb18-450"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/ms.qmd</span></span>
+<span id="cb18-451" class="hljs-ln-code"><a href="#cb18-451"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Haddock markup"</span></span>
+<span id="cb18-452" class="hljs-ln-code"><a href="#cb18-452"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/haddock.qmd</span></span>
+<span id="cb18-453" class="hljs-ln-code"><a href="#cb18-453"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"OPML"</span></span>
+<span id="cb18-454" class="hljs-ln-code"><a href="#cb18-454"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/opml.qmd</span></span>
+<span id="cb18-455" class="hljs-ln-code"><a href="#cb18-455"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Textile"</span></span>
+<span id="cb18-456" class="hljs-ln-code"><a href="#cb18-456"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/textile.qmd</span></span>
+<span id="cb18-457" class="hljs-ln-code"><a href="#cb18-457"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"DocBook"</span></span>
+<span id="cb18-458" class="hljs-ln-code"><a href="#cb18-458"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/docbook.qmd</span></span>
+<span id="cb18-459" class="hljs-ln-code"><a href="#cb18-459"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"InDesign"</span></span>
+<span id="cb18-460" class="hljs-ln-code"><a href="#cb18-460"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/icml.qmd</span></span>
+<span id="cb18-461" class="hljs-ln-code"><a href="#cb18-461"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"TEI Simple"</span></span>
+<span id="cb18-462" class="hljs-ln-code"><a href="#cb18-462"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/tei.qmd</span></span>
+<span id="cb18-463" class="hljs-ln-code"><a href="#cb18-463"></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"FictionBook"</span></span>
+<span id="cb18-464" class="hljs-ln-code"><a href="#cb18-464"></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/fb2.qmd</span></span>
+<span id="cb18-465" class="hljs-ln-code"><a href="#cb18-465"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Code Cells"</span></span>
+<span id="cb18-466" class="hljs-ln-code"><a href="#cb18-466"></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/index.qmd</span></span>
+<span id="cb18-467" class="hljs-ln-code"><a href="#cb18-467"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-468" class="hljs-ln-code"><a href="#cb18-468"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jupyter"</span></span>
+<span id="cb18-469" class="hljs-ln-code"><a href="#cb18-469"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/cells-jupyter.qmd</span></span>
+<span id="cb18-470" class="hljs-ln-code"><a href="#cb18-470"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Knitr"</span></span>
+<span id="cb18-471" class="hljs-ln-code"><a href="#cb18-471"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/cells-knitr.qmd</span></span>
+<span id="cb18-472" class="hljs-ln-code"><a href="#cb18-472"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Observable"</span></span>
+<span id="cb18-473" class="hljs-ln-code"><a href="#cb18-473"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/cells-ojs.qmd</span></span>
+<span id="cb18-474" class="hljs-ln-code"><a href="#cb18-474"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Projects"</span></span>
+<span id="cb18-475" class="hljs-ln-code"><a href="#cb18-475"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-476" class="hljs-ln-code"><a href="#cb18-476"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Options"</span></span>
+<span id="cb18-477" class="hljs-ln-code"><a href="#cb18-477"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/projects/options.qmd</span></span>
+<span id="cb18-478" class="hljs-ln-code"><a href="#cb18-478"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Websites"</span></span>
+<span id="cb18-479" class="hljs-ln-code"><a href="#cb18-479"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/projects/websites.qmd</span></span>
+<span id="cb18-480" class="hljs-ln-code"><a href="#cb18-480"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Books"</span></span>
+<span id="cb18-481" class="hljs-ln-code"><a href="#cb18-481"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/projects/books.qmd</span></span>
+<span id="cb18-482" class="hljs-ln-code"><a href="#cb18-482"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"More"</span></span>
+<span id="cb18-483" class="hljs-ln-code"><a href="#cb18-483"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-484" class="hljs-ln-code"><a href="#cb18-484"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dates"</span></span>
+<span id="cb18-485" class="hljs-ln-code"><a href="#cb18-485"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/dates.qmd</span></span>
+<span id="cb18-486" class="hljs-ln-code"><a href="#cb18-486"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Globs"</span></span>
+<span id="cb18-487" class="hljs-ln-code"><a href="#cb18-487"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/globs.qmd</span></span>
+<span id="cb18-488" class="hljs-ln-code"><a href="#cb18-488"></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Citations"</span></span>
+<span id="cb18-489" class="hljs-ln-code"><a href="#cb18-489"></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/metadata/citation.qmd</span></span>
+<span id="cb18-490" class="hljs-ln-code"><a href="#cb18-490"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> prerelease</span></span>
+<span id="cb18-491" class="hljs-ln-code"><a href="#cb18-491"></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto 1.3"</span></span>
+<span id="cb18-492" class="hljs-ln-code"><a href="#cb18-492"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-493" class="hljs-ln-code"><a href="#cb18-493"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Highlights"</span></span>
+<span id="cb18-494" class="hljs-ln-code"><a href="#cb18-494"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/index.qmd</span></span>
+<span id="cb18-495" class="hljs-ln-code"><a href="#cb18-495"></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-496" class="hljs-ln-code"><a href="#cb18-496"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Confluence Publishing"</span></span>
+<span id="cb18-497" class="hljs-ln-code"><a href="#cb18-497"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/publishing/confluence.qmd</span></span>
+<span id="cb18-498" class="hljs-ln-code"><a href="#cb18-498"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Multi-Format"</span></span>
+<span id="cb18-499" class="hljs-ln-code"><a href="#cb18-499"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/output-formats/html-multi-format.qmd</span></span>
+<span id="cb18-500" class="hljs-ln-code"><a href="#cb18-500"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cell Embedding"</span></span>
+<span id="cb18-501" class="hljs-ln-code"><a href="#cb18-501"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/notebook-embed.qmd</span></span>
+<span id="cb18-502" class="hljs-ln-code"><a href="#cb18-502"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Grid Customization"</span></span>
+<span id="cb18-503" class="hljs-ln-code"><a href="#cb18-503"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/output-formats/page-layout.qmd</span><span class="co">#grid-customization</span></span>
+<span id="cb18-504" class="hljs-ln-code"><a href="#cb18-504"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Code Annotation"</span></span>
+<span id="cb18-505" class="hljs-ln-code"><a href="#cb18-505"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/code-annotation.qmd</span></span>
+<span id="cb18-506" class="hljs-ln-code"><a href="#cb18-506"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto AST"</span></span>
+<span id="cb18-507" class="hljs-ln-code"><a href="#cb18-507"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/ast.qmd</span></span>
+<span id="cb18-508" class="hljs-ln-code"><a href="#cb18-508"></a><span class="at">              </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb18-509" class="hljs-ln-code"><a href="#cb18-509"></a><span class="at">                </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Callouts</span></span>
+<span id="cb18-510" class="hljs-ln-code"><a href="#cb18-510"></a><span class="at">                  </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/custom-ast-nodes/callout.qmd</span></span>
+<span id="cb18-511" class="hljs-ln-code"><a href="#cb18-511"></a><span class="at">                </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Tabsets</span></span>
+<span id="cb18-512" class="hljs-ln-code"><a href="#cb18-512"></a><span class="at">                  </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/custom-ast-nodes/tabset.qmd</span></span>
+<span id="cb18-513" class="hljs-ln-code"><a href="#cb18-513"></a><span class="at">                </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Conditional Blocks</span></span>
+<span id="cb18-514" class="hljs-ln-code"><a href="#cb18-514"></a><span class="at">                  </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/custom-ast-nodes/conditional-block.qmd</span></span>
+<span id="cb18-515" class="hljs-ln-code"><a href="#cb18-515"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mermaid Theming"</span></span>
+<span id="cb18-516" class="hljs-ln-code"><a href="#cb18-516"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/diagrams.qmd</span><span class="co">#mermaid-theming</span></span>
+<span id="cb18-517" class="hljs-ln-code"><a href="#cb18-517"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"PDF Images"</span></span>
+<span id="cb18-518" class="hljs-ln-code"><a href="#cb18-518"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/pdf.qmd</span></span>
+<span id="cb18-519" class="hljs-ln-code"><a href="#cb18-519"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"`kbd` Shortcode"</span></span>
+<span id="cb18-520" class="hljs-ln-code"><a href="#cb18-520"></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/markdown-basics.qmd</span><span class="co">#keyboard-shortcuts</span></span>
+<span id="cb18-521" class="hljs-ln-code"><a href="#cb18-521"></a></span>
+<span id="cb18-522" class="hljs-ln-code"><a href="#cb18-522"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb18-523" class="hljs-ln-code"><a href="#cb18-523"></a></span>
+<span id="cb18-524" class="hljs-ln-code"><a href="#cb18-524"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb18-525" class="hljs-ln-code"><a href="#cb18-525"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb18-526" class="hljs-ln-code"><a href="#cb18-526"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-527" class="hljs-ln-code"><a href="#cb18-527"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
+<span id="cb18-528" class="hljs-ln-code"><a href="#cb18-528"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">cosmo</span><span class="kw">,</span><span class="at"> theme.scss</span><span class="kw">]</span></span>
+<span id="cb18-529" class="hljs-ln-code"><a href="#cb18-529"></a><span class="at">    </span><span class="fu">code-copy</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-530" class="hljs-ln-code"><a href="#cb18-530"></a><span class="at">    </span><span class="fu">code-overflow</span><span class="kw">:</span><span class="at"> wrap</span></span>
+<span id="cb18-531" class="hljs-ln-code"><a href="#cb18-531"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb18-532" class="hljs-ln-code"><a href="#cb18-532"></a><span class="at">    </span><span class="fu">include-after-body</span><span class="kw">:</span><span class="at"> js.html</span></span>
+<span id="cb18-533" class="hljs-ln-code"><a href="#cb18-533"></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span></span>
+<span id="cb18-534" class="hljs-ln-code"><a href="#cb18-534"></a><span class="at">      </span><span class="fu">sidebar-width</span><span class="kw">:</span><span class="at"> 250px</span></span>
+<span id="cb18-535" class="hljs-ln-code"><a href="#cb18-535"></a><span class="at">      </span><span class="fu">body-width</span><span class="kw">:</span><span class="at"> 900px</span></span>
+<span id="cb18-536" class="hljs-ln-code"><a href="#cb18-536"></a><span class="at">      </span><span class="fu">margin-width</span><span class="kw">:</span><span class="at"> 300px</span></span>
+<span id="cb18-537" class="hljs-ln-code"><a href="#cb18-537"></a></span>
+<span id="cb18-538" class="hljs-ln-code"><a href="#cb18-538"></a><span class="fu">filters</span><span class="kw">:</span></span>
+<span id="cb18-539" class="hljs-ln-code"><a href="#cb18-539"></a><span class="at">  </span><span class="kw">-</span><span class="at"> filters/tools-tabset.lua</span></span>
+<span id="cb18-540" class="hljs-ln-code"><a href="#cb18-540"></a></span>
+<span id="cb18-541" class="hljs-ln-code"><a href="#cb18-541"></a><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-542" class="hljs-ln-code"><a href="#cb18-542"></a></span>
+<span id="cb18-543" class="hljs-ln-code"><a href="#cb18-543"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
+<span id="cb18-544" class="hljs-ln-code"><a href="#cb18-544"></a></span>
+<span id="cb18-545" class="hljs-ln-code"><a href="#cb18-545"></a><span class="fu">profile</span><span class="kw">:</span></span>
+<span id="cb18-546" class="hljs-ln-code"><a href="#cb18-546"></a><span class="at">  </span><span class="fu">group</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb18-547" class="hljs-ln-code"><a href="#cb18-547"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">prerelease</span><span class="kw">,</span><span class="at">rc</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="quarto-project-vs-rstudio-project" class="slide level2">
+<h2>Quarto Project vs RStudio Project</h2>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<ul>
+<li class="fragment">Quarto Projects determine how <code>quarto render</code>, <code>quarto preview</code> and <code>quarto publish</code> work when run inside the directory.</li>
+<li class="fragment">RStudio Projects store configuration info for the IDE when working from the directory.</li>
+<li class="fragment">A directory can have one or both!</li>
+</ul>
+</div><div class="column fragment fade-left" style="width:50%;">
+<p><br>
+</p>
+<p><img data-src="images/quarto-rstudio-project.png" class="drop" alt="Files panel in RStudio showing my-doc.qmd, _quarto.yml, and an .Rproj file."></p>
+</div>
+</div>
+</section>
+<section id="our-running-example-course-materials" class="slide level2">
+<h2>Our Running Example: Course Materials</h2>
+<div class="centered">
+<p><img data-src="images/stat20.png" alt="Screenshot of stat20.org"></p>
+</div>
+</section>
+<section id="your-turn-1" class="slide level2 your-turn">
+<h2>Your Turn</h2>
+<p>Open <code>docs-to-projects</code> and click through the file directories to see what’s inside. Try rendering all five of the .qmd files.</p>
+<p><i class="fa-brands fa-discord" aria-label="discord"></i> Post to Discord one piece of Quarto syntax or YAML option that you have never seen before.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_6dbc683e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="the-4-roles-of-a-quarto-project" class="slide level2">
+<h2>The 4 roles of a Quarto Project</h2>
+<div>
+<ol type="1">
+<li class="fragment">Control which files get rendered</li>
+<li class="fragment">Store shared metadata</li>
+<li class="fragment">Enable conditional content</li>
+<li class="fragment">Structure the navigation between docs</li>
+</ol>
+</div>
+</section></section>
+<section>
+<section id="control-which-files-get-rendered" class="title-slide slide level1 center">
+<h1>1. Control which files get rendered</h1>
+
+</section>
+<section id="to-render-or-not-to-render" class="slide level2">
+<h2>To render or not to render</h2>
+<p>When you call <code>quarto render</code> inside a project, it defaults to rendering <em>all</em> .qmd files. There are three ways to exert finer control over this.</p>
+<div class="fragment">
+<p><br>
+<br>
+</p>
+<p>You can ignore files from the render by:</p>
+<ol type="1">
+<li>Adding them to the render targets list</li>
+<li>Renaming the file (or a dir along its path) to begin with <code>_</code></li>
+<li>Renaming the file (or a dir along its path) to begin with <code>.</code></li>
+</ol>
+</div>
+</section>
+<section id="render-targets" class="slide level2">
+<h2>Render Targets</h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="at">  </span><span class="fu">render</span><span class="kw">:</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="at">    </span><span class="kw">-</span><span class="at"> slides/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-9" class="slide level2" data-menu-title="&quot;globs">
+<h2></h2>
+<div style="text-align: center">
+<iframe src="https://quarto.org/docs/reference/globs.html" title="Quarto Glob Syntax" frameborder="1" height="800" width="1450" style="border: 1px solid black"></iframe>
+</div>
+</section>
+<section id="control-render" class="slide level2 our-turn">
+<h2>Our Turn</h2>
+<p>Let’s test out controlling the render.</p>
+<ol type="1">
+<li><a href="#/create-blank">Create a blank project</a></li>
+<li><a href="#/render-all">Render all of the files</a></li>
+<li><a href="#/output-dir">Collect the output in a dir</a></li>
+<li><a href="#/exclude-note">Exclude one particular note</a></li>
+<li><a href="#/exclude-dir">Exclude a subdirectory</a></li>
+</ol>
+</section>
+<section id="the-4-roles-of-a-quarto-project-1" class="slide level2">
+<h2>The 4 roles of a Quarto Project</h2>
+<ol type="1">
+<li><span class="fragment highlight-current-red">Control which files get rendered</span></li>
+<li><span class="fragment highlight-current-red">Store shared metadata</span></li>
+<li>Enable conditional content</li>
+<li>Structure the navigation between docs</li>
+</ol>
+</section></section>
+<section>
+<section id="store-shared-metadata" class="title-slide slide level1 center">
+<h1>2. Store shared metadata</h1>
+
+</section>
+<section id="shared-meta" class="slide level2 our-turn">
+<h2>Our Turn</h2>
+<ol type="1">
+<li>Move the author upstream.</li>
+<li>Consider code-folding</li>
+</ol>
+</section>
+<section id="your-turn-2" class="slide level2 your-turn">
+<h2>Your Turn</h2>
+<ol type="1">
+<li>Move the rest of the metadata shared by all four files into <code>_quarto.yml</code></li>
+<li>Add your name to the <code>author:</code> key in one of the documents. Does the document- or project-level author take precedence?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_42d8302d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="store-meta" class="slide level2 our-turn">
+<h2>Our Turn</h2>
+<ol type="1">
+<li><span id="_metadata">Split off notes written by colleague</span>.</li>
+<li><span id="_variables">Treat the semester as a variable</span>.</li>
+</ol>
+</section>
+<section id="takeaways" class="slide level2">
+<h2>Takeaways</h2>
+<div>
+<ul>
+<li class="fragment"><p>Metadata can live in a document, in _metadata.yml, or in _quarto.yml.</p></li>
+<li class="fragment"><p>DRY<sup>1</sup> out your metadata by moving it upstream.</p></li>
+<li class="fragment"><p>Precedence of Metadata</p>
+<div style="text-align: center">
+<p>_quarto.yml &lt; _metadata.yml &lt; foo.qmd &lt; -M</p>
+</div></li>
+</ul>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>“Don’t Repeat Yourself”. A coding maxim to encourage writing functions.</p></li></ol></aside></section>
+<section id="the-4-roles-of-a-quarto-project-2" class="slide level2">
+<h2>The 4 roles of a Quarto Project</h2>
+<ol type="1">
+<li>Control which files get rendered</li>
+<li><span class="fragment highlight-current-red">Store shared metadata</span></li>
+<li><span class="fragment highlight-current-red">Enable conditional content</span></li>
+<li>Structure the navigation between docs</li>
+</ol>
+</section></section>
+<section>
+<section id="enable-conditional-content" class="title-slide slide level1 center">
+<h1>3. Enable conditional content</h1>
+
+</section>
+<section id="our-turn" class="slide level2 our-turn">
+<h2>Our Turn</h2>
+<ol type="1">
+<li>Include the learning objectives only when rendered to a pdf.</li>
+</ol>
+</section>
+<section id="the-4-roles-of-a-quarto-project-3" class="slide level2">
+<h2>The 4 roles of a Quarto Project</h2>
+<ol type="1">
+<li>Control which files get rendered</li>
+<li>Store shared metadata</li>
+<li><span class="fragment highlight-current-red">Enable conditional content</span></li>
+<li><span class="fragment highlight-current-red">Structure the navigation between docs</span></li>
+</ol>
+<p><br>
+<br>
+</p>
+<div class="fragment" style="text-align:center">
+<p>Sounds like a <span class="smalladage">website</span>!</p>
+</div>
+</section>
+<section id="quartoing-as-coding-1" class="slide level2">
+<h2>Quartoing as Coding</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div>
+<ol type="1">
+<li class="fragment"><p>DRY out your document (Don’t Repeat Yourself)</p></li>
+<li class="fragment"><p>Use control flow (if/then)</p></li>
+<li class="fragment"><p>Think about data structures</p></li>
+</ol>
+</div>
+</div><div class="column" style="width:60%;">
+<p><img data-src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2369&amp;q=80"></p>
+</div>
+</div>
+</section>
+<section id="quartopub" class="slide level2">
+<h2>Quartopub</h2>
+<p>Visit <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a> and set up a free account.</p>
+<div style="text-align: center">
+<p><img data-src="images/quartopub.png"></p>
+</div>
+</section></section>
+<section id="lets-take-a-break" class="title-slide slide level1 center">
+<h1>Let’s take a break!</h1>
+<p><br>
+<br>
+</p>
+<div style="text-align: center">
+<p><img data-src="https://i.gifer.com/A7YM.gif"></p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_297ae209" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">30</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="appendix" class="title-slide slide level1 center">
+<h1>Appendix</h1>
+
+</section>
+<section id="create-blank" class="slide level2">
+<h2>Create a blank project</h2>
+<ol type="1">
+<li>You can create a blank project by running <code>quarto create-project</code> at the command line.</li>
+<li>Note the files that it creates: a largely empty <code>_quarto.yml</code>, a <code>.gitignore</code> file if you’re using git, and a demo doc called <code>project.qmd</code>. That’s just there to give you something to render - it can be deleted!</li>
+<li>Learn more by running <code>quarto create-project --help</code> at the command line.</li>
+</ol>
+<div style="text-align: center">
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> <a href="#/control-render">Return to Control Render</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+</div>
+</section>
+<section id="render-all" class="slide level2">
+<h2>Render all of the files</h2>
+<ul>
+<li>Running <code>quarto render</code> (without specifying a document) within the project directory, it will render all of the qmds that are not ignored.</li>
+<li>When running locally, clicking the Render button on a specific qmd will do an <em>incremental render</em>, rendering the minimal number of files to render that particular file. This doesn’t work currently on Posit Cloud.</li>
+</ul>
+<div style="text-align: center">
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> <a href="#/control-render">Return to Control Render</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+</div>
+</section>
+<section id="output-dir" class="slide level2">
+<h2>Collect the output in a dir</h2>
+<ul>
+<li>Use <code>output-dir: &lt;path&gt;</code> under the <code>project</code> key to send the output to that directory.</li>
+</ul>
+<div style="text-align: center">
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> <a href="#/control-render">Return to Control Render</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+</div>
+</section>
+<section id="exclude-note" class="slide level2">
+<h2>Exclude one particular note</h2>
+<ol type="1">
+<li></li>
+</ol>
+<div style="text-align: center">
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> <a href="#/control-render">Return to Control Render</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+</div>
+</section>
+<section id="exclude-dir" class="slide level2">
+<h2>Exclude a subdirectory</h2>
+<div style="text-align: center">
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> <a href="#/control-render">Return to Control Render</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+</div>
+</section>
+<section id="metadata.yml" class="slide level2">
+<h2>_metadata.yml</h2>
+<p>In addition to storing project-wide metadata in <code>_quarto.yml</code>, you can store sub-directory specific metadata in a <code>_metadata.yml</code>.</p>
+<div style="text-align: center">
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> <a href="#/fa-bolt-live-code">Return to Live Code</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+</div>
+</section>
+<section id="variables.yml" class="slide level2">
+<h2>_variables.yml</h2>
+<ul>
+<li><p>You can store any information you like in YAML format in a file called <code>_variables.yml</code> at the root of the project directory (<a href="https://quarto.org/docs/authoring/variables.html#var">docs</a>).</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_variables.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">semester</span><span class="kw">:</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2023</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="at">  </span><span class="fu">term</span><span class="kw">:</span><span class="at"> fall</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Those values can be injected into a document using the shortcode syntax</p>
+<p><code>{{&lt;var semester.year &gt;}}</code> will evaluate to <code>2023</code>.</p></li>
+</ul>
+<div style="text-align: center">
+<p><i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i> <a href="#/fa-bolt-live-code">Return to Live Code</a> <i class="fa-solid fa-arrow-rotate-left" aria-label="arrow-rotate-left"></i></p>
+</div>
 
 <div class="footer footer-default">
 <p><a href="index.html">Quarto for R &amp; RStudio</a></p>
 </div>
-</section>
+</section></section>
+
     </div>
   </div>
 
@@ -866,6 +2130,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

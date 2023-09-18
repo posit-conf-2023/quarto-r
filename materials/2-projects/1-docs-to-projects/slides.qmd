@@ -3,45 +3,222 @@ title: "From Documents to Projects"
 format: qmdrslides-revealjs
 ---
 
-## Your Turn {.your-turn style="font-size: .85em"}
+## Introductions
 
-1. Open the *Quarto Puzzle* project on Posit Cloud.
-2. Open `quarto-puzzle.qmd` and render it.
-3. Modify the document to add five features:
-   1. Add an author to the yaml.
-   2. Convert "Advanced Quarto" to be a level two header.
-   3. Add a link to the Quarto website (https://quarto.org/) on the word "Quarto" that appears before the comma in the first sentence.
-   4. Turn the schedule into a bulleted list with 8 items.
-   5. At the end of the document, insert the image `quarto-logo.png` found in the same directory.
+Take \~2 minutes to introduce yourself to your neighbors.
 
-Render after each change to your document to check your progress!
+\
+
+::: poll
+Please share ...
+
+1.  Your name
+2.  Where you're from
+3.  What you work on in 3 words or fewer
+4.  Name one thing you've made that you're proud of
+:::
 
 ```{r}
-countdown::countdown(7)
+countdown::countdown(2)
 ```
 
 
-# Fundamentals of a Quarto Document
+# About the Workshop
 
-# The Structure of a Document
+##  {data-menu-title="Website Link" style="text-align: center"}
+
+\
+\
+\
+
+::: r-fit-text
+Workshop materials are at:
+
+[pos.it/quarto-r-conf23](pos.it/quarto-r-conf23)
+:::
+
+##  {data-menu-item="Workshop Goals"}
+
+\
+\
+
+### Goals for the Workshop {style="font-size: 2.5em; text-align: center"}
+
+::: {.incremental style="font-size: 1.5em"}
+1.  Everyone leaves with a website and a book.
+
+2.  Learn from one another.
+
+3.  Build an understanding of the big picture.
+:::
+
+## From Magic to Magical Machines
+
+![Artwork by Allison Horst](images/rmarkdown_wizards.png){.fragment .fade-in-then-semi-out fig-alt="Two fuzzy round monsters dressed as wizards, working together to brew different things together from a pantry (code, text, figures, etc.) in a cauldron labeled “R Markdown”. The monster wizard at the cauldron is reading a recipe that includes steps “1. Add text. 2. Add code. 3. Knit. 4. (magic) 5. Celebrate perceived wizardry.” The R Markdown potion then travels through a tube, and is converted to markdown by a monster on a broom with a magic wand, and eventually converted to an output by pandoc. Stylized text (in a font similar to Harry Potter) reads “R Markdown. Text. Code. Output. Get it together, people.”" width="1100px"}
+
+![](images/edison-bulb.png){.fragment .fade-left fig-alt="A technical sketch of a lightbulb" style="position: absolute; top: 180px; left: 450px; height: 600px; border: 3px solid orange; filter: drop-shadow(10px 10px 4px #5c5859)"}
+
+## Quartoing as Coding
+
+:::columns
+:::{.column width=40%}
+:::incremental
+1. DRY out your document (Don't Repeat Yourself)
+
+2. Use control flow (if/then)
+
+3. Think about data structures
+:::
+:::
+:::{.column width=60%}
+
+![](https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2369&q=80)
+:::
+:::
+
+## Workshop Schedule
+
+::: {style="text-align: center"}
+-   9-10:30 am [From Docs to Projects](materials/2-projects/1-docs-to-projects)
+-   10:30-11 am Coffee Break
+-   11-12:30 pm [Websites](materials/2-projects/2-websites)
+-   12:30-1:30 pm Lunch
+-   1:30-2 pm [Advanced Slidecraft](materials/2-projects/3-slidecraft)
+-   2-3 pm [Books](materials/2-projects/4-books)
+-   3-3:30 pm Coffee Break
+-   3:30-4:30 [Extensions](materials/2-projects/5-extensions)
+-   4:30-5 pm [Quarto Dev Q&A](materials/2-projects/6-dev-panel/slides.qmd)
+:::
+
+## Discussions: Discord
+
+Ask questions at **#advanced-quarto-with-r-and-rstudio**.
+
+![](images/adv-discord.png){fig-alt="Screenshot of the discord server app that serves as the forum for the workshop." fig-align="center" width="546"}
+
+## Flow of the Workshop
+
+::: {.r-stretch layout="[2, 2]" style="text-align: center"}
+![](images/slide-normal.png){.drop .fragment width="540"}
+
+![](images/slide-discord.png){.drop .fragment width="540"}
+
+![](images/slide-our-turn.png){.drop .fragment width="540"}
+
+![](images/slide-your-turn.png){.drop .fragment width="540"}
+:::
+
+## Stickies
+
+::: {layout="[[4, 5, 1]]" layout-valign="center"}
+![](images/sticky.jpeg){fig-alt="Picture of a laptop with a red sticky note stuck to the top." width="540"}
+
+During an activity, place a [**blue**]{style="color: blue"} sticky on your laptop if you're good to go and a [**red**]{style="color: red"} sticky if you want help.
+:::
+
+::: footer
+Image by [Megan Duffy](https://dynamicecology.wordpress.com/2015/01/13/sticky-notes-as-a-teaching-and-lab-meeting-tool/)
+:::
+
+## Practicalities
+
+::: {.columns style="font-size: .7em"}
+::: {.column width="50%"}
+-   WiFi:
+    -   Network: Posit Conf 2023
+    -   Password: conf2023
+-   There are gender-neutral bathrooms located are among the Grand Suite Bathrooms.
+-   There are two meditation/prayer rooms: Grand Suite 2A and Grand Suite 2B. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.
+-   The lactation room is located in Grand Suite 1. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.
+:::
+
+::: {.column width="50%"}
+-   Participants who do not wish to be photographed have red lanyards; please note everyone's lanyard colors before taking a photo and respect their choices.
+-   The Code of Conduct and COVID policies can be found at https://posit.co/code-of-conduct/. Please review them carefully. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.
+:::
+:::
+
+# A Challenge
+
+##  {menu-title="Posit Cloud"}
+
+::: {style="text-align: center"}
+{{< fa solid cloud size=4x >}}
+
+[Join me in Posit Cloud!]{.bigadage}
+
+::: fragment
+If having not yet accepted an invite:
+
+[<https://tinyurl.com/adv-quarto>]{style="font-size: 2em"}
+:::
+
+::: fragment
+If you have:
+
+[<https://posit.cloud/spaces/397249>]{style="font-size: 2em"}
+:::
+:::
+
+## Paired programming
+
+::: columns
+::: {.column width="50%"}
+![](images/pair-programming.png)
+:::
+
+::: {.column width="50%"}
+\
+\
+\
+
+Talk through your code.
+
+\
+
+Two people. One laptop.
+:::
+:::
+
+## Your Turn {.your-turn}
+
+Click in the `quarto-puzzle` project, open `quarto-puzzle.qmd` and **render** it. Then modify the document to add five features:
+
+. . .
+
+1.  Add an author to the yaml.
+2.  Convert "Advanced Quarto" to be a level two header.
+3.  Add a link to the Quarto website (https://quarto.org/) on the word "Quarto" that appears before the comma in the first sentence.
+4.  Turn the schedule into a bulleted list with 8 items.
+5.  At the end of the document, insert the image `quarto-logo.png` found in the same directory and make it 150 pixels wide.
+
+**Render** after each change to your document to check your progress!
+
+```{r}
+countdown::countdown(10)
+```
+
+
+# Pandoc's Document Model
 
 ## What Defines a Document?
 
-A document consists of *content*, *structure*, *appearance*, *format*.
+. . .
+
+A document consists of *content*, *format*, *appearance*, *structure*.
 
 ::: columns
-:::{.column width="50%" .fragment .fade-right}
+::: {.column .fragment .fade-right width="50%"}
 ![](images/rubiks-patent.png)
 :::
 
-::: {.column width="50%" .fragment}
+::: {.column .fragment width="50%"}
 \
 
-- **Content:** text, code, graphics
-- **Structure:** paragraphs, lists, emphasis, etc.
-- **Appearance:** fonts, colors, layout
-- **Format:** functionality
-
+-   **Content:** text, code, graphics
+-   **Format:** functionality, technology
+-   **Appearance:** fonts, colors, layout
+-   **Structure:** paragraphs, lists, emphasis, etc.
 :::
 :::
 
@@ -55,13 +232,13 @@ A document consists of *content*, *structure*, *appearance*, *format*.
 \
 
 ::: {style="text-align: center"}
-[A document is a list of [block elements]{.block-el}]{.fragment} [that contain [inline elements]{.inline-el} or other blocks,]{.fragment} [along with associated [metadata]{.meta-el}.]{.fragment}
+[A document is a list of [block elements]{.block-el}]{.fragment} [that may contain [inline elements]{.inline-el} or other blocks,]{.fragment} [along with associated [metadata]{.meta-el}.]{.fragment}
 :::
 
 ##  {data-menu-title="Block Elements" auto-animate="true"}
 
 ::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
+A document is a list of [block elements]{.block-el} that may contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
 :::
 
 \
@@ -104,7 +281,7 @@ Examples:
 ##  {data-menu-title="Inline Elements" auto-animate="true"}
 
 ::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
+A document is a list of [block elements]{.block-el} that may contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
 :::
 
 \
@@ -152,7 +329,7 @@ Examples:
 ##  {data-menu-title="Metadata" auto-animate="true"}
 
 ::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
+A document is a list of [block elements]{.block-el} that may contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
 :::
 
 \
@@ -204,7 +381,7 @@ Examples:
 ##  {data-menu-title="Document Formats" auto-animate="true"}
 
 ::: {style="text-align: center"}
-A document is a list of [block elements]{.block-el} that contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
+A document is a list of [block elements]{.block-el} that may contain [inline elements]{.inline-el} or other blocks, along with associated [metadata]{.meta-el}.
 :::
 
 ::: {layout-ncol="2"}
@@ -245,92 +422,912 @@ Image
 :::
 :::
 
+# Review: YAML
 
-# Exercise 2
+## [Metadata:]{.meta-el} YAML
+
+"Yet Another Markup Language" or "YAML Ain't Markup Language" is used to provide document level metadata ...
+
+:::columns
+
+:::{.column width=10%}
+:::
+
+:::{.column width=50%}
+[... in key-value pairs,]{.fragment}
+
+[... that can nest,]{.fragment}
+
+[... are fussy about indentation,]{.fragment}
+
+[... and are kept between `---`.]{.fragment}
+
+:::
+
+:::{.column width=40% .fragment}
+
+\
+
+``` yaml
+---
+format: 
+  html:
+    toc: true
+    code-fold: true
+---
+```
+:::
+
+:::
+
+
+
+<!-- ## [Metadata:]{.meta-el} Types of values -->
+
+<!-- ZZQ could add slide talking about single value, [] list and - lists. -->
+
+
+<!-- :::columns -->
+
+<!-- :::{.column width=50%} -->
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: something -->
+<!-- --- -->
+<!-- ``` -->
+<!-- ::: -->
+
+<!-- :::{.column width=50% .fragment} -->
+
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: html -->
+<!-- --- -->
+<!-- ``` -->
+
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: pdf -->
+<!-- --- -->
+<!-- ``` -->
+
+<!-- ``` yaml -->
+<!-- --- -->
+<!-- format: revealjs -->
+<!-- --- -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+## {menu-title="YAML Poll" style="font-size: .8em"}
+
+::: poll
+{{< fa brands discord >}} Which of the following are valid ways to include metadata?
+:::
+
+:::columns
+:::{.column width="50%"}
+[A]{.smallcaps}
+```markdown
+---
+title: US Patent: A Spatial Toy
+author: Erno Rubik
+format: html
+---
+
+My idea is to build a cube...
+```
+
+[C]{.smallcaps}
+```markdown
+---
+format: html
+---
+
+My idea is to build a cube...
+
+---
+title: A Spatial Toy
+author: Erno Rubik
+---
+```
+
+:::
+
+:::{.column width="50%"}
+[B]{.smallcaps}
+
+```markdown
+My idea is to build a cube...
+```
+
+... then at the command line, run:
+
+```bash
+quarto render patent.qmd --to html -M title:patent
+```
+
+\ 
+
+
+[D]{.smallcaps}
+```markdown
+---
+title: "US Patent: A Spatial Toy"
+author: "Erno Rubik"
+format: "html"
+---
+
+My idea is to build a cube...
+```
+
+:::
+:::
+
+## [Metadata:]{.meta-el} YAML Syntax Rules
+
+:::columns
+:::{.column width="50%" style="max-height: 1000px"}
+```yaml
+---
+title: "US Patent: A Toy"
+author:
+  - Erno Rubrik
+  - Albert Einstein
+format:
+  html:
+    toc: true
+    abstract: |
+      This is the abstract.
+
+      It has two paragraphs.
+---
+```
+:::
+
+:::{.column width="50%" style="font-size: .85em"}
+
+::: incremental
+- Set a single value with
+  ```yaml
+  key: value
+  ```
+- Set a list of values either:
+  ```yaml
+  key: [val1, val2]
+  ```
+  ```yaml
+  key:
+    - val1
+    - val2
+  ```
+- Quote values that contain `:`
+- Indent 2 spaces to nest
+- Multi-line strings follow `|`
+- Multiple YAML blocks will be merged
+:::
+
+:::
+:::
+
+:::aside
+An overview of YAML syntax: <https://en.m.wikipedia.org/wiki/YAML#Syntax>
+:::
+
+## [Metadata:]{.meta-el} Fussing with YAML
+
+[Invalid]{.inline-el}
+
+:::columns
+:::{.column width=50%}
+``` yaml {.fragment}
+---
+format:html
+---
+```
+
+\
+
+``` yaml {.fragment}
+---
+format:
+html
+---
+```
+
+\
+
+``` yaml {.fragment}
+---
+format: 
+  html:
+---
+```
+
+:::
+:::{.column width=50%}
+
+[Valid]{.block-el}
+
+``` yaml {.fragment}
+format: html
+```
+
+\
+
+``` yaml {.fragment}
+format:
+  html
+```
+
+\
+
+``` yaml {.fragment}
+format: 
+  html:
+    toc: true
+```
+:::
+:::
+
+## Quarto linting
+
+Lint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs.
+
+<br>
+
+![](images/lint-rstudio.png){.drop fig-align="center"}
+
+
+::: aside
+Source: <https://en.wikipedia.org/wiki/Lint_(software)>
+:::
+
+## Quarto YAML Intelligence
+
+RStudio + VSCode provide rich tab-completion - start a word and tab to complete, or <kbd>`Ctrl + space`</kbd> to see all available options.
+
+\
+
+![](images/quarto-tab-complete.png){.drop fig-align="center" width="600"}
+
+
 
 # Fundamentals of a Quarto Project
 
 ## What defines a Quarto Project?
 
-:::{.r-fit-text}
+::: r-fit-text
 > [A Quarto Project is a directory]{.fragment} [that contains a file called `_quarto.yml`.]{.fragment}
 :::
 
 \
 
-:::{.columns}
-:::{.column .fragment .fade-right width=50%}
+::: columns
+::: {.column .fragment .fade-right width="50%"}
 This is a Quarto Project.
 
 ![](images/quarto-project.png){.drop fig-alt="Files panel in RStudio showing my-doc.qmd and _quarto.yml."}
-
 :::
-:::{.column .fragment .fade-left width=50%}
+
+::: {.column .fragment .fade-left width="50%"}
 This is not.
 
 ![](images/not-quarto-project.png){.drop fig-alt="Files panel in RStudio showing only my-doc.qmd."}
 :::
 :::
 
-## _quarto.yml
+## \_quarto.yml {auto-animate="true"}
 
 A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.
 
+```yaml {filename="_quarto.yml" .fragment}
+project:
+  title: "A Barebones Project"
+```
+
+## \_quarto.yml {auto-animate="true"}
+
+A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.
+
+```yaml {filename="_quarto.yml" code-line-numbers="1-20|528-548"}
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "/docs/download/_download.json"
+    - "/docs/download/_prerelease.json"
+    - "/_redirects"
+
+website:
+  title: "Quarto"
+  image: "quarto-dark-bg.jpeg"
+  favicon: "favicon.png"
+  google-analytics: "G-FV9Z7SDZ0M"
+  open-graph: true
+  twitter-card: true
+  site-url: https://quarto.org
+  repo-url: https://github.com/quarto-dev/quarto-web
+  issue-url: https://github.com/quarto-dev/quarto-cli/issues/new/choose
+  repo-actions: [edit, issue]
+  page-navigation: true
+  bread-crumbs: true
+  search:
+    show-item-context: true
+    type: overlay
+    algolia:
+      index-name: prod_QUARTO
+      application-id: ZPJB5I1QN7
+      search-only-api-key: 41be6c1e0a7fea4a51b107810facf577
+      analytics-events: true
+      show-logo: true
+  page-footer:
+    left: |
+      Proudly supported by
+      [![](https://www.rstudio.com/assets/img/posit-logo-fullcolor-TM.svg){fig-alt="Posit" width=65px}](https://posit.co)
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "FAQ"
+        href: docs/faq/index.qmd
+      - text: "License"
+        href: license.qmd
+      - text: "Trademark"
+        href: trademark.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/quarto_pub
+        aria-label: Quarto Twitter
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-cli
+        aria-label: Quarto GitHub
+      - icon: rss
+        href: https://quarto.org/docs/blog/index.xml
+        aria-label: Quarto Blog RSS        
+  navbar:
+    background: light
+    logo: quarto.png
+    logo-alt: "Quarto logo."
+    title: false
+    collapse-below: lg
+    left:
+      - text: "Overview"
+        href: index.qmd
+      - text: "Get Started"
+        href: docs/get-started/index.qmd
+      - text: "Guide"
+        href: docs/guide/index.qmd
+      - text: Extensions
+        href: docs/extensions/index.qmd
+      - text: "Reference"
+        href: docs/reference/index.qmd
+      - text: "Gallery"
+        href: docs/gallery/index.qmd
+      - text: "Blog"
+        href: docs/blog/index.qmd
+      - text: "Help"
+        menu:
+          - text: "Report a Bug"
+            icon: "bug"
+            href: "https://github.com/quarto-dev/quarto-cli/issues"
+          - text: "Ask a Question"
+            icon: "chat-right-text"
+            href: "https://github.com/quarto-dev/quarto-cli/discussions"
+          - text: "FAQ"
+            icon: "question-circle"
+            href: docs/faq/index.qmd
+    tools:
+      - icon: twitter
+        href: https://twitter.com/quarto_pub
+        text: Quarto Twitter
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-cli
+        text: Quarto GitHub
+      - icon: rss
+        href: https://quarto.org/docs/blog/index.xml
+        text: Quarto Blog RSS        
+
+  sidebar:
+    - id: get-started
+      title: "Get Started"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      contents:
+        - docs/get-started/index.qmd
+        - text: "Tutorial: Hello, Quarto"
+          href: docs/get-started/hello/
+        - text: "Tutorial: Computations"
+          href: docs/get-started/computations/
+        - text: "Tutorial: Authoring"
+          href: docs/get-started/authoring/
+
+    - id: guide
+      collapse-level: 1
+      contents:
+        - section: "Guide"
+          href: docs/guide/index.qmd
+          contents:
+          - section: "Authoring"
+            contents:
+              - docs/authoring/markdown-basics.qmd
+              - docs/authoring/figures.qmd
+              - docs/authoring/tables.qmd
+              - docs/authoring/diagrams.qmd
+              - docs/authoring/videos.qmd
+              - text: "Jupyter Notebooks"
+                href: docs/authoring/notebook-embed.qmd
+              - docs/authoring/callouts.qmd
+              - docs/authoring/code-annotation.qmd
+              - docs/authoring/article-layout.qmd
+              - section: "Scholarly Writing"
+                contents:
+                  - docs/authoring/front-matter.qmd
+                  - docs/authoring/title-blocks.qmd
+                  - docs/authoring/footnotes-and-citations.qmd
+                  - docs/authoring/cross-references.qmd
+                  - docs/authoring/create-citeable-articles.qmd
+                  - docs/authoring/appendices.qmd
+          - section: "Computations"
+            contents:
+              - docs/computations/python.qmd
+              - docs/computations/r.qmd
+              - docs/computations/julia.qmd
+              - docs/computations/ojs.qmd
+              - docs/computations/execution-options.qmd
+              - docs/computations/parameters.qmd
+          - section: "Tools"
+            contents:
+              - section: "JupyterLab"
+                contents:
+                  - text: "JupyterLab Basics"
+                    href: docs/tools/jupyter-lab.qmd
+                  - text: "JupyterLab Extension"
+                    href: docs/tools/jupyter-lab-extension.qmd
+              - section: "RStudio IDE"
+                contents: 
+                  - text: "RStudio Basics"
+                    href: docs/tools/rstudio.qmd
+                  - section: "Visual Editor"
+                    href: docs/visual-editor/index.qmd
+                    contents:
+                      - text: Editor Basics
+                        href: docs/visual-editor/index.qmd
+                      - docs/visual-editor/technical.qmd
+                      - docs/visual-editor/content.qmd
+                      - docs/visual-editor/options.qmd
+                      - docs/visual-editor/markdown.qmd
+              - section: "VS Code"
+                href: docs/tools/vscode.qmd
+                contents:
+                  - text: "VS Code Basics"
+                    href: docs/tools/vscode.qmd
+                  - text: "Visual Editor"
+                    href: docs/visual-editor/vscode/index.qmd
+                  - text: "Notebook Editor"
+                    href: docs/tools/vscode-notebook.qmd
+                
+              - docs/tools/neovim.qmd
+              - docs/tools/text-editors.qmd
+          - section: "Documents"
+            contents:
+              - section: "HTML"
+                contents:
+                  - docs/output-formats/html-basics.qmd
+                  - docs/output-formats/html-code.qmd
+                  - docs/output-formats/html-themes.qmd
+                  - docs/output-formats/html-multi-format.qmd
+                  - docs/output-formats/html-publishing.qmd
+              - section: "PDF"
+                contents:
+                  - docs/output-formats/pdf-basics.qmd
+                  - docs/output-formats/pdf-engine.qmd
+              - section: "MS Word"
+                contents:
+                  - docs/output-formats/ms-word.qmd
+                  - docs/output-formats/ms-word-templates.qmd
+              - section: "Markdown"
+                contents:
+                  - docs/output-formats/gfm.qmd
+                  - docs/output-formats/hugo.qmd
+                  - docs/output-formats/docusaurus.qmd
+              - docs/output-formats/all-formats.qmd
+          - section: "Presentations"
+            contents:
+              - text: "Overview"
+                href: docs/presentations/index.qmd
+              - section: docs/presentations/revealjs/index.qmd
+                contents:
+                  - text: "Reveal Basics"
+                    href: docs/presentations/revealjs/index.qmd
+                  - docs/presentations/revealjs/presenting.qmd
+                  - docs/presentations/revealjs/advanced.qmd
+                  - docs/presentations/revealjs/themes.qmd
+              - docs/presentations/powerpoint.qmd
+              - docs/presentations/beamer.qmd
+          - section: "Websites"
+            href: docs/websites/website-basics.qmd
+            contents:
+              - docs/websites/website-basics.qmd
+              - docs/websites/website-navigation.qmd
+              - docs/websites/website-blog.qmd
+              - docs/websites/website-search.qmd
+              - docs/websites/website-tools.qmd
+              - docs/websites/website-about.qmd
+              - section: "Listing Pages"
+                href: docs/websites/website-listings.qmd
+                contents:
+                  - docs/websites/website-listings.qmd
+                  - docs/websites/website-listings-custom.qmd
+          - section: "Books"
+            href: docs/books/book-basics.qmd
+            contents:
+              - docs/books/book-basics.qmd
+              - docs/books/book-structure.qmd
+              - docs/books/book-crossrefs.qmd
+              - text: "Customizing Output"
+                href: docs/books/book-output.qmd
+          - section: "Interactivity"
+            contents:
+              - text: "Overview"
+                href: docs/interactive/index.qmd
+              - section: docs/interactive/ojs/index.qmd
+                contents:
+                  - text: "Introduction"
+                    href: docs/interactive/ojs/index.qmd
+                  - docs/interactive/ojs/libraries.qmd
+                  - docs/interactive/ojs/data-sources.qmd
+                  - docs/interactive/ojs/ojs-cells.qmd
+                  - docs/interactive/ojs/shiny.qmd
+                  - docs/interactive/ojs/code-reuse.qmd
+                  - section: "Examples"
+                    contents:
+                      - docs/interactive/ojs/examples/penguins.qmd
+                      - docs/interactive/ojs/examples/sunburst.qmd
+                      - docs/interactive/ojs/examples/arquero.qmd
+                      - docs/interactive/ojs/examples/population.qmd
+                      - docs/interactive/ojs/examples/noaa-co2.qmd
+                      - docs/interactive/ojs/examples/github.qmd
+                      - docs/interactive/ojs/examples/layout.qmd
+                      - section: "Shiny"
+                        contents:
+                          - text: "K-Means"
+                            href: https://jjallaire.shinyapps.io/kmeans-shiny-ojs/
+                          - text: "Binning"
+                            href: https://jjallaire.shinyapps.io/binning-shiny-ojs/
+                          - text: "Data Binding"
+                            href: https://jjallaire.shinyapps.io/data-shiny-ojs/
+                          - text: "Covid Map"
+                            href: https://jjallaire.shinyapps.io/covid19-bicartogram/
+              - section: docs/interactive/shiny/index.qmd
+                contents:
+                  - text: "Introduction"
+                    href: docs/interactive/shiny/index.qmd
+                  - docs/interactive/shiny/running.qmd
+                  - docs/interactive/shiny/execution.qmd
+                  - docs/interactive/shiny/resources.qmd
+                  - section: "Examples"
+                    contents:
+                      - text: "Old Faithful"
+                        href: https://jjallaire.shinyapps.io/shiny-old-faithful/
+                      - text: "K-Means"
+                        href: https://jjallaire.shinyapps.io/shiny-k-means/
+                      - text: "Diamonds"
+                        href: https://jjallaire.shinyapps.io/shiny-diamonds/
+              - section: "Widgets"
+                contents:
+                  - docs/interactive/widgets/jupyter.qmd
+                  - docs/interactive/widgets/htmlwidgets.qmd
+              - docs/interactive/layout.qmd
+          - section: "Publishing"
+            contents:
+              - docs/publishing/index.qmd
+              - docs/publishing/quarto-pub.qmd
+              - docs/publishing/github-pages.qmd
+              - docs/publishing/rstudio-connect.qmd
+              - docs/publishing/netlify.qmd
+              - docs/publishing/confluence.qmd
+              - docs/publishing/other.qmd
+              - text: "Publishing with CI"
+                href: docs/publishing/ci.qmd
+          - section: "Projects"
+            contents:
+              - docs/projects/quarto-projects.qmd
+              - docs/projects/code-execution.qmd
+              - docs/projects/profiles.qmd
+              - docs/projects/environment.qmd
+              - docs/projects/scripts.qmd
+              - docs/projects/virtual-environments.qmd
+          - section: "Advanced"
+            contents:
+              - docs/authoring/includes.qmd
+              - docs/authoring/variables.qmd
+              - docs/output-formats/page-layout.qmd
+              - docs/authoring/language.qmd
+              - docs/authoring/conditional.qmd
+              - docs/extensions/nbfilter.qmd
+    - id: extensions
+      title: "Extensions"
+      contents:
+        - "---"
+        - section: docs/extensions/index.qmd
+          contents: 
+            - text: "Shortcodes & Filters"
+              href: docs/extensions/listing-filters.qmd
+            - text: "Journal Articles"
+              href: docs/extensions/listing-journals.qmd
+            - text: "Custom Formats"
+              href: docs/extensions/listing-formats.qmd
+            - text: "Revealjs Extensions"
+              href: docs/extensions/listing-revealjs.qmd
+            - docs/extensions/managing.qmd
+        - "---"
+        - section: docs/extensions/creating.qmd
+          contents:
+            - text: "Overview"
+              href: docs/extensions/creating.qmd
+            - docs/extensions/lua.qmd
+            - docs/extensions/lua-api.qmd
+            - text: "Distribution"
+              href: docs/extensions/distributing.qmd
+            - "---"
+            - text: "Shortcodes"
+              href: docs/extensions/shortcodes.qmd
+            - text: "Filters"
+              href: docs/extensions/filters.qmd
+            - section: "Journal Articles"
+              href: docs/journals/formats.qmd
+              contents:
+                - docs/journals/formats.qmd
+                - docs/journals/templates.qmd
+                - docs/journals/authors.qmd
+            - docs/extensions/formats.qmd
+            - docs/extensions/revealjs.qmd
+            - docs/extensions/project-types.qmd
+            - docs/extensions/starter-templates.qmd
+    - id: manuscripts
+      title: "Manuscripts"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      contents:
+        - text: Manuscripts Overview
+          href: docs/manuscripts/index.qmd
+        - text: "Authoring Manuscripts"
+          contents: 
+            - text: Jupyter Lab
+              href: docs/manuscripts/authoring/jupyterlab.qmd
+            - text: VS Code
+              href: docs/manuscripts/authoring/vscode.qmd
+            - text: RStudio
+              href: docs/manuscripts/authoring/rstudio.qmd
+        - text: "Publishing Manuscripts"
+          href: docs/manuscripts/publishing.qmd
+        - text: "Next Steps"
+          href: docs/manuscripts/next-steps.qmd
+        - text: "---"
+        - text: "Manuscript Components"
+          href: docs/manuscripts/components.qmd
+          
+        
+    - id: reference
+      title: "Reference"
+      collapse-level: 3
+      contents:
+        - section: "Reference"
+          href: docs/reference/index.qmd
+          contents:
+          - section: "Formats"
+            contents:
+              - text: "HTML"
+                href: docs/reference/formats/html.qmd
+              - text: "PDF"
+                href: docs/reference/formats/pdf.qmd
+              - text: "MS Word"
+                href: docs/reference/formats/docx.qmd
+              - text: "OpenOffice"
+                href: docs/reference/formats/odt.qmd
+              - text: "ePub"
+                href: docs/reference/formats/epub.qmd
+              - section: "Presentations"
+                contents:
+                  - text: "Revealjs"
+                    href: docs/reference/formats/presentations/revealjs.qmd
+                  - text: "PowerPoint"
+                    href: docs/reference/formats/presentations/pptx.qmd
+                  - text: "Beamer"
+                    href: docs/reference/formats/presentations/beamer.qmd
+              - section: "Markdown"
+                contents:
+                  - text: "GitHub"
+                    href: docs/reference/formats/markdown/gfm.qmd
+                  - text: "CommonMark"
+                    href: docs/reference/formats/markdown/commonmark.qmd
+                  - text: "Markua"
+                    href: docs/reference/formats/markdown/markua.qmd
+              - section: "Wikis"
+                contents:
+                  - text: "MediaWiki"
+                    href: docs/reference/formats/wiki/mediawiki.qmd
+                  - text: "DokuWiki"
+                    href: docs/reference/formats/wiki/dokuwiki.qmd
+                  - text: "ZimWiki"
+                    href: docs/reference/formats/wiki/zimwiki.qmd
+                  - text: "Jira Wiki"
+                    href: docs/reference/formats/wiki/jira.qmd
+                  - text: "XWiki"
+                    href: docs/reference/formats/wiki/xwiki.qmd
+              - section: "More Formats"
+                contents:
+                  - text: "JATS"
+                    href: docs/reference/formats/jats.qmd
+                  - text: "Jupyter"
+                    href: docs/reference/formats/ipynb.qmd
+                  - text: "ConTeXt"
+                    href: docs/reference/formats/context.qmd
+                  - text: "RTF"
+                    href: docs/reference/formats/rtf.qmd
+                  - text: "reST"
+                    href: docs/reference/formats/rst.qmd
+                  - text: "AsciiDoc"
+                    href: docs/reference/formats/asciidoc.qmd
+                  - text: "Org-Mode"
+                    href: docs/reference/formats/org.qmd
+                  - text: "Muse"
+                    href: docs/reference/formats/muse.qmd
+                  - text: "GNU TexInfo"
+                    href: docs/reference/formats/texinfo.qmd
+                  - text: "Groff Man Page"
+                    href: docs/reference/formats/man.qmd
+                  - text: "Groff Manuscript"
+                    href: docs/reference/formats/ms.qmd
+                  - text: "Haddock markup"
+                    href: docs/reference/formats/haddock.qmd
+                  - text: "OPML"
+                    href: docs/reference/formats/opml.qmd
+                  - text: "Textile"
+                    href: docs/reference/formats/textile.qmd
+                  - text: "DocBook"
+                    href: docs/reference/formats/docbook.qmd
+                  - text: "InDesign"
+                    href: docs/reference/formats/icml.qmd
+                  - text: "TEI Simple"
+                    href: docs/reference/formats/tei.qmd
+                  - text: "FictionBook"
+                    href: docs/reference/formats/fb2.qmd
+          - section: "Code Cells"
+            href: docs/reference/cells/index.qmd
+            contents:
+              - text: "Jupyter"
+                href: docs/reference/cells/cells-jupyter.qmd
+              - text: "Knitr"
+                href: docs/reference/cells/cells-knitr.qmd
+              - text: "Observable"
+                href: docs/reference/cells/cells-ojs.qmd
+          - section: "Projects"
+            contents:
+              - text: "Options"
+                href: docs/reference/projects/options.qmd
+              - text: "Websites"
+                href: docs/reference/projects/websites.qmd
+              - text: "Books"
+                href: docs/reference/projects/books.qmd
+          - section: "More"
+            contents:
+              - text: "Dates"
+                href: docs/reference/dates.qmd
+              - text: "Globs"
+                href: docs/reference/globs.qmd
+              - text: "Citations"
+                href: docs/reference/metadata/citation.qmd
+    - id: prerelease
+      title: "Quarto 1.3"
+      contents:
+        - section: "Highlights"
+          href: docs/prerelease/1.3/index.qmd
+          contents:
+            - text: "Confluence Publishing"
+              href: docs/publishing/confluence.qmd
+            - text: "Multi-Format"
+              href: docs/output-formats/html-multi-format.qmd
+            - text: "Cell Embedding"
+              href: docs/authoring/notebook-embed.qmd
+            - text: "Grid Customization"
+              href: docs/output-formats/page-layout.qmd#grid-customization
+            - text: "Code Annotation"
+              href: docs/authoring/code-annotation.qmd
+            - section: "Quarto AST"
+              href: docs/prerelease/1.3/ast.qmd
+              contents:
+                - text: Callouts
+                  href: docs/prerelease/1.3/custom-ast-nodes/callout.qmd
+                - text: Tabsets
+                  href: docs/prerelease/1.3/custom-ast-nodes/tabset.qmd
+                - text: Conditional Blocks
+                  href: docs/prerelease/1.3/custom-ast-nodes/conditional-block.qmd
+            - text: "Mermaid Theming"
+              href: docs/authoring/diagrams.qmd#mermaid-theming
+            - text: "PDF Images"
+              href: docs/prerelease/1.3/pdf.qmd
+            - text: "`kbd` Shortcode"
+              href: docs/authoring/markdown-basics.qmd#keyboard-shortcuts
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    theme:
+      light: [cosmo, theme.scss]
+    code-copy: true
+    code-overflow: wrap
+    css: styles.css
+    include-after-body: js.html
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+
+filters:
+  - filters/tools-tabset.lua
+
+freeze: true
+
+editor: visual
+
+profile:
+  group: 
+    - [prerelease,rc]
+```
 
 ## Quarto Project vs RStudio Project
 
-:::columns
-
-:::{.column width=50% .smaller}
-- Quarto Projects determine how `quarto render`, `quarto preview` and `quarto publish` work when run inside the directory.
-- RStudio Projects store configuration info for the IDE when working from the directory.
-- A directory can have one or both!
+::: columns
+::: {.column .incremental .smaller width="50%"}
+-   Quarto Projects determine how `quarto render`, `quarto preview` and `quarto publish` work when run inside the directory.
+-   RStudio Projects store configuration info for the IDE when working from the directory.
+-   A directory can have one or both!
 :::
 
-:::{.column width=50% .fragment .fade-left }
-
+::: {.column .fragment .fade-left width="50%"}
 \
 
-![This is both a Quarto Project and an RStudio Project.](images/quarto-rstudio-project.png){.drop fig-alt="Files panel in RStudio showing my-doc.qmd, _quarto.yml, and an .Rproj file."}
+![](images/quarto-rstudio-project.png){.drop fig-alt="Files panel in RStudio showing my-doc.qmd, _quarto.yml, and an .Rproj file."}
 :::
-
 :::
 
 ## Our Running Example: Course Materials
 
-:::{.centered}
+::: centered
 ![](images/stat20.png){fig-alt="Screenshot of stat20.org"}
 :::
 
-## Kick the Tires
+## Your Turn {.your-turn}
 
-:::{.poll}
+Open `docs-to-projects` and click through the file directories to see what's inside. Try rendering all five of the .qmd files.
 
-**Poll**: Open `1-docs-to-projects-activity` and click through the file directories to see what's inside. Try rendering a document or two.
-
-*Post to Discord one piece of Quarto syntax or YAML option that you have never seen before*.
-:::
+{{< fa brands discord >}} Post to Discord one piece of Quarto syntax or YAML option that you have never seen before.
 
 ```{r}
 #| echo: false
-countdown::countdown(3)
+countdown::countdown(4)
 ```
-
 
 ## The 4 roles of a Quarto Project
 
-:::incremental
-1. Control which files get rendered
-2. Store shared metadata
-3. Enable conditional content
-4. Structure the navigation between docs
+::: incremental
+1.  Control which files get rendered
+2.  Store shared metadata
+3.  Enable conditional content
+4.  Structure the navigation between docs
 :::
 
 # 1. Control which files get rendered
 
-## Render Targets
+## To render or not to render
 
-When you call `quarto render` inside a project, it defaults to rendering *all* .qmd files. There are two ways to exert finer control over this.
+When you call `quarto render` inside a project, it defaults to rendering *all* .qmd files. There are three ways to exert finer control over this.
 
 . . .
 
@@ -339,145 +1336,218 @@ When you call `quarto render` inside a project, it defaults to rendering *all* .
 
 You can ignore files from the render by:
 
-1. Adding them to the render targets list.
-2. Renaming the file (or a dir along its path) to begin with `_`.
+1.  Adding them to the render targets list
+2.  Renaming the file (or a dir along its path) to begin with `_`
+2.  Renaming the file (or a dir along its path) to begin with `.`
 
+## Render Targets
 
-## Live Code {.live-code}
+```yaml
+project:
+  render:
+    - slides/
+```
 
-Let's start with a first baby step.
+## {menu-title="globs}
 
-1. [Create a blank project]
-2. [Render all of the files]
-3. [Exclude one particular note]
-4. [Exclude a subdirectory]
+:::{style="text-align: center"}
+```{=html}
+<iframe src="https://quarto.org/docs/reference/globs.html" title = "Quarto Glob Syntax" frameborder="1" height="800" width="1450" style="border: 1px solid black"></iframe>
+```
+:::
 
+## Our Turn {.our-turn #control-render}
 
+Let's test out controlling the render.
+
+1.  [Create a blank project](#create-blank)
+2.  [Render all of the files](#render-all)
+3.  [Collect the output in a dir](#output-dir)
+4.  [Exclude one particular note](#exclude-note)
+5.  [Exclude a subdirectory](#exclude-dir)
+
+## The 4 roles of a Quarto Project
+
+1.  [Control which files get rendered]{.fragment .highlight-current-red}
+2.  [Store shared metadata]{.fragment .highlight-current-red}
+3.  Enable conditional content
+4.  Structure the navigation between docs
 
 # 2. Store shared metadata
 
-## Activity
 
-**Goal**: Let's reorganize the metadata that exists in a repo of class notes.
+## Our Turn {.our-turn #shared-meta}
 
-Screenshot of `1-docs-to-projects-activity` project.
-
-
-## Live Code {.live-code}
-
-Let's start with a first baby step.
-
-1. [Create a blank project].
-
+1. Move the author upstream.
+2. Consider code-folding
 
 ## Your Turn {.your-turn}
 
-1. Move the metadata shared by all three files into `_quarto.yml`
-2. Add your name to the `author:` key in one of the documents. Does the document- or project-level author take precedence?
+1.  Move the rest of the metadata shared by all four files into `_quarto.yml`
+2.  Add your name to the `author:` key in one of the documents. Does the document- or project-level author take precedence?
 
-## Live Code {.live-code}
+```{r}
+countdown::countdown(5)
+```
 
-1. [Create a blank project].
-2. [Split off notes written by colleague]{#_metadata.yml}.
-3. [Treat the semester as a variable]{#_variables.yml}.
 
+## Our Turn {.our-turn #store-meta}
+
+1.  [Split off notes written by colleague]{#_metadata}.
+2.  [Treat the semester as a variable]{#_variables}.
 
 ## Takeaways
 
-:::incremental
-- Metadata can live in a document, in _metadata.yml, or in _quarto.yml.
+::: incremental
+-   Metadata can live in a document, in \_metadata.yml, or in \_quarto.yml.
 
-- DRY^["Don't Repeat Yourself". A coding maxim to encourage writing functions.] out your metadata by moving it upstream.
+-   DRY[^1] out your metadata by moving it upstream.
 
-- Precedence of Metadata
+-   Precedence of Metadata
 
-  :::{style="text-align: center"}
-  _quarto.yml < _metadata.yml < foo.qmd < -M
-  :::
+    ::: {style="text-align: center"}
+    \_quarto.yml \< \_metadata.yml \< foo.qmd \< -M
+    :::
 :::
+
+[^1]: "Don't Repeat Yourself". A coding maxim to encourage writing functions.
 
 ## The 4 roles of a Quarto Project
 
-1. Control which files get rendered
-2. [Store shared metadata]{.fragment .highlight-current-red}
-3. [Enable conditional content]{.fragment .highlight-current-red}
-4. Structure the navigation between docs
+1.  Control which files get rendered
+2.  [Store shared metadata]{.fragment .highlight-current-red}
+3.  [Enable conditional content]{.fragment .highlight-current-red}
+4.  Structure the navigation between docs
 
 # 3. Enable conditional content
 
+## Our Turn {.our-turn}
+
+1. Include the learning objectives only when rendered to a pdf.
 
 
 ## The 4 roles of a Quarto Project
 
-1. Control which files get rendered
-2. Store shared metadata
-3. [Enable conditional content]{.fragment .highlight-current-red}
-4. [Structure the navigation between docs]{.fragment .highlight-current-red}
+1.  Control which files get rendered
+2.  Store shared metadata
+3.  [Enable conditional content]{.fragment .highlight-current-red}
+4.  [Structure the navigation between docs]{.fragment .highlight-current-red}
 
-:::{.fragment style="text-align:center"}
+\
+\
+
+::: {.fragment style="text-align:center"}
 Sounds like a [website]{.smalladage}!
 :::
 
+## Quartoing as Coding
+
+:::columns
+:::{.column width=40%}
+:::incremental
+1. DRY out your document (Don't Repeat Yourself)
+
+2. Use control flow (if/then)
+
+3. Think about data structures
+:::
+:::
+:::{.column width=60%}
+
+![](https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2369&q=80)
+:::
+:::
+
+## Quartopub 
+
+Visit <https://quartopub.com/> and set up a free account.
+
+:::{style="text-align: center"}
+![](images/quartopub.png)
+:::
+
+# Let's take a break!
+
+\
+\
+
+:::{style="text-align: center"}
+![](https://i.gifer.com/A7YM.gif)
+:::
+
+```{r}
+#| echo: false
+countdown::countdown(30)
+```
+
+
 # Appendix
 
-## Create a blank project
+## Create a blank project {#create-blank}
 
-1. You can create a blank project by running `quarto create-project` at the command line.
-2. Note the files that it creates: a largely empty `_quarto.yml` and a demo doc called `project.qmd`. That's just there to give you something to render - it can be deleted!
-3. Learn more by running `quarto create-project --help` at the command line.
+1.  You can create a blank project by running `quarto create-project` at the command line.
+2.  Note the files that it creates: a largely empty `_quarto.yml`, a `.gitignore` file if you're using git, and a demo doc called `project.qmd`. That's just there to give you something to render - it can be deleted!
+3.  Learn more by running `quarto create-project --help` at the command line.
 
-:::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
+::: {style="text-align: center"}
+{{< fa arrow-rotate-left >}} [Return to Control Render](#control-render) {{< fa arrow-rotate-left >}}
 :::
 
-1. [Create a blank project]
-2. [Render all of the files]
-3. [Exclude one particular note]
-4. [Exclude a subdirectory]
+## Render all of the files {#render-all}
 
-## Render all of the files
+- Running `quarto render` (without specifying a document) within the project directory, it will render all of the qmds that are not ignored.
+- When running locally, clicking the Render button on a specific qmd will do an *incremental render*, rendering the minimal number of files to render that particular file. This doesn't work currently on Posit Cloud.
 
 
-
-:::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
+::: {style="text-align: center"}
+{{< fa arrow-rotate-left >}} [Return to Control Render](#control-render) {{< fa arrow-rotate-left >}}
 :::
 
-## Exclude one particular note
+## Collect the output in a dir {#output-dir}
 
-:::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
+- Use `output-dir: <path>` under the `project` key to send the output to that directory.
+
+
+::: {style="text-align: center"}
+{{< fa arrow-rotate-left >}} [Return to Control Render](#control-render) {{< fa arrow-rotate-left >}}
 :::
 
-## Exclude a subdirectory
+## Exclude one particular note {#exclude-note}
 
-:::{style="text-align: center"}
-{{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
+1. 
+
+::: {style="text-align: center"}
+{{< fa arrow-rotate-left >}} [Return to Control Render](#control-render) {{< fa arrow-rotate-left >}}
 :::
 
-## _metadata.yml
+## Exclude a subdirectory {#exclude-dir}
+
+::: {style="text-align: center"}
+{{< fa arrow-rotate-left >}} [Return to Control Render](#control-render) {{< fa arrow-rotate-left >}}
+:::
+
+## \_metadata.yml
 
 In addition to storing project-wide metadata in `_quarto.yml`, you can store sub-directory specific metadata in a `_metadata.yml`.
 
-:::{style="text-align: center"}
+::: {style="text-align: center"}
 {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
 :::
 
+## \_variables.yml
 
-## _variables.yml
+-   You can store any information you like in YAML format in a file called `_variables.yml` at the root of the project directory ([docs](https://quarto.org/docs/authoring/variables.html#var)).
 
-- You can store any information you like in YAML format in a file called `_variables.yml` at the root of the project directory ([docs](https://quarto.org/docs/authoring/variables.html#var)).
+    ``` {.yml filename="_variables.yml"}
+    semester:
+      year: 2023
+      term: fall
+    ```
 
-  ```yml {filename="_variables.yml"}
-  semester:
-    year: 2023
-    term: fall
-  ```
+-   Those values can be injected into a document using the shortcode syntax
 
-- Those values can be injected into a document using the shortcode syntax
+    `{{<var semester.year >}}` will evaluate to `2023`.
 
-  `{{<var semester.year >}}` will evaluate to `2023`.
-
-:::{style="text-align: center"}
+::: {style="text-align: center"}
 {{< fa arrow-rotate-left >}} [Return to Live Code](#fa-bolt-live-code) {{< fa arrow-rotate-left >}}
 :::

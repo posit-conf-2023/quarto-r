@@ -2,3 +2,94 @@
 title: "Websites"
 format: qmdrslides-revealjs
 ---
+
+## Anatomy of a Project
+
+Websites, like any project, are defined by `_quarto.yml`. 
+
+```yaml
+project:
+  type: website
+
+website:
+  title: "posit-conf"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+```
+
+## Our Turn {.our-turn}
+
+Let's create our first website!
+
+1. Click into `empty-project`
+2. Run `quarto create-project --type website`
+3. Run `quarto render`
+4. Run `quarto publish`
+
+## Your Turn {.your-turn}
+
+Open `websites` and click through the file directories to see what's inside. Try rendering all five of the new .qmd files.
+
+- `syllabus.qmd`
+- `intro-to-data/notes.qmd`
+- `intro-to-data/ps.qmd`
+- `learning-r/notes.qmd`
+- `learning-r/ps.qmd`
+
+{{< fa brands discord >}} Post to Discord one piece of Quarto syntax or YAML option that you have never seen before.
+
+```{r}
+#| echo: false
+countdown::countdown(4)
+```
+
+
+## Our Turn {.our-turn}
+
+Let's add some life to our website.
+
+1. Modify the homepage a bit.
+2. Add a theme
+
+
+## Your Turn {.your-turn}
+
+Add more features to the website by:
+
+1. Add an image to the homepage.
+2. Add a footer
+3. Create a toggle between light and dark mode
+
+```{r}
+countdown::countdown(20)
+```
+
+
+## Our Turn {.our-turn}
+
+Let's add a dedicated page for the problem sets.
+
+1. Make a new `ps-home.qmd`.
+2. Link in navigation.
+3. Add a listing.
+
+
+## Your Turn {.your-turn}
+
+Let's add a dedicated page for the problem sets.
+
+1. Make a new `notes-home.qmd`.
+2. Link in navigation.
+3. Add a listing.
+
+
+## Our Turn {.our-turn}
+
+Let's made a dedicated staff website.
+
+1. Change home page.
+2. Add instructors page and link to it.
+3. Add learning objectives to the notes.

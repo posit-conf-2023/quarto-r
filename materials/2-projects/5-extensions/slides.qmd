@@ -2,3 +2,74 @@
 title: "Extensions"
 format: qmdrslides-revealjs
 ---
+
+# An Open Source Ecosystem
+
+# Quarto Custom Formats
+
+## Our Turn {.our-turn}
+
+1. Install stat20handout at the project level
+2. Convert over ps to use the format
+3. Change the format a bit
+
+## Your Turn {.your-turn}
+
+1. Install qmdrslides at the project level
+2. Covert over all slides to use the format
+3. Change the format a bit
+
+# Lua Filter
+
+What does it do: performs computation on the document as if it were a data structure.
+
+Sounds like a Script. An R Script.
+
+But where is the data?
+
+## Reprise: Quarto Workflow
+
+## What is the AST?
+
+Pandocs document model
+
+Pandocs document model as a yaml file
+
+## Example
+
+Read in a yaml as a json, write an r function to to count header blocks.
+
+Show them the analogous lua script.
+
+## Our Turn {.our-turn}
+
+1. copy and paste lua script into the directory and run it.
+2. Revisit quarto puzzle and show how it can render into many formats.
+3. Point out where the .lua is.
+
+## Your Turn {.your-turn}
+
+Return to the Quarto Puzzle and...
+
+1. Switch the Victory! Image to another of your choosing.
+2. Change the criteria for the header to level 3
+3. somethign else
+
+## Writing Lua
+
+check quarto.org
+
+chatgpt
+
+
+### Goals for the Workshop {style="font-size: 2.5em; text-align: center"}
+
+::: {.incremental style="font-size: 1.5em"}
+1.  Everyone leaves with a website and a book.
+
+2.  Learn from one another.
+
+3.  Build an understanding of the big picture.
+:::
+
+# Thank You
