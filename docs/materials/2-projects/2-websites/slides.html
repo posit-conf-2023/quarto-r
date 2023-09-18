@@ -438,7 +438,7 @@
 <p><i class="fa-brands fa-discord" aria-label="discord"></i> Post to Discord one piece of Quarto syntax or YAML option that you have never seen before.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_714d4a40" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_24a18dfd" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -449,53 +449,89 @@
 <h2>Our Turn</h2>
 <p>Let’s add some life to our website.</p>
 <ol type="1">
-<li>Modify the homepage a bit.</li>
-<li>Add a theme</li>
+<li>Modify the homepage content a bit</li>
+<li>Add links to the two <code>intro-data</code> notes.</li>
+<li>Turn on freeze to save computational artifacts.</li>
 </ol>
 </section>
 <section id="your-turn-1" class="slide level2 your-turn">
 <h2>Your Turn</h2>
 <p>Add more features to the website by:</p>
 <ol type="1">
-<li>Add an image to the homepage.</li>
-<li>Add a footer</li>
-<li>Create a toggle between light and dark mode</li>
+<li>Add two notes from <code>learning-r</code> to the sidebar navigation.</li>
+<li>Modify the <a href="https://quarto.org/docs/websites/website-about.html">about page</a> to describe a course you would like to teach.</li>
+<li><a href="https://quarto.org/docs/authoring/figures.html">Add an image</a> to the homepage that illustrates “statistics” to you. (note: it’s easiest to use a url to an image online)</li>
+<li><a href="https://quarto.org/docs/websites/website-navigation.html#page-footer">Add a footer</a> with and <a href="">icon</a>.</li>
+<li>Create a toggle between <a href="https://quarto.org/docs/output-formats/html-themes.html#dark-mode">light and dark mode</a>.</li>
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_4cb2bd24" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_868ebfa9" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+</section>
+<section id="listings" class="slide level2">
+<h2>Listings</h2>
+<p>If you have a class of documents that you will author many of (over time), you can create adaptive navigation using a <strong>Document Listing</strong>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Listing Example"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">listing</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="at">  </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"reports/*.qmd"</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"lab-notes/*reports.qmd"</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="our-turn-2" class="slide level2 our-turn">
 <h2>Our Turn</h2>
 <p>Let’s add a dedicated page for the problem sets.</p>
 <ol type="1">
 <li>Make a new <code>ps-home.qmd</code>.</li>
-<li>Link in navigation.</li>
-<li>Add a listing.</li>
+<li>Link to PS in the navbar.</li>
+<li>Add a <a href="https://quarto.org/docs/websites/website-listings.html">listing</a> to <code>ps-home.qmd</code>.</li>
 </ol>
 </section>
 <section id="your-turn-2" class="slide level2 your-turn">
 <h2>Your Turn</h2>
-<p>Let’s add a dedicated page for the problem sets.</p>
+<p>Add a dedicated page for slides.</p>
 <ol type="1">
-<li>Make a new <code>notes-home.qmd</code>.</li>
-<li>Link in navigation.</li>
-<li>Add a listing.</li>
+<li>Make a new <code>slides-home.qmd</code>.</li>
+<li>Link to Slides in navbar.</li>
+<li>Add a <a href="https://quarto.org/docs/websites/website-listings.html">listing</a> to <code>ps-home.qmd</code>.
+<ol type="1">
+<li>Change the <a href="https://quarto.org/docs/websites/website-listings.html#listing-types">listing type</a> to a grid.</li>
+</ol></li>
 </ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_60bc8761" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="our-turn-3" class="slide level2 our-turn">
 <h2>Our Turn</h2>
-<p>Let’s made a dedicated staff website.</p>
+<ol type="1">
+<li>Let’s combine the two listings pages
+<ol type="1">
+<li>Rename <code>ps-home.qmd</code> to <code>materials.qmd</code></li>
+<li>Rename <code>PS</code> to <code>Materials</code> in navbar.</li>
+<li><a href="https://quarto.org/docs/websites/website-listings.html#multiple-listings">Combine the listings</a>.</li>
+</ol></li>
+<li>Let’s made a dedicated staff website.
 <ol type="1">
 <li>Change home page.</li>
 <li>Add instructors page and link to it.</li>
 <li>Add learning objectives to the notes.</li>
+</ol></li>
 </ol>
+</section>
+<section id="lets-take-a-break" class="slide level2">
+<h2>Let’s take a break</h2>
 
 <div class="footer footer-default">
 <p><a href="index.html">Quarto for R &amp; RStudio</a></p>

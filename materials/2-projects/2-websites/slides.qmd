@@ -51,45 +51,71 @@ countdown::countdown(4)
 
 Let's add some life to our website.
 
-1. Modify the homepage a bit.
-2. Add a theme
+1. Modify the homepage content a bit
+1. Add links to the two `intro-data` notes.
+1. Turn on freeze to save computational artifacts.
 
 
 ## Your Turn {.your-turn}
 
 Add more features to the website by:
 
-1. Add an image to the homepage.
-2. Add a footer
-3. Create a toggle between light and dark mode
+1. Add two notes from `learning-r` to the sidebar navigation.
+1. Modify the [about page](https://quarto.org/docs/websites/website-about.html) to describe a course you would like to teach.
+1. [Add an image](https://quarto.org/docs/authoring/figures.html) to the homepage that illustrates "statistics" to you. (note: it's easiest to use a url to an image online)
+1. [Add a footer](https://quarto.org/docs/websites/website-navigation.html#page-footer) with and [icon]().
+1. Create a toggle between [light and dark mode](https://quarto.org/docs/output-formats/html-themes.html#dark-mode).
 
 ```{r}
-countdown::countdown(20)
+countdown::countdown(25)
 ```
 
+## Listings
+
+If you have a class of documents that you will author many of (over time), you can create adaptive navigation using a **Document Listing**.
+
+```yaml
+---
+title: "Listing Example"
+listing:
+  contents:
+    - "reports/*.qmd"
+    - "lab-notes/*reports.qmd"
+---
+```
 
 ## Our Turn {.our-turn}
 
 Let's add a dedicated page for the problem sets.
 
 1. Make a new `ps-home.qmd`.
-2. Link in navigation.
-3. Add a listing.
+2. Link to PS in the navbar.
+3. Add a [listing](https://quarto.org/docs/websites/website-listings.html) to `ps-home.qmd`.
 
 
 ## Your Turn {.your-turn}
 
-Let's add a dedicated page for the problem sets.
+Add a dedicated page for slides.
 
-1. Make a new `notes-home.qmd`.
-2. Link in navigation.
-3. Add a listing.
+1. Make a new `slides-home.qmd`.
+2. Link to Slides in navbar.
+3. Add a [listing](https://quarto.org/docs/websites/website-listings.html) to `ps-home.qmd`.
+   1. Change the [listing type](https://quarto.org/docs/websites/website-listings.html#listing-types) to a grid.
+
+```{r}
+countdown::countdown(10)
+```
 
 
 ## Our Turn {.our-turn}
 
-Let's made a dedicated staff website.
-
-1. Change home page.
-2. Add instructors page and link to it.
-3. Add learning objectives to the notes.
+1. Let's combine the two listings pages
+   1. Rename `ps-home.qmd` to `materials.qmd`
+   1. Rename `PS` to `Materials` in navbar.
+   1. [Combine the listings](https://quarto.org/docs/websites/website-listings.html#multiple-listings).
+1. Let's made a dedicated staff website.
+   1. Change home page.
+   2. Add instructors page and link to it.
+   3. Add learning objectives to the notes.
+   
+## Let's take a break

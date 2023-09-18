@@ -67,35 +67,49 @@
     "href": "materials/2-projects/2-websites/slides.html#our-turn-1",
     "title": "Websites",
     "section": "Our Turn",
-    "text": "Our Turn\nLet’s add some life to our website.\n\nModify the homepage a bit.\nAdd a theme"
+    "text": "Our Turn\nLet’s add some life to our website.\n\nModify the homepage content a bit\nAdd links to the two intro-data notes.\nTurn on freeze to save computational artifacts."
   },
   {
     "objectID": "materials/2-projects/2-websites/slides.html#your-turn-1",
     "href": "materials/2-projects/2-websites/slides.html#your-turn-1",
     "title": "Websites",
     "section": "Your Turn",
-    "text": "Your Turn\nAdd more features to the website by:\n\nAdd an image to the homepage.\nAdd a footer\nCreate a toggle between light and dark mode\n\n\n\n\n−+\n20:00"
+    "text": "Your Turn\nAdd more features to the website by:\n\nAdd two notes from learning-r to the sidebar navigation.\nModify the about page to describe a course you would like to teach.\nAdd an image to the homepage that illustrates “statistics” to you. (note: it’s easiest to use a url to an image online)\nAdd a footer with and icon.\nCreate a toggle between light and dark mode.\n\n\n\n\n−+\n25:00"
+  },
+  {
+    "objectID": "materials/2-projects/2-websites/slides.html#listings",
+    "href": "materials/2-projects/2-websites/slides.html#listings",
+    "title": "Websites",
+    "section": "Listings",
+    "text": "Listings\nIf you have a class of documents that you will author many of (over time), you can create adaptive navigation using a Document Listing.\n---\ntitle: \"Listing Example\"\nlisting:\n  contents:\n    - \"reports/*.qmd\"\n    - \"lab-notes/*reports.qmd\"\n---"
   },
   {
     "objectID": "materials/2-projects/2-websites/slides.html#our-turn-2",
     "href": "materials/2-projects/2-websites/slides.html#our-turn-2",
     "title": "Websites",
     "section": "Our Turn",
-    "text": "Our Turn\nLet’s add a dedicated page for the problem sets.\n\nMake a new ps-home.qmd.\nLink in navigation.\nAdd a listing."
+    "text": "Our Turn\nLet’s add a dedicated page for the problem sets.\n\nMake a new ps-home.qmd.\nLink to PS in the navbar.\nAdd a listing to ps-home.qmd."
   },
   {
     "objectID": "materials/2-projects/2-websites/slides.html#your-turn-2",
     "href": "materials/2-projects/2-websites/slides.html#your-turn-2",
     "title": "Websites",
     "section": "Your Turn",
-    "text": "Your Turn\nLet’s add a dedicated page for the problem sets.\n\nMake a new notes-home.qmd.\nLink in navigation.\nAdd a listing."
+    "text": "Your Turn\nAdd a dedicated page for slides.\n\nMake a new slides-home.qmd.\nLink to Slides in navbar.\nAdd a listing to ps-home.qmd.\n\nChange the listing type to a grid.\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/2-projects/2-websites/slides.html#our-turn-3",
     "href": "materials/2-projects/2-websites/slides.html#our-turn-3",
     "title": "Websites",
     "section": "Our Turn",
-    "text": "Our Turn\nLet’s made a dedicated staff website.\n\nChange home page.\nAdd instructors page and link to it.\nAdd learning objectives to the notes.\n\n\n\nQuarto for R & RStudio"
+    "text": "Our Turn\n\nLet’s combine the two listings pages\n\nRename ps-home.qmd to materials.qmd\nRename PS to Materials in navbar.\nCombine the listings.\n\nLet’s made a dedicated staff website.\n\nChange home page.\nAdd instructors page and link to it.\nAdd learning objectives to the notes."
+  },
+  {
+    "objectID": "materials/2-projects/2-websites/slides.html#lets-take-a-break",
+    "href": "materials/2-projects/2-websites/slides.html#lets-take-a-break",
+    "title": "Websites",
+    "section": "Let’s take a break",
+    "text": "Let’s take a break\n\n\nQuarto for R & RStudio"
   },
   {
     "objectID": "materials/2-projects/1-docs-to-projects/slides.html#introductions",
@@ -732,7 +746,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1]  0.71382481 -0.04337225  0.59674098 -0.60324260 -1.61063204"
+    "text": "Executing code\n\nrnorm(5)\n\n[1] -2.6990557 -1.8822323  0.3112671 -0.5929895 -1.0647468"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",
