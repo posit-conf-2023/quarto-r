@@ -7,7 +7,7 @@ Quarto with R & RStudio
 
 - Andrew Bray
 - Amelia McNamara
-- Emil Hvitveldt
+- Emil Hvitfeldt
 - Mouna Belaid
 
 -----
