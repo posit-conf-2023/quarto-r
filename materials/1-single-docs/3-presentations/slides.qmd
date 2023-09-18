@@ -50,7 +50,7 @@ This slide deck is in desperate need of some help. Let's...
 
 ## SCSS
 
-```scss {code-line-numbers="1|3-4|6-7|9-11|13-16"}
+```css {code-line-numbers="1|3-4|6-7|9-11|13-16"}
 /*-- scss:defaults --*/
 
 // fonts
