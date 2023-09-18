@@ -62,6 +62,7 @@ Add more features to the website by:
 
 1. Add two notes from `learning-r` to the sidebar navigation.
 1. Modify the [about page](https://quarto.org/docs/websites/website-about.html) to describe a course you would like to teach.
+1. Add a link to `syllabus.qmd` in the [top navbar](https://quarto.org/docs/websites/website-navigation.html#top-navigation).
 1. [Add an image](https://quarto.org/docs/authoring/figures.html) to the homepage that illustrates "statistics" to you. (note: it's easiest to use a url to an image online)
 1. [Add a footer](https://quarto.org/docs/websites/website-navigation.html#page-footer) with and [icon]().
 1. Create a toggle between [light and dark mode](https://quarto.org/docs/output-formats/html-themes.html#dark-mode).

@@ -74,7 +74,7 @@
     "href": "materials/2-projects/2-websites/slides.html#your-turn-1",
     "title": "Websites",
     "section": "Your Turn",
-    "text": "Your Turn\nAdd more features to the website by:\n\nAdd two notes from learning-r to the sidebar navigation.\nModify the about page to describe a course you would like to teach.\nAdd an image to the homepage that illustrates “statistics” to you. (note: it’s easiest to use a url to an image online)\nAdd a footer with and icon.\nCreate a toggle between light and dark mode.\n\n\n\n\n−+\n25:00"
+    "text": "Your Turn\nAdd more features to the website by:\n\nAdd two notes from learning-r to the sidebar navigation.\nModify the about page to describe a course you would like to teach.\nAdd a link to syllabus.qmd in the top navbar.\nAdd an image to the homepage that illustrates “statistics” to you. (note: it’s easiest to use a url to an image online)\nAdd a footer with and icon.\nCreate a toggle between light and dark mode.\n\n\n\n\n−+\n25:00"
   },
   {
     "objectID": "materials/2-projects/2-websites/slides.html#listings",
@@ -746,7 +746,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1] -2.6990557 -1.8822323  0.3112671 -0.5929895 -1.0647468"
+    "text": "Executing code\n\nrnorm(5)\n\n[1] -1.5445294 -0.5461976  3.0208223 -0.1120525  0.5237019"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",
@@ -2028,6 +2028,27 @@
     "title": "Advanced Slidecraft",
     "section": "",
     "text": "Full Screen"
+  },
+  {
+    "objectID": "materials/2-projects/4-books/slides.html#anatomy-of-a-project",
+    "href": "materials/2-projects/4-books/slides.html#anatomy-of-a-project",
+    "title": "Books",
+    "section": "Anatomy of a Project",
+    "text": "Anatomy of a Project\nbooks, like any project, are defined by _quarto.yml.\nproject:\n  type: book\n\nbook:\n  title: \"mybook\"\n  author: \"Jane Doe\"\n  date: \"8/18/2021\"\n  chapters:\n    - index.qmd\n    - intro.qmd\n    - summary.qmd\n    - references.qmd\n\nbibliography: references.bib\n\nformat:\n  html:\n    theme: cosmo\n  pdf:\n    documentclass: scrreport\n  epub:\n    cover-image: cover.png"
+  },
+  {
+    "objectID": "materials/2-projects/4-books/slides.html#our-turn",
+    "href": "materials/2-projects/4-books/slides.html#our-turn",
+    "title": "Books",
+    "section": "Our Turn",
+    "text": "Our Turn\nLet’s create our first book!\n\nClick into empty-book\nRun quarto create-project --type book\nRun quarto render\nRun quarto publish"
+  },
+  {
+    "objectID": "materials/2-projects/4-books/slides.html#your-turn",
+    "href": "materials/2-projects/4-books/slides.html#your-turn",
+    "title": "Books",
+    "section": "Your Turn",
+    "text": "Your Turn\nLet’s turn the Stat 20 notes into a book.\n\nClick into book.\nRun quarto create-project --type book\nModify _quarto.yml to be sure all notes are added as chapters.\nPublish it! quarto publish\nAdd an icon to your website sidebar\nCreate a crossreference between chapters (add a reference to a figure from chapter 2 in chapter 4.)\n\n\n\n\n−+\n10:00\n\n\n\n\n\nQuarto for R & RStudio"
   },
   {
     "objectID": "materials/2-projects/5-extensions/slides.html#our-turn",

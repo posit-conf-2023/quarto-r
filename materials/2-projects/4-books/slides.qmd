@@ -2,3 +2,57 @@
 title: "Books"
 format: qmdrslides-revealjs
 ---
+
+## Anatomy of a Project
+
+books, like any project, are defined by `_quarto.yml`. 
+
+```yaml
+project:
+  type: book
+
+book:
+  title: "mybook"
+  author: "Jane Doe"
+  date: "8/18/2021"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreport
+  epub:
+    cover-image: cover.png
+```
+
+## Our Turn {.our-turn}
+
+Let's create our first book!
+
+1. Click into `empty-book`
+2. Run `quarto create-project --type book`
+3. Run `quarto render`
+4. Run `quarto publish`
+
+## Your Turn {.your-turn}
+
+Let's turn the Stat 20 notes into a book.
+
+1. Click into `book`.
+2. Run `quarto create-project --type book`
+3. Modify `_quarto.yml` to be sure all notes are added as [chapters](https://quarto.org/docs/books/book-structure.html#overview).
+4. Publish it! `quarto publish`
+5. Add an icon to your website [sidebar](https://quarto.org/docs/reference/projects/books.html#sidebar-tools)
+6. Create a [crossreference](https://quarto.org/docs/authoring/cross-references.html) *between* chapters (add a reference to a figure from chapter 2 in chapter 4.)
+
+```{r}
+countdown::countdown(10)
+```
+
